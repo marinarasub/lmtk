@@ -1,0 +1,167 @@
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md11}{}\doxysection{Light Multimedia Tool\+Kit}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md11}
+Multimedia processing tool for images, audio and video. Currently in early development for images. Written in C++. A student/hobby project.
+
+Made by marinarasub 2021 -\/ 2022
+
+Currently, this file contains developement progress and features. Keep in mind that this project is under development and there may be uncompleted, buggy or unusable features. I will probably move a lot of this to seperate files/ locations once it gets long.
+
+Note\+: every feature is WIP, even if not stated there probably is not full support (i.\+e. metadata, bit depths etc.)
+
+~\newline
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md12}{}\doxysection{Latest Release ✅}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md12}
+Coming soon. Currently developing for Windows 32 and 64 bit.
+
+~\newline
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md13}{}\doxysection{Features}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md13}
+Here are some of the main features 😃. Demos are available see \mbox{\hyperlink{md__c___users__david_source_repos_lmtk__d_e_m_o}{DEMO.md}}
+
+~\newline
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md14}{}\doxysubsection{Images 🌄}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md14}
+See images/ for more. Images used are rolyalty free. Contact me for copyright or takedown, or source (author, url etc.) request. Mostly taken from \href{https://unsplash.com/}{\texttt{ https\+://unsplash.\+com/}} \hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md15}{}\doxysubsubsection{Supported Formats}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md15}
+
+\begin{DoxyItemize}
+\item PNG \mbox{[}read/write\mbox{]}
+\item JPEG \mbox{[}read/write\mbox{]} 
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md16}{}\doxysubsubsection{Tools}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md16}
+
+\begin{DoxyItemize}
+\item Image convolution
+\item Resizing TODO bicubic and bilinear
+\item Mirror TODO angle
+\item Gradient TODO more options lol
+\item Alpha blending
+\item TODO conversion between formats 
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md17}{}\doxysubsubsection{Effects}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md17}
+
+\begin{DoxyItemize}
+\item Blurs \& Sharpen
+\begin{DoxyItemize}
+\item Box/fast blur
+\item Gaussian blur
+\item Bokeh/lens blur
+\end{DoxyItemize}
+\item Adjustment/\+Correction
+\begin{DoxyItemize}
+\item HSL (Hue/\+Sat/\+Lum) Adjust
+\end{DoxyItemize}
+\item Other
+\begin{DoxyItemize}
+\item Grayscale
+\item Chroma key
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+~\newline
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md18}{}\doxysubsection{Audio / DSP 🎵}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md18}
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md19}{}\doxysubsubsection{Supported Formats}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md19}
+
+\begin{DoxyItemize}
+\item FLAC \mbox{[}read only\mbox{]}
+\item NEXT PLANNED\+: MP3 (MPEG Audio Layer III)
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md20}{}\doxysubsubsection{Tools/fx}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md20}
+
+\begin{DoxyItemize}
+\item Audio player to output device
+\begin{DoxyItemize}
+\item Live gain
+\end{DoxyItemize}
+\item Track Blending (just add them like A + B!)
+\item Wave Generators\+:
+\begin{DoxyItemize}
+\item Sine
+\item Saw
+\item Square
+\end{DoxyItemize}
+\item TODO low pass, high pass, band pass
+\item TODO peak detection
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md21}{}\doxysubsection{Video 🎥}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md21}
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md22}{}\doxysubsubsection{Supported Formats}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md22}
+
+\begin{DoxyItemize}
+\item none lol
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md23}{}\doxysubsection{Other}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md23}
+
+\begin{DoxyItemize}
+\item DFT + FFT \mbox{[}WIP\mbox{]} $\ast$might choose to use fftw or other lib instead
+\begin{DoxyItemize}
+\item Power/frequency spectrum
+\end{DoxyItemize}
+\item Some math stuff
+
+~\newline
+
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md24}{}\doxysection{Compiling / Building}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md24}
+Currently, the project is not generalized for build. I will make it easier to build in the future, perhaps with CMake or something.
+
+I use Visual C++ (Visual Studio).
+
+~\newline
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md25}{}\doxysection{Performance}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md25}
+I\textquotesingle{}ll update this once the project is more mature.
+
+~\newline
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md26}{}\doxysection{License}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md26}
+MIT license. see LICENSE.
+
+I have not published any third party source code or binaries so far as of January 2022, but info on licenses and links are below.
+
+~\newline
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md27}{}\doxysection{Documentation / API}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md27}
+Right now comments are formatted for \href{https://www.doxygen.nl/index.html}{\texttt{ Doxygen}} mostly using Javadoc styles. Subject to (very much) change. See docs/.
+
+Will update in the future.
+
+~\newline
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md28}{}\doxysection{Development ☕}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md28}
+Although it is not intended for community contribution right now, anyone is welcome to contribute, although you should probably wait until I clean up the code and ensure platform \& compiler compatibility.\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md29}{}\doxysubsection{Required Libraries}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md29}
+The following libraries are currently used in the project, subject to change.
+
+I try to use the least libraries with less restrictive open source licenses.\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md30}{}\doxysubsubsection{Images}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md30}
+
+\begin{DoxyItemize}
+\item \href{http://www.libpng.org/pub/png/libpng.html}{\texttt{ libpng}} -\/ PNG Reference Library License
+\item zlib (use link above) -\/ zlib license
+\item \href{https://libjpeg-turbo.org/}{\texttt{ libjpeg-\/turbo}} -\/ Multiple licenses
+\begin{DoxyItemize}
+\item OR \href{https://ijg.org/}{\texttt{ libjpeg}} -\/ IJG license 
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md31}{}\doxysubsubsection{Audio}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md31}
+
+\begin{DoxyItemize}
+\item \href{http://www.portaudio.com/}{\texttt{ Port\+Audio}} -\/ Port\+Audio license
+\item \href{https://www.xiph.org/flac/}{\texttt{ FLAC}} (lib\+FLAC++) -\/ BSD 
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md32}{}\doxysubsubsection{Other}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md32}
+
+\begin{DoxyItemize}
+\item \href{https://eigen.tuxfamily.org/}{\texttt{ Eigen}} -\/ MPL 2.\+0
+\begin{DoxyItemize}
+\item will include license if binaries/source code distributed
+\end{DoxyItemize}
+
+~\newline
+
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md33}{}\doxysubsection{Testing}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md33}
+I am using \href{https://github.com/google/googletest}{\texttt{ Google Test}} to unit test.
+
+Utility funcitons are tested \char`\"{}normally\char`\"{} using assertions and such.
+
+For media, testing only covers basic things so far or does not perform rigorous checks. Often, minor tweaks are common and it is easier just to look/listen to the result instead of writing tests that break every minor change.
+
+As project features mature, expect more test coverage.
+
+~\newline
+\hypertarget{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md34}{}\doxysubsection{Future / Roadmap / Random TODOs}\label{md__c___users__david_source_repos_lmtk__r_e_a_d_m_e_autotoc_md34}
+
+\begin{DoxyItemize}
+\item Text/font support
+\item Progress callbacks for image stuff (for loading bar etc.)
+\item Multithreaded processing
+\item I plan to make a command line interface and GUI, maybe using Wx\+Widgets or something for editing images, audio etc.
+\item More formats support.
+\item Speed optimization
+\item Probably use ffmpeg in the future.
+\item Video editor, maybe.
+\item Writing this file takes a while so I will continue to update as I think of stuff.
+\item Linux, Mac OS
+\item Mobile???\# Contains all source code 
+\end{DoxyItemize}

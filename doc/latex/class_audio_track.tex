@@ -1,0 +1,83 @@
+\hypertarget{class_audio_track}{}\doxysection{Audio\+Track Class Reference}
+\label{class_audio_track}\index{AudioTrack@{AudioTrack}}
+Inheritance diagram for Audio\+Track\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_audio_track}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_audio_track_aff6eeda34fa7d7cdd991b49520dd2955}\label{class_audio_track_aff6eeda34fa7d7cdd991b49520dd2955}} 
+{\bfseries Audio\+Track} (unsigned long length)
+\item 
+\mbox{\Hypertarget{class_audio_track_a10f431d4b9b09a0f877f1d6914a5d62a}\label{class_audio_track_a10f431d4b9b09a0f877f1d6914a5d62a}} 
+{\bfseries Audio\+Track} (unsigned long length, unsigned long sample\+\_\+rate)
+\item 
+\mbox{\Hypertarget{class_audio_track_a75d8450be50369ecdbd956ce30cddcdc}\label{class_audio_track_a75d8450be50369ecdbd956ce30cddcdc}} 
+{\bfseries Audio\+Track} (const \mbox{\hyperlink{class_audio_track}{Audio\+Track}} \&other)
+\item 
+\mbox{\Hypertarget{class_audio_track_a59605120d85ddec078d42ca269869636}\label{class_audio_track_a59605120d85ddec078d42ca269869636}} 
+\mbox{\hyperlink{class_audio_track}{Audio\+Track}} {\bfseries operator=} (const \mbox{\hyperlink{class_audio_track}{Audio\+Track}} \&other)
+\item 
+\mbox{\Hypertarget{class_audio_track_ad78548aa9042956e34070761f64607f1}\label{class_audio_track_ad78548aa9042956e34070761f64607f1}} 
+\mbox{\hyperlink{class_audio_track}{Audio\+Track}} {\bfseries operator+} (const \mbox{\hyperlink{class_audio_track}{Audio\+Track}} \&other) const
+\item 
+\mbox{\Hypertarget{class_audio_track_a059462e72d634195ccac4fef701b26f9}\label{class_audio_track_a059462e72d634195ccac4fef701b26f9}} 
+unsigned int {\bfseries sample\+Rate} () const
+\item 
+\mbox{\Hypertarget{class_audio_track_a4de88a8b00c50f19fbab2fe479bd5940}\label{class_audio_track_a4de88a8b00c50f19fbab2fe479bd5940}} 
+unsigned long {\bfseries sample\+Length} () const
+\item 
+\mbox{\Hypertarget{class_audio_track_ad3fd5a407901cf506fd706d4828a897c}\label{class_audio_track_ad3fd5a407901cf506fd706d4828a897c}} 
+byte {\bfseries channels} () const
+\item 
+\mbox{\Hypertarget{class_audio_track_a8ad8f382683190bb4aeae7f97c8cdc81}\label{class_audio_track_a8ad8f382683190bb4aeae7f97c8cdc81}} 
+void {\bfseries reset\+Position} ()
+\item 
+\mbox{\Hypertarget{class_audio_track_a89793f76dedeb41e6024287dbb7828c1}\label{class_audio_track_a89793f76dedeb41e6024287dbb7828c1}} 
+unsigned long {\bfseries current\+Pos} () const
+\item 
+\mbox{\Hypertarget{class_audio_track_a2397367eb3ab28ecc68d37499644f4d3}\label{class_audio_track_a2397367eb3ab28ecc68d37499644f4d3}} 
+bool {\bfseries ended} () const
+\item 
+\mbox{\Hypertarget{class_audio_track_adb630d1f4365d4ecd2b76b8edd242984}\label{class_audio_track_adb630d1f4365d4ecd2b76b8edd242984}} 
+\mbox{\hyperlink{structaudio__sample}{audio\+\_\+sample}} {\bfseries next\+Sample} ()
+\item 
+\mbox{\Hypertarget{class_audio_track_a9cb71dfd2a576e0ca0af2e17fa060d97}\label{class_audio_track_a9cb71dfd2a576e0ca0af2e17fa060d97}} 
+\mbox{\hyperlink{structaudio__sample}{audio\+\_\+sample}} {\bfseries get\+Sample} (unsigned long idx) const
+\item 
+\mbox{\Hypertarget{class_audio_track_ad2338fbdd08976a2c0de17198d9b3f22}\label{class_audio_track_ad2338fbdd08976a2c0de17198d9b3f22}} 
+void {\bfseries set\+Sample} (unsigned long idx, \mbox{\hyperlink{structaudio__sample}{audio\+\_\+sample}} data)
+\item 
+\mbox{\Hypertarget{class_audio_track_aecc10e5dd4187ca51d07a66e2418ad8e}\label{class_audio_track_aecc10e5dd4187ca51d07a66e2418ad8e}} 
+void {\bfseries resample} (unsigned long new\+\_\+sample\+\_\+rate)
+\item 
+\mbox{\Hypertarget{class_audio_track_a3560a5777a949c3fa0bb1010c5f89541}\label{class_audio_track_a3560a5777a949c3fa0bb1010c5f89541}} 
+void {\bfseries merge} (\mbox{\hyperlink{class_audio_track}{Audio\+Track}} \&track)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_audio_track_adb5ceada61b51d44d8d499883b849b96}\label{class_audio_track_adb5ceada61b51d44d8d499883b849b96}} 
+void {\bfseries copy} (const \mbox{\hyperlink{class_audio_track}{Audio\+Track}} \&other)
+\item 
+\mbox{\Hypertarget{class_audio_track_af3a42290989d4228a56aecee8251209f}\label{class_audio_track_af3a42290989d4228a56aecee8251209f}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{class_audio_track_a0fdabcd432acc0939b7d2c91a0a9503c}\label{class_audio_track_a0fdabcd432acc0939b7d2c91a0a9503c}} 
+\mbox{\hyperlink{structaudio__sample}{audio\+\_\+sample}} {\bfseries clamp\+Sample} (\mbox{\hyperlink{structaudio__sample}{audio\+\_\+sample}} \&sample) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_audio_track_a72fc58336dade0b7b01c0aef142ed0b5}\label{class_audio_track_a72fc58336dade0b7b01c0aef142ed0b5}} 
+\mbox{\hyperlink{structaudio__sample}{audio\+\_\+sample}} $\ast$ {\bfseries audio}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKaudio/\mbox{\hyperlink{audiotrack_8h}{audiotrack.\+h}}\item 
+src/lib\+LMTKaudio/audiotrack.\+cpp\end{DoxyCompactItemize}

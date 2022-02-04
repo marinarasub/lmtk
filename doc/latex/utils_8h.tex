@@ -1,0 +1,74 @@
+\hypertarget{utils_8h}{}\doxysubsection{src/utils/utils.h File Reference}
+\label{utils_8h}\index{src/utils/utils.h@{src/utils/utils.h}}
+
+
+Copyright (c) 2022 marinarasub.  
+
+
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{utils_8cpp_a2d70b5e2b332670da0ee84f8667e5341}{utils\+::uint\+\_\+max\+\_\+val}} (uint8\+\_\+t bit\+\_\+depth)
+\begin{DoxyCompactList}\small\item\em Returns the maximum value for an unsigned int of a given bit depth. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{utils_8cpp_a3e557e2e0cce1696d35ac3303ba75039}{utils\+::uint64\+\_\+next\+\_\+pwr2}} (uint64\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Determines the tightest power of 2 that is equal or greater than a number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{utils_8cpp_a2771f700f348106a5b99587a185ae37b}\label{utils_8cpp_a2771f700f348106a5b99587a185ae37b}} 
+std\+::string {\bfseries utils\+::get\+\_\+size\+\_\+string} (size\+\_\+t byte\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Copyright (c) 2022 marinarasub. 
+
+LMTK / Light Multimedia Tool\+Kit
+
+This file is included in the utils library for LMTK LMTK and its subprojects are available under the MIT license.
+
+\begin{DoxyAuthor}{Author}
+marinarasub 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 2022
+\end{DoxyDate}
+File containing various utility functions 
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{utils_8cpp_a3e557e2e0cce1696d35ac3303ba75039}\label{utils_8cpp_a3e557e2e0cce1696d35ac3303ba75039}} 
+\index{utils.h@{utils.h}!uint64\_next\_pwr2@{uint64\_next\_pwr2}}
+\index{uint64\_next\_pwr2@{uint64\_next\_pwr2}!utils.h@{utils.h}}
+\doxyparagraph{\texorpdfstring{uint64\_next\_pwr2()}{uint64\_next\_pwr2()}}
+{\footnotesize\ttfamily uint64\+\_\+t utils\+::uint64\+\_\+next\+\_\+pwr2 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Determines the tightest power of 2 that is equal or greater than a number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Number to check \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils_8cpp_a2d70b5e2b332670da0ee84f8667e5341}\label{utils_8cpp_a2d70b5e2b332670da0ee84f8667e5341}} 
+\index{utils.h@{utils.h}!uint\_max\_val@{uint\_max\_val}}
+\index{uint\_max\_val@{uint\_max\_val}!utils.h@{utils.h}}
+\doxyparagraph{\texorpdfstring{uint\_max\_val()}{uint\_max\_val()}}
+{\footnotesize\ttfamily uint32\+\_\+t utils\+::uint\+\_\+max\+\_\+val (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bit\+\_\+depth }\end{DoxyParamCaption})}
+
+
+
+Returns the maximum value for an unsigned int of a given bit depth. 
+
+The maximum value is where \$bit\+\_\+depth\$ number of bits are set. 
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+depth} & The bit depth, in bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum unsigned integer value of a bit depth 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+is the bit\+\_\+depth given is \texorpdfstring{$>$}{>} 32, use UINT32\+\_\+\+MAX 
+\end{DoxyNote}

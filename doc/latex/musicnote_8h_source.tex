@@ -1,0 +1,63 @@
+\hypertarget{musicnote_8h_source}{}\doxysubsection{musicnote.\+h}
+\label{musicnote_8h_source}\index{src/libLMTKaudio/musicnote.h@{src/libLMTKaudio/musicnote.h}}
+\mbox{\hyperlink{musicnote_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef \_LIBLMTKAUDIO\_MUSICNOTE\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define \_LIBLMTKAUDIO\_MUSICNOTE\_H\_}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }audio \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keyword}{namespace }MusicalNote}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         \textcolor{comment}{// TODO use enum instead?}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} Note; \textcolor{comment}{// in delta semitones from A4 below:}}
+\DoxyCodeLine{33         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} DEFAULT\_A4\_HZ = 440.0;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \textcolor{comment}{/* ALL NOTES from 1-\/8 octave */} \textcolor{comment}{// TODO finish}}
+\DoxyCodeLine{36         \textcolor{keyword}{constexpr} Note C\_4 = -\/9, C\_MIDDLE = -\/9;}
+\DoxyCodeLine{37         \textcolor{keyword}{constexpr} Note C\_SHARP\_4 = -\/8, D\_FLAT\_4 = -\/8;}
+\DoxyCodeLine{38         \textcolor{keyword}{constexpr} Note D\_4 = -\/7;}
+\DoxyCodeLine{39         \textcolor{keyword}{constexpr} Note D\_SHARP\_4 = -\/6, E\_FLAT\_4 = -\/6;}
+\DoxyCodeLine{40         \textcolor{keyword}{constexpr} Note E\_4 = -\/5;}
+\DoxyCodeLine{41         \textcolor{keyword}{constexpr} Note F\_4 = -\/4;}
+\DoxyCodeLine{42         \textcolor{keyword}{constexpr} Note F\_SHARP\_4 = -\/3, G\_FLAT\_4 = -\/3;}
+\DoxyCodeLine{43         \textcolor{keyword}{constexpr} Note G\_4 = -\/2;}
+\DoxyCodeLine{44         \textcolor{keyword}{constexpr} Note G\_SHARP\_4 = -\/1, A\_FLAT\_4 = -\/1;}
+\DoxyCodeLine{45         \textcolor{keyword}{constexpr} Note A\_4 = 0;}
+\DoxyCodeLine{46         \textcolor{keyword}{constexpr} Note A\_SHARP\_4 = 1, B\_FLAT\_4 = 1;}
+\DoxyCodeLine{47         \textcolor{keyword}{constexpr} Note B\_4 = 2;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{keyword}{constexpr} Note C\_5 = 3;}
+\DoxyCodeLine{50         \textcolor{keyword}{constexpr} Note C\_SHARP\_5 = 4, D\_FLAT\_5 = 4;}
+\DoxyCodeLine{51         \textcolor{keyword}{constexpr} Note D\_5 = 5;}
+\DoxyCodeLine{52         \textcolor{keyword}{constexpr} Note D\_SHARP\_5 = 6, E\_FLAT\_5 = 6;}
+\DoxyCodeLine{53         \textcolor{keyword}{constexpr} Note E\_5 = 7;}
+\DoxyCodeLine{54         \textcolor{keyword}{constexpr} Note F\_5 = 8;}
+\DoxyCodeLine{55         \textcolor{keyword}{constexpr} Note F\_SHARP\_5 = 9, G\_FLAT\_5 = 9;}
+\DoxyCodeLine{56         \textcolor{keyword}{constexpr} Note G\_5 = 10;}
+\DoxyCodeLine{57         \textcolor{keyword}{constexpr} Note G\_SHARP\_5 = 11, A\_FLAT\_5 = 11;}
+\DoxyCodeLine{58         \textcolor{keyword}{constexpr} Note A\_5 = 12;}
+\DoxyCodeLine{59         \textcolor{keyword}{constexpr} Note A\_SHARP\_5 = 13, B\_FLAT\_5 = 13;}
+\DoxyCodeLine{60         \textcolor{keyword}{constexpr} Note B\_5 = 14;}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62         \textcolor{keyword}{constexpr} Note C\_6 = 15;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{68         \textcolor{keywordtype}{double} \mbox{\hyperlink{musicnote_8h_aec17e85f10bf9685daab6df3e6df2561}{getFrequency}}(Note note) \{}
+\DoxyCodeLine{69             \textcolor{keywordflow}{return} DEFAULT\_A4\_HZ * pow(2, 1.0 / 12.0 * note);}
+\DoxyCodeLine{70         \}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{77         \textcolor{keywordtype}{double} \mbox{\hyperlink{musicnote_8h_aec17e85f10bf9685daab6df3e6df2561}{getFrequency}}(\textcolor{keywordtype}{double} A4Freq, Note note) \{}
+\DoxyCodeLine{78             \textcolor{keywordflow}{return} A4Freq * pow(2, 1.0 / 12.0 * note);}
+\DoxyCodeLine{79         \}}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81 \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKAUDIO\_MUSICNOTE\_H\_}}
+
+\end{DoxyCode}

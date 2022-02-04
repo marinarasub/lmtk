@@ -1,0 +1,250 @@
+\hypertarget{imagefx_8hpp_source}{}\doxysubsection{imagefx.\+hpp}
+\label{imagefx_8hpp_source}\index{src/app/imagetools/imagefx.hpp@{src/app/imagetools/imagefx.hpp}}
+\mbox{\hyperlink{imagefx_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef \_LMTKIMAGE\_IMAGEFX\_H\_}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define \_LMTKIMAGE\_IMAGEFX\_H\_}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include <unordered\_map>} \textcolor{comment}{// TODO ordered map by alphabetical??? or nah}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}../../libLMTKimage/pluginchain.h"{}}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include "{}../../libLMTKimage/filters.h"{}}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{namespace }lmtkimage}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     \textcolor{keyword}{using namespace }image;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{comment}{// TODO make except. use map usage field}}
+\DoxyCodeLine{38     \textcolor{comment}{// TODO count passes since removed from image shaders TODO!!!!!!}}
+\DoxyCodeLine{39     \textcolor{comment}{// TODO return multiple}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     std::vector<ImageShader*> make\_bokeh\_blur(\textcolor{keywordtype}{size\_t} passes, std::vector<std::string> args)}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{if} (passes == 0) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}\# of passes must be > 0"{}});}
+\DoxyCodeLine{44         \textcolor{comment}{// why would you want more than 1 pass though?}}
+\DoxyCodeLine{45         \textcolor{keywordtype}{float} radX, radY;}
+\DoxyCodeLine{46         \textcolor{keywordflow}{switch} (args.size())}
+\DoxyCodeLine{47         \{}
+\DoxyCodeLine{48         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{49             radX = std::stof(args[0]);}
+\DoxyCodeLine{50             radY = radX;}
+\DoxyCodeLine{51             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{52         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{53             radX = std::stof(args[0]);}
+\DoxyCodeLine{54             radY = std::stof(args[1]);}
+\DoxyCodeLine{55             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{56         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{57             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}invalid number of args"{}});}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59         \textcolor{keywordflow}{return} std::vector<ImageShader*>(passes, \textcolor{keyword}{new} \mbox{\hyperlink{classimage_1_1_bokeh_blur}{BokehBlur}}(radX, radY));}
+\DoxyCodeLine{60     \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     std::vector<ImageShader*> make\_box\_blur(\textcolor{keywordtype}{size\_t} passes, std::vector<std::string> args)}
+\DoxyCodeLine{63     \{}
+\DoxyCodeLine{64         \textcolor{keywordflow}{if} (passes == 0) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}\# of passes must be > 0"{}});}
+\DoxyCodeLine{65         \textcolor{keywordtype}{float} radX, radY;}
+\DoxyCodeLine{66         \textcolor{keywordflow}{switch} (args.size())}
+\DoxyCodeLine{67         \{}
+\DoxyCodeLine{68         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{69             radX = std::stof(args[0]);}
+\DoxyCodeLine{70             radY = radX;}
+\DoxyCodeLine{71             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{72         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{73             radX = std::stof(args[0]);}
+\DoxyCodeLine{74             radY = std::stof(args[1]);}
+\DoxyCodeLine{75             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{76         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{77             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}invalid number of args"{}});}
+\DoxyCodeLine{78         \}}
+\DoxyCodeLine{79         std::vector<ImageShader*> boxb;}
+\DoxyCodeLine{80         \mbox{\hyperlink{classimage_1_1_box_blur_horizontal}{BoxBlurHorizontal}}* bX = \textcolor{keyword}{new} \mbox{\hyperlink{classimage_1_1_box_blur_horizontal}{BoxBlurHorizontal}}(radX);}
+\DoxyCodeLine{81         \mbox{\hyperlink{classimage_1_1_box_blur_vertical}{BoxBlurVertical}}* bY = \textcolor{keyword}{new} \mbox{\hyperlink{classimage_1_1_box_blur_vertical}{BoxBlurVertical}}(radY);}
+\DoxyCodeLine{82         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < passes; i++)}
+\DoxyCodeLine{83         \{}
+\DoxyCodeLine{84             boxb.push\_back(bX);}
+\DoxyCodeLine{85             boxb.push\_back(bY);}
+\DoxyCodeLine{86         \}}
+\DoxyCodeLine{87         \textcolor{keywordflow}{return} boxb;}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90     std::vector<ImageShader*> make\_fast\_blur(\textcolor{keywordtype}{size\_t} passes, std::vector<std::string> args)}
+\DoxyCodeLine{91     \{}
+\DoxyCodeLine{92         \textcolor{keywordflow}{return} make\_box\_blur(passes * 3, args);}
+\DoxyCodeLine{93     \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     std::vector<ImageShader*> make\_chroma\_keyer(\textcolor{keywordtype}{size\_t} passes, std::vector<std::string> args)}
+\DoxyCodeLine{96     \{}
+\DoxyCodeLine{97         \textcolor{keywordflow}{if} (passes != 1) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}chroma key only needs 1 pass"{}});}
+\DoxyCodeLine{98         \textcolor{keywordflow}{if} (args.size() < 3) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}chroma key needs 3, 4 or 5 args"{}});}
+\DoxyCodeLine{99         \textcolor{keywordtype}{float} r = std::stof(args[0]);}
+\DoxyCodeLine{100         \textcolor{keywordtype}{float} g = std::stof(args[1]);}
+\DoxyCodeLine{101         \textcolor{keywordtype}{float} b = std::stof(args[2]);}
+\DoxyCodeLine{102         \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} p(r, g, b);}
+\DoxyCodeLine{103         \textcolor{keywordtype}{float} a, tol = \mbox{\hyperlink{classimage_1_1_chroma_key_shader_a7046ec6f4db0bf4370f51442e4edd136}{ChromaKeyShader::DEFAULT\_TOLERANCE}};}
+\DoxyCodeLine{104         \textcolor{keywordflow}{if} (args.size() > 3)}
+\DoxyCodeLine{105         \{}
+\DoxyCodeLine{106             a = std::stof(args[3]);}
+\DoxyCodeLine{107             p.setAlpha(a);}
+\DoxyCodeLine{108         \}}
+\DoxyCodeLine{109         \textcolor{keywordflow}{if} (args.size() > 4)}
+\DoxyCodeLine{110         \{}
+\DoxyCodeLine{111             tol = std::stof(args[4]);}
+\DoxyCodeLine{112         \}}
+\DoxyCodeLine{113         \textcolor{keywordflow}{if} (args.size() > 5) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}too many args for chroma key"{}});}
+\DoxyCodeLine{114         \textcolor{keywordflow}{return} std::vector<ImageShader*>(1, \textcolor{keyword}{new} \mbox{\hyperlink{classimage_1_1_chroma_key_shader}{ChromaKeyShader}}(p, tol));}
+\DoxyCodeLine{115     \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     std::vector<ImageShader*> make\_color\_invert(\textcolor{keywordtype}{size\_t} passes, std::vector<std::string> args)}
+\DoxyCodeLine{118     \{}
+\DoxyCodeLine{119         \textcolor{keywordflow}{if} (passes != 1) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}invert only needs 1 pass"{}});}
+\DoxyCodeLine{120         \textcolor{keywordflow}{if} (args.size() > 0) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}too many args for invert"{}});}
+\DoxyCodeLine{121         \textcolor{keywordflow}{return} std::vector<ImageShader*>(1, \textcolor{keyword}{new} \mbox{\hyperlink{classimage_1_1_color_invert_shader}{ColorInvertShader}}());}
+\DoxyCodeLine{122     \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     std::vector<ImageShader*> make\_gaussian\_blur(\textcolor{keywordtype}{size\_t} passes, std::vector<std::string> args)}
+\DoxyCodeLine{125     \{}
+\DoxyCodeLine{126         \textcolor{keywordflow}{if} (passes == 0) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}\# of passes must be > 0"{}});}
+\DoxyCodeLine{127         \textcolor{keywordtype}{float} sdX = 0, sdY = 0, tol = -\/1;}
+\DoxyCodeLine{128         \textcolor{keywordflow}{switch} (args.size())}
+\DoxyCodeLine{129         \{}
+\DoxyCodeLine{130         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{131             sdX = std::stof(args[0]);}
+\DoxyCodeLine{132             sdY = sdX;}
+\DoxyCodeLine{133             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{134         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{135             sdX = std::stof(args[0]);}
+\DoxyCodeLine{136             sdY = std::stof(args[1]);}
+\DoxyCodeLine{137             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{138         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{139         \{}
+\DoxyCodeLine{140             \textcolor{keywordtype}{float} arg3 = std::stof(args[2]);}
+\DoxyCodeLine{141             \textcolor{keywordflow}{if} (arg3 > 0)}
+\DoxyCodeLine{142             \{}
+\DoxyCodeLine{143                 tol = arg3;}
+\DoxyCodeLine{144                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{145             \}}
+\DoxyCodeLine{146         \}}
+\DoxyCodeLine{147         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{148             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}bad args"{}});}
+\DoxyCodeLine{149         \}}
+\DoxyCodeLine{150         std::vector<ImageShader*> gaussians;}
+\DoxyCodeLine{151         \mbox{\hyperlink{classimage_1_1_gaussian_blur_horizontal}{GaussianBlurHorizontal}}* gX = \textcolor{keyword}{new} \mbox{\hyperlink{classimage_1_1_gaussian_blur_horizontal}{GaussianBlurHorizontal}}(sdX);}
+\DoxyCodeLine{152         \mbox{\hyperlink{classimage_1_1_gaussian_blur_vertical}{GaussianBlurVertical}}* gY = \textcolor{keyword}{new} \mbox{\hyperlink{classimage_1_1_gaussian_blur_vertical}{GaussianBlurVertical}}(sdY);}
+\DoxyCodeLine{153         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < passes; i++)}
+\DoxyCodeLine{154         \{}
+\DoxyCodeLine{155             gaussians.push\_back(gX);}
+\DoxyCodeLine{156             gaussians.push\_back(gY);}
+\DoxyCodeLine{157         \}}
+\DoxyCodeLine{158         \textcolor{keywordflow}{return} gaussians;}
+\DoxyCodeLine{159     \}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161     std::vector<ImageShader*> make\_grayscale(\textcolor{keywordtype}{size\_t} passes, std::vector<std::string> args)}
+\DoxyCodeLine{162     \{}
+\DoxyCodeLine{163         \textcolor{keywordflow}{if} (passes != 1) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}greyscale only needs 1 pass"{}});}
+\DoxyCodeLine{164         \textcolor{keywordflow}{if} (args.size() != 0) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}too many args for grayscale"{}});}
+\DoxyCodeLine{165         \textcolor{keywordflow}{return} std::vector<ImageShader*>(1, \textcolor{keyword}{new} \mbox{\hyperlink{classimage_1_1_gray_scale_shader}{GrayScaleShader}}());}
+\DoxyCodeLine{166     \}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168     std::vector<ImageShader*> make\_hsl\_adjust(\textcolor{keywordtype}{size\_t} passes, std::vector<std::string> args)}
+\DoxyCodeLine{169     \{}
+\DoxyCodeLine{170         \textcolor{keywordflow}{if} (passes != 1) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}hsl only needs 1 pass"{}});}
+\DoxyCodeLine{171         \textcolor{keywordflow}{if} (args.size() != 3) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}hsl needs 2 args (hue shift degrees, sat multiplier, lum multiplier)"{}});}
+\DoxyCodeLine{172         \textcolor{keywordtype}{float} hue = std::stof(args[0]);}
+\DoxyCodeLine{173         \textcolor{keywordtype}{float} sat = std::stof(args[1]);}
+\DoxyCodeLine{174         \textcolor{keywordtype}{float} lum = std::stof(args[2]);}
+\DoxyCodeLine{175         \textcolor{keywordflow}{return} std::vector<ImageShader*>(1, \textcolor{keyword}{new} \mbox{\hyperlink{classimage_1_1_hue_sat_lum_adjust}{HueSatLumAdjust}}(hue, sat, lum));}
+\DoxyCodeLine{176     \}}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179     std::vector<ImageShader*> make\_image\_sharpen(\textcolor{keywordtype}{size\_t} passes, std::vector<std::string> args)}
+\DoxyCodeLine{180     \{}
+\DoxyCodeLine{181         \textcolor{keywordtype}{float} amt = -\/1;}
+\DoxyCodeLine{182         \textcolor{keywordflow}{if} (args.size() == 0)}
+\DoxyCodeLine{183         \{}
+\DoxyCodeLine{184             \textcolor{keywordflow}{return} std::vector<ImageShader*>(passes, \textcolor{keyword}{new} \mbox{\hyperlink{classimage_1_1_image_sharpen}{ImageSharpen}}());}
+\DoxyCodeLine{185         \}}
+\DoxyCodeLine{186         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (args.size() == 1) }
+\DoxyCodeLine{187         \{}
+\DoxyCodeLine{188             amt = std::stof(args[0]);}
+\DoxyCodeLine{189             \textcolor{keywordflow}{return} std::vector<ImageShader*>(passes, \textcolor{keyword}{new} \mbox{\hyperlink{classimage_1_1_image_sharpen}{ImageSharpen}}(amt));}
+\DoxyCodeLine{190         \}}
+\DoxyCodeLine{191         \textcolor{keywordflow}{else} \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}too many args for sharpen"{}});}
+\DoxyCodeLine{192     \}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194     \textcolor{keyword}{struct }\mbox{\hyperlink{structlmtkimage_1_1fx__info}{fx\_info}}}
+\DoxyCodeLine{195     \{}
+\DoxyCodeLine{196         std::function<std::vector<ImageShader*>(\textcolor{keywordtype}{size\_t} passes, std::vector<std::string>)> \textcolor{keyword}{function};}
+\DoxyCodeLine{197         std::string description;}
+\DoxyCodeLine{198         std::string usage;}
+\DoxyCodeLine{199     \};}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201     \textcolor{comment}{// map for fx string to instantiation wrapper}}
+\DoxyCodeLine{202     \textcolor{keyword}{static} std::unordered\_map<std::string, fx\_info> fx\_map =}
+\DoxyCodeLine{203     \{}
+\DoxyCodeLine{204         \{\textcolor{stringliteral}{"{}bokeh-\/blur"{}}, \{make\_bokeh\_blur, \textcolor{stringliteral}{"{}bokeh/lens blur"{}}, \textcolor{stringliteral}{"{}[\#passes*](radius-\/x, radius-\/y)"{}}\}\},}
+\DoxyCodeLine{205         \{\textcolor{stringliteral}{"{}box-\/blur"{}}, \{make\_box\_blur, \textcolor{stringliteral}{"{}box convolution blur, default is equivalent to fast blur"{}}, \textcolor{stringliteral}{"{}[\#passes*](radius)"{}}\}\},}
+\DoxyCodeLine{206         \{\textcolor{stringliteral}{"{}fast-\/blur"{}}, \{make\_fast\_blur, \textcolor{stringliteral}{"{}fast blur, approximates gaussian blur (using box blur)"{}}, \textcolor{stringliteral}{"{}(radius)"{}}\}\},}
+\DoxyCodeLine{207         \{\textcolor{stringliteral}{"{}chroma-\/key"{}}, \{make\_chroma\_keyer, \textcolor{stringliteral}{"{}chroma keyer, removes all color within threshold of target"{}}, \textcolor{stringliteral}{"{}(r, g, b, a*, threshold*)"{}}\}\},}
+\DoxyCodeLine{208         \{\textcolor{stringliteral}{"{}color-\/invert"{}}, \{make\_color\_invert, \textcolor{stringliteral}{"{}inverts color"{}}, \textcolor{stringliteral}{"{}none"{}}\}\},}
+\DoxyCodeLine{209         \{\textcolor{stringliteral}{"{}gaussian-\/blur"{}}, \{make\_gaussian\_blur, \textcolor{stringliteral}{"{}blurs the image with surrounding pixels with to gaussian function"{}}, \textcolor{stringliteral}{"{}[\#passes*](stdev-\/x, stdev-\/y, tolerance*)"{}}\}\},}
+\DoxyCodeLine{210         \{\textcolor{stringliteral}{"{}sharpen"{}}, \{make\_image\_sharpen, \textcolor{stringliteral}{"{}sharpens the image by emphasizing edges"{}}, \textcolor{stringliteral}{"{}[\#passes*](amount*)"{}}\}\},}
+\DoxyCodeLine{211         \{\textcolor{stringliteral}{"{}hsl-\/adjust"{}}, \{make\_hsl\_adjust, \textcolor{stringliteral}{"{}adjust the hue, saturation and luminance of the image"{}}, \textcolor{stringliteral}{"{}(hue shift in degrees, saturation multiplier, luminance multiplier)"{}}\}\},}
+\DoxyCodeLine{212         \{\textcolor{stringliteral}{"{}grayscale"{}}, \{make\_grayscale, \textcolor{stringliteral}{"{}convert the image to grayscale (black \& white)"{}}, \textcolor{stringliteral}{"{}none"{}}\}\}}
+\DoxyCodeLine{213     \};}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216     \textcolor{comment}{// help msg for usage of fx}}
+\DoxyCodeLine{217     std::string help\_fx()}
+\DoxyCodeLine{218     \{}
+\DoxyCodeLine{219         std::string all\_fx;}
+\DoxyCodeLine{220         all\_fx.append(\textcolor{stringliteral}{"{}Use effects with -\/-\/fx \(\backslash\)"{}effect\_name[\#passes*](arg1, arg2,...)\(\backslash\)"{} ...\(\backslash\)n"{}});}
+\DoxyCodeLine{221         all\_fx.append(\textcolor{stringliteral}{"{}Valid effects (* denotes optional argument):"{}});}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223         \textcolor{comment}{// find size to resize to}}
+\DoxyCodeLine{224         \textcolor{keywordtype}{size\_t} max\_name = 0, max\_desc = 0, max\_use = 0;}
+\DoxyCodeLine{225         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} kv : fx\_map)}
+\DoxyCodeLine{226         \{}
+\DoxyCodeLine{227             \textcolor{keywordtype}{size\_t} name\_len = kv.first.length();}
+\DoxyCodeLine{228             \textcolor{keywordtype}{size\_t} desc\_len = kv.second.description.length();}
+\DoxyCodeLine{229             \textcolor{keywordtype}{size\_t} use\_len = kv.second.usage.length();}
+\DoxyCodeLine{230             max\_name = name\_len > max\_name ? name\_len : max\_name;}
+\DoxyCodeLine{231             max\_desc = desc\_len > max\_name ? desc\_len : max\_desc;}
+\DoxyCodeLine{232             max\_use = use\_len > max\_use ? use\_len : max\_use;}
+\DoxyCodeLine{233         \}}
+\DoxyCodeLine{234         \textcolor{comment}{// format}}
+\DoxyCodeLine{235         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} kv : fx\_map)}
+\DoxyCodeLine{236         \{   }
+\DoxyCodeLine{237             std::string name = kv.first;}
+\DoxyCodeLine{238             std::string desc = kv.second.description;}
+\DoxyCodeLine{239             std::string use = kv.second.usage;}
+\DoxyCodeLine{240             name.resize(max\_name, \textcolor{charliteral}{' '});}
+\DoxyCodeLine{241             desc.resize(max\_desc, \textcolor{charliteral}{' '});}
+\DoxyCodeLine{242             use.resize(max\_use, \textcolor{charliteral}{' '});}
+\DoxyCodeLine{243             all\_fx.append(\textcolor{stringliteral}{"{}\(\backslash\)n  "{}} + name);}
+\DoxyCodeLine{244             all\_fx.append(\textcolor{stringliteral}{"{}    "{}} + desc);}
+\DoxyCodeLine{245             all\_fx.append(\textcolor{stringliteral}{"{}    args: "{}} + use);}
+\DoxyCodeLine{246         \}}
+\DoxyCodeLine{247         \textcolor{keywordflow}{return} all\_fx;}
+\DoxyCodeLine{248     \}}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250     \textcolor{comment}{// returns null if not found}}
+\DoxyCodeLine{251     std::vector<ImageShader*> get\_effects(std::string effect, \textcolor{keywordtype}{size\_t} passes, std::vector<std::string> args)}
+\DoxyCodeLine{252     \{}
+\DoxyCodeLine{253         \textcolor{keyword}{auto} iter = fx\_map.find(effect);}
+\DoxyCodeLine{254         \textcolor{keywordflow}{if} (iter != fx\_map.end()) \textcolor{keywordflow}{return} fx\_map[effect].function(passes, args);}
+\DoxyCodeLine{255         \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}unknown effect: "{}} + effect);}
+\DoxyCodeLine{256     \}}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259 \}}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LMTKIMAGE\_IMAGEFX\_H\_}}
+
+\end{DoxyCode}

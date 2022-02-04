@@ -1,0 +1,584 @@
+\hypertarget{classimage_1_1_image}{}\doxysubsection{image\+::Image Class Reference}
+\label{classimage_1_1_image}\index{image::Image@{image::Image}}
+
+
+Represents an rectangular, colored image.  
+
+
+
+
+{\ttfamily \#include $<$image.\+h$>$}
+
+Inheritance diagram for image\+::Image\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimage_1_1_image}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimage_1_1_image_ad8bc6254b9b0dfc8e2c9bae9f4651d1f}{Image}} ()
+\begin{DoxyCompactList}\small\item\em Creates an empty image of size 0 x 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_image_ad2ce5bdeba28b2f8002b770bc9897822}{Image}} (unsigned int w, unsigned int h)
+\begin{DoxyCompactList}\small\item\em Creates an image of size width $\ast$ height. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_image_a3ab77fdaa60ead9e8b2db332e225bab7}{Image}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&other)
+\begin{DoxyCompactList}\small\item\em Creates an image by copying another image\textquotesingle{}s data. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classimage_1_1_image_a61aca5aaba98e3b42abe2ce92955952c}{$\sim$\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Deallocates dynamic memory used by image. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classimage_1_1_image}{Image}} \mbox{\hyperlink{classimage_1_1_image_ac520e8d994249912131c1f7522200dce}{operator=}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator\+: sets this image to another image. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classimage_1_1_image_a05cd908e4efbe30647a0db0c6965974b}{operator==}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equality operator\+: checks if two images are equal. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classimage_1_1_image_a0590d52647d07f8b9a7869de1049fc1c}{operator!=}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&other) const
+\begin{DoxyCompactList}\small\item\em Inequality operator\+: checks if two images are NOT equal. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classimage_1_1_image_afb18cbc49ad092f0aba4341eff836e6d}{width}} () const
+\begin{DoxyCompactList}\small\item\em Get the width of the image in pixels. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classimage_1_1_image_a4515aa304957e9ea20bcac20aa0ce6c2}{height}} () const
+\begin{DoxyCompactList}\small\item\em Get the height of the image in pixels. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classimage_1_1_image_a7dc6eb579393ff0fb51c7b9b11f248af}{size}} () const
+\begin{DoxyCompactList}\small\item\em Get the total size of the image in pixels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_image_af881a3b095f08af9f15c40b114a0931d}{fill\+Solid\+Color}} (const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&color)
+\begin{DoxyCompactList}\small\item\em Fills the image with the given color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_image_aaf2fb742642bdbf84d70f63784c1d849}{fill\+Gradient}} (const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&color1, const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&color2)
+\begin{DoxyCompactList}\small\item\em Fills the a gradient from color1 to color2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_image_a6b9df95b75731206d2142c2bf85600eb}{blend\+Normal}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&other)
+\begin{DoxyCompactList}\small\item\em Blends the given image on top of this one, including alpha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_image_a41e27f3f489ce27fc149c7249864ef27}{resize}} (unsigned int w, unsigned int h)
+\begin{DoxyCompactList}\small\item\em Resizes the current image to specified width and height, in pixels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage_1_1_image_a0ba97aaad3adec1246cda88a8f408b89}\label{classimage_1_1_image_a0ba97aaad3adec1246cda88a8f408b89}} 
+void {\bfseries resize} (unsigned int w, unsigned int h, \mbox{\hyperlink{image_8h_ae7687b891f118032f511be3d46d1650b}{Resample\+Method}} method)
+\item 
+void \mbox{\hyperlink{classimage_1_1_image_a6b244f44029ee8a0a9f55daa478a9008}{scale}} (float scale\+\_\+x, float scale\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Scales the width and height of the image by a specified amount. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage_1_1_image_a834919778803dd4f02ab3bf3cdf6705e}\label{classimage_1_1_image_a834919778803dd4f02ab3bf3cdf6705e}} 
+void {\bfseries mirror} ()
+\begin{DoxyCompactList}\small\item\em Flips the image across an axis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} $\ast$ \mbox{\hyperlink{classimage_1_1_image_a1719a39332fc24952302fe674964c040}{get\+RGBAPixel}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the pixel at (x, y). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_image_a603e70ecdc54dc13352ac5082790ab24}{get\+RGBAPixel}} (int x, int y, Edge\+Handling\+Method edge\+\_\+method) const
+\begin{DoxyCompactList}\small\item\em Returns pixel at (x, y) if exists, else depends on edge handling. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_image_a105e25da71d46846b6e0226b20e1f527}{get\+RGBAPixel}} (float x, float y, \mbox{\hyperlink{image_8h_ae7687b891f118032f511be3d46d1650b}{Resample\+Method}} method) const
+\begin{DoxyCompactList}\small\item\em Returns pixel at resampled pixel at (x, y) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classimage_1_1_image_aee46dea122e486cfb270337458ba200f}{set\+RGBAPixel}} (const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&color, int x, int y)
+\begin{DoxyCompactList}\small\item\em Attempts to set the pixel at (x, y) to the given color. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classimage_1_1_image_a1ed941a0fff0a93234ece62a3d03f7cf}{set\+HSLAPixel}} (const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&color, int x, int y)
+\begin{DoxyCompactList}\small\item\em Attempts to set the pixel at (x, y) to the given color. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classimage_1_1_image_add1139f0807ae5c9fb0cc968b52929c7}{to\+\_\+string}} ()
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage_1_1_image_a49a11a37708eb0b4cb2f49e1818bc791}\label{classimage_1_1_image_a49a11a37708eb0b4cb2f49e1818bc791}} 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} $\ast$ {\bfseries get\+Row} (int row\+\_\+num) const
+\begin{DoxyCompactList}\small\item\em return pointer to start or row. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage_1_1_image_ad38fd056015d0196a40e62262db5ab7d}\label{classimage_1_1_image_ad38fd056015d0196a40e62262db5ab7d}} 
+bool {\bfseries set\+Row} (\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} row\+\_\+pixels\mbox{[}$\,$\mbox{]}, size\+\_\+t row\+\_\+width, int row\+\_\+num)
+\item 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} $\ast$ \mbox{\hyperlink{classimage_1_1_image_a39c58fad98f596c8ce4b61a9c03d771e}{pixel\+At}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the pixel at (x, y), if exists. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage_1_1_image_a66639b165e9a89453b07bd901f77b2d5}\label{classimage_1_1_image_a66639b165e9a89453b07bd901f77b2d5}} 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} {\bfseries bilinear\+Resample} (float x, float y) const
+\begin{DoxyCompactList}\small\item\em Helper for resampling of color at x, y using bilinear resample. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage_1_1_image_a2f7d9f100167cdd2343646aa22b76110}\label{classimage_1_1_image_a2f7d9f100167cdd2343646aa22b76110}} 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} {\bfseries bicubic\+Resample} (float x, float y) const
+\item 
+void \mbox{\hyperlink{classimage_1_1_image_ac2784b207072a309a6d38a7fd0958305}{set\+Initial\+Size}} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Attempts to set the size of the image and allocates memory for pixel data. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classimage_1_1_image_a4f602cf472123dad88b7cae4f74c5f73}{copy}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&)
+\begin{DoxyCompactList}\small\item\em Copies the current image to match the given image. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classimage_1_1_image_ac4486fda76bb19b5d48797ac7007c893}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Frees the pixel data, if it is not NULL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage_1_1_image_ae6b478e83b54ea5f8cdecf2a8dbaeab4}\label{classimage_1_1_image_ae6b478e83b54ea5f8cdecf2a8dbaeab4}} 
+pixel\+\_\+array\+\_\+struct {\bfseries pixel\+\_\+data}
+\begin{DoxyCompactList}\small\item\em The image pixel data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Represents an rectangular, colored image. 
+
+\mbox{\hyperlink{classimage_1_1_image}{Image}} is of size width $\ast$ height (OR x $\ast$ y OR \#columns $\ast$ \#rows). Stores color/ pixel data in RGBA format and provides basic image creation and modification functions.
+
+\begin{DoxyNote}{Note}
+The image class does not provide I/O (read/write) functions as it is just a respresentation in memory. For such, use a class for a well defined image file format. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_image_ad8bc6254b9b0dfc8e2c9bae9f4651d1f}\label{classimage_1_1_image_ad8bc6254b9b0dfc8e2c9bae9f4651d1f}} 
+\index{image::Image@{image::Image}!Image@{Image}}
+\index{Image@{Image}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily image\+::\+Image\+::\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates an empty image of size 0 x 0. 
+
+\begin{DoxyNote}{Note}
+The pixel array is not initialized in this case. Must use \mbox{\hyperlink{classimage_1_1_image_ac2784b207072a309a6d38a7fd0958305}{set\+Initial\+Size()}} to use image 
+\end{DoxyNote}
+\mbox{\Hypertarget{classimage_1_1_image_ad2ce5bdeba28b2f8002b770bc9897822}\label{classimage_1_1_image_ad2ce5bdeba28b2f8002b770bc9897822}} 
+\index{image::Image@{image::Image}!Image@{Image}}
+\index{Image@{Image}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily image\+::\+Image\+::\+Image (\begin{DoxyParamCaption}\item[{unsigned int}]{w,  }\item[{unsigned int}]{h }\end{DoxyParamCaption})}
+
+
+
+Creates an image of size width $\ast$ height. 
+
+Each pixel is initialized to the default color with \mbox{\hyperlink{classimage_1_1_image_af881a3b095f08af9f15c40b114a0931d}{fill\+Solid\+Color()}} The default is transparent. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_af881a3b095f08af9f15c40b114a0931d}{fill\+Solid\+Color()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Width \\
+\hline
+{\em h} & Height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_a3ab77fdaa60ead9e8b2db332e225bab7}\label{classimage_1_1_image_a3ab77fdaa60ead9e8b2db332e225bab7}} 
+\index{image::Image@{image::Image}!Image@{Image}}
+\index{Image@{Image}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily image\+::\+Image\+::\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Creates an image by copying another image\textquotesingle{}s data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_a61aca5aaba98e3b42abe2ce92955952c}\label{classimage_1_1_image_a61aca5aaba98e3b42abe2ce92955952c}} 
+\index{image::Image@{image::Image}!````~Image@{$\sim$Image}}
+\index{````~Image@{$\sim$Image}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{$\sim$Image()}{~Image()}}
+{\footnotesize\ttfamily image\+::\+Image\+::$\sim$\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deallocates dynamic memory used by image. 
+
+Frees pixel data, calls \mbox{\hyperlink{classimage_1_1_image_ac4486fda76bb19b5d48797ac7007c893}{clear()}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_ac4486fda76bb19b5d48797ac7007c893}{clear()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_image_a6b9df95b75731206d2142c2bf85600eb}\label{classimage_1_1_image_a6b9df95b75731206d2142c2bf85600eb}} 
+\index{image::Image@{image::Image}!blendNormal@{blendNormal}}
+\index{blendNormal@{blendNormal}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{blendNormal()}{blendNormal()}}
+{\footnotesize\ttfamily void image\+::\+Image\+::blend\+Normal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Blends the given image on top of this one, including alpha. 
+
+The current (this) image is modified by blending every pixel with the corresponding color in the other image, proportional to the alpha of each. This is done until the other image has no remaining pixels. If the other image is larger, any remnant pixels are ignored. \begin{DoxyNote}{Note}
+If the blending pixel\textquotesingle{}s alpha is 1.\+0, the current will be replaced 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em color1} & The starting color \\
+\hline
+{\em color2} & The end color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_ac4486fda76bb19b5d48797ac7007c893}\label{classimage_1_1_image_ac4486fda76bb19b5d48797ac7007c893}} 
+\index{image::Image@{image::Image}!clear@{clear}}
+\index{clear@{clear}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void image\+::\+Image\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Frees the pixel data, if it is not NULL. 
+
+Sets the pixel data pointer to NULL after completion. \mbox{\Hypertarget{classimage_1_1_image_a4f602cf472123dad88b7cae4f74c5f73}\label{classimage_1_1_image_a4f602cf472123dad88b7cae4f74c5f73}} 
+\index{image::Image@{image::Image}!copy@{copy}}
+\index{copy@{copy}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily void image\+::\+Image\+::copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Copies the current image to match the given image. 
+
+Old image data is freed with \mbox{\hyperlink{classimage_1_1_image_ac4486fda76bb19b5d48797ac7007c893}{clear()}} before allocating space for the size of the image to copy, Then calls \mbox{\hyperlink{classimage_1_1_image_ac2784b207072a309a6d38a7fd0958305}{set\+Initial\+Size()}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_ac4486fda76bb19b5d48797ac7007c893}{clear()}} 
+
+\mbox{\hyperlink{classimage_1_1_image_ac2784b207072a309a6d38a7fd0958305}{set\+Initial\+Size()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classimage_1_1_image_aaf2fb742642bdbf84d70f63784c1d849}\label{classimage_1_1_image_aaf2fb742642bdbf84d70f63784c1d849}} 
+\index{image::Image@{image::Image}!fillGradient@{fillGradient}}
+\index{fillGradient@{fillGradient}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{fillGradient()}{fillGradient()}}
+{\footnotesize\ttfamily void image\+::\+Image\+::fill\+Gradient (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&}]{color1,  }\item[{const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&}]{color2 }\end{DoxyParamCaption})}
+
+
+
+Fills the a gradient from color1 to color2. 
+
+Uses a linear gradient for each channel indepently with the difference color2 -\/ color1 in each channel R, G, B, A. The channel values may either increase or decrease from color1, depending on if color2\textquotesingle{}s value is larger or smaller. 
+\begin{DoxyParams}{Parameters}
+{\em color1} & The starting color \\
+\hline
+{\em color2} & The end color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_af881a3b095f08af9f15c40b114a0931d}\label{classimage_1_1_image_af881a3b095f08af9f15c40b114a0931d}} 
+\index{image::Image@{image::Image}!fillSolidColor@{fillSolidColor}}
+\index{fillSolidColor@{fillSolidColor}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{fillSolidColor()}{fillSolidColor()}}
+{\footnotesize\ttfamily void image\+::\+Image\+::fill\+Solid\+Color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Fills the image with the given color. 
+
+Every pixel in the image is set to the given pixel, in RGBA 
+\begin{DoxyParams}{Parameters}
+{\em color} & The new color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_a105e25da71d46846b6e0226b20e1f527}\label{classimage_1_1_image_a105e25da71d46846b6e0226b20e1f527}} 
+\index{image::Image@{image::Image}!getRGBAPixel@{getRGBAPixel}}
+\index{getRGBAPixel@{getRGBAPixel}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{getRGBAPixel()}{getRGBAPixel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} image\+::\+Image\+::get\+RGBAPixel (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{\mbox{\hyperlink{image_8h_ae7687b891f118032f511be3d46d1650b}{Resample\+Method}}}]{method }\end{DoxyParamCaption}) const}
+
+
+
+Returns pixel at resampled pixel at (x, y) 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_a1719a39332fc24952302fe674964c040}{get\+RGBAPixel()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of pixel \\
+\hline
+{\em y} & Y position of pixel \\
+\hline
+{\em method} & The resampling method \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Resample\+Method 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The sampled pixel at (x, y) using a resample method 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_image_a1719a39332fc24952302fe674964c040}\label{classimage_1_1_image_a1719a39332fc24952302fe674964c040}} 
+\index{image::Image@{image::Image}!getRGBAPixel@{getRGBAPixel}}
+\index{getRGBAPixel@{getRGBAPixel}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{getRGBAPixel()}{getRGBAPixel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} $\ast$ image\+::\+Image\+::get\+RGBAPixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const}
+
+
+
+Returns a pointer to the pixel at (x, y). 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_a39c58fad98f596c8ce4b61a9c03d771e}{pixel\+At()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of pixel \\
+\hline
+{\em y} & Y position of pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the pixel at (x, y) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em an} & exception if the pixel does not exist \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classimage_1_1_image_a603e70ecdc54dc13352ac5082790ab24}\label{classimage_1_1_image_a603e70ecdc54dc13352ac5082790ab24}} 
+\index{image::Image@{image::Image}!getRGBAPixel@{getRGBAPixel}}
+\index{getRGBAPixel@{getRGBAPixel}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{getRGBAPixel()}{getRGBAPixel()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} image\+::\+Image\+::get\+RGBAPixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{Edge\+Handling\+Method}]{edge\+\_\+method }\end{DoxyParamCaption}) const}
+
+
+
+Returns pixel at (x, y) if exists, else depends on edge handling. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_a1719a39332fc24952302fe674964c040}{get\+RGBAPixel()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of pixel \\
+\hline
+{\em y} & Y position of pixel \\
+\hline
+{\em edge\+\_\+method} & The edge handling method \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Edge\+Handling\+Method 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The pixel at (x, y) if exists, else use edge handling method 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_image_a4515aa304957e9ea20bcac20aa0ce6c2}\label{classimage_1_1_image_a4515aa304957e9ea20bcac20aa0ce6c2}} 
+\index{image::Image@{image::Image}!height@{height}}
+\index{height@{height}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily unsigned int image\+::\+Image\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the height of the image in pixels. 
+
+\begin{DoxyReturn}{Returns}
+Height of the image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_image_a0590d52647d07f8b9a7869de1049fc1c}\label{classimage_1_1_image_a0590d52647d07f8b9a7869de1049fc1c}} 
+\index{image::Image@{image::Image}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool image\+::\+Image\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Inequality operator\+: checks if two images are NOT equal. 
+
+\begin{DoxySeeAlso}{See also}
+operator== 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to be checked \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_ac520e8d994249912131c1f7522200dce}\label{classimage_1_1_image_ac520e8d994249912131c1f7522200dce}} 
+\index{image::Image@{image::Image}!operator=@{operator=}}
+\index{operator=@{operator=}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_image}{Image}} image\+::\+Image\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Assignment operator\+: sets this image to another image. 
+
+If the two images are not the same already, calls \mbox{\hyperlink{classimage_1_1_image_a4f602cf472123dad88b7cae4f74c5f73}{copy()}} \begin{DoxyNote}{Note}
+can be overriden to check additional parameters 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_a4f602cf472123dad88b7cae4f74c5f73}{copy()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classimage_1_1_image_a05cd908e4efbe30647a0db0c6965974b}\label{classimage_1_1_image_a05cd908e4efbe30647a0db0c6965974b}} 
+\index{image::Image@{image::Image}!operator==@{operator==}}
+\index{operator==@{operator==}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool image\+::\+Image\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Equality operator\+: checks if two images are equal. 
+
+Two images are equal if they are the same width and height, and if every single pixel is equal. \begin{DoxyNote}{Note}
+can be overriden to check additional parameters 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to be checked \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_a39c58fad98f596c8ce4b61a9c03d771e}\label{classimage_1_1_image_a39c58fad98f596c8ce4b61a9c03d771e}} 
+\index{image::Image@{image::Image}!pixelAt@{pixelAt}}
+\index{pixelAt@{pixelAt}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{pixelAt()}{pixelAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} $\ast$ image\+::\+Image\+::pixel\+At (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Returns a pointer to the pixel at (x, y), if exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position \\
+\hline
+{\em y} & Y position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to pixel at (x, y) or nullptr if out of bounds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_image_a41e27f3f489ce27fc149c7249864ef27}\label{classimage_1_1_image_a41e27f3f489ce27fc149c7249864ef27}} 
+\index{image::Image@{image::Image}!resize@{resize}}
+\index{resize@{resize}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void image\+::\+Image\+::resize (\begin{DoxyParamCaption}\item[{unsigned int}]{w,  }\item[{unsigned int}]{h }\end{DoxyParamCaption})}
+
+
+
+Resizes the current image to specified width and height, in pixels. 
+
+Resizing is done using nearest neighbor resampling \begin{DoxyNote}{Note}
+Should not be resized to 0 $\ast$ 0 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em w} & New width \\
+\hline
+{\em h} & New height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_a6b244f44029ee8a0a9f55daa478a9008}\label{classimage_1_1_image_a6b244f44029ee8a0a9f55daa478a9008}} 
+\index{image::Image@{image::Image}!scale@{scale}}
+\index{scale@{scale}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void image\+::\+Image\+::scale (\begin{DoxyParamCaption}\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Scales the width and height of the image by a specified amount. 
+
+Calculates the new width and height and calls \mbox{\hyperlink{classimage_1_1_image_a41e27f3f489ce27fc149c7249864ef27}{resize()}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_a41e27f3f489ce27fc149c7249864ef27}{resize()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Should not scale by 0 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em scale\+\_\+x} & Width scale \\
+\hline
+{\em scale\+\_\+y} & Height scale \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_a1ed941a0fff0a93234ece62a3d03f7cf}\label{classimage_1_1_image_a1ed941a0fff0a93234ece62a3d03f7cf}} 
+\index{image::Image@{image::Image}!setHSLAPixel@{setHSLAPixel}}
+\index{setHSLAPixel@{setHSLAPixel}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{setHSLAPixel()}{setHSLAPixel()}}
+{\footnotesize\ttfamily bool image\+::\+Image\+::set\+HSLAPixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&}]{color,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Attempts to set the pixel at (x, y) to the given color. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_a39c58fad98f596c8ce4b61a9c03d771e}{pixel\+At()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em color} & HSLA Color to set the pixel to \\
+\hline
+{\em x} & X position of pixel \\
+\hline
+{\em y} & Y position of pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the color of the pixel was changed, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_image_ac2784b207072a309a6d38a7fd0958305}\label{classimage_1_1_image_ac2784b207072a309a6d38a7fd0958305}} 
+\index{image::Image@{image::Image}!setInitialSize@{setInitialSize}}
+\index{setInitialSize@{setInitialSize}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{setInitialSize()}{setInitialSize()}}
+{\footnotesize\ttfamily void image\+::\+Image\+::set\+Initial\+Size (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Attempts to set the size of the image and allocates memory for pixel data. 
+
+\begin{DoxyWarning}{Warning}
+Should only be used if necessary, and call \mbox{\hyperlink{classimage_1_1_image_ac4486fda76bb19b5d48797ac7007c893}{clear()}} before using or else will memory leak. 
+\end{DoxyWarning}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em an} & exception!!! if the width or height given is 0 \\
+\hline
+{\em an} & exception!!! if malloc returns NULL \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classimage_1_1_image_aee46dea122e486cfb270337458ba200f}\label{classimage_1_1_image_aee46dea122e486cfb270337458ba200f}} 
+\index{image::Image@{image::Image}!setRGBAPixel@{setRGBAPixel}}
+\index{setRGBAPixel@{setRGBAPixel}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{setRGBAPixel()}{setRGBAPixel()}}
+{\footnotesize\ttfamily bool image\+::\+Image\+::set\+RGBAPixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&}]{color,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Attempts to set the pixel at (x, y) to the given color. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_a39c58fad98f596c8ce4b61a9c03d771e}{pixel\+At()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em color} & RGBA Color to set the pixel to \\
+\hline
+{\em x} & X position of pixel \\
+\hline
+{\em y} & Y position of pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the color of the pixel was changed, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_image_a7dc6eb579393ff0fb51c7b9b11f248af}\label{classimage_1_1_image_a7dc6eb579393ff0fb51c7b9b11f248af}} 
+\index{image::Image@{image::Image}!size@{size}}
+\index{size@{size}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily unsigned int image\+::\+Image\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the total size of the image in pixels. 
+
+The size of the image is width $\ast$ height \begin{DoxyReturn}{Returns}
+Size of the image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_image_add1139f0807ae5c9fb0cc968b52929c7}\label{classimage_1_1_image_add1139f0807ae5c9fb0cc968b52929c7}} 
+\index{image::Image@{image::Image}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string image\+::\+Image\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a string representation of the image. 
+
+\begin{DoxyNote}{Note}
+This function is subject to change. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The string representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_image_afb18cbc49ad092f0aba4341eff836e6d}\label{classimage_1_1_image_afb18cbc49ad092f0aba4341eff836e6d}} 
+\index{image::Image@{image::Image}!width@{width}}
+\index{width@{width}!image::Image@{image::Image}}
+\doxyparagraph{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily unsigned int image\+::\+Image\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the width of the image in pixels. 
+
+\begin{DoxyReturn}{Returns}
+Width of the image 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{image_8h}{image.\+h}}\item 
+src/lib\+LMTKimage/image.\+cpp\end{DoxyCompactItemize}

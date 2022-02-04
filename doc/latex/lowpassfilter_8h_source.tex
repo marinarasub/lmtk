@@ -1,0 +1,33 @@
+\hypertarget{lowpassfilter_8h_source}{}\doxysubsection{lowpassfilter.\+h}
+\label{lowpassfilter_8h_source}\index{src/libLMTKaudio/lowpassfilter.h@{src/libLMTKaudio/lowpassfilter.h}}
+\mbox{\hyperlink{lowpassfilter_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{19 \textcolor{comment}{// !!! NOT YET IMPLEMENTED !!! //}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef \_AUDIO\_LOWPASSFILTER\_H\_}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define \_AUDIO\_LOWPASSFILTER\_H\_}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{audiofilter_8h}{audiofilter.h}}"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <Eigen/Dense>}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{namespace }audio \{}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keyword}{class }\mbox{\hyperlink{classaudio_1_1_low_pass_filter}{LowPassFilter}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaudio_1_1_audio_filter}{AudioFilter}}}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32     \textcolor{keyword}{public}:}
+\DoxyCodeLine{33         \mbox{\hyperlink{classaudio_1_1_low_pass_filter}{LowPassFilter}}(\textcolor{keywordtype}{float} cutoff) : cutoff\_freq(cutoff) \{\};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_low_pass_filter_a8f6793e877ebc9dc80b58f8a56d62482}{operator()}}(\mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}\& track);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{private}:}
+\DoxyCodeLine{38         \textcolor{keywordtype}{float} cutoff\_freq;}
+\DoxyCodeLine{39     \};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_AUDIO\_LOWPASSFILTER\_H\_}}
+\DoxyCodeLine{44 }
+
+\end{DoxyCode}

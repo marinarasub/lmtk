@@ -1,0 +1,38 @@
+\hypertarget{bokehblur_8h_source}{}\doxysubsection{bokehblur.\+h}
+\label{bokehblur_8h_source}\index{src/libLMTKimage/bokehblur.h@{src/libLMTKimage/bokehblur.h}}
+\mbox{\hyperlink{bokehblur_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef \_LIBLMTKIMAGE\_BOKEHBLUR\_H\_}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define \_LIBLMTKIMAGE\_BOKEHBLUR\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{convolution_8h}{convolution.h}}"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}../utils/utilsmath.h"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }image \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{34     \textcolor{keyword}{class }\mbox{\hyperlink{classimage_1_1_bokeh_blur}{BokehBlur}} : \textcolor{keyword}{public} \mbox{\hyperlink{classimage_1_1_image_convolution}{ImageConvolution}}}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36     \textcolor{keyword}{public}:}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{comment}{// Note: may want to correct lighting / highlights for artistic effect}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{45         \mbox{\hyperlink{classimage_1_1_bokeh_blur_ad5cdebcefc3d85462f0c49b54a1aa131}{BokehBlur}}(\textcolor{keywordtype}{float} radius);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{53         \mbox{\hyperlink{classimage_1_1_bokeh_blur_ad5cdebcefc3d85462f0c49b54a1aa131}{BokehBlur}}(\textcolor{keywordtype}{float} radiusX, \textcolor{keywordtype}{float} radiusY);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{keyword}{private}:}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{63         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_bokeh_blur_a884f23558c46a253fae65a9a06928219}{computeKernel}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65         \textcolor{keywordtype}{float} radiusX; }
+\DoxyCodeLine{66         \textcolor{keywordtype}{float} radiusY; }
+\DoxyCodeLine{67     \};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKIMAGE\_BOKEHBLUR\_H\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,125 @@
+\hypertarget{classimage_1_1_gaussian_blur}{}\doxysubsection{image\+::Gaussian\+Blur Class Reference}
+\label{classimage_1_1_gaussian_blur}\index{image::GaussianBlur@{image::GaussianBlur}}
+
+
+Class for gaussian blur kernel filtering of an image.  
+
+
+
+
+{\ttfamily \#include \char`\"{}gaussianblur.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Gaussian\+Blur\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimage_1_1_gaussian_blur}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimage_1_1_gaussian_blur_a14789ef2d98c7a82cc5df2d654edc8f5}{Gaussian\+Blur}} (float stdev)
+\begin{DoxyCompactList}\small\item\em Creates a gaussian blur with a given standard deviation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_gaussian_blur_a7cf0a4920e50379dd4bec4aa80721a68}{Gaussian\+Blur}} (float stdevX, float stdevY)
+\begin{DoxyCompactList}\small\item\em Creates gaussian blur with horizontal and vertical standard deviation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_gaussian_blur_ac486c073a3ae7f262ea40df670761519}{Gaussian\+Blur}} (float stdevX, float stdevY, float toleranceX, float toleranceY)
+\begin{DoxyCompactList}\small\item\em Creates gaussian blur with standard deviations and tolerances. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classimage_1_1_gaussian_blur_afb51712b40a570f26014ae502d590cde}{compute\+Kernel}} () override
+\begin{DoxyCompactList}\small\item\em Computes the kernel according to the gaussian function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Class for gaussian blur kernel filtering of an image. 
+
+Blurs the image, taking neigboring pixel weighted according to the gaussian/normal distribution function. The result is a smooth, but rather boring looking blur. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespaceutils_1_1math_a03b322be2f55f7ac30e08b4125fb47bb}{utils\+::math\+::gaussian()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_gaussian_blur_a14789ef2d98c7a82cc5df2d654edc8f5}\label{classimage_1_1_gaussian_blur_a14789ef2d98c7a82cc5df2d654edc8f5}} 
+\index{image::GaussianBlur@{image::GaussianBlur}!GaussianBlur@{GaussianBlur}}
+\index{GaussianBlur@{GaussianBlur}!image::GaussianBlur@{image::GaussianBlur}}
+\doxyparagraph{\texorpdfstring{GaussianBlur()}{GaussianBlur()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily image\+::\+Gaussian\+Blur\+::\+Gaussian\+Blur (\begin{DoxyParamCaption}\item[{float}]{stdev }\end{DoxyParamCaption})}
+
+
+
+Creates a gaussian blur with a given standard deviation. 
+
+Standard deviation is in pixels. May be fractional. 
+\begin{DoxyParams}{Parameters}
+{\em stdev} & Standard deviation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_gaussian_blur_a7cf0a4920e50379dd4bec4aa80721a68}\label{classimage_1_1_gaussian_blur_a7cf0a4920e50379dd4bec4aa80721a68}} 
+\index{image::GaussianBlur@{image::GaussianBlur}!GaussianBlur@{GaussianBlur}}
+\index{GaussianBlur@{GaussianBlur}!image::GaussianBlur@{image::GaussianBlur}}
+\doxyparagraph{\texorpdfstring{GaussianBlur()}{GaussianBlur()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily image\+::\+Gaussian\+Blur\+::\+Gaussian\+Blur (\begin{DoxyParamCaption}\item[{float}]{stdevX,  }\item[{float}]{stdevY }\end{DoxyParamCaption})}
+
+
+
+Creates gaussian blur with horizontal and vertical standard deviation. 
+
+Standard deviation is in pixels. May be fractional. 
+\begin{DoxyParams}{Parameters}
+{\em stdevX} & Horizontal standard deviation \\
+\hline
+{\em stdevY} & Vertial standard deviation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_gaussian_blur_ac486c073a3ae7f262ea40df670761519}\label{classimage_1_1_gaussian_blur_ac486c073a3ae7f262ea40df670761519}} 
+\index{image::GaussianBlur@{image::GaussianBlur}!GaussianBlur@{GaussianBlur}}
+\index{GaussianBlur@{GaussianBlur}!image::GaussianBlur@{image::GaussianBlur}}
+\doxyparagraph{\texorpdfstring{GaussianBlur()}{GaussianBlur()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily image\+::\+Gaussian\+Blur\+::\+Gaussian\+Blur (\begin{DoxyParamCaption}\item[{float}]{stdevX,  }\item[{float}]{stdevY,  }\item[{float}]{toleranceX,  }\item[{float}]{toleranceY }\end{DoxyParamCaption})}
+
+
+
+Creates gaussian blur with standard deviations and tolerances. 
+
+Standard deviation is in pixels. May be fractional. Tolerance refers to the value for which any weights smaller than it will not be included in the kernel. A low tolerance will be more accurate, but a cost of a larger kernel (with diminishing return) \begin{DoxyNote}{Note}
+Default tolerance is 3 standard deviations ($\sim$99.7\%) 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em stdevX} & Horizontal standard deviation \\
+\hline
+{\em stdevY} & Vertial standard deviation \\
+\hline
+{\em toleranceX} & Tolerance for kernel columns \\
+\hline
+{\em toleranceY} & Tolerance for kernel rows \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_gaussian_blur_afb51712b40a570f26014ae502d590cde}\label{classimage_1_1_gaussian_blur_afb51712b40a570f26014ae502d590cde}} 
+\index{image::GaussianBlur@{image::GaussianBlur}!computeKernel@{computeKernel}}
+\index{computeKernel@{computeKernel}!image::GaussianBlur@{image::GaussianBlur}}
+\doxyparagraph{\texorpdfstring{computeKernel()}{computeKernel()}}
+{\footnotesize\ttfamily void image\+::\+Gaussian\+Blur\+::compute\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Computes the kernel according to the gaussian function. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespaceutils_1_1math_a310081c5feda57130aed9cd0ea627c65}{utils\+::math\+::gaussian2d()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}{image\+::\+Image\+Convolution}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{gaussianblur_8h}{gaussianblur.\+h}}\item 
+src/lib\+LMTKimage/gaussianblur.\+cpp\end{DoxyCompactItemize}

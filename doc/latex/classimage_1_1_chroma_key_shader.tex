@@ -1,0 +1,131 @@
+\hypertarget{classimage_1_1_chroma_key_shader}{}\doxysubsection{image\+::Chroma\+Key\+Shader Class Reference}
+\label{classimage_1_1_chroma_key_shader}\index{image::ChromaKeyShader@{image::ChromaKeyShader}}
+
+
+Class for a simple chroma keyer (aka green screen).  
+
+
+
+
+{\ttfamily \#include \char`\"{}chromakeyer.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Chroma\+Key\+Shader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classimage_1_1_chroma_key_shader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimage_1_1_chroma_key_shader_a783495b165e7620f1b6bf13c177986eb}{Chroma\+Key\+Shader}} (\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} target)
+\begin{DoxyCompactList}\small\item\em Creates a chroma keyer functor with default tolerance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_chroma_key_shader_ae046960fdfacff48de1d47082de40fcb}{Chroma\+Key\+Shader}} (\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} target, float tol)
+\begin{DoxyCompactList}\small\item\em Creates a chroma keyer functor with tolerance. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classimage_1_1_chroma_key_shader_a9d0be2c377dcdf09c7b40ff61b3ab749}{operator()}} (\mbox{\hyperlink{classimage_1_1_image}{Image}} \&img) override
+\begin{DoxyCompactList}\small\item\em Removes the target color from the image. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_chroma_key_shader_af5d8a52f4c02f6f613cfa3c9bca4c25d}{operator()}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&img, size\+\_\+t x, size\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Returns a transparent pixel if the original pixel is within tolerance of target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage_1_1_chroma_key_shader_a7046ec6f4db0bf4370f51442e4edd136}\label{classimage_1_1_chroma_key_shader_a7046ec6f4db0bf4370f51442e4edd136}} 
+static constexpr float {\bfseries DEFAULT\+\_\+\+TOLERANCE} = 0.\+1
+\begin{DoxyCompactList}\small\item\em The default color distance threshold. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Class for a simple chroma keyer (aka green screen). 
+
+For every pixel in a given image, the operator sets the alpha to 0 if the color distance is within a defined threshold of the target color (default 0, which means the colors must be equal) 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_chroma_key_shader_a783495b165e7620f1b6bf13c177986eb}\label{classimage_1_1_chroma_key_shader_a783495b165e7620f1b6bf13c177986eb}} 
+\index{image::ChromaKeyShader@{image::ChromaKeyShader}!ChromaKeyShader@{ChromaKeyShader}}
+\index{ChromaKeyShader@{ChromaKeyShader}!image::ChromaKeyShader@{image::ChromaKeyShader}}
+\doxyparagraph{\texorpdfstring{ChromaKeyShader()}{ChromaKeyShader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily image\+::\+Chroma\+Key\+Shader\+::\+Chroma\+Key\+Shader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}}]{target }\end{DoxyParamCaption})}
+
+
+
+Creates a chroma keyer functor with default tolerance. 
+
+Sets the color threshold to default 
+\begin{DoxyParams}{Parameters}
+{\em target} & Target color to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_chroma_key_shader_ae046960fdfacff48de1d47082de40fcb}\label{classimage_1_1_chroma_key_shader_ae046960fdfacff48de1d47082de40fcb}} 
+\index{image::ChromaKeyShader@{image::ChromaKeyShader}!ChromaKeyShader@{ChromaKeyShader}}
+\index{ChromaKeyShader@{ChromaKeyShader}!image::ChromaKeyShader@{image::ChromaKeyShader}}
+\doxyparagraph{\texorpdfstring{ChromaKeyShader()}{ChromaKeyShader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily image\+::\+Chroma\+Key\+Shader\+::\+Chroma\+Key\+Shader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}}]{target,  }\item[{float}]{tol }\end{DoxyParamCaption})}
+
+
+
+Creates a chroma keyer functor with tolerance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target color to be removed. \\
+\hline
+{\em tol} & Minimum threshold distance from the target color to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_chroma_key_shader_af5d8a52f4c02f6f613cfa3c9bca4c25d}\label{classimage_1_1_chroma_key_shader_af5d8a52f4c02f6f613cfa3c9bca4c25d}} 
+\index{image::ChromaKeyShader@{image::ChromaKeyShader}!operator()@{operator()}}
+\index{operator()@{operator()}!image::ChromaKeyShader@{image::ChromaKeyShader}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} image\+::\+Chroma\+Key\+Shader\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{img,  }\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a transparent pixel if the original pixel is within tolerance of target. 
+
+Does not change the R, G, B channels in case alpha channel is ignored 
+\begin{DoxyParams}{Parameters}
+{\em img} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to operate chroma keyer on \\
+\hline
+{\em x} & X location of target pixel \\
+\hline
+{\em y} & Y location of target pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Transparent if within threshold, else the original pixel 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_shader_aba9ce88c5538453871d7a60a7cd0957d}{image\+::\+Image\+Shader}}.
+
+\mbox{\Hypertarget{classimage_1_1_chroma_key_shader_a9d0be2c377dcdf09c7b40ff61b3ab749}\label{classimage_1_1_chroma_key_shader_a9d0be2c377dcdf09c7b40ff61b3ab749}} 
+\index{image::ChromaKeyShader@{image::ChromaKeyShader}!operator()@{operator()}}
+\index{operator()@{operator()}!image::ChromaKeyShader@{image::ChromaKeyShader}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void image\+::\+Chroma\+Key\+Shader\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{img }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes the target color from the image. 
+
+For each pixel in the image, removes the pixel if it is within threshold of the target color. It removes a color by setting its alpha value to 0. Otherwise, the pixel is left alone.
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to operate chroma keyer on \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classimage_1_1_image_shader_a2451e1c8c54e928393f46bdeb494d533}{image\+::\+Image\+Shader}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{chromakeyer_8h}{chromakeyer.\+h}}\item 
+src/lib\+LMTKimage/chromakeyer.\+cpp\end{DoxyCompactItemize}

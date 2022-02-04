@@ -1,0 +1,91 @@
+\hypertarget{classthreadpool_1_1_task_queue}{}\doxysubsection{threadpool\+::Task\+Queue Class Reference}
+\label{classthreadpool_1_1_task_queue}\index{threadpool::TaskQueue@{threadpool::TaskQueue}}
+
+
+A FIFO queue of callback tasks that is thread-\/safe.  
+
+
+
+
+{\ttfamily \#include \char`\"{}threadpool.\+h\char`\"{}}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classthreadpool_1_1_task_queue_adbf4951e0eb193268c98595521e3f2bc}\label{classthreadpool_1_1_task_queue_adbf4951e0eb193268c98595521e3f2bc}} 
+{\bfseries Task\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Creates an empty task queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classthreadpool_1_1_task_queue_a38698d2b73965088fdf25e54ad5ca843}{enqueue}} (const \mbox{\hyperlink{structthreadpool_1_1task}{task}} \&t)
+\begin{DoxyCompactList}\small\item\em Pushes a task onto the task queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structthreadpool_1_1task}{task}} \mbox{\hyperlink{classthreadpool_1_1_task_queue_a2364e32d3af5475ccdce1b4eebfcce75}{dequeue}} ()
+\begin{DoxyCompactList}\small\item\em Pop the oldest task on the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classthreadpool_1_1_task_queue_a34dcbf3e81d780c4466e3d0cfef9ef5b}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the task queue is empty. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classthreadpool_1_1_task_queue_a8c9befa8d87ee34618746dd8149c634c}{size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size of the task queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+A FIFO queue of callback tasks that is thread-\/safe. 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classthreadpool_1_1_task_queue_a2364e32d3af5475ccdce1b4eebfcce75}\label{classthreadpool_1_1_task_queue_a2364e32d3af5475ccdce1b4eebfcce75}} 
+\index{threadpool::TaskQueue@{threadpool::TaskQueue}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!threadpool::TaskQueue@{threadpool::TaskQueue}}
+\doxyparagraph{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structthreadpool_1_1task}{task}} threadpool\+::\+Task\+Queue\+::dequeue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pop the oldest task on the queue. 
+
+Removes the task from the queue \begin{DoxyReturn}{Returns}
+Oldest task on the queue. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classthreadpool_1_1_task_queue_a34dcbf3e81d780c4466e3d0cfef9ef5b}\label{classthreadpool_1_1_task_queue_a34dcbf3e81d780c4466e3d0cfef9ef5b}} 
+\index{threadpool::TaskQueue@{threadpool::TaskQueue}!empty@{empty}}
+\index{empty@{empty}!threadpool::TaskQueue@{threadpool::TaskQueue}}
+\doxyparagraph{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool threadpool\+::\+Task\+Queue\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the task queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if empty, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classthreadpool_1_1_task_queue_a38698d2b73965088fdf25e54ad5ca843}\label{classthreadpool_1_1_task_queue_a38698d2b73965088fdf25e54ad5ca843}} 
+\index{threadpool::TaskQueue@{threadpool::TaskQueue}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!threadpool::TaskQueue@{threadpool::TaskQueue}}
+\doxyparagraph{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily void threadpool\+::\+Task\+Queue\+::enqueue (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structthreadpool_1_1task}{task}} \&}]{t }\end{DoxyParamCaption})}
+
+
+
+Pushes a task onto the task queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Task to push onto queue \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classthreadpool_1_1_task_queue_a8c9befa8d87ee34618746dd8149c634c}\label{classthreadpool_1_1_task_queue_a8c9befa8d87ee34618746dd8149c634c}} 
+\index{threadpool::TaskQueue@{threadpool::TaskQueue}!size@{size}}
+\index{size@{size}!threadpool::TaskQueue@{threadpool::TaskQueue}}
+\doxyparagraph{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t threadpool\+::\+Task\+Queue\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the size of the task queue. 
+
+\begin{DoxyReturn}{Returns}
+Size of the task queue 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/\mbox{\hyperlink{threadpool_8h}{threadpool.\+h}}\item 
+src/utils/threadpool.\+cpp\end{DoxyCompactItemize}

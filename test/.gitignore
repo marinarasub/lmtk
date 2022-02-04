@@ -1,0 +1,12 @@
+# test logs and data
+
+[Ll]og/
+[Ll]ogs/
+[Tt]est[Ll]og/
+[Tt]est[Ll]ogs/
+[Tt]est[Dd]ata/
+
+# other
+
+*.bak
+*.bkp

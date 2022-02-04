@@ -1,0 +1,66 @@
+\hypertarget{utilsmath_8h_source}{}\doxysubsection{utilsmath.\+h}
+\label{utilsmath_8h_source}\index{src/utils/utilsmath.h@{src/utils/utilsmath.h}}
+\mbox{\hyperlink{utilsmath_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef \_UTILS\_UTILSMATH\_H\_}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define \_UTILS\_UTILSMATH\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <complex>}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }utils \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{36     \textcolor{keyword}{namespace }math \{}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{41         \textcolor{keyword}{typedef} std::complex<double> \mbox{\hyperlink{namespaceutils_1_1math_aa5d09d8a1bc7fd362022c783b9e853e4}{complex}};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{46         \textcolor{keyword}{typedef} std::complex<float> \mbox{\hyperlink{namespaceutils_1_1math_a40cb93b3eeb1619a5a81fda1950c7058}{complexf}};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{51         \textcolor{keyword}{constexpr} \mbox{\hyperlink{namespaceutils_1_1math_aa5d09d8a1bc7fd362022c783b9e853e4}{complex}} \mbox{\hyperlink{namespaceutils_1_1math_a91e374c7f2cd871abf64527572ab42b4}{IMAGINARY\_UNIT}} = \mbox{\hyperlink{namespaceutils_1_1math_aa5d09d8a1bc7fd362022c783b9e853e4}{complex}}(0, 1);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{56         \textcolor{keyword}{constexpr} \mbox{\hyperlink{namespaceutils_1_1math_a40cb93b3eeb1619a5a81fda1950c7058}{complexf}} \mbox{\hyperlink{namespaceutils_1_1math_a3e6b63e393d27380d0223bb0249fbe9d}{IMAGINARY\_UNIT\_F}} = \mbox{\hyperlink{namespaceutils_1_1math_a40cb93b3eeb1619a5a81fda1950c7058}{complexf}}(0, 1);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{61         \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{namespaceutils_1_1math_ab5425e99a61a268cfc7f7c03cf5a3438}{EULER}} = std::exp(1);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} \mbox{\hyperlink{namespaceutils_1_1math_ada77ab1fedceacdd53b262b37483047b}{PI}} = 3.141592653589793238463;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{74         \mbox{\hyperlink{namespaceutils_1_1math_aa5d09d8a1bc7fd362022c783b9e853e4}{complex}} \mbox{\hyperlink{namespaceutils_1_1math_a67922657406251598499c10e0f2610c6}{real\_to\_complex}}(\textcolor{keywordtype}{double} val);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{82         \mbox{\hyperlink{namespaceutils_1_1math_a40cb93b3eeb1619a5a81fda1950c7058}{complexf}} \mbox{\hyperlink{namespaceutils_1_1math_a0cfaf3001d00d2c8f51e5adffea1dd8b}{real\_to\_complexf}}(\textcolor{keywordtype}{float} val);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{90         \textcolor{keywordtype}{double} \mbox{\hyperlink{namespaceutils_1_1math_a2838727f631f8557c4353341fbbf1325}{sqr}}(\textcolor{keywordtype}{double} val);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{98         \textcolor{keywordtype}{float} \mbox{\hyperlink{namespaceutils_1_1math_a153109c1f0d4e875762b75e400dd6c2a}{sqrf}}(\textcolor{keywordtype}{float} val);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{106         \mbox{\hyperlink{namespaceutils_1_1math_aa5d09d8a1bc7fd362022c783b9e853e4}{complex}} \mbox{\hyperlink{namespaceutils_1_1math_a2838727f631f8557c4353341fbbf1325}{sqr}}(\mbox{\hyperlink{namespaceutils_1_1math_aa5d09d8a1bc7fd362022c783b9e853e4}{complex}} val);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{114         \mbox{\hyperlink{namespaceutils_1_1math_a40cb93b3eeb1619a5a81fda1950c7058}{complexf}} \mbox{\hyperlink{namespaceutils_1_1math_a153109c1f0d4e875762b75e400dd6c2a}{sqrf}}(\mbox{\hyperlink{namespaceutils_1_1math_a40cb93b3eeb1619a5a81fda1950c7058}{complexf}} val);}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{123         \textcolor{keywordtype}{double} \mbox{\hyperlink{namespaceutils_1_1math_aae4083bcdd50e65696d84f896e0b8abc}{nsum}}(\textcolor{keywordtype}{double} arr[], \textcolor{keywordtype}{size\_t} n);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{132         \textcolor{keywordtype}{float} \mbox{\hyperlink{namespaceutils_1_1math_a3945008a6ee848fc04b851b8fe84a8a5}{nsumf}}(\textcolor{keywordtype}{float} arr[], \textcolor{keywordtype}{size\_t} n);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134         \textcolor{comment}{//double stdev();}}
+\DoxyCodeLine{135         \textcolor{comment}{//double mean();}}
+\DoxyCodeLine{136         \textcolor{comment}{//double median();}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{148         \textcolor{keywordtype}{double} \mbox{\hyperlink{namespaceutils_1_1math_ac30e8ee3b281e99c92b9c76ce9ff388e}{dist}}(\textcolor{keywordtype}{double} x1, \textcolor{keywordtype}{double} y1, \textcolor{keywordtype}{double} x2, \textcolor{keywordtype}{double} y2);}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{160         \textcolor{keywordtype}{double} \mbox{\hyperlink{namespaceutils_1_1math_a03b322be2f55f7ac30e08b4125fb47bb}{gaussian}}(\textcolor{keywordtype}{double} mean, \textcolor{keywordtype}{double} sigma, \textcolor{keywordtype}{double} x);}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{175         \textcolor{keywordtype}{double} \mbox{\hyperlink{namespaceutils_1_1math_a310081c5feda57130aed9cd0ea627c65}{gaussian2d}}(}
+\DoxyCodeLine{176             \textcolor{keywordtype}{double} mean\_x,}
+\DoxyCodeLine{177             \textcolor{keywordtype}{double} mean\_y,}
+\DoxyCodeLine{178             \textcolor{keywordtype}{double} sigma\_x,}
+\DoxyCodeLine{179             \textcolor{keywordtype}{double} sigma\_y,}
+\DoxyCodeLine{180             \textcolor{keywordtype}{double} x,}
+\DoxyCodeLine{181             \textcolor{keywordtype}{double} y);}
+\DoxyCodeLine{182     \}}
+\DoxyCodeLine{183 \}}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_UTILS\_UTILSMATH\_H\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,84 @@
+\hypertarget{namespaceutils}{}\doxysection{utils Namespace Reference}
+\label{namespaceutils}\index{utils@{utils}}
+
+
+namespace for discrete fourier transform/series and other related functions  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceutils_1_1math}{math}}
+\begin{DoxyCompactList}\small\item\em contains math utility functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classutils_1_1_timer}{Timer}}
+\begin{DoxyCompactList}\small\item\em Represents a timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceutils_a2e1def02aff2cd1c16f54ae17b218ea8}\label{namespaceutils_a2e1def02aff2cd1c16f54ae17b218ea8}} 
+using {\bfseries hrc} = high\+\_\+resolution\+\_\+clock
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceutils_a0d640adef33bc119806951170512c243}\label{namespaceutils_a0d640adef33bc119806951170512c243}} 
+std\+::string {\bfseries file\+\_\+extension} (std\+::string path)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespaceutils_a2d70b5e2b332670da0ee84f8667e5341}{uint\+\_\+max\+\_\+val}} (uint8\+\_\+t bit\+\_\+depth)
+\begin{DoxyCompactList}\small\item\em Returns the maximum value for an unsigned int of a given bit depth. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceutils_a3e557e2e0cce1696d35ac3303ba75039}{uint64\+\_\+next\+\_\+pwr2}} (uint64\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Determines the tightest power of 2 that is equal or greater than a number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceutils_a2771f700f348106a5b99587a185ae37b}\label{namespaceutils_a2771f700f348106a5b99587a185ae37b}} 
+std\+::string {\bfseries get\+\_\+size\+\_\+string} (size\+\_\+t byte\+\_\+size)
+\item 
+\mbox{\Hypertarget{namespaceutils_a9ce9fed8e457a8941ce9cea675a2036c}\label{namespaceutils_a9ce9fed8e457a8941ce9cea675a2036c}} 
+std\+::string {\bfseries remove\+\_\+spaces} (std\+::string in)
+\item 
+\mbox{\Hypertarget{namespaceutils_a1f8062e53422c312455a25d667856e65}\label{namespaceutils_a1f8062e53422c312455a25d667856e65}} 
+size\+\_\+t {\bfseries count\+\_\+char} (std\+::string in, char c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+namespace for discrete fourier transform/series and other related functions 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceutils_a3e557e2e0cce1696d35ac3303ba75039}\label{namespaceutils_a3e557e2e0cce1696d35ac3303ba75039}} 
+\index{utils@{utils}!uint64\_next\_pwr2@{uint64\_next\_pwr2}}
+\index{uint64\_next\_pwr2@{uint64\_next\_pwr2}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{uint64\_next\_pwr2()}{uint64\_next\_pwr2()}}
+{\footnotesize\ttfamily uint64\+\_\+t utils\+::uint64\+\_\+next\+\_\+pwr2 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Determines the tightest power of 2 that is equal or greater than a number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Number to check \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceutils_a2d70b5e2b332670da0ee84f8667e5341}\label{namespaceutils_a2d70b5e2b332670da0ee84f8667e5341}} 
+\index{utils@{utils}!uint\_max\_val@{uint\_max\_val}}
+\index{uint\_max\_val@{uint\_max\_val}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{uint\_max\_val()}{uint\_max\_val()}}
+{\footnotesize\ttfamily uint32\+\_\+t utils\+::uint\+\_\+max\+\_\+val (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bit\+\_\+depth }\end{DoxyParamCaption})}
+
+
+
+Returns the maximum value for an unsigned int of a given bit depth. 
+
+The maximum value is where \$bit\+\_\+depth\$ number of bits are set. 
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+depth} & The bit depth, in bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum unsigned integer value of a bit depth 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+is the bit\+\_\+depth given is \texorpdfstring{$>$}{>} 32, use UINT32\+\_\+\+MAX 
+\end{DoxyNote}

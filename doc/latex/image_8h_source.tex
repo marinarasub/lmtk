@@ -1,0 +1,153 @@
+\hypertarget{image_8h_source}{}\doxysubsection{image.\+h}
+\label{image_8h_source}\index{src/libLMTKimage/image.h@{src/libLMTKimage/image.h}}
+\mbox{\hyperlink{image_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifndef \_LIBLMTKIMAGE\_IMAGE\_H\_}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define \_LIBLMTKIMAGE\_IMAGE\_H\_}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rgbcolor_8h}{rgbcolor.h}}"{}}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{hslcolor_8h}{hslcolor.h}}"{}}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{namespace }image \{}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{comment}{//\#define SUCCESS 0}}
+\DoxyCodeLine{35 \textcolor{comment}{//\#define ERROR -\/1 // TODO don't use macros, use exceptions instead}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} byte;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{comment}{/*}}
+\DoxyCodeLine{40 \textcolor{comment}{    * Enum for picking pixels outside of image dimensions}}
+\DoxyCodeLine{41 \textcolor{comment}{    *}}
+\DoxyCodeLine{42 \textcolor{comment}{    * DEFAULT is throw exception}}
+\DoxyCodeLine{43 \textcolor{comment}{    */}}
+\DoxyCodeLine{44     \textcolor{keyword}{enum class} EdgeHandlingMethod }
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         NO\_HANDLE,}
+\DoxyCodeLine{47         EXTEND,}
+\DoxyCodeLine{48         WRAP,}
+\DoxyCodeLine{49         TILE = WRAP,}
+\DoxyCodeLine{50         MIRROR,}
+\DoxyCodeLine{51         DEFAULT = NO\_HANDLE}
+\DoxyCodeLine{52     \};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58     \textcolor{keyword}{enum class} \mbox{\hyperlink{image_8h_ae7687b891f118032f511be3d46d1650b}{ResampleMethod}} \{}
+\DoxyCodeLine{59         NEIGHBOR,}
+\DoxyCodeLine{60         BILINEAR,}
+\DoxyCodeLine{61         BICUBIC,}
+\DoxyCodeLine{62         DEFAULT = BILINEAR}
+\DoxyCodeLine{63     \};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \textcolor{comment}{// TODO image transformations}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{80     \textcolor{keyword}{class }\mbox{\hyperlink{classimage_1_1_image}{Image}}}
+\DoxyCodeLine{81     \{}
+\DoxyCodeLine{88         \textcolor{keyword}{struct }pixel\_array\_struct}
+\DoxyCodeLine{89         \{}
+\DoxyCodeLine{90             \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}* pixels;}
+\DoxyCodeLine{91             \textcolor{keywordtype}{int} \mbox{\hyperlink{classimage_1_1_image_afb18cbc49ad092f0aba4341eff836e6d}{width}};}
+\DoxyCodeLine{92             \textcolor{keywordtype}{int} \mbox{\hyperlink{classimage_1_1_image_a4515aa304957e9ea20bcac20aa0ce6c2}{height}};}
+\DoxyCodeLine{93         \};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96     \textcolor{keyword}{public}:}
+\DoxyCodeLine{103         \mbox{\hyperlink{classimage_1_1_image_ad8bc6254b9b0dfc8e2c9bae9f4651d1f}{Image}}();}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{114         \mbox{\hyperlink{classimage_1_1_image_ad8bc6254b9b0dfc8e2c9bae9f4651d1f}{Image}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} w, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} h);}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{121         \mbox{\hyperlink{classimage_1_1_image_ad8bc6254b9b0dfc8e2c9bae9f4651d1f}{Image}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_image}{Image}}\& other);}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{129         \textcolor{keyword}{virtual} \mbox{\hyperlink{classimage_1_1_image_a61aca5aaba98e3b42abe2ce92955952c}{\string~Image}}();}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{138         \textcolor{keyword}{virtual} \mbox{\hyperlink{classimage_1_1_image}{Image}} \mbox{\hyperlink{classimage_1_1_image_ac520e8d994249912131c1f7522200dce}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_image}{Image}}\& other);}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{148         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classimage_1_1_image_a05cd908e4efbe30647a0db0c6965974b}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_image}{Image}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{156         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classimage_1_1_image_a0590d52647d07f8b9a7869de1049fc1c}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_image}{Image}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{163         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classimage_1_1_image_afb18cbc49ad092f0aba4341eff836e6d}{width}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{170         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classimage_1_1_image_a4515aa304957e9ea20bcac20aa0ce6c2}{height}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{178         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classimage_1_1_image_a7dc6eb579393ff0fb51c7b9b11f248af}{size}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{186         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_af881a3b095f08af9f15c40b114a0931d}{fillSolidColor}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}\& \mbox{\hyperlink{namespacecolor}{color}});}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188         \textcolor{comment}{// TODO add angles and raidal modes. Right now it is only vertical grad.}}
+\DoxyCodeLine{189         \textcolor{comment}{// TODO arbitrary number of "{}color points"{}, given location to start each.}}
+\DoxyCodeLine{200 \textcolor{comment}{}        \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_aaf2fb742642bdbf84d70f63784c1d849}{fillGradient}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}\& color1, \textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}\& color2);}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202         \textcolor{comment}{// TODO specify location to place}}
+\DoxyCodeLine{214 \textcolor{comment}{}        \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_a6b9df95b75731206d2142c2bf85600eb}{blendNormal}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_image}{Image}}\& other);}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216         \textcolor{comment}{// TODO bicubic, linear resample}}
+\DoxyCodeLine{225 \textcolor{comment}{}        \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_a41e27f3f489ce27fc149c7249864ef27}{resize}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} w, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} h); \textcolor{comment}{// calls default}}
+\DoxyCodeLine{226         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_a41e27f3f489ce27fc149c7249864ef27}{resize}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} w, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} h, \mbox{\hyperlink{image_8h_ae7687b891f118032f511be3d46d1650b}{ResampleMethod}} method); \textcolor{comment}{// will call scale resize}}
+\DoxyCodeLine{227         \textcolor{comment}{// calls getPixel with a interp. method (accepts floats)}}
+\DoxyCodeLine{228         \textcolor{comment}{// TODO downsampling}}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{239         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_a6b244f44029ee8a0a9f55daa478a9008}{scale}}(\textcolor{keywordtype}{float} scale\_x, \textcolor{keywordtype}{float} scale\_y);}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241         \textcolor{comment}{// TODO crop and size}}
+\DoxyCodeLine{242         \textcolor{comment}{// void crop(); upper left and lower right}}
+\DoxyCodeLine{243         \textcolor{comment}{//}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245         \textcolor{comment}{// TODO flip horizontal}}
+\DoxyCodeLine{249 \textcolor{comment}{}        \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_a834919778803dd4f02ab3bf3cdf6705e}{mirror}}(); \textcolor{comment}{// flip across one axis}}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251         \textcolor{comment}{// TODO rotate (more complicated, need matrix math and resampling)}}
+\DoxyCodeLine{252         \textcolor{comment}{//}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254         \textcolor{comment}{// TODO may return color instead of ptr in future}}
+\DoxyCodeLine{264 \textcolor{comment}{}        \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}* \mbox{\hyperlink{classimage_1_1_image_a1719a39332fc24952302fe674964c040}{getRGBAPixel}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y) \textcolor{keyword}{const};}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{276         \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_image_a1719a39332fc24952302fe674964c040}{getRGBAPixel}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, EdgeHandlingMethod edge\_method) \textcolor{keyword}{const};}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{288         \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_image_a1719a39332fc24952302fe674964c040}{getRGBAPixel}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y, \mbox{\hyperlink{image_8h_ae7687b891f118032f511be3d46d1650b}{ResampleMethod}} method) \textcolor{keyword}{const};}
+\DoxyCodeLine{289         }
+\DoxyCodeLine{290         \textcolor{comment}{// TODO get HSLA?}}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{301         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classimage_1_1_image_aee46dea122e486cfb270337458ba200f}{setRGBAPixel}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}\& \mbox{\hyperlink{namespacecolor}{color}}, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{312         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classimage_1_1_image_a1ed941a0fff0a93234ece62a3d03f7cf}{setHSLAPixel}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}}\& \mbox{\hyperlink{namespacecolor}{color}}, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{313 }
+\DoxyCodeLine{320         std::string \mbox{\hyperlink{classimage_1_1_image_add1139f0807ae5c9fb0cc968b52929c7}{to\_string}}();}
+\DoxyCodeLine{321 }
+\DoxyCodeLine{322 }
+\DoxyCodeLine{323     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{324 }
+\DoxyCodeLine{325         \textcolor{comment}{// lower level functions for read/write}}
+\DoxyCodeLine{329 \textcolor{comment}{}        \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}* \mbox{\hyperlink{classimage_1_1_image_a49a11a37708eb0b4cb2f49e1818bc791}{getRow}}(\textcolor{keywordtype}{int} row\_num) \textcolor{keyword}{const};}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{331         \textcolor{comment}{// caller's responsibility to make sure row\_width is correct}}
+\DoxyCodeLine{332         \textcolor{comment}{// if row\_wdith > width(), ignore. < then stop at row\_width}}
+\DoxyCodeLine{333         \textcolor{keywordtype}{bool} setRow(\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} row\_pixels[], \textcolor{keywordtype}{size\_t} row\_width, \textcolor{keywordtype}{int} row\_num);}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{342         \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}* \mbox{\hyperlink{classimage_1_1_image_a39c58fad98f596c8ce4b61a9c03d771e}{pixelAt}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y) \textcolor{keyword}{const};}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{347         \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_image_a66639b165e9a89453b07bd901f77b2d5}{bilinearResample}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y) \textcolor{keyword}{const};}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{349         \textcolor{comment}{// TODO}}
+\DoxyCodeLine{350         \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} bicubicResample(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y) \textcolor{keyword}{const};}
+\DoxyCodeLine{351         }
+\DoxyCodeLine{352         \textcolor{comment}{// TODO mipmap, box (downsampling)}}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{362         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_ac2784b207072a309a6d38a7fd0958305}{setInitialSize}}(\textcolor{keywordtype}{int} w, \textcolor{keywordtype}{int} h);}
+\DoxyCodeLine{363 }
+\DoxyCodeLine{372         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_a4f602cf472123dad88b7cae4f74c5f73}{copy}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_image}{Image}}\&);}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{379         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_ac4486fda76bb19b5d48797ac7007c893}{clear}}();}
+\DoxyCodeLine{380 }
+\DoxyCodeLine{381         pixel\_array\_struct \mbox{\hyperlink{classimage_1_1_image_ae6b478e83b54ea5f8cdecf2a8dbaeab4}{pixel\_data}}; }
+\DoxyCodeLine{382     \};}
+\DoxyCodeLine{383 }
+\DoxyCodeLine{384 \}}
+\DoxyCodeLine{385 }
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKIMAGE\_IMAGE\_H\_}}
+
+\end{DoxyCode}

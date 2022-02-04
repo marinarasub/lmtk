@@ -1,0 +1,43 @@
+\hypertarget{imagefile_8h_source}{}\doxysubsection{imagefile.\+h}
+\label{imagefile_8h_source}\index{src/libLMTKimage/imagefile.h@{src/libLMTKimage/imagefile.h}}
+\mbox{\hyperlink{imagefile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*/***************************************************************************/}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef \_LIBLMTKIMAGE\_IMAGEFILE\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define \_LIBLMTKIMAGE\_IMAGEFILE\_H\_}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{image_8h}{image.h}}"{}}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{namespace }image \{}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{35     \textcolor{keyword}{class }\mbox{\hyperlink{classimage_1_1_image_file}{ImageFile}} : \textcolor{keyword}{public} \mbox{\hyperlink{classimage_1_1_image}{Image}}}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keyword}{public}:}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{43         \textcolor{keyword}{virtual} \mbox{\hyperlink{classimage_1_1_image_file_aaaa9a01157c4248fdf58670eb1a4ac40}{\string~ImageFile}}() \{\}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{50         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_file_afc3f2e52dd400b6db9b532ca7ceb4afc}{readFile}}(std::string path) = 0;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{57         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_file_a5c881a826d05f3539adc7ca9ddf8022c}{writeFile}}(std::string path) = 0;}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{67         \mbox{\hyperlink{classimage_1_1_image_file_ae1ea4eb746e75a0b047c586fb50bbc54}{ImageFile}}() : \mbox{\hyperlink{classimage_1_1_image}{Image}}() \{\}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{77         \mbox{\hyperlink{classimage_1_1_image_file_a71deb0830810a27c24d2fa812670e7f2}{ImageFile}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} w, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} h) : \mbox{\hyperlink{classimage_1_1_image}{Image}}(w, h) \{\}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{84         \mbox{\hyperlink{classimage_1_1_image_file_a971fc870c8284c8901a8fddac0727437}{ImageFile}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_image}{Image}}\& other) : \mbox{\hyperlink{classimage_1_1_image}{Image}}(other) \{\}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86         \textcolor{comment}{//ImageFile(const ImageFile \&other) : Image(other) \{\}}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKIMAGE\_IMAGEFILE\_H\_}}
+
+\end{DoxyCode}

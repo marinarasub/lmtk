@@ -1,0 +1,61 @@
+\hypertarget{image_8h}{}\doxysubsection{src/lib\+LMTKimage/image.h File Reference}
+\label{image_8h}\index{src/libLMTKimage/image.h@{src/libLMTKimage/image.h}}
+
+
+Copyright (c) 2022 marinarasub.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include \char`\"{}rgbcolor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hslcolor.\+h\char`\"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classimage_1_1_image}{image\+::\+Image}}
+\begin{DoxyCompactList}\small\item\em Represents an rectangular, colored image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{image_8h_ac5329785f1031f6f2a54b8c3e7efa6a6}\label{image_8h_ac5329785f1031f6f2a54b8c3e7efa6a6}} 
+typedef unsigned char {\bfseries image\+::byte}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{image_8h_ab034c127dc59460ff1daad24af9e9785}\label{image_8h_ab034c127dc59460ff1daad24af9e9785}} 
+enum class {\bfseries Edge\+Handling\+Method} \{ \newline
+{\bfseries NO\+\_\+\+HANDLE}
+, {\bfseries EXTEND}
+, {\bfseries WRAP}
+, {\bfseries TILE} = WRAP
+, \newline
+{\bfseries MIRROR}
+, {\bfseries DEFAULT} = NO\+\_\+\+HANDLE
+ \}
+\item 
+\mbox{\Hypertarget{image_8h_ae7687b891f118032f511be3d46d1650b}\label{image_8h_ae7687b891f118032f511be3d46d1650b}} 
+enum class \mbox{\hyperlink{image_8h_ae7687b891f118032f511be3d46d1650b}{image\+::\+Resample\+Method}} \{ {\bfseries NEIGHBOR}
+, {\bfseries BILINEAR}
+, {\bfseries BICUBIC}
+, {\bfseries DEFAULT} = BILINEAR
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for resizing methods\+: nearest neighbor, linear, bicubic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Copyright (c) 2022 marinarasub. 
+
+LMTK / Light Multimedia Tool\+Kit
+
+This file is included in lib\+LMTKimage, the image library for LMTK LMTK and its subprojects are available under the MIT license.
+
+\begin{DoxyAuthor}{Author}
+marinarasub 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 2021
+\end{DoxyDate}
+Class for representing an colored image in memory
+
+The image class represents a 2D canvas with color, and provides basic image creation and modification. 

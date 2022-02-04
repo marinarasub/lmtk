@@ -1,0 +1,82 @@
+\hypertarget{classimage_1_1_box_blur_horizontal}{}\doxysubsection{image\+::Box\+Blur\+Horizontal Class Reference}
+\label{classimage_1_1_box_blur_horizontal}\index{image::BoxBlurHorizontal@{image::BoxBlurHorizontal}}
+
+
+Class for box blur\textquotesingle{}s seperable horizontal component.  
+
+
+
+
+{\ttfamily \#include \char`\"{}boxblur.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Box\+Blur\+Horizontal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimage_1_1_box_blur_horizontal}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage_1_1_box_blur_horizontal_a1d675a1af65826986387a71a4205110b}\label{classimage_1_1_box_blur_horizontal_a1d675a1af65826986387a71a4205110b}} 
+{\bfseries Box\+Blur\+Horizontal} ()
+\begin{DoxyCompactList}\small\item\em Creates a box blur with default 3x1 convolution. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_box_blur_horizontal_a6af26edde9ed9151b39c3c95b67be69c}{Box\+Blur\+Horizontal}} (size\+\_\+t radius)
+\begin{DoxyCompactList}\small\item\em Creates a box blur with a mx1 convolution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classimage_1_1_box_blur_horizontal_ad621e7fe69dc84884964959aae2fe9fc}{compute\+Kernel}} () override
+\begin{DoxyCompactList}\small\item\em Sets the kernel to all 1, normalized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Class for box blur\textquotesingle{}s seperable horizontal component. 
+
+The horizontal convolution of box blur, which is a seperable kernel and may be done with a horizontal pass followed by a vertical pass (or vice versa), reducing time complexity from O(n $\ast$ m) to O(n + m) \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_box_blur}{Box\+Blur}} 
+
+\mbox{\hyperlink{classimage_1_1_box_blur_vertical}{Box\+Blur\+Vertical}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_box_blur_horizontal_a6af26edde9ed9151b39c3c95b67be69c}\label{classimage_1_1_box_blur_horizontal_a6af26edde9ed9151b39c3c95b67be69c}} 
+\index{image::BoxBlurHorizontal@{image::BoxBlurHorizontal}!BoxBlurHorizontal@{BoxBlurHorizontal}}
+\index{BoxBlurHorizontal@{BoxBlurHorizontal}!image::BoxBlurHorizontal@{image::BoxBlurHorizontal}}
+\doxyparagraph{\texorpdfstring{BoxBlurHorizontal()}{BoxBlurHorizontal()}}
+{\footnotesize\ttfamily image\+::\+Box\+Blur\+Horizontal\+::\+Box\+Blur\+Horizontal (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{radius }\end{DoxyParamCaption})}
+
+
+
+Creates a box blur with a mx1 convolution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & Horizontal radius \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_box_blur_horizontal_ad621e7fe69dc84884964959aae2fe9fc}\label{classimage_1_1_box_blur_horizontal_ad621e7fe69dc84884964959aae2fe9fc}} 
+\index{image::BoxBlurHorizontal@{image::BoxBlurHorizontal}!computeKernel@{computeKernel}}
+\index{computeKernel@{computeKernel}!image::BoxBlurHorizontal@{image::BoxBlurHorizontal}}
+\doxyparagraph{\texorpdfstring{computeKernel()}{computeKernel()}}
+{\footnotesize\ttfamily void image\+::\+Box\+Blur\+Horizontal\+::compute\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Sets the kernel to all 1, normalized. 
+
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}{image\+::\+Image\+Convolution}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{boxblur_8h}{boxblur.\+h}}\item 
+src/lib\+LMTKimage/boxblur.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+# CMake
+
+config.h
+
+# Other
+
+[Ii]gnore/
+*.bak
+*.bkp

@@ -1,0 +1,252 @@
+\hypertarget{classimage_1_1_image_convolution}{}\doxysubsection{image\+::Image\+Convolution Class Reference}
+\label{classimage_1_1_image_convolution}\index{image::ImageConvolution@{image::ImageConvolution}}
+
+
+Base class for all image filters using convolution/kernel filtering.  
+
+
+
+
+{\ttfamily \#include \char`\"{}convolution.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Image\+Convolution\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{classimage_1_1_image_convolution}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimage_1_1_image_convolution_ac7175ed1a4ec89740dfb66cab9fcb168}{Image\+Convolution}} ()
+\begin{DoxyCompactList}\small\item\em Creates the default image convolution. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_image_convolution_ab5eb9813bb3114f2fe8ceb0104208a8a}{Image\+Convolution}} (size\+\_\+t center)
+\begin{DoxyCompactList}\small\item\em Creates a image convolution with kernel center at (center, center). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_image_convolution_ae6d16521569ad5c1c57fc1c254b8aa0c}{Image\+Convolution}} (size\+\_\+t centerX, size\+\_\+t centerY)
+\begin{DoxyCompactList}\small\item\em Creates an image convolution with kernel center at (centerX, centerY). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_image_convolution_a7c9d1df60db161f7db8c50c1fc8a75eb}{Image\+Convolution}} (size\+\_\+t centerX, size\+\_\+t centerY, Edge\+Handling\+Method \mbox{\hyperlink{classimage_1_1_image_shader_aae5281c90bbf2cf215d4b8b5704f048a}{edge\+\_\+method}})
+\begin{DoxyCompactList}\small\item\em Creates an image convolution with kernel center and edge handling method for boundary pixels convolving outside the image. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classimage_1_1_image_convolution_a5a948e4a3b82da338b8cbbffc3ec1d52}{operator()}} (\mbox{\hyperlink{classimage_1_1_image}{Image}} \&img) override
+\begin{DoxyCompactList}\small\item\em Convolves the entire image. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_image_convolution_a287b264eb9320860c7cfa4dec30587e1}{operator()}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&img, size\+\_\+t x, size\+\_\+t y) override
+\begin{DoxyCompactList}\small\item\em Virtual convolution operator returns the result pixel at x, y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classimage_1_1_image_convolution_a694a7ddcfefe12d1ff647fb6c1276afd}{set\+Kernel\+Size}} (size\+\_\+t centerX, size\+\_\+t centerY)
+\begin{DoxyCompactList}\small\item\em Sets the kernel size using a given integral center row and column. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}{compute\+Kernel}} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract function for computing the kernel for derived classes to use. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_image_convolution_afe68794c87f0a8dd2320247db36d92d1}{convolution}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&img, unsigned int x, unsigned int y)
+\begin{DoxyCompactList}\small\item\em Performs convoution multiplication of the kernel and masked pixel matrix around x, y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_image_convolution_ac84c5c9437229b694276f58fb22ee51b}{normalize}} ()
+\begin{DoxyCompactList}\small\item\em Normalized the sum of all weights to 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage_1_1_image_convolution_aa47757b4e87aa52897e40dc5dc022a8f}\label{classimage_1_1_image_convolution_aa47757b4e87aa52897e40dc5dc022a8f}} 
+Eigen\+::\+Matrix\+Xf {\bfseries kernel}
+\begin{DoxyCompactList}\small\item\em The kernel matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Base class for all image filters using convolution/kernel filtering. 
+
+\mbox{\hyperlink{classimage_1_1_image}{Image}} convolution uses a kernel, which is a m $\ast$ n matrix of weights. For each pixel in a image, a new pixel is calculated using weights at the corresponding (row, col) in the kernel, where the original pixel is the center.
+
+This implementation guarentees an odd n and m for a well defined center. \begin{DoxyNote}{Note}
+Time complexity of one pixel is O(n $\ast$ m) 
+\end{DoxyNote}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_image_convolution_ac7175ed1a4ec89740dfb66cab9fcb168}\label{classimage_1_1_image_convolution_ac7175ed1a4ec89740dfb66cab9fcb168}} 
+\index{image::ImageConvolution@{image::ImageConvolution}!ImageConvolution@{ImageConvolution}}
+\index{ImageConvolution@{ImageConvolution}!image::ImageConvolution@{image::ImageConvolution}}
+\doxyparagraph{\texorpdfstring{ImageConvolution()}{ImageConvolution()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily image\+::\+Image\+Convolution\+::\+Image\+Convolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates the default image convolution. 
+
+A 1 $\ast$ 1 matrix \mbox{\Hypertarget{classimage_1_1_image_convolution_ab5eb9813bb3114f2fe8ceb0104208a8a}\label{classimage_1_1_image_convolution_ab5eb9813bb3114f2fe8ceb0104208a8a}} 
+\index{image::ImageConvolution@{image::ImageConvolution}!ImageConvolution@{ImageConvolution}}
+\index{ImageConvolution@{ImageConvolution}!image::ImageConvolution@{image::ImageConvolution}}
+\doxyparagraph{\texorpdfstring{ImageConvolution()}{ImageConvolution()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily image\+::\+Image\+Convolution\+::\+Image\+Convolution (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{center }\end{DoxyParamCaption})}
+
+
+
+Creates a image convolution with kernel center at (center, center). 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_convolution_a694a7ddcfefe12d1ff647fb6c1276afd}{set\+Kernel\+Size()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em center} & The center row and column \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_convolution_ae6d16521569ad5c1c57fc1c254b8aa0c}\label{classimage_1_1_image_convolution_ae6d16521569ad5c1c57fc1c254b8aa0c}} 
+\index{image::ImageConvolution@{image::ImageConvolution}!ImageConvolution@{ImageConvolution}}
+\index{ImageConvolution@{ImageConvolution}!image::ImageConvolution@{image::ImageConvolution}}
+\doxyparagraph{\texorpdfstring{ImageConvolution()}{ImageConvolution()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily image\+::\+Image\+Convolution\+::\+Image\+Convolution (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{centerX,  }\item[{size\+\_\+t}]{centerY }\end{DoxyParamCaption})}
+
+
+
+Creates an image convolution with kernel center at (centerX, centerY). 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_convolution_a694a7ddcfefe12d1ff647fb6c1276afd}{set\+Kernel\+Size()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em centerX} & The center column \\
+\hline
+{\em centerY} & The center row \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_convolution_a7c9d1df60db161f7db8c50c1fc8a75eb}\label{classimage_1_1_image_convolution_a7c9d1df60db161f7db8c50c1fc8a75eb}} 
+\index{image::ImageConvolution@{image::ImageConvolution}!ImageConvolution@{ImageConvolution}}
+\index{ImageConvolution@{ImageConvolution}!image::ImageConvolution@{image::ImageConvolution}}
+\doxyparagraph{\texorpdfstring{ImageConvolution()}{ImageConvolution()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily image\+::\+Image\+Convolution\+::\+Image\+Convolution (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{centerX,  }\item[{size\+\_\+t}]{centerY,  }\item[{Edge\+Handling\+Method}]{edge\+\_\+method }\end{DoxyParamCaption})}
+
+
+
+Creates an image convolution with kernel center and edge handling method for boundary pixels convolving outside the image. 
+
+\begin{DoxySeeAlso}{See also}
+Edge\+Handling\+Method 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em centerX} & The center column \\
+\hline
+{\em centerY} & The center row \\
+\hline
+{\em edge\+\_\+method} & The edge handling method \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}\label{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}} 
+\index{image::ImageConvolution@{image::ImageConvolution}!computeKernel@{computeKernel}}
+\index{computeKernel@{computeKernel}!image::ImageConvolution@{image::ImageConvolution}}
+\doxyparagraph{\texorpdfstring{computeKernel()}{computeKernel()}}
+{\footnotesize\ttfamily void image\+::\+Image\+Convolution\+::compute\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Abstract function for computing the kernel for derived classes to use. 
+
+
+
+Implemented in \mbox{\hyperlink{classimage_1_1_bokeh_blur_a884f23558c46a253fae65a9a06928219}{image\+::\+Bokeh\+Blur}}, \mbox{\hyperlink{classimage_1_1_box_blur_a43cd0ca8b95d00d9e09981cb824fa2f6}{image\+::\+Box\+Blur}}, \mbox{\hyperlink{classimage_1_1_box_blur_horizontal_ad621e7fe69dc84884964959aae2fe9fc}{image\+::\+Box\+Blur\+Horizontal}}, \mbox{\hyperlink{classimage_1_1_box_blur_vertical_abd87b1629ff625a593ac07d7fbecf414}{image\+::\+Box\+Blur\+Vertical}}, \mbox{\hyperlink{classimage_1_1_gaussian_blur_afb51712b40a570f26014ae502d590cde}{image\+::\+Gaussian\+Blur}}, \mbox{\hyperlink{classimage_1_1_gaussian_blur_horizontal_ae68b365f541a0b4c7f829b6b8f37ee04}{image\+::\+Gaussian\+Blur\+Horizontal}}, \mbox{\hyperlink{classimage_1_1_gaussian_blur_vertical_ae000e3fd7a9ef25bc664d51318c25974}{image\+::\+Gaussian\+Blur\+Vertical}}, and \mbox{\hyperlink{classimage_1_1_image_sharpen_aca7238e8f84a48ceb0cf324ec0c35fca}{image\+::\+Image\+Sharpen}}.
+
+\mbox{\Hypertarget{classimage_1_1_image_convolution_afe68794c87f0a8dd2320247db36d92d1}\label{classimage_1_1_image_convolution_afe68794c87f0a8dd2320247db36d92d1}} 
+\index{image::ImageConvolution@{image::ImageConvolution}!convolution@{convolution}}
+\index{convolution@{convolution}!image::ImageConvolution@{image::ImageConvolution}}
+\doxyparagraph{\texorpdfstring{convolution()}{convolution()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} image\+::\+Image\+Convolution\+::convolution (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{img,  }\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Performs convoution multiplication of the kernel and masked pixel matrix around x, y. 
+
+Convolution is done by multiplying each kernel entry (row, col) with the corresponding image pixel at (row, col) formed at center (x, y) on the given image. This is done for each channel R, G, B, A
+
+\begin{DoxyNote}{Note}
+Out of bound pixels needed are handled with edge\+\_\+method 
+
+The resulting color may clip. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classimage_1_1_image_convolution_ac84c5c9437229b694276f58fb22ee51b}\label{classimage_1_1_image_convolution_ac84c5c9437229b694276f58fb22ee51b}} 
+\index{image::ImageConvolution@{image::ImageConvolution}!normalize@{normalize}}
+\index{normalize@{normalize}!image::ImageConvolution@{image::ImageConvolution}}
+\doxyparagraph{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily void image\+::\+Image\+Convolution\+::normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Normalized the sum of all weights to 1. 
+
+This guarentees no \char`\"{}loss\char`\"{} or \char`\"{}gain\char`\"{} of color. Optional to use. Some convolutions may not use a normalized kernel. \mbox{\Hypertarget{classimage_1_1_image_convolution_a287b264eb9320860c7cfa4dec30587e1}\label{classimage_1_1_image_convolution_a287b264eb9320860c7cfa4dec30587e1}} 
+\index{image::ImageConvolution@{image::ImageConvolution}!operator()@{operator()}}
+\index{operator()@{operator()}!image::ImageConvolution@{image::ImageConvolution}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} image\+::\+Image\+Convolution\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{img,  }\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual convolution operator returns the result pixel at x, y. 
+
+Performs convolution using the kernel at x, y on given image with surrounding pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_convolution_afe68794c87f0a8dd2320247db36d92d1}{convolution()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em img} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to operate over \\
+\hline
+{\em x} & X location of target pixel \\
+\hline
+{\em y} & Y location of target pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resulting convolved pixel 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_shader_aba9ce88c5538453871d7a60a7cd0957d}{image\+::\+Image\+Shader}}.
+
+\mbox{\Hypertarget{classimage_1_1_image_convolution_a5a948e4a3b82da338b8cbbffc3ec1d52}\label{classimage_1_1_image_convolution_a5a948e4a3b82da338b8cbbffc3ec1d52}} 
+\index{image::ImageConvolution@{image::ImageConvolution}!operator()@{operator()}}
+\index{operator()@{operator()}!image::ImageConvolution@{image::ImageConvolution}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void image\+::\+Image\+Convolution\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{img }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Convolves the entire image. 
+
+Uses the \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} operator() on each pixel in the given image. 
+\begin{DoxyParams}{Parameters}
+{\em img} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to operate on \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classimage_1_1_image_shader_a2451e1c8c54e928393f46bdeb494d533}{image\+::\+Image\+Shader}}.
+
+\mbox{\Hypertarget{classimage_1_1_image_convolution_a694a7ddcfefe12d1ff647fb6c1276afd}\label{classimage_1_1_image_convolution_a694a7ddcfefe12d1ff647fb6c1276afd}} 
+\index{image::ImageConvolution@{image::ImageConvolution}!setKernelSize@{setKernelSize}}
+\index{setKernelSize@{setKernelSize}!image::ImageConvolution@{image::ImageConvolution}}
+\doxyparagraph{\texorpdfstring{setKernelSize()}{setKernelSize()}}
+{\footnotesize\ttfamily void image\+::\+Image\+Convolution\+::set\+Kernel\+Size (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{centerX,  }\item[{size\+\_\+t}]{centerY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sets the kernel size using a given integral center row and column. 
+
+This guarentees and odd number of rows and columns
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerX} & The index of the central column \\
+\hline
+{\em centerY} & The index of the central row \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{convolution_8h}{convolution.\+h}}\item 
+src/lib\+LMTKimage/convolution.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\hypertarget{classimage_1_1_color_invert_shader}{}\doxysubsection{image\+::Color\+Invert\+Shader Class Reference}
+\label{classimage_1_1_color_invert_shader}\index{image::ColorInvertShader@{image::ColorInvertShader}}
+
+
+Class for a color inversion.  
+
+
+
+
+{\ttfamily \#include \char`\"{}colorinvert.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Color\+Invert\+Shader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classimage_1_1_color_invert_shader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classimage_1_1_color_invert_shader_a3e3e955741a9a3bbdf9245fef136258f}{operator()}} (\mbox{\hyperlink{classimage_1_1_image}{Image}} \&img) override
+\begin{DoxyCompactList}\small\item\em Creates a color inversion image functor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_color_invert_shader_a6509f8f72c2b3b939a2f8b355c6eb6c2}{operator()}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&img, size\+\_\+t x, size\+\_\+t y) override
+\begin{DoxyCompactList}\small\item\em Creates a color inversion pixel functor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Class for a color inversion. 
+
+For every pixel in a given image, the R, G, B channels are inverted and the alpha is left as is. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_color_invert_shader_a6509f8f72c2b3b939a2f8b355c6eb6c2}\label{classimage_1_1_color_invert_shader_a6509f8f72c2b3b939a2f8b355c6eb6c2}} 
+\index{image::ColorInvertShader@{image::ColorInvertShader}!operator()@{operator()}}
+\index{operator()@{operator()}!image::ColorInvertShader@{image::ColorInvertShader}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} image\+::\+Color\+Invert\+Shader\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{img,  }\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a color inversion pixel functor. 
+
+Inverts every pixel in the image by calling invert() \begin{DoxySeeAlso}{See also}
+invert() 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em img} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to sample from \\
+\hline
+{\em x} & X location of target \\
+\hline
+{\em y} & Y location of target \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_shader_aba9ce88c5538453871d7a60a7cd0957d}{image\+::\+Image\+Shader}}.
+
+\mbox{\Hypertarget{classimage_1_1_color_invert_shader_a3e3e955741a9a3bbdf9245fef136258f}\label{classimage_1_1_color_invert_shader_a3e3e955741a9a3bbdf9245fef136258f}} 
+\index{image::ColorInvertShader@{image::ColorInvertShader}!operator()@{operator()}}
+\index{operator()@{operator()}!image::ColorInvertShader@{image::ColorInvertShader}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void image\+::\+Color\+Invert\+Shader\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{img }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a color inversion image functor. 
+
+Inverts every pixel in the image by calling invert() \begin{DoxySeeAlso}{See also}
+invert() 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em img} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to invert \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classimage_1_1_image_shader_a2451e1c8c54e928393f46bdeb494d533}{image\+::\+Image\+Shader}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{colorinvert_8h}{colorinvert.\+h}}\item 
+src/lib\+LMTKimage/colorinvert.\+cpp\end{DoxyCompactItemize}

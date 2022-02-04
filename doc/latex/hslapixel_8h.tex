@@ -1,0 +1,56 @@
+\hypertarget{hslapixel_8h}{}\doxysubsection{src/lib\+LMTKimage/hslapixel.h File Reference}
+\label{hslapixel_8h}\index{src/libLMTKimage/hslapixel.h@{src/libLMTKimage/hslapixel.h}}
+
+
+Copyright (c) 2022 marinarasub.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}color.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rgbapixel.\+h\char`\"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{image\+::\+HSLAPixel}}
+\begin{DoxyCompactList}\small\item\em Class for representing a pixel\textquotesingle{}s color using the HSL color model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{hslapixel_8cpp_a056f6636f0c39c741cc2c795533d1166}{image\+::operator$<$$<$}} (std\+::ostream \&out, const HSLAPixel \&pixel)
+\begin{DoxyCompactList}\small\item\em Add string representation of pixel to stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Copyright (c) 2022 marinarasub. 
+
+LMTK / Light Multimedia Tool\+Kit
+
+This file is included in lib\+LMTKimage, the image library for LMTK LMTK and its subprojects are available under the MIT license.
+
+\begin{DoxyAuthor}{Author}
+marinarasub 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 2022
+\end{DoxyDate}
+This file contains the class for representing color using the HSLA color model. 
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{hslapixel_8cpp_a056f6636f0c39c741cc2c795533d1166}\label{hslapixel_8cpp_a056f6636f0c39c741cc2c795533d1166}} 
+\index{hslapixel.h@{hslapixel.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!hslapixel.h@{hslapixel.h}}
+\doxyparagraph{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& image\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&}]{pixel }\end{DoxyParamCaption})}
+
+
+
+Add string representation of pixel to stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream \\
+\hline
+{\em pixel} & Pixel to output to stream \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,44 @@
+\hypertarget{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder}{}\doxysection{audio\+::FLAC\+::FLACDecoder Class Reference}
+\label{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder}\index{audio::FLAC::FLACDecoder@{audio::FLAC::FLACDecoder}}
+Inheritance diagram for audio\+::FLAC\+::FLACDecoder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_ac71c554faea3ca83f210a132ae1bbd28}\label{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_ac71c554faea3ca83f210a132ae1bbd28}} 
+\mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} {\bfseries get} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_af489dcf5cbd806334d737b127270f5a9}\label{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_af489dcf5cbd806334d737b127270f5a9}} 
+virtual FLAC\+\_\+\+\_\+\+Stream\+Decoder\+Write\+Status {\bfseries write\+\_\+callback} (const FLAC\+\_\+\+\_\+\+Frame $\ast$frame, const FLAC\+\_\+\+\_\+int32 $\ast$const $\ast$buffer) override
+\item 
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_aeb6468beb52a188524ef94204558cfdc}\label{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_aeb6468beb52a188524ef94204558cfdc}} 
+virtual void {\bfseries metadata\+\_\+callback} (const FLAC\+\_\+\+\_\+\+Stream\+Metadata $\ast$metadata) override
+\item 
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_a424429af155a16ef6a3be0bd799a5516}\label{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_a424429af155a16ef6a3be0bd799a5516}} 
+virtual void {\bfseries error\+\_\+callback} (FLAC\+\_\+\+\_\+\+Stream\+Decoder\+Error\+Status status) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_a80dd40778337b4d23a37433a1ac7877f}\label{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_a80dd40778337b4d23a37433a1ac7877f}} 
+\mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} $\ast$ {\bfseries out}
+\item 
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_a6959fbf88741614fae24228d01cfe57f}\label{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_a6959fbf88741614fae24228d01cfe57f}} 
+bool {\bfseries finished} = false
+\item 
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_aa803b41850ded90b70ad0ca2e4e15884}\label{classaudio_1_1_f_l_a_c_1_1_f_l_a_c_decoder_aa803b41850ded90b70ad0ca2e4e15884}} 
+unsigned int {\bfseries bit\+\_\+depth} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David/source/repos/lmtk/src/lib\+LMTKaudio/\mbox{\hyperlink{flac_8h}{flac.\+h}}\item 
+C\+:/\+Users/\+David/source/repos/lmtk/src/lib\+LMTKaudio/flac.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,314 @@
+\hypertarget{classaudio_1_1_audio_track}{}\doxysubsection{audio\+::Audio\+Track Class Reference}
+\label{classaudio_1_1_audio_track}\index{audio::AudioTrack@{audio::AudioTrack}}
+
+
+Class for an \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} containing audio samples which can be played, edited or written to a writeable format.  
+
+
+
+
+{\ttfamily \#include \char`\"{}audiotrack.\+h\char`\"{}}
+
+Inheritance diagram for audio\+::Audio\+Track\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classaudio_1_1_audio_track}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaudio_1_1_audio_track_abbbac59295baedea18bcbc16a6a5e6e9}\label{classaudio_1_1_audio_track_abbbac59295baedea18bcbc16a6a5e6e9}} 
+{\bfseries Audio\+Track} ()
+\begin{DoxyCompactList}\small\item\em Create an empty audio track of length 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaudio_1_1_audio_track_a1386acb661ec6a5ac10e9ab5f4a2fb65}{Audio\+Track}} (unsigned long length)
+\begin{DoxyCompactList}\small\item\em Create and audio track with n samples at default sample rate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaudio_1_1_audio_track_aa584e95db067e14cecffd6266d8e8d2d}{Audio\+Track}} (unsigned long length, unsigned long sample\+\_\+rate)
+\begin{DoxyCompactList}\small\item\em Create and audio track with n samples and sample rate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaudio_1_1_audio_track_a391237459d24bce1d2fed812839a8c5b}{Audio\+Track}} (const \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaudio_1_1_audio_track_a530dd1f7535456282b871ad2ab1b0632}\label{classaudio_1_1_audio_track_a530dd1f7535456282b871ad2ab1b0632}} 
+{\bfseries $\sim$\+Audio\+Track} ()
+\begin{DoxyCompactList}\small\item\em Delete all sample data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \mbox{\hyperlink{classaudio_1_1_audio_track_a0efb43e40a1c02bbd587e2618785b218}{operator=}} (const \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator\+: sets this track equal to given one. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \mbox{\hyperlink{classaudio_1_1_audio_track_af2049b0242ccf4b43ed67f6361bd8347}{operator+}} (const \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&other) const
+\begin{DoxyCompactList}\small\item\em operator+\+: Adds two audio tracks. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classaudio_1_1_audio_track_a2969a5f57d9bd0303f93c4e7d6d43898}{sample\+Rate}} () const
+\item 
+unsigned long \mbox{\hyperlink{classaudio_1_1_audio_track_a753843df7ee265e0a6ccb11377dbd5ad}{sample\+Length}} () const
+\item 
+byte \mbox{\hyperlink{classaudio_1_1_audio_track_afa2d1c332a4dce3d1e6be4adff5a72aa}{channels}} () const
+\item 
+\mbox{\Hypertarget{classaudio_1_1_audio_track_aadf545a05971e073f7813a9d0537689d}\label{classaudio_1_1_audio_track_aadf545a05971e073f7813a9d0537689d}} 
+void {\bfseries reset\+Position} ()
+\begin{DoxyCompactList}\small\item\em Resets the cursor to START\+\_\+\+POS. \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{classaudio_1_1_audio_track_af005384b12dbdf8dc61894792ecd64e9}{current\+Pos}} () const
+\item 
+bool \mbox{\hyperlink{classaudio_1_1_audio_track_a730a337fb6f316c7981ee13fb547263e}{ended}} () const
+\item 
+\mbox{\hyperlink{structaudio_1_1audio__sample}{audio\+\_\+sample}} \mbox{\hyperlink{classaudio_1_1_audio_track_afa5e4602cf42206243ab1faf5e4bd2fc}{next\+Sample}} ()
+\begin{DoxyCompactList}\small\item\em Using the track cursor, get the next sample and move the cursor by 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structaudio_1_1audio__sample}{audio\+\_\+sample}} \mbox{\hyperlink{classaudio_1_1_audio_track_ad06f77571ba14cb347dc4460c16cadc1}{get\+Sample}} (unsigned long idx) const
+\begin{DoxyCompactList}\small\item\em Get the sample at given position in track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaudio_1_1_audio_track_a51190ced997d7d123eb54647c5660ace}{set\+Sample}} (unsigned long idx, \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\+\_\+sample}} data)
+\begin{DoxyCompactList}\small\item\em Set the sample at given index with an audio sample. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaudio_1_1_audio_track_aba9d73e06f7ea2dd07c767d8800a08be}{resample}} (unsigned long new\+\_\+sample\+\_\+rate)
+\begin{DoxyCompactList}\small\item\em Resample the audio data to a new sample rate with minimal alteration to sound. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaudio_1_1_audio_track_abf204dbdb602b81e7482d9293067baa3}{merge}} (\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&track)
+\begin{DoxyCompactList}\small\item\em Adds given track to $\ast$this one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classaudio_1_1_audio_track_aeef41186a95170e6bd7005503fa600e6}{copy}} (const \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&other)
+\begin{DoxyCompactList}\small\item\em Copies an audio track to $\ast$this, including audio data and track info. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaudio_1_1_audio_track_a17e5bfe83cfd696a5b1cbe5f186190bc}\label{classaudio_1_1_audio_track_a17e5bfe83cfd696a5b1cbe5f186190bc}} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clear audio sample data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaudio_1_1_audio_track_a2fc2f80ea0022e0aa3313bcfa641f8ef}\label{classaudio_1_1_audio_track_a2fc2f80ea0022e0aa3313bcfa641f8ef}} 
+\mbox{\hyperlink{structaudio_1_1audio__sample}{audio\+\_\+sample}} $\ast$ {\bfseries audio}
+\begin{DoxyCompactList}\small\item\em Array of audio samples of the track. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Class for an \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} containing audio samples which can be played, edited or written to a writeable format. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaudio_1_1_audio_player}{Audio\+Player}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_a1386acb661ec6a5ac10e9ab5f4a2fb65}\label{classaudio_1_1_audio_track_a1386acb661ec6a5ac10e9ab5f4a2fb65}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!AudioTrack@{AudioTrack}}
+\index{AudioTrack@{AudioTrack}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{AudioTrack()}{AudioTrack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily audio\+::\+Audio\+Track\+::\+Audio\+Track (\begin{DoxyParamCaption}\item[{unsigned long}]{length }\end{DoxyParamCaption})}
+
+
+
+Create and audio track with n samples at default sample rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & Length in samples \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_aa584e95db067e14cecffd6266d8e8d2d}\label{classaudio_1_1_audio_track_aa584e95db067e14cecffd6266d8e8d2d}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!AudioTrack@{AudioTrack}}
+\index{AudioTrack@{AudioTrack}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{AudioTrack()}{AudioTrack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily audio\+::\+Audio\+Track\+::\+Audio\+Track (\begin{DoxyParamCaption}\item[{unsigned long}]{length,  }\item[{unsigned long}]{sample\+\_\+rate }\end{DoxyParamCaption})}
+
+
+
+Create and audio track with n samples and sample rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & Length in samples \\
+\hline
+{\em sample\+\_\+rate} & Sample rate in hz \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_a391237459d24bce1d2fed812839a8c5b}\label{classaudio_1_1_audio_track_a391237459d24bce1d2fed812839a8c5b}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!AudioTrack@{AudioTrack}}
+\index{AudioTrack@{AudioTrack}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{AudioTrack()}{AudioTrack()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily audio\+::\+Audio\+Track\+::\+Audio\+Track (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+Clear current data and copy all sample and track data to $\ast$this 
+\begin{DoxyParams}{Parameters}
+{\em other} & Track to copy \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_afa2d1c332a4dce3d1e6be4adff5a72aa}\label{classaudio_1_1_audio_track_afa2d1c332a4dce3d1e6be4adff5a72aa}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!channels@{channels}}
+\index{channels@{channels}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{channels()}{channels()}}
+{\footnotesize\ttfamily byte audio\+::\+Audio\+Track\+::channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The number of audio channels 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_aeef41186a95170e6bd7005503fa600e6}\label{classaudio_1_1_audio_track_aeef41186a95170e6bd7005503fa600e6}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!copy@{copy}}
+\index{copy@{copy}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily void audio\+::\+Audio\+Track\+::copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Copies an audio track to $\ast$this, including audio data and track info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Track to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_af005384b12dbdf8dc61894792ecd64e9}\label{classaudio_1_1_audio_track_af005384b12dbdf8dc61894792ecd64e9}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!currentPos@{currentPos}}
+\index{currentPos@{currentPos}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{currentPos()}{currentPos()}}
+{\footnotesize\ttfamily unsigned long audio\+::\+Audio\+Track\+::current\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Current cursor position in the track 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_a730a337fb6f316c7981ee13fb547263e}\label{classaudio_1_1_audio_track_a730a337fb6f316c7981ee13fb547263e}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!ended@{ended}}
+\index{ended@{ended}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{ended()}{ended()}}
+{\footnotesize\ttfamily bool audio\+::\+Audio\+Track\+::ended (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+If the cursor has reached the end of the track 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_ad06f77571ba14cb347dc4460c16cadc1}\label{classaudio_1_1_audio_track_ad06f77571ba14cb347dc4460c16cadc1}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!getSample@{getSample}}
+\index{getSample@{getSample}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{getSample()}{getSample()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\+\_\+sample}} audio\+::\+Audio\+Track\+::get\+Sample (\begin{DoxyParamCaption}\item[{unsigned long}]{idx }\end{DoxyParamCaption}) const}
+
+
+
+Get the sample at given position in track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Index of sample \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_abf204dbdb602b81e7482d9293067baa3}\label{classaudio_1_1_audio_track_abf204dbdb602b81e7482d9293067baa3}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!merge@{merge}}
+\index{merge@{merge}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily void audio\+::\+Audio\+Track\+::merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&}]{track }\end{DoxyParamCaption})}
+
+
+
+Adds given track to $\ast$this one. 
+
+\begin{DoxySeeAlso}{See also}
+operator+ 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em track} & Track to merge with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_afa5e4602cf42206243ab1faf5e4bd2fc}\label{classaudio_1_1_audio_track_afa5e4602cf42206243ab1faf5e4bd2fc}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!nextSample@{nextSample}}
+\index{nextSample@{nextSample}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{nextSample()}{nextSample()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\+\_\+sample}} audio\+::\+Audio\+Track\+::next\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Using the track cursor, get the next sample and move the cursor by 1. 
+
+\begin{DoxyReturn}{Returns}
+The next audio sample at the cursor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_af2049b0242ccf4b43ed67f6361bd8347}\label{classaudio_1_1_audio_track_af2049b0242ccf4b43ed67f6361bd8347}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!operator+@{operator+}}
+\index{operator+@{operator+}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} audio\+::\+Audio\+Track\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator+\+: Adds two audio tracks. 
+
+Adds by adding each sample data together. Also known as track mixing. 
+\begin{DoxyParams}{Parameters}
+{\em other} & Track to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of mixing two tracks 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_a0efb43e40a1c02bbd587e2618785b218}\label{classaudio_1_1_audio_track_a0efb43e40a1c02bbd587e2618785b218}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!operator=@{operator=}}
+\index{operator=@{operator=}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} audio\+::\+Audio\+Track\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Assignment operator\+: sets this track equal to given one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Track to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Copied audio track 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_aba9d73e06f7ea2dd07c767d8800a08be}\label{classaudio_1_1_audio_track_aba9d73e06f7ea2dd07c767d8800a08be}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!resample@{resample}}
+\index{resample@{resample}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{resample()}{resample()}}
+{\footnotesize\ttfamily void audio\+::\+Audio\+Track\+::resample (\begin{DoxyParamCaption}\item[{unsigned long}]{new\+\_\+sample\+\_\+rate }\end{DoxyParamCaption})}
+
+
+
+Resample the audio data to a new sample rate with minimal alteration to sound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+sample\+\_\+rate} & New sample rate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_a753843df7ee265e0a6ccb11377dbd5ad}\label{classaudio_1_1_audio_track_a753843df7ee265e0a6ccb11377dbd5ad}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!sampleLength@{sampleLength}}
+\index{sampleLength@{sampleLength}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{sampleLength()}{sampleLength()}}
+{\footnotesize\ttfamily unsigned long audio\+::\+Audio\+Track\+::sample\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The length of track in samples 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_a2969a5f57d9bd0303f93c4e7d6d43898}\label{classaudio_1_1_audio_track_a2969a5f57d9bd0303f93c4e7d6d43898}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!sampleRate@{sampleRate}}
+\index{sampleRate@{sampleRate}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{sampleRate()}{sampleRate()}}
+{\footnotesize\ttfamily unsigned int audio\+::\+Audio\+Track\+::sample\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The sample rate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaudio_1_1_audio_track_a51190ced997d7d123eb54647c5660ace}\label{classaudio_1_1_audio_track_a51190ced997d7d123eb54647c5660ace}} 
+\index{audio::AudioTrack@{audio::AudioTrack}!setSample@{setSample}}
+\index{setSample@{setSample}!audio::AudioTrack@{audio::AudioTrack}}
+\doxyparagraph{\texorpdfstring{setSample()}{setSample()}}
+{\footnotesize\ttfamily void audio\+::\+Audio\+Track\+::set\+Sample (\begin{DoxyParamCaption}\item[{unsigned long}]{idx,  }\item[{\mbox{\hyperlink{structaudio_1_1audio__sample}{audio\+\_\+sample}}}]{data }\end{DoxyParamCaption})}
+
+
+
+Set the sample at given index with an audio sample. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Index of sample to set \\
+\hline
+{\em data} & Audio sample to set to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKaudio/\mbox{\hyperlink{audiotrack_8h}{audiotrack.\+h}}\item 
+src/lib\+LMTKaudio/audiotrack.\+cpp\end{DoxyCompactItemize}

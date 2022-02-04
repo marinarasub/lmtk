@@ -1,0 +1,31 @@
+# Build directories
+
+[Oo]ut/
+[Bb]uild/
+[Bb]in/
+
+# External libs
+
+[Pp]ackages/
+[Ee]xternal/
+[Ll]ibs/
+
+# CMake
+
+CMakeSettings.json
+CMakeFiles/
+config.h
+
+# vcpkg
+
+vcpkg_installed/
+
+# Other
+
+.vs/
+.editorconfig
+[Tt]esting/
+
+[Ii]gnore/
+*.bak
+*.bkp

@@ -1,0 +1,124 @@
+\hypertarget{classaudio_1_1_audio_player}{}\doxysubsection{audio\+::Audio\+Player Class Reference}
+\label{classaudio_1_1_audio_player}\index{audio::AudioPlayer@{audio::AudioPlayer}}
+
+
+An audio player for audio tracks to device output Uses portaudio for audio device IO.  
+
+
+
+
+{\ttfamily \#include \char`\"{}audioplayer.\+h\char`\"{}}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaudio_1_1_audio_player_a8d0197a4dcda2410a7c48fdd9bbd8654}{Audio\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Create an audio player. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaudio_1_1_audio_player_a94fb3c0a7a7d06c672c64d3c4e147a5a}\label{classaudio_1_1_audio_player_a94fb3c0a7a7d06c672c64d3c4e147a5a}} 
+{\bfseries $\sim$\+Audio\+Player} ()
+\begin{DoxyCompactList}\small\item\em Closes audio stream and terminates audio player. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classaudio_1_1_audio_player_a7642017876250bf58721aab77a9496a3}{operator()}} (\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&\mbox{\hyperlink{classaudio_1_1_audio_player_a935a8253de79eff84ed7bf67fb1f94ce}{track}})
+\begin{DoxyCompactList}\small\item\em Audio track operator\+: play the selected track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaudio_1_1_audio_player_ab0cb7450f85d0a15caae84bd8c3c17b2}{play}} (\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&\mbox{\hyperlink{classaudio_1_1_audio_player_a935a8253de79eff84ed7bf67fb1f94ce}{track}})
+\begin{DoxyCompactList}\small\item\em Play the selected track to default audio device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaudio_1_1_audio_player_aa37244a9c48cfbf2392eb8e97fb86fd5}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops playing the audio track. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaudio_1_1_audio_player_a0c92ee3afac7f1257947d1c73aa7d0ed}\label{classaudio_1_1_audio_player_a0c92ee3afac7f1257947d1c73aa7d0ed}} 
+void {\bfseries close} ()
+\begin{DoxyCompactList}\small\item\em Close the audio stream, if open. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} $\ast$ \mbox{\hyperlink{classaudio_1_1_audio_player_a935a8253de79eff84ed7bf67fb1f94ce}{track}} ()
+\item 
+void \mbox{\hyperlink{classaudio_1_1_audio_player_a2f024797c5b13d3ef9f74b3bb7c320a7}{set\+Gain}} (float db)
+\begin{DoxyCompactList}\small\item\em Sets the gain of the output sound. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+An audio player for audio tracks to device output Uses portaudio for audio device IO. 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaudio_1_1_audio_player_a8d0197a4dcda2410a7c48fdd9bbd8654}\label{classaudio_1_1_audio_player_a8d0197a4dcda2410a7c48fdd9bbd8654}} 
+\index{audio::AudioPlayer@{audio::AudioPlayer}!AudioPlayer@{AudioPlayer}}
+\index{AudioPlayer@{AudioPlayer}!audio::AudioPlayer@{audio::AudioPlayer}}
+\doxyparagraph{\texorpdfstring{AudioPlayer()}{AudioPlayer()}}
+{\footnotesize\ttfamily audio\+::\+Audio\+Player\+::\+Audio\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create an audio player. 
+
+Opens an audio stream for playing 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaudio_1_1_audio_player_a7642017876250bf58721aab77a9496a3}\label{classaudio_1_1_audio_player_a7642017876250bf58721aab77a9496a3}} 
+\index{audio::AudioPlayer@{audio::AudioPlayer}!operator()@{operator()}}
+\index{operator()@{operator()}!audio::AudioPlayer@{audio::AudioPlayer}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void audio\+::\+Audio\+Player\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Audio track operator\+: play the selected track. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaudio_1_1_audio_player_ab0cb7450f85d0a15caae84bd8c3c17b2}{play()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em track} & Audio track to play \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_audio_player_ab0cb7450f85d0a15caae84bd8c3c17b2}\label{classaudio_1_1_audio_player_ab0cb7450f85d0a15caae84bd8c3c17b2}} 
+\index{audio::AudioPlayer@{audio::AudioPlayer}!play@{play}}
+\index{play@{play}!audio::AudioPlayer@{audio::AudioPlayer}}
+\doxyparagraph{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void audio\+::\+Audio\+Player\+::play (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&}]{track }\end{DoxyParamCaption})}
+
+
+
+Play the selected track to default audio device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track} & Audio track to play \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_audio_player_a2f024797c5b13d3ef9f74b3bb7c320a7}\label{classaudio_1_1_audio_player_a2f024797c5b13d3ef9f74b3bb7c320a7}} 
+\index{audio::AudioPlayer@{audio::AudioPlayer}!setGain@{setGain}}
+\index{setGain@{setGain}!audio::AudioPlayer@{audio::AudioPlayer}}
+\doxyparagraph{\texorpdfstring{setGain()}{setGain()}}
+{\footnotesize\ttfamily void audio\+::\+Audio\+Player\+::set\+Gain (\begin{DoxyParamCaption}\item[{float}]{db }\end{DoxyParamCaption})}
+
+
+
+Sets the gain of the output sound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Gain in decibels \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_audio_player_aa37244a9c48cfbf2392eb8e97fb86fd5}\label{classaudio_1_1_audio_player_aa37244a9c48cfbf2392eb8e97fb86fd5}} 
+\index{audio::AudioPlayer@{audio::AudioPlayer}!stop@{stop}}
+\index{stop@{stop}!audio::AudioPlayer@{audio::AudioPlayer}}
+\doxyparagraph{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void audio\+::\+Audio\+Player\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops playing the audio track. 
+
+Abort\+Stream() for immediate stop (forceq)\mbox{\Hypertarget{classaudio_1_1_audio_player_a935a8253de79eff84ed7bf67fb1f94ce}\label{classaudio_1_1_audio_player_a935a8253de79eff84ed7bf67fb1f94ce}} 
+\index{audio::AudioPlayer@{audio::AudioPlayer}!track@{track}}
+\index{track@{track}!audio::AudioPlayer@{audio::AudioPlayer}}
+\doxyparagraph{\texorpdfstring{track()}{track()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} $\ast$ audio\+::\+Audio\+Player\+::track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The audio track associated with the audio player 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKaudio/\mbox{\hyperlink{audioplayer_8h}{audioplayer.\+h}}\item 
+src/lib\+LMTKaudio/audioplayer.\+cpp\end{DoxyCompactItemize}

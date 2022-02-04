@@ -1,0 +1,165 @@
+\hypertarget{classimage_1_1_p_n_g}{}\doxysubsection{image\+::PNG Class Reference}
+\label{classimage_1_1_p_n_g}\index{image::PNG@{image::PNG}}
+
+
+\mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} image class.  
+
+
+
+
+{\ttfamily \#include $<$png.\+h$>$}
+
+Inheritance diagram for image\+::PNG\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimage_1_1_p_n_g}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimage_1_1_p_n_g_a6e8a6e2b37fcada7943e0ec2f8faab8e}{PNG}} (unsigned int w, unsigned int h)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} image of size width $\ast$ height. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_p_n_g_ab23212e2b3691de3d6978957dfe16034}{PNG}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} from a file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage_1_1_p_n_g_a79e99d3b5aad79784f9c67c45feaf315}\label{classimage_1_1_p_n_g_a79e99d3b5aad79784f9c67c45feaf315}} 
+{\bfseries PNG} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&other)
+\item 
+\mbox{\Hypertarget{classimage_1_1_p_n_g_a4bac0428f359d3ce7303a2e451f9b34f}\label{classimage_1_1_p_n_g_a4bac0428f359d3ce7303a2e451f9b34f}} 
+{\bfseries $\sim$\+PNG} () override
+\begin{DoxyCompactList}\small\item\em Right now it does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_p_n_g_adb83bfb01869c9e639fa5d9e325da51b}{read\+File}} (std\+::string path) override
+\begin{DoxyCompactList}\small\item\em Read \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} data from a file from disk. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_p_n_g_a651866682c06db4006184ed38739bf28}{write\+File}} (std\+::string path) override
+\begin{DoxyCompactList}\small\item\em Writes the \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+\mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} image class. 
+
+The \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} class has all image functionality plus read/write capability, and additional \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} specific tools. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image}{Image}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_p_n_g_a6e8a6e2b37fcada7943e0ec2f8faab8e}\label{classimage_1_1_p_n_g_a6e8a6e2b37fcada7943e0ec2f8faab8e}} 
+\index{image::PNG@{image::PNG}!PNG@{PNG}}
+\index{PNG@{PNG}!image::PNG@{image::PNG}}
+\doxyparagraph{\texorpdfstring{PNG()}{PNG()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily image\+::\+PNG\+::\+PNG (\begin{DoxyParamCaption}\item[{unsigned int}]{w,  }\item[{unsigned int}]{h }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} image of size width $\ast$ height. 
+
+public interface functions
+
+Calls base class constructor \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image}{Image}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Width \\
+\hline
+{\em h} & Height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_p_n_g_ab23212e2b3691de3d6978957dfe16034}\label{classimage_1_1_p_n_g_ab23212e2b3691de3d6978957dfe16034}} 
+\index{image::PNG@{image::PNG}!PNG@{PNG}}
+\index{PNG@{PNG}!image::PNG@{image::PNG}}
+\doxyparagraph{\texorpdfstring{PNG()}{PNG()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily image\+::\+PNG\+::\+PNG (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} from a file. 
+
+Creates a \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} file and converts all image data to the representation in the \mbox{\hyperlink{classimage_1_1_image}{Image}} and \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} classes. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image}{Image}} 
+
+\mbox{\hyperlink{classimage_1_1_p_n_g_adb83bfb01869c9e639fa5d9e325da51b}{read\+File()}}; 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of file to open \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if \mbox{\hyperlink{classimage_1_1_p_n_g_adb83bfb01869c9e639fa5d9e325da51b}{read\+File()}} throws an exception \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_p_n_g_adb83bfb01869c9e639fa5d9e325da51b}\label{classimage_1_1_p_n_g_adb83bfb01869c9e639fa5d9e325da51b}} 
+\index{image::PNG@{image::PNG}!readFile@{readFile}}
+\index{readFile@{readFile}!image::PNG@{image::PNG}}
+\doxyparagraph{\texorpdfstring{readFile()}{readFile()}}
+{\footnotesize\ttfamily void image\+::\+PNG\+::read\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Read \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} data from a file from disk. 
+
+Attempts to open and replace existing \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} data if the file given is a valid \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}}. Then converts all byte data from the libpng to RGBA pixels. \begin{DoxySeeAlso}{See also}
+is\+File\+PNG() 
+
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of file to open \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid} & argument exception if the file is not a \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} or does not exist \\
+\hline
+{\em An} & exception if failed to read // TODO \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_file_afc3f2e52dd400b6db9b532ca7ceb4afc}{image\+::\+Image\+File}}.
+
+\mbox{\Hypertarget{classimage_1_1_p_n_g_a651866682c06db4006184ed38739bf28}\label{classimage_1_1_p_n_g_a651866682c06db4006184ed38739bf28}} 
+\index{image::PNG@{image::PNG}!writeFile@{writeFile}}
+\index{writeFile@{writeFile}!image::PNG@{image::PNG}}
+\doxyparagraph{\texorpdfstring{writeFile()}{writeFile()}}
+{\footnotesize\ttfamily void image\+::\+PNG\+::write\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes the \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} to a file. 
+
+Attempts to create/open a file if the directory exists, then reverse pixel data into byte data for libpng to use. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+libpng handles compression 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of file to open \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid} & argument exception if the file is not a \mbox{\hyperlink{classimage_1_1_p_n_g}{PNG}} // TODO \\
+\hline
+{\em An} & exception filed to write // TODO \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_file_a5c881a826d05f3539adc7ca9ddf8022c}{image\+::\+Image\+File}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{png_8h}{png.\+h}}\item 
+src/lib\+LMTKimage/png.\+cpp\end{DoxyCompactItemize}

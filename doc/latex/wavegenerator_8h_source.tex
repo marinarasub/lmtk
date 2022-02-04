@@ -1,0 +1,42 @@
+\hypertarget{wavegenerator_8h_source}{}\doxysubsection{wavegenerator.\+h}
+\label{wavegenerator_8h_source}\index{src/libLMTKaudio/wavegenerator.h@{src/libLMTKaudio/wavegenerator.h}}
+\mbox{\hyperlink{wavegenerator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef \_LIBLMTKAUDIO\_WAVEGENERATOR\_H\_}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define \_LIBLMTKAUDIO\_WAVEGENERATOR\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{audiofilter_8h}{audiofilter.h}}"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}../utils/utilsmath.h"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }audio \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} PI = \mbox{\hyperlink{namespaceutils_1_1math_ada77ab1fedceacdd53b262b37483047b}{utils::math::PI}};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{37     \textcolor{keyword}{class }\mbox{\hyperlink{classaudio_1_1_wave_generator}{WaveGenerator}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaudio_1_1_audio_filter}{AudioFilter}}}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39     \textcolor{keyword}{public}:}
+\DoxyCodeLine{40         }
+\DoxyCodeLine{44         \textcolor{keyword}{virtual} \mbox{\hyperlink{classaudio_1_1_wave_generator_a4aa33c9696ea4d1540d1254780012f69}{\string~WaveGenerator}}() \{\};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{51         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_wave_generator_a99136681ca763ec2df9b2c1743f3773e}{operator()}}(\mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}\& track) = 0;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{63         \mbox{\hyperlink{classaudio_1_1_wave_generator_a73a03b15aafbe143a203a38103f2a32e}{WaveGenerator}}(\textcolor{keywordtype}{float} freql, \textcolor{keywordtype}{float} freqr, \textcolor{keywordtype}{float} amp, \textcolor{keywordtype}{float} \mbox{\hyperlink{classaudio_1_1_wave_generator_a0f06b359f8c84033a7f43613370393eb}{offset}})}
+\DoxyCodeLine{64             : \mbox{\hyperlink{classaudio_1_1_wave_generator_a0875c517e88a6c307333c1cd7fd1e06d}{left\_freq}}(freql), \mbox{\hyperlink{classaudio_1_1_wave_generator_ae736f9ba4f3a4b440381bd46ba93c2bb}{right\_freq}}(freqr), \mbox{\hyperlink{classaudio_1_1_wave_generator_afe1ac1cd3c9eef71940aad94dc0c6d8e}{amplitude}}(amp), \mbox{\hyperlink{classaudio_1_1_wave_generator_a0f06b359f8c84033a7f43613370393eb}{offset}}(\mbox{\hyperlink{classaudio_1_1_wave_generator_a0f06b359f8c84033a7f43613370393eb}{offset}})}
+\DoxyCodeLine{65         \{\}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67         \textcolor{keywordtype}{float} \mbox{\hyperlink{classaudio_1_1_wave_generator_a0875c517e88a6c307333c1cd7fd1e06d}{left\_freq}}; }
+\DoxyCodeLine{68         \textcolor{keywordtype}{float} \mbox{\hyperlink{classaudio_1_1_wave_generator_ae736f9ba4f3a4b440381bd46ba93c2bb}{right\_freq}}; }
+\DoxyCodeLine{69         \textcolor{comment}{// Note: will be clamped to [-\/1, 1]}}
+\DoxyCodeLine{70         \textcolor{keywordtype}{float} \mbox{\hyperlink{classaudio_1_1_wave_generator_afe1ac1cd3c9eef71940aad94dc0c6d8e}{amplitude}};  }
+\DoxyCodeLine{71         \textcolor{keywordtype}{float} \mbox{\hyperlink{classaudio_1_1_wave_generator_a0f06b359f8c84033a7f43613370393eb}{offset}};  }
+\DoxyCodeLine{72     \};}
+\DoxyCodeLine{73 \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKAUDIO\_WAVEGENERATOR\_H\_}}
+
+\end{DoxyCode}

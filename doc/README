@@ -1,0 +1,9 @@
+# This folder contains generated documentation usin Doxygen
+
+The Doxyfile is included in the top level folder (lmtk/) if you would like to 
+generate your own copy of the API.
+
+To view html, go to html/index.html
+
+If you want to view a latex PDF, compile files in latex/
+- Use something like MiKTeX

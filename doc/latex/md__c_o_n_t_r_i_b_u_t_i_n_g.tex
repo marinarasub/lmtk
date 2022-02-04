@@ -1,0 +1,158 @@
+\hypertarget{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md1}{}\doxysubsection{Issues}\label{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md1}
+For now, open an issue on \href{https://github.com/marinarasub/lmtk}{\texttt{ github}}. In the future this will be more organized.\hypertarget{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md2}{}\doxysubsection{Commits \& Pull Requests}\label{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md2}
+First, work on your own branch (i.\+e. mygitusername-\/dev). You may fix issues, add new features, tests, or help in any other way! Any and all help is appreciated. Submit a pull request once you think you are ready. As the project is in early development, we don\textquotesingle{}t have too many rules! But try to use common sense.
+
+Currently there are status checks for building on windows and linux.\hypertarget{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md3}{}\doxysubsection{Code Style}\label{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md3}
+The code style attempts to be consistent and readable, and is subject to change, but here are the styling I use so far\+:
+
+For the most part, I follow a similar format to \href{https://google.github.io/styleguide/cppguide.html}{\texttt{ Google C++ Style Guide}}
+
+This will get updated as the project matures.\hypertarget{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md4}{}\doxysubsubsection{General}\label{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Try to adhere to ISO C++ 11, so the project can build on both linux and windows.
+\item Use whitespace where appropriate for readability
+\item two newlines at after include, header guards, macros before content
+\begin{DoxyItemize}
+\item header guards follow google C++ conventions
+\item include c++ library, then external library headers before user defined 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#ifndef \_SILLYPROJECT\_HEADER\_H\_}
+\DoxyCodeLine{\#define \_SILLYPROJECT\_HEADER\_H\_}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#include <stdlib.h>}
+\DoxyCodeLine{\#include <externallib.h>}
+\DoxyCodeLine{\#include userfile.h"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{class Content }
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#endif // \_SILLYPROJECT\_HEADER\_H\_}
+
+\end{DoxyCode}
+ ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md5}{}\doxysubsubsection{Comments}\label{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Follow Doxygen Javadoc styling for formal API specification 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/**}
+\DoxyCodeLine{* Brief description.}
+\DoxyCodeLine{*}
+\DoxyCodeLine{\# @tags like this}
+\DoxyCodeLine{*/}
+\DoxyCodeLine{code...}
+
+\end{DoxyCode}
+
+\item Use // for temporary comments, TODO comments, and code comments 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{// TODO fix this "{}later"{}}
+\DoxyCodeLine{messy code...}
+
+\end{DoxyCode}
+
+\item All files belonging to the same subproject should have the same banner.
+\begin{DoxyItemize}
+\item Currently only header files have one, this is not a struct requirement and can always be mass updated later. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/***************************************************************************//**}
+\DoxyCodeLine{ * Copyright (c) 2022 marinarasub}
+\DoxyCodeLine{ *}
+\DoxyCodeLine{ * LMTK / Light Multimedia ToolKit}
+\DoxyCodeLine{ *}
+\DoxyCodeLine{ * <subproject specific text ...>}
+\DoxyCodeLine{ * LMTK and its subprojects are available under the MIT license.}
+\DoxyCodeLine{ *}
+\DoxyCodeLine{ ******************************************************************************/}
+
+\end{DoxyCode}
+ ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md6}{}\doxysubsubsection{Naming}\label{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md6}
+
+\begin{DoxyItemize}
+\item UPPERCASE for constants, macros etc. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#define MACRO}
+\DoxyCodeLine{}
+\DoxyCodeLine{const char* CONSTANT}
+
+\end{DoxyCode}
+
+\item Pascal\+Case for classes 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{class HelloWorld}
+
+\end{DoxyCode}
+
+\item camel\+Case for functions 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void myFunc()}
+
+\end{DoxyCode}
+
+\item snake\+\_\+case for fields/members and structs (more hidden/low level stuff) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{double me\_is\_snake\_case}
+\DoxyCodeLine{struct my\_struct}
+
+\end{DoxyCode}
+
+\item snake\+\_\+case for namespaces 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{namespace not\_std}
+
+\end{DoxyCode}
+ ~\newline
+
+\end{DoxyItemize}\hypertarget{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md7}{}\doxysubsubsection{Brackets/\+Code Blocks}\label{md__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md7}
+
+\begin{DoxyItemize}
+\item curly on next line for functions, classes and branch logic 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{class Class}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    void func()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        ...}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\item curly on same line for namespaces and try/catch blocks 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{namespace hello \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    try \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    catch (...) \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\item branch logic (not as strict) followed by space for condition and curly next line 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{if (condition)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{else}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ ~\newline
+ 
+\end{DoxyItemize}

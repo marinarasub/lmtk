@@ -1,0 +1,55 @@
+\hypertarget{progressbar_8h_source}{}\doxysubsection{progressbar.\+h}
+\label{progressbar_8h_source}\index{src/app/imagetools/progressbar.h@{src/app/imagetools/progressbar.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef \_\_PROGRESSBAR\_H\_}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define \_\_PROGRESSBAR\_H\_}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{comment}{// Allow ANSI escape on Windows}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#if defined(\_WIN32) || defined(\_WIN64)}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{    \#ifndef \_WINDOWS}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{        \#define \_WINDOWS}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{    \#include <windows.h>}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{        \#ifndef ENABLE\_VIRTUAL\_TERMINAL\_PROCESSING}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{        \#define ENABLE\_VIRTUAL\_TERMINAL\_PROCESSING 0x0004}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{    \#define \_WINDOWS\_ANSI()                                         \(\backslash\)}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{    do \{                                                            \(\backslash\)}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{        HANDLE hout = GetStdHandle(STD\_OUTPUT\_HANDLE);              \(\backslash\)}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{        DWORD dw;                                                   \(\backslash\)}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{        GetConsoleMode(hout, \&dw);                                  \(\backslash\)}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{        if (!SetConsoleMode(                                        \(\backslash\)}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{            hout,                                                   \(\backslash\)}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{            dw | ENABLE\_VIRTUAL\_TERMINAL\_PROCESSING)) exit(-\/1);     \(\backslash\)}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{    \} while(0)}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceprogressbar}{progressbar}} \{}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keyword}{const} std::string CLEAR = \textcolor{stringliteral}{"{}\(\backslash\)x1B[0J"{}};}
+\DoxyCodeLine{43     \textcolor{keyword}{const} std::string CLEARSAVED = \textcolor{stringliteral}{"{}\(\backslash\)x1B[3J"{}};}
+\DoxyCodeLine{44     \textcolor{keyword}{const} std::string CLEARLINE = \textcolor{stringliteral}{"{}\(\backslash\)x1B[2K"{}};}
+\DoxyCodeLine{45     \textcolor{keyword}{const} std::string YELLOW = \textcolor{stringliteral}{"{}\(\backslash\)x1B[33m"{}};}
+\DoxyCodeLine{46     \textcolor{keyword}{const} std::string GREEN = \textcolor{stringliteral}{"{}\(\backslash\)x1B[32m"{}};}
+\DoxyCodeLine{47     \textcolor{keyword}{const} std::string RED  = \textcolor{stringliteral}{"{}\(\backslash\)x1B[31m"{}};}
+\DoxyCodeLine{48     \textcolor{keyword}{const} std::string RESET = \textcolor{stringliteral}{"{}\(\backslash\)x1B[0m"{}};}
+\DoxyCodeLine{49     \textcolor{keyword}{const} std::string BLINK = \textcolor{stringliteral}{"{}\(\backslash\)x1B[5m"{}};}
+\DoxyCodeLine{50     \textcolor{keyword}{const} std::string CURSORRESET = \textcolor{stringliteral}{"{}\(\backslash\)x1B[0G"{}};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{comment}{// TODO the output is well... interesting when the bar is too wide for the}}
+\DoxyCodeLine{53     \textcolor{comment}{// console. Figure out a way to detect console width and truncate }}
+\DoxyCodeLine{59 \textcolor{comment}{}    std::string \mbox{\hyperlink{namespaceprogressbar_aff48cc20fa5548d3e0142c2b557913bf}{getProgressBar}}(\textcolor{keywordtype}{double} percent, \textcolor{keywordtype}{bool} failed);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_\_PROGRESSBAR\_H\_ }}
+
+\end{DoxyCode}

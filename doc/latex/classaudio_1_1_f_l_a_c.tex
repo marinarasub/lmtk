@@ -1,0 +1,117 @@
+\hypertarget{classaudio_1_1_f_l_a_c}{}\doxysubsection{audio\+::FLAC Class Reference}
+\label{classaudio_1_1_f_l_a_c}\index{audio::FLAC@{audio::FLAC}}
+
+
+Class for a \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} file audio track.  
+
+
+
+
+{\ttfamily \#include \char`\"{}flac.\+h\char`\"{}}
+
+Inheritance diagram for audio\+::FLAC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classaudio_1_1_f_l_a_c}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaudio_1_1_f_l_a_c_aaa5b35ec475ce832fdc7bee506b4a147}{FLAC}} (unsigned long length)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} of length in samples, at default sample rate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaudio_1_1_f_l_a_c_ac31af4cf95e3ca84eac52b786173f0a1}{FLAC}} (unsigned long length, unsigned long sample\+\_\+rate)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} of length in samples, at given sample rate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaudio_1_1_f_l_a_c_a5792f92e4ba96fb225fc081ddf70e7d0}{FLAC}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Creates \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} from file on disk. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaudio_1_1_f_l_a_c_ab713b282351d6e60b411ba4078120a6d}{read\+File}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Reads a \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} file from disk into memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_a36445c8bddda22ac53b9791239e0d401}\label{classaudio_1_1_f_l_a_c_a36445c8bddda22ac53b9791239e0d401}} 
+bool {\bfseries write\+File} (std\+::string path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Class for a \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} file audio track. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_aaa5b35ec475ce832fdc7bee506b4a147}\label{classaudio_1_1_f_l_a_c_aaa5b35ec475ce832fdc7bee506b4a147}} 
+\index{audio::FLAC@{audio::FLAC}!FLAC@{FLAC}}
+\index{FLAC@{FLAC}!audio::FLAC@{audio::FLAC}}
+\doxyparagraph{\texorpdfstring{FLAC()}{FLAC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily audio\+::\+FLAC\+::\+FLAC (\begin{DoxyParamCaption}\item[{unsigned long}]{length }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} of length in samples, at default sample rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & Length in audio samples \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_ac31af4cf95e3ca84eac52b786173f0a1}\label{classaudio_1_1_f_l_a_c_ac31af4cf95e3ca84eac52b786173f0a1}} 
+\index{audio::FLAC@{audio::FLAC}!FLAC@{FLAC}}
+\index{FLAC@{FLAC}!audio::FLAC@{audio::FLAC}}
+\doxyparagraph{\texorpdfstring{FLAC()}{FLAC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily audio\+::\+FLAC\+::\+FLAC (\begin{DoxyParamCaption}\item[{unsigned long}]{length,  }\item[{unsigned long}]{sample\+\_\+rate }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} of length in samples, at given sample rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & Length in audio samples \\
+\hline
+{\em sample\+\_\+rate} & Sample rate in hz \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_a5792f92e4ba96fb225fc081ddf70e7d0}\label{classaudio_1_1_f_l_a_c_a5792f92e4ba96fb225fc081ddf70e7d0}} 
+\index{audio::FLAC@{audio::FLAC}!FLAC@{FLAC}}
+\index{FLAC@{FLAC}!audio::FLAC@{audio::FLAC}}
+\doxyparagraph{\texorpdfstring{FLAC()}{FLAC()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily audio\+::\+FLAC\+::\+FLAC (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Creates \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} from file on disk. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaudio_1_1_f_l_a_c_ab713b282351d6e60b411ba4078120a6d}{read\+File()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaudio_1_1_f_l_a_c_ab713b282351d6e60b411ba4078120a6d}\label{classaudio_1_1_f_l_a_c_ab713b282351d6e60b411ba4078120a6d}} 
+\index{audio::FLAC@{audio::FLAC}!readFile@{readFile}}
+\index{readFile@{readFile}!audio::FLAC@{audio::FLAC}}
+\doxyparagraph{\texorpdfstring{readFile()}{readFile()}}
+{\footnotesize\ttfamily bool audio\+::\+FLAC\+::read\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Reads a \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} file from disk into memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to file \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKaudio/\mbox{\hyperlink{flac_8h}{flac.\+h}}\item 
+src/lib\+LMTKaudio/flac.\+cpp\end{DoxyCompactItemize}

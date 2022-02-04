@@ -1,0 +1,14 @@
+{
+  "name": "lmtk",
+  "version-string": "latest",
+  "dependencies": [
+    "libpng",
+    "libjpeg-turbo",
+    "eigen3",
+    "zlib",
+    "portaudio",
+    "libflac",
+    "gtest",
+    "boost-program-options"
+  ]
+}

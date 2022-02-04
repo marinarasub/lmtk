@@ -1,0 +1,82 @@
+\hypertarget{classimage_1_1_box_blur_vertical}{}\doxysubsection{image\+::Box\+Blur\+Vertical Class Reference}
+\label{classimage_1_1_box_blur_vertical}\index{image::BoxBlurVertical@{image::BoxBlurVertical}}
+
+
+Class for box blur\textquotesingle{}s seperable vertical component.  
+
+
+
+
+{\ttfamily \#include \char`\"{}boxblur.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Box\+Blur\+Vertical\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimage_1_1_box_blur_vertical}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage_1_1_box_blur_vertical_a215c585d06e6901746b50bee8420d047}\label{classimage_1_1_box_blur_vertical_a215c585d06e6901746b50bee8420d047}} 
+{\bfseries Box\+Blur\+Vertical} ()
+\begin{DoxyCompactList}\small\item\em Creates a box blur with default 1x3 convolution. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_box_blur_vertical_ae7796585df421f0c00a9c86ad0347e08}{Box\+Blur\+Vertical}} (size\+\_\+t radius)
+\begin{DoxyCompactList}\small\item\em Creates a box blur with a 1xn convolution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classimage_1_1_box_blur_vertical_abd87b1629ff625a593ac07d7fbecf414}{compute\+Kernel}} () override
+\begin{DoxyCompactList}\small\item\em Sets the kernel to all 1, normalized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Class for box blur\textquotesingle{}s seperable vertical component. 
+
+The vertical convolution of box blur, which is a seperable kernel and may be done with a horizontal pass followed by a vertical pass (or vice versa), reducing time complexity from O(n $\ast$ m) to O(n + m) \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_box_blur}{Box\+Blur}} 
+
+\mbox{\hyperlink{classimage_1_1_box_blur_horizontal}{Box\+Blur\+Horizontal}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_box_blur_vertical_ae7796585df421f0c00a9c86ad0347e08}\label{classimage_1_1_box_blur_vertical_ae7796585df421f0c00a9c86ad0347e08}} 
+\index{image::BoxBlurVertical@{image::BoxBlurVertical}!BoxBlurVertical@{BoxBlurVertical}}
+\index{BoxBlurVertical@{BoxBlurVertical}!image::BoxBlurVertical@{image::BoxBlurVertical}}
+\doxyparagraph{\texorpdfstring{BoxBlurVertical()}{BoxBlurVertical()}}
+{\footnotesize\ttfamily image\+::\+Box\+Blur\+Vertical\+::\+Box\+Blur\+Vertical (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{radius }\end{DoxyParamCaption})}
+
+
+
+Creates a box blur with a 1xn convolution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & Vertical radius \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_box_blur_vertical_abd87b1629ff625a593ac07d7fbecf414}\label{classimage_1_1_box_blur_vertical_abd87b1629ff625a593ac07d7fbecf414}} 
+\index{image::BoxBlurVertical@{image::BoxBlurVertical}!computeKernel@{computeKernel}}
+\index{computeKernel@{computeKernel}!image::BoxBlurVertical@{image::BoxBlurVertical}}
+\doxyparagraph{\texorpdfstring{computeKernel()}{computeKernel()}}
+{\footnotesize\ttfamily void image\+::\+Box\+Blur\+Vertical\+::compute\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Sets the kernel to all 1, normalized. 
+
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}{image\+::\+Image\+Convolution}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{boxblur_8h}{boxblur.\+h}}\item 
+src/lib\+LMTKimage/boxblur.\+cpp\end{DoxyCompactItemize}

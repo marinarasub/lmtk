@@ -1,0 +1,99 @@
+\hypertarget{classimage_1_1_gaussian_blur_horizontal}{}\doxysubsection{image\+::Gaussian\+Blur\+Horizontal Class Reference}
+\label{classimage_1_1_gaussian_blur_horizontal}\index{image::GaussianBlurHorizontal@{image::GaussianBlurHorizontal}}
+
+
+Class for seperable horizontal component of gaussian blur.  
+
+
+
+
+{\ttfamily \#include \char`\"{}gaussianblur.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Gaussian\+Blur\+Horizontal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimage_1_1_gaussian_blur_horizontal}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimage_1_1_gaussian_blur_horizontal_a91ac728d5f2fdef73944de28bf5c7e66}{Gaussian\+Blur\+Horizontal}} (float stdev)
+\begin{DoxyCompactList}\small\item\em Creates a horizontal gaussian blur with a standard deviation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_gaussian_blur_horizontal_ae28bec01641e1766fc83c60cb944ded6}{Gaussian\+Blur\+Horizontal}} (float stdev, float tol)
+\begin{DoxyCompactList}\small\item\em Create gaussian blur with horizontal standard deviation and tolerance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classimage_1_1_gaussian_blur_horizontal_ae68b365f541a0b4c7f829b6b8f37ee04}{compute\+Kernel}} () override
+\begin{DoxyCompactList}\small\item\em Computes the kernel according to the gaussian function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Class for seperable horizontal component of gaussian blur. 
+
+Blurs the image according to the gaussian horizontally \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_gaussian_blur}{Gaussian\+Blur}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_gaussian_blur_horizontal_a91ac728d5f2fdef73944de28bf5c7e66}\label{classimage_1_1_gaussian_blur_horizontal_a91ac728d5f2fdef73944de28bf5c7e66}} 
+\index{image::GaussianBlurHorizontal@{image::GaussianBlurHorizontal}!GaussianBlurHorizontal@{GaussianBlurHorizontal}}
+\index{GaussianBlurHorizontal@{GaussianBlurHorizontal}!image::GaussianBlurHorizontal@{image::GaussianBlurHorizontal}}
+\doxyparagraph{\texorpdfstring{GaussianBlurHorizontal()}{GaussianBlurHorizontal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily image\+::\+Gaussian\+Blur\+Horizontal\+::\+Gaussian\+Blur\+Horizontal (\begin{DoxyParamCaption}\item[{float}]{stdev }\end{DoxyParamCaption})}
+
+
+
+Creates a horizontal gaussian blur with a standard deviation. 
+
+Standard deviation is in pixels. May be fractional. 
+\begin{DoxyParams}{Parameters}
+{\em stdev} & Horizontal standard deviation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_gaussian_blur_horizontal_ae28bec01641e1766fc83c60cb944ded6}\label{classimage_1_1_gaussian_blur_horizontal_ae28bec01641e1766fc83c60cb944ded6}} 
+\index{image::GaussianBlurHorizontal@{image::GaussianBlurHorizontal}!GaussianBlurHorizontal@{GaussianBlurHorizontal}}
+\index{GaussianBlurHorizontal@{GaussianBlurHorizontal}!image::GaussianBlurHorizontal@{image::GaussianBlurHorizontal}}
+\doxyparagraph{\texorpdfstring{GaussianBlurHorizontal()}{GaussianBlurHorizontal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily image\+::\+Gaussian\+Blur\+Horizontal\+::\+Gaussian\+Blur\+Horizontal (\begin{DoxyParamCaption}\item[{float}]{stdev,  }\item[{float}]{tol }\end{DoxyParamCaption})}
+
+
+
+Create gaussian blur with horizontal standard deviation and tolerance. 
+
+Standard deviation is in pixels. May be fractional. Tolerance refers to the value for which any weights smaller than it will not be included in the kernel. 
+\begin{DoxyParams}{Parameters}
+{\em stdev} & Horizontal standard deviation \\
+\hline
+{\em tol} & Tolerance for kernel weights \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_gaussian_blur_horizontal_ae68b365f541a0b4c7f829b6b8f37ee04}\label{classimage_1_1_gaussian_blur_horizontal_ae68b365f541a0b4c7f829b6b8f37ee04}} 
+\index{image::GaussianBlurHorizontal@{image::GaussianBlurHorizontal}!computeKernel@{computeKernel}}
+\index{computeKernel@{computeKernel}!image::GaussianBlurHorizontal@{image::GaussianBlurHorizontal}}
+\doxyparagraph{\texorpdfstring{computeKernel()}{computeKernel()}}
+{\footnotesize\ttfamily void image\+::\+Gaussian\+Blur\+Horizontal\+::compute\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Computes the kernel according to the gaussian function. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespaceutils_1_1math_a03b322be2f55f7ac30e08b4125fb47bb}{utils\+::math\+::gaussian()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}{image\+::\+Image\+Convolution}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{gaussianblur_8h}{gaussianblur.\+h}}\item 
+src/lib\+LMTKimage/gaussianblur.\+cpp\end{DoxyCompactItemize}

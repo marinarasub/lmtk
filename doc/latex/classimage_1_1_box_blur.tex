@@ -1,0 +1,111 @@
+\hypertarget{classimage_1_1_box_blur}{}\doxysubsection{image\+::Box\+Blur Class Reference}
+\label{classimage_1_1_box_blur}\index{image::BoxBlur@{image::BoxBlur}}
+
+
+Class for box blur.  
+
+
+
+
+{\ttfamily \#include \char`\"{}boxblur.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Box\+Blur\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimage_1_1_box_blur}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage_1_1_box_blur_a1f64907fa9a1bb475085bdc28519b9d0}\label{classimage_1_1_box_blur_a1f64907fa9a1bb475085bdc28519b9d0}} 
+{\bfseries Box\+Blur} ()
+\begin{DoxyCompactList}\small\item\em Creates a box blur with a default 3x3 convolution. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_box_blur_a1833b5e77f90eafc07e0df90b3bf1bbf}{Box\+Blur}} (size\+\_\+t radius)
+\begin{DoxyCompactList}\small\item\em Creates a box blur given radius. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_box_blur_a7620c490a1ad0d14f41ce74356d16997}{Box\+Blur}} (size\+\_\+t radiusX, size\+\_\+t radiusY)
+\begin{DoxyCompactList}\small\item\em Creates a box blur given horizontal and vertial radius. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classimage_1_1_box_blur_a43cd0ca8b95d00d9e09981cb824fa2f6}{compute\+Kernel}} () override
+\begin{DoxyCompactList}\small\item\em Sets the kernel to all 1, normalized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Class for box blur. 
+
+A box blur convolution is all 1\textquotesingle{}s, smoothing the image with equally weighted surrounding pixels. Repeated iterations / multiple passes approximates the Gaussian Blur. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_gaussian_blur}{Gaussian\+Blur}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_box_blur_a1833b5e77f90eafc07e0df90b3bf1bbf}\label{classimage_1_1_box_blur_a1833b5e77f90eafc07e0df90b3bf1bbf}} 
+\index{image::BoxBlur@{image::BoxBlur}!BoxBlur@{BoxBlur}}
+\index{BoxBlur@{BoxBlur}!image::BoxBlur@{image::BoxBlur}}
+\doxyparagraph{\texorpdfstring{BoxBlur()}{BoxBlur()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily image\+::\+Box\+Blur\+::\+Box\+Blur (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{radius }\end{DoxyParamCaption})}
+
+
+
+Creates a box blur given radius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The matrix radius \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+\char`\"{}radius\char`\"{} loosely refers to how many pixels the matrix extends from the center horizontally and vertically 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_convolution_ac7175ed1a4ec89740dfb66cab9fcb168}{Image\+Convolution()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classimage_1_1_box_blur_a7620c490a1ad0d14f41ce74356d16997}\label{classimage_1_1_box_blur_a7620c490a1ad0d14f41ce74356d16997}} 
+\index{image::BoxBlur@{image::BoxBlur}!BoxBlur@{BoxBlur}}
+\index{BoxBlur@{BoxBlur}!image::BoxBlur@{image::BoxBlur}}
+\doxyparagraph{\texorpdfstring{BoxBlur()}{BoxBlur()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily image\+::\+Box\+Blur\+::\+Box\+Blur (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{radiusX,  }\item[{size\+\_\+t}]{radiusY }\end{DoxyParamCaption})}
+
+
+
+Creates a box blur given horizontal and vertial radius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radiusX} & The horizontal matrix radius \\
+\hline
+{\em radiusY} & The vertical matrix radius \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+\char`\"{}radius\char`\"{} loosely refers to how many pixels the matrix extends from the center horizontally and vertically 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_convolution_ac7175ed1a4ec89740dfb66cab9fcb168}{Image\+Convolution()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_box_blur_a43cd0ca8b95d00d9e09981cb824fa2f6}\label{classimage_1_1_box_blur_a43cd0ca8b95d00d9e09981cb824fa2f6}} 
+\index{image::BoxBlur@{image::BoxBlur}!computeKernel@{computeKernel}}
+\index{computeKernel@{computeKernel}!image::BoxBlur@{image::BoxBlur}}
+\doxyparagraph{\texorpdfstring{computeKernel()}{computeKernel()}}
+{\footnotesize\ttfamily void image\+::\+Box\+Blur\+::compute\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Sets the kernel to all 1, normalized. 
+
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}{image\+::\+Image\+Convolution}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{boxblur_8h}{boxblur.\+h}}\item 
+src/lib\+LMTKimage/boxblur.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+install
+libpng
+libjpeg-turbo
+Eigen3
+ZLIB
+portaudio
+libflac
+gtest
+boost-program-options

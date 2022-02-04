@@ -1,0 +1,82 @@
+\hypertarget{convolution_8h_source}{}\doxysubsection{convolution.\+h}
+\label{convolution_8h_source}\index{src/libLMTKimage/convolution.h@{src/libLMTKimage/convolution.h}}
+\mbox{\hyperlink{convolution_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifndef \_LIBLMTKIMAGE\_CONVOLUTION\_H\_}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define \_LIBLMTKIMAGE\_CONVOLUTION\_H\_}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include <Eigen/Dense>}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{imageshader_8h}{imageshader.h}}"{}}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{namespace }image \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{comment}{// TODO seperate kernels for each channel}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{comment}{/*}}
+\DoxyCodeLine{34 \textcolor{comment}{    * Convolution Example:}}
+\DoxyCodeLine{35 \textcolor{comment}{    * }}
+\DoxyCodeLine{36 \textcolor{comment}{    * Ex Identity   0 0 0   1 2 3}}
+\DoxyCodeLine{37 \textcolor{comment}{    *               0 1 0 * 4 5 6 = 5}}
+\DoxyCodeLine{38 \textcolor{comment}{    *               0 0 0   7 8 9}}
+\DoxyCodeLine{39 \textcolor{comment}{    * }}
+\DoxyCodeLine{40 \textcolor{comment}{    * Ex Box        1 1 1   1 2 3}}
+\DoxyCodeLine{41 \textcolor{comment}{    *               1 1 1 * 4 5 6 = 45}}
+\DoxyCodeLine{42 \textcolor{comment}{    *               1 1 1   7 8 9}}
+\DoxyCodeLine{43 \textcolor{comment}{    */}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{57     \textcolor{keyword}{class }\mbox{\hyperlink{classimage_1_1_image_convolution}{ImageConvolution}} : \textcolor{keyword}{public} \mbox{\hyperlink{classimage_1_1_image_shader}{ImageShader}}}
+\DoxyCodeLine{58     \{}
+\DoxyCodeLine{59     \textcolor{keyword}{public}:}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66         \mbox{\hyperlink{classimage_1_1_image_convolution_ac7175ed1a4ec89740dfb66cab9fcb168}{ImageConvolution}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{74         \mbox{\hyperlink{classimage_1_1_image_convolution_ac7175ed1a4ec89740dfb66cab9fcb168}{ImageConvolution}}(\textcolor{keywordtype}{size\_t} center);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{83         \mbox{\hyperlink{classimage_1_1_image_convolution_ac7175ed1a4ec89740dfb66cab9fcb168}{ImageConvolution}}(\textcolor{keywordtype}{size\_t} centerX, \textcolor{keywordtype}{size\_t} centerY);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{94         \mbox{\hyperlink{classimage_1_1_image_convolution_ac7175ed1a4ec89740dfb66cab9fcb168}{ImageConvolution}}(\textcolor{keywordtype}{size\_t} centerX, \textcolor{keywordtype}{size\_t} centerY,}
+\DoxyCodeLine{95             EdgeHandlingMethod \mbox{\hyperlink{classimage_1_1_image_shader_aae5281c90bbf2cf215d4b8b5704f048a}{edge\_method}});}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{103         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_convolution_a5a948e4a3b82da338b8cbbffc3ec1d52}{operator()}}(\mbox{\hyperlink{classimage_1_1_image}{Image}}\& img) \textcolor{keyword}{override};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{117         \textcolor{keyword}{virtual} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_image_convolution_a5a948e4a3b82da338b8cbbffc3ec1d52}{operator()}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_image}{Image}}\& img, \textcolor{keywordtype}{size\_t} x, \textcolor{keywordtype}{size\_t} y) }
+\DoxyCodeLine{118             \textcolor{keyword}{override};}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122         \textcolor{comment}{/*}}
+\DoxyCodeLine{123 \textcolor{comment}{        * Sizing Example:}}
+\DoxyCodeLine{124 \textcolor{comment}{        * }}
+\DoxyCodeLine{125 \textcolor{comment}{        * Ex center = 0, 0  0}}
+\DoxyCodeLine{126 \textcolor{comment}{        * }}
+\DoxyCodeLine{127 \textcolor{comment}{        * Ex center = 1, 1  0 0 0}}
+\DoxyCodeLine{128 \textcolor{comment}{        *                   0 c 0}}
+\DoxyCodeLine{129 \textcolor{comment}{        *                   0 0 0}}
+\DoxyCodeLine{130 \textcolor{comment}{        * }}
+\DoxyCodeLine{131 \textcolor{comment}{        * Ex center = 2, 3  0 0 0 0 0}}
+\DoxyCodeLine{132 \textcolor{comment}{        *                   0 0 0 0 0}}
+\DoxyCodeLine{133 \textcolor{comment}{        *                   0 0 0 0 0}}
+\DoxyCodeLine{134 \textcolor{comment}{        *                   0 0 c 0 0}}
+\DoxyCodeLine{135 \textcolor{comment}{        *                   0 0 0 0 0}}
+\DoxyCodeLine{136 \textcolor{comment}{        *                   0 0 0 0 0}}
+\DoxyCodeLine{137 \textcolor{comment}{        *                   0 0 0 0 0}}
+\DoxyCodeLine{138 \textcolor{comment}{        */}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{148         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_convolution_a694a7ddcfefe12d1ff647fb6c1276afd}{setKernelSize}}(\textcolor{keywordtype}{size\_t} centerX, \textcolor{keywordtype}{size\_t} centerY);}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{154         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}{computeKernel}}() = 0;}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{168         \textcolor{keyword}{virtual} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_image_convolution_afe68794c87f0a8dd2320247db36d92d1}{convolution}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_image}{Image}}\& img, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{176         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_convolution_ac84c5c9437229b694276f58fb22ee51b}{normalize}}();}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178         Eigen::MatrixXf \mbox{\hyperlink{classimage_1_1_image_convolution_aa47757b4e87aa52897e40dc5dc022a8f}{kernel}}; }
+\DoxyCodeLine{179     \};}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 \}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//\_LIBLMTKIMAGE\_CONVOLUTION\_H\_}}
+
+\end{DoxyCode}

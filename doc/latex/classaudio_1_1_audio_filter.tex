@@ -1,0 +1,55 @@
+\hypertarget{classaudio_1_1_audio_filter}{}\doxysubsection{audio\+::Audio\+Filter Class Reference}
+\label{classaudio_1_1_audio_filter}\index{audio::AudioFilter@{audio::AudioFilter}}
+
+
+Abstract audio filter class.  
+
+
+
+
+{\ttfamily \#include \char`\"{}audiofilter.\+h\char`\"{}}
+
+Inheritance diagram for audio\+::Audio\+Filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classaudio_1_1_audio_filter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaudio_1_1_audio_filter_a833b6dffc26afc913224c99b651f448e}\label{classaudio_1_1_audio_filter_a833b6dffc26afc913224c99b651f448e}} 
+virtual {\bfseries $\sim$\+Audio\+Filter} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classaudio_1_1_audio_filter_a2018d3548aabb9b1252faf463319d99e}{operator()}} (\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&track)=0
+\begin{DoxyCompactList}\small\item\em Abstract operator to an audio track. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Abstract audio filter class. 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaudio_1_1_audio_filter_a2018d3548aabb9b1252faf463319d99e}\label{classaudio_1_1_audio_filter_a2018d3548aabb9b1252faf463319d99e}} 
+\index{audio::AudioFilter@{audio::AudioFilter}!operator()@{operator()}}
+\index{operator()@{operator()}!audio::AudioFilter@{audio::AudioFilter}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual void audio\+::\+Audio\+Filter\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract operator to an audio track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track} & Audio track to filter \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classaudio_1_1_low_pass_filter_a8f6793e877ebc9dc80b58f8a56d62482}{audio\+::\+Low\+Pass\+Filter}}, \mbox{\hyperlink{classaudio_1_1_sawtooth_wave_a91f419410def6704478d5846dd1d9ea3}{audio\+::\+Sawtooth\+Wave}}, \mbox{\hyperlink{classaudio_1_1_sine_wave_aa16dc4b1e30d41675f8347b578c8a573}{audio\+::\+Sine\+Wave}}, \mbox{\hyperlink{classaudio_1_1_square_wave_a05423bdd7e68dd375abf604bf66be3dd}{audio\+::\+Square\+Wave}}, and \mbox{\hyperlink{classaudio_1_1_wave_generator_a99136681ca763ec2df9b2c1743f3773e}{audio\+::\+Wave\+Generator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKaudio/\mbox{\hyperlink{audiofilter_8h}{audiofilter.\+h}}\end{DoxyCompactItemize}

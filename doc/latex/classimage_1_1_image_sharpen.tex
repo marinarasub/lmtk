@@ -1,0 +1,83 @@
+\hypertarget{classimage_1_1_image_sharpen}{}\doxysubsection{image\+::Image\+Sharpen Class Reference}
+\label{classimage_1_1_image_sharpen}\index{image::ImageSharpen@{image::ImageSharpen}}
+
+
+class for sharpening an image  
+
+
+
+
+{\ttfamily \#include \char`\"{}sharpen.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Image\+Sharpen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimage_1_1_image_sharpen}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage_1_1_image_sharpen_a9802944032d6b890e5eb51aa56598a29}\label{classimage_1_1_image_sharpen_a9802944032d6b890e5eb51aa56598a29}} 
+{\bfseries Image\+Sharpen} ()
+\begin{DoxyCompactList}\small\item\em Create a sharpening functor with default sharpnening amount. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_image_sharpen_aee751df5966fe1ede74d4d84630d44aa}{Image\+Sharpen}} (float amt)
+\begin{DoxyCompactList}\small\item\em Create a sharpening functor with sharpening amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage_1_1_image_sharpen_a9df7715b3ee3805509de94b81ae812c8}\label{classimage_1_1_image_sharpen_a9df7715b3ee3805509de94b81ae812c8}} 
+static const size\+\_\+t {\bfseries SHARP\+\_\+\+CENTER} = 1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classimage_1_1_image_sharpen_aca7238e8f84a48ceb0cf324ec0c35fca}{compute\+Kernel}} () override
+\begin{DoxyCompactList}\small\item\em Computes the kernel using laplcian filter plus identity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+class for sharpening an image 
+
+\mbox{\hyperlink{classimage_1_1_image}{Image}} sharpening is done by emphasizing color differences (edges) This implementation uses a lapacian filter + identity 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_image_sharpen_aee751df5966fe1ede74d4d84630d44aa}\label{classimage_1_1_image_sharpen_aee751df5966fe1ede74d4d84630d44aa}} 
+\index{image::ImageSharpen@{image::ImageSharpen}!ImageSharpen@{ImageSharpen}}
+\index{ImageSharpen@{ImageSharpen}!image::ImageSharpen@{image::ImageSharpen}}
+\doxyparagraph{\texorpdfstring{ImageSharpen()}{ImageSharpen()}}
+{\footnotesize\ttfamily image\+::\+Image\+Sharpen\+::\+Image\+Sharpen (\begin{DoxyParamCaption}\item[{float}]{amt }\end{DoxyParamCaption})}
+
+
+
+Create a sharpening functor with sharpening amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amt} & Amount to sharpen \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_image_sharpen_aca7238e8f84a48ceb0cf324ec0c35fca}\label{classimage_1_1_image_sharpen_aca7238e8f84a48ceb0cf324ec0c35fca}} 
+\index{image::ImageSharpen@{image::ImageSharpen}!computeKernel@{computeKernel}}
+\index{computeKernel@{computeKernel}!image::ImageSharpen@{image::ImageSharpen}}
+\doxyparagraph{\texorpdfstring{computeKernel()}{computeKernel()}}
+{\footnotesize\ttfamily void image\+::\+Image\+Sharpen\+::compute\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Computes the kernel using laplcian filter plus identity. 
+
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}{image\+::\+Image\+Convolution}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{sharpen_8h}{sharpen.\+h}}\item 
+src/lib\+LMTKimage/sharpen.\+cpp\end{DoxyCompactItemize}

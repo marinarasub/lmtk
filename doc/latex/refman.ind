@@ -1,0 +1,579 @@
+\begin{theindex}
+
+  \item {$\sim$Image}
+    \subitem {image::Image}, \hyperpage{69}
+  \item {$\sim$ImageFile}
+    \subitem {image::ImageFile}, \hyperpage{84}
+  \item {$\sim$ThreadPool}
+    \subitem {threadpool::ThreadPool}, \hyperpage{118}
+
+  \indexspace
+
+  \item {a}
+    \subitem {image::HSLAPixel}, \hyperpage{63}
+    \subitem {image::RGBAPixel}, \hyperpage{108}
+  \item {addEffect}
+    \subitem {image::PluginChain}, \hyperpage{94}
+  \item {addTask}
+    \subitem {threadpool::ThreadPool}, \hyperpage{118, 119}
+  \item {audio::audio\_sample}, \hyperpage{25}
+    \subitem {operator+}, \hyperpage{25}
+  \item {audio::AudioFilter}, \hyperpage{26}
+    \subitem {operator()}, \hyperpage{26}
+  \item {audio::AudioPlayer}, \hyperpage{27}
+    \subitem {AudioPlayer}, \hyperpage{27}
+    \subitem {operator()}, \hyperpage{28}
+    \subitem {play}, \hyperpage{28}
+    \subitem {setGain}, \hyperpage{28}
+    \subitem {stop}, \hyperpage{29}
+    \subitem {track}, \hyperpage{29}
+  \item {audio::AudioTrack}, \hyperpage{29}
+    \subitem {AudioTrack}, \hyperpage{31}
+    \subitem {channels}, \hyperpage{32}
+    \subitem {copy}, \hyperpage{32}
+    \subitem {currentPos}, \hyperpage{32}
+    \subitem {ended}, \hyperpage{32}
+    \subitem {getSample}, \hyperpage{32}
+    \subitem {merge}, \hyperpage{33}
+    \subitem {nextSample}, \hyperpage{33}
+    \subitem {operator+}, \hyperpage{33}
+    \subitem {operator=}, \hyperpage{34}
+    \subitem {resample}, \hyperpage{34}
+    \subitem {sampleLength}, \hyperpage{34}
+    \subitem {sampleRate}, \hyperpage{34}
+    \subitem {setSample}, \hyperpage{35}
+  \item {audio::FLAC}, \hyperpage{47}
+    \subitem {FLAC}, \hyperpage{47, 48}
+    \subitem {readFile}, \hyperpage{48}
+  \item {audio::LowPassFilter}, \hyperpage{92}
+    \subitem {operator()}, \hyperpage{93}
+  \item {audio::SawtoothWave}, \hyperpage{109}
+    \subitem {operator()}, \hyperpage{111}
+    \subitem {SawtoothWave}, \hyperpage{110}
+  \item {audio::SineWave}, \hyperpage{111}
+    \subitem {operator()}, \hyperpage{113}
+    \subitem {SineWave}, \hyperpage{112}
+  \item {audio::SquareWave}, \hyperpage{113}
+    \subitem {operator()}, \hyperpage{115}
+    \subitem {SquareWave}, \hyperpage{114}
+  \item {audio::WaveGenerator}, \hyperpage{122}
+    \subitem {operator()}, \hyperpage{124}
+    \subitem {WaveGenerator}, \hyperpage{123}
+  \item {AudioPlayer}
+    \subitem {audio::AudioPlayer}, \hyperpage{27}
+  \item {AudioTrack}
+    \subitem {audio::AudioTrack}, \hyperpage{31}
+  \item {average}
+    \subitem {image::RGBAPixel}, \hyperpage{103}
+
+  \indexspace
+
+  \item {b}
+    \subitem {image::RGBAPixel}, \hyperpage{108}
+  \item {blendNormal}
+    \subitem {image::Image}, \hyperpage{69}
+  \item {BokehBlur}
+    \subitem {image::BokehBlur}, \hyperpage{36}
+  \item {BoxBlur}
+    \subitem {image::BoxBlur}, \hyperpage{38}
+  \item {BoxBlurHorizontal}
+    \subitem {image::BoxBlurHorizontal}, \hyperpage{40}
+  \item {BoxBlurVertical}
+    \subitem {image::BoxBlurVertical}, \hyperpage{42}
+
+  \indexspace
+
+  \item {channels}
+    \subitem {audio::AudioTrack}, \hyperpage{32}
+  \item {ChromaKeyShader}
+    \subitem {image::ChromaKeyShader}, \hyperpage{43}
+  \item {clear}
+    \subitem {image::Image}, \hyperpage{70}
+  \item {color}, \hyperpage{17}
+  \item {color::hsl\_color}, \hyperpage{57}
+  \item {color::rgb\_color}, \hyperpage{99}
+  \item {computeKernel}
+    \subitem {image::BokehBlur}, \hyperpage{37}
+    \subitem {image::BoxBlur}, \hyperpage{39}
+    \subitem {image::BoxBlurHorizontal}, \hyperpage{40}
+    \subitem {image::BoxBlurVertical}, \hyperpage{42}
+    \subitem {image::GaussianBlur}, \hyperpage{51}
+    \subitem {image::GaussianBlurHorizontal}, \hyperpage{53}
+    \subitem {image::GaussianBlurVertical}, \hyperpage{55}
+    \subitem {image::ImageConvolution}, \hyperpage{81}
+    \subitem {image::ImageSharpen}, \hyperpage{89}
+  \item {convolution}
+    \subitem {image::ImageConvolution}, \hyperpage{81}
+  \item {copy}
+    \subitem {audio::AudioTrack}, \hyperpage{32}
+    \subitem {image::Image}, \hyperpage{70}
+  \item {currentPos}
+    \subitem {audio::AudioTrack}, \hyperpage{32}
+
+  \indexspace
+
+  \item {dequeue}
+    \subitem {threadpool::TaskQueue}, \hyperpage{116}
+  \item {detach}
+    \subitem {threadpool::ThreadPool}, \hyperpage{119}
+  \item {dist}
+    \subitem {image::RGBAPixel}, \hyperpage{103}
+    \subitem {utils::math}, \hyperpage{19}
+
+  \indexspace
+
+  \item {edge\_method}
+    \subitem {image::ImageShader}, \hyperpage{87}
+  \item {empty}
+    \subitem {image::PluginChain}, \hyperpage{94}
+    \subitem {threadpool::TaskQueue}, \hyperpage{116}
+  \item {ended}
+    \subitem {audio::AudioTrack}, \hyperpage{32}
+  \item {enqueue}
+    \subitem {threadpool::TaskQueue}, \hyperpage{116}
+
+  \indexspace
+
+  \item {fillGradient}
+    \subitem {image::Image}, \hyperpage{70}
+  \item {fillSolidColor}
+    \subitem {image::Image}, \hyperpage{71}
+  \item {FLAC}
+    \subitem {audio::FLAC}, \hyperpage{47, 48}
+
+  \indexspace
+
+  \item {g}
+    \subitem {image::RGBAPixel}, \hyperpage{108}
+  \item {gaussian}
+    \subitem {utils::math}, \hyperpage{19}
+  \item {gaussian2d}
+    \subitem {utils::math}, \hyperpage{20}
+  \item {GaussianBlur}
+    \subitem {image::GaussianBlur}, \hyperpage{50, 51}
+  \item {gaussianblur.h}
+    \subitem {sigmaTolerance}, \hyperpage{152}
+  \item {GaussianBlurHorizontal}
+    \subitem {image::GaussianBlurHorizontal}, \hyperpage{52, 53}
+  \item {GaussianBlurVertical}
+    \subitem {image::GaussianBlurVertical}, \hyperpage{54, 55}
+  \item {getFrequency}
+    \subitem {musicnote.h}, \hyperpage{137, 138}
+  \item {getRGBAPixel}
+    \subitem {image::Image}, \hyperpage{71, 72}
+  \item {getSample}
+    \subitem {audio::AudioTrack}, \hyperpage{32}
+
+  \indexspace
+
+  \item {h}
+    \subitem {image::HSLAPixel}, \hyperpage{63}
+  \item {height}
+    \subitem {image::Image}, \hyperpage{73}
+  \item {HSLAPixel}
+    \subitem {image::HSLAPixel}, \hyperpage{59}
+  \item {hslapixel.h}
+    \subitem {operator$<$$<$}, \hyperpage{155}
+  \item {HueSatLumAdjust}
+    \subitem {image::HueSatLumAdjust}, \hyperpage{65}
+
+  \indexspace
+
+  \item {Image}
+    \subitem {image::Image}, \hyperpage{68, 69}
+  \item {image::BokehBlur}, \hyperpage{35}
+    \subitem {BokehBlur}, \hyperpage{36}
+    \subitem {computeKernel}, \hyperpage{37}
+  \item {image::BoxBlur}, \hyperpage{37}
+    \subitem {BoxBlur}, \hyperpage{38}
+    \subitem {computeKernel}, \hyperpage{39}
+  \item {image::BoxBlurHorizontal}, \hyperpage{39}
+    \subitem {BoxBlurHorizontal}, \hyperpage{40}
+    \subitem {computeKernel}, \hyperpage{40}
+  \item {image::BoxBlurVertical}, \hyperpage{41}
+    \subitem {BoxBlurVertical}, \hyperpage{42}
+    \subitem {computeKernel}, \hyperpage{42}
+  \item {image::ChromaKeyShader}, \hyperpage{42}
+    \subitem {ChromaKeyShader}, \hyperpage{43}
+    \subitem {operator()}, \hyperpage{44}
+  \item {image::ColorInvertShader}, \hyperpage{45}
+    \subitem {operator()}, \hyperpage{45, 46}
+  \item {image::GaussianBlur}, \hyperpage{49}
+    \subitem {computeKernel}, \hyperpage{51}
+    \subitem {GaussianBlur}, \hyperpage{50, 51}
+  \item {image::GaussianBlurHorizontal}, \hyperpage{52}
+    \subitem {computeKernel}, \hyperpage{53}
+    \subitem {GaussianBlurHorizontal}, \hyperpage{52, 53}
+  \item {image::GaussianBlurVertical}, \hyperpage{54}
+    \subitem {computeKernel}, \hyperpage{55}
+    \subitem {GaussianBlurVertical}, \hyperpage{54, 55}
+  \item {image::GrayScaleShader}, \hyperpage{56}
+    \subitem {operator()}, \hyperpage{56, 57}
+  \item {image::HSLAPixel}, \hyperpage{57}
+    \subitem {a}, \hyperpage{63}
+    \subitem {h}, \hyperpage{63}
+    \subitem {HSLAPixel}, \hyperpage{59}
+    \subitem {l}, \hyperpage{64}
+    \subitem {operator!=}, \hyperpage{60}
+    \subitem {operator=}, \hyperpage{60}
+    \subitem {operator==}, \hyperpage{60}
+    \subitem {s}, \hyperpage{64}
+    \subitem {set}, \hyperpage{61, 62}
+    \subitem {setAlpha}, \hyperpage{62}
+    \subitem {setTransparency}, \hyperpage{63}
+    \subitem {to\_string}, \hyperpage{63}
+  \item {image::hslcolor}, \hyperpage{17}
+  \item {image::HueSatLumAdjust}, \hyperpage{64}
+    \subitem {HueSatLumAdjust}, \hyperpage{65}
+    \subitem {operator()}, \hyperpage{65, 66}
+  \item {image::Image}, \hyperpage{66}
+    \subitem {$\sim$Image}, \hyperpage{69}
+    \subitem {blendNormal}, \hyperpage{69}
+    \subitem {clear}, \hyperpage{70}
+    \subitem {copy}, \hyperpage{70}
+    \subitem {fillGradient}, \hyperpage{70}
+    \subitem {fillSolidColor}, \hyperpage{71}
+    \subitem {getRGBAPixel}, \hyperpage{71, 72}
+    \subitem {height}, \hyperpage{73}
+    \subitem {Image}, \hyperpage{68, 69}
+    \subitem {operator!=}, \hyperpage{73}
+    \subitem {operator=}, \hyperpage{73}
+    \subitem {operator==}, \hyperpage{74}
+    \subitem {pixelAt}, \hyperpage{74}
+    \subitem {resize}, \hyperpage{74}
+    \subitem {scale}, \hyperpage{75}
+    \subitem {setHSLAPixel}, \hyperpage{75}
+    \subitem {setInitialSize}, \hyperpage{76}
+    \subitem {setRGBAPixel}, \hyperpage{76}
+    \subitem {size}, \hyperpage{77}
+    \subitem {to\_string}, \hyperpage{77}
+    \subitem {width}, \hyperpage{77}
+  \item {image::ImageConvolution}, \hyperpage{78}
+    \subitem {computeKernel}, \hyperpage{81}
+    \subitem {convolution}, \hyperpage{81}
+    \subitem {ImageConvolution}, \hyperpage{80}
+    \subitem {normalize}, \hyperpage{81}
+    \subitem {operator()}, \hyperpage{82}
+    \subitem {setKernelSize}, \hyperpage{83}
+  \item {image::ImageFile}, \hyperpage{83}
+    \subitem {$\sim$ImageFile}, \hyperpage{84}
+    \subitem {ImageFile}, \hyperpage{84, 85}
+    \subitem {readFile}, \hyperpage{85}
+    \subitem {writeFile}, \hyperpage{85}
+  \item {image::ImageShader}, \hyperpage{86}
+    \subitem {edge\_method}, \hyperpage{87}
+    \subitem {operator()}, \hyperpage{87}
+  \item {image::ImageSharpen}, \hyperpage{88}
+    \subitem {computeKernel}, \hyperpage{89}
+    \subitem {ImageSharpen}, \hyperpage{89}
+  \item {image::JPEG}, \hyperpage{90}
+    \subitem {JPEG}, \hyperpage{90, 91}
+    \subitem {readFile}, \hyperpage{91}
+    \subitem {writeFile}, \hyperpage{92}
+  \item {image::PluginChain}, \hyperpage{93}
+    \subitem {addEffect}, \hyperpage{94}
+    \subitem {empty}, \hyperpage{94}
+    \subitem {operator()}, \hyperpage{95}
+    \subitem {operator[]}, \hyperpage{95}
+    \subitem {size}, \hyperpage{95}
+  \item {image::PNG}, \hyperpage{96}
+    \subitem {PNG}, \hyperpage{96, 97}
+    \subitem {readFile}, \hyperpage{97}
+    \subitem {writeFile}, \hyperpage{98}
+  \item {image::RGBAPixel}, \hyperpage{99}
+    \subitem {a}, \hyperpage{108}
+    \subitem {average}, \hyperpage{103}
+    \subitem {b}, \hyperpage{108}
+    \subitem {dist}, \hyperpage{103}
+    \subitem {g}, \hyperpage{108}
+    \subitem {naverage}, \hyperpage{103}
+    \subitem {operator!=}, \hyperpage{104}
+    \subitem {operator=}, \hyperpage{104}
+    \subitem {operator==}, \hyperpage{104}
+    \subitem {r}, \hyperpage{109}
+    \subitem {RGBAPixel}, \hyperpage{101, 102}
+    \subitem {set}, \hyperpage{105, 106}
+    \subitem {setAlpha}, \hyperpage{106}
+    \subitem {setTransparency}, \hyperpage{107}
+    \subitem {to\_string}, \hyperpage{107}
+    \subitem {weighted\_average}, \hyperpage{107}
+    \subitem {weighted\_naverage}, \hyperpage{108}
+  \item {image::rgbcolor}, \hyperpage{18}
+  \item {ImageConvolution}
+    \subitem {image::ImageConvolution}, \hyperpage{80}
+  \item {ImageFile}
+    \subitem {image::ImageFile}, \hyperpage{84, 85}
+  \item {ImageSharpen}
+    \subitem {image::ImageSharpen}, \hyperpage{89}
+  \item {include/config.h}, \hyperpage{125}
+
+  \indexspace
+
+  \item {join}
+    \subitem {threadpool::ThreadPool}, \hyperpage{120}
+  \item {JPEG}
+    \subitem {image::JPEG}, \hyperpage{90, 91}
+
+  \indexspace
+
+  \item {l}
+    \subitem {image::HSLAPixel}, \hyperpage{64}
+  \item {lmtkimage::fx\_info}, \hyperpage{49}
+
+  \indexspace
+
+  \item {merge}
+    \subitem {audio::AudioTrack}, \hyperpage{33}
+  \item {musicnote.h}
+    \subitem {getFrequency}, \hyperpage{137, 138}
+
+  \indexspace
+
+  \item {naverage}
+    \subitem {image::RGBAPixel}, \hyperpage{103}
+  \item {nextSample}
+    \subitem {audio::AudioTrack}, \hyperpage{33}
+  \item {normalize}
+    \subitem {image::ImageConvolution}, \hyperpage{81}
+  \item {nsum}
+    \subitem {utils::math}, \hyperpage{21}
+  \item {nsumf}
+    \subitem {utils::math}, \hyperpage{21}
+
+  \indexspace
+
+  \item {operator!=}
+    \subitem {image::HSLAPixel}, \hyperpage{60}
+    \subitem {image::Image}, \hyperpage{73}
+    \subitem {image::RGBAPixel}, \hyperpage{104}
+  \item {operator$<$$<$}
+    \subitem {hslapixel.h}, \hyperpage{155}
+    \subitem {rgbapixel.h}, \hyperpage{169}
+  \item {operator()}
+    \subitem {audio::AudioFilter}, \hyperpage{26}
+    \subitem {audio::AudioPlayer}, \hyperpage{28}
+    \subitem {audio::LowPassFilter}, \hyperpage{93}
+    \subitem {audio::SawtoothWave}, \hyperpage{111}
+    \subitem {audio::SineWave}, \hyperpage{113}
+    \subitem {audio::SquareWave}, \hyperpage{115}
+    \subitem {audio::WaveGenerator}, \hyperpage{124}
+    \subitem {image::ChromaKeyShader}, \hyperpage{44}
+    \subitem {image::ColorInvertShader}, \hyperpage{45, 46}
+    \subitem {image::GrayScaleShader}, \hyperpage{56, 57}
+    \subitem {image::HueSatLumAdjust}, \hyperpage{65, 66}
+    \subitem {image::ImageConvolution}, \hyperpage{82}
+    \subitem {image::ImageShader}, \hyperpage{87}
+    \subitem {image::PluginChain}, \hyperpage{95}
+  \item {operator+}
+    \subitem {audio::audio\_sample}, \hyperpage{25}
+    \subitem {audio::AudioTrack}, \hyperpage{33}
+  \item {operator=}
+    \subitem {audio::AudioTrack}, \hyperpage{34}
+    \subitem {image::HSLAPixel}, \hyperpage{60}
+    \subitem {image::Image}, \hyperpage{73}
+    \subitem {image::RGBAPixel}, \hyperpage{104}
+  \item {operator==}
+    \subitem {image::HSLAPixel}, \hyperpage{60}
+    \subitem {image::Image}, \hyperpage{74}
+    \subitem {image::RGBAPixel}, \hyperpage{104}
+  \item {operator[]}
+    \subitem {image::PluginChain}, \hyperpage{95}
+
+  \indexspace
+
+  \item {pixelAt}
+    \subitem {image::Image}, \hyperpage{74}
+  \item {play}
+    \subitem {audio::AudioPlayer}, \hyperpage{28}
+  \item {PNG}
+    \subitem {image::PNG}, \hyperpage{96, 97}
+
+  \indexspace
+
+  \item {r}
+    \subitem {image::RGBAPixel}, \hyperpage{109}
+  \item {readFile}
+    \subitem {audio::FLAC}, \hyperpage{48}
+    \subitem {image::ImageFile}, \hyperpage{85}
+    \subitem {image::JPEG}, \hyperpage{91}
+    \subitem {image::PNG}, \hyperpage{97}
+  \item {real\_to\_complex}
+    \subitem {utils::math}, \hyperpage{21}
+  \item {real\_to\_complexf}
+    \subitem {utils::math}, \hyperpage{22}
+  \item {resample}
+    \subitem {audio::AudioTrack}, \hyperpage{34}
+  \item {resize}
+    \subitem {image::Image}, \hyperpage{74}
+  \item {RGBAPixel}
+    \subitem {image::RGBAPixel}, \hyperpage{101, 102}
+  \item {rgbapixel.h}
+    \subitem {operator$<$$<$}, \hyperpage{169}
+
+  \indexspace
+
+  \item {s}
+    \subitem {image::HSLAPixel}, \hyperpage{64}
+  \item {sampleLength}
+    \subitem {audio::AudioTrack}, \hyperpage{34}
+  \item {sampleRate}
+    \subitem {audio::AudioTrack}, \hyperpage{34}
+  \item {SawtoothWave}
+    \subitem {audio::SawtoothWave}, \hyperpage{110}
+  \item {scale}
+    \subitem {image::Image}, \hyperpage{75}
+  \item {set}
+    \subitem {image::HSLAPixel}, \hyperpage{61, 62}
+    \subitem {image::RGBAPixel}, \hyperpage{105, 106}
+  \item {setAlpha}
+    \subitem {image::HSLAPixel}, \hyperpage{62}
+    \subitem {image::RGBAPixel}, \hyperpage{106}
+  \item {setGain}
+    \subitem {audio::AudioPlayer}, \hyperpage{28}
+  \item {setHSLAPixel}
+    \subitem {image::Image}, \hyperpage{75}
+  \item {setInitialSize}
+    \subitem {image::Image}, \hyperpage{76}
+  \item {setKernelSize}
+    \subitem {image::ImageConvolution}, \hyperpage{83}
+  \item {setRGBAPixel}
+    \subitem {image::Image}, \hyperpage{76}
+  \item {setSample}
+    \subitem {audio::AudioTrack}, \hyperpage{35}
+  \item {setTransparency}
+    \subitem {image::HSLAPixel}, \hyperpage{63}
+    \subitem {image::RGBAPixel}, \hyperpage{107}
+  \item {sigmaTolerance}
+    \subitem {gaussianblur.h}, \hyperpage{152}
+  \item {SineWave}
+    \subitem {audio::SineWave}, \hyperpage{112}
+  \item {size}
+    \subitem {image::Image}, \hyperpage{77}
+    \subitem {image::PluginChain}, \hyperpage{95}
+    \subitem {threadpool::TaskQueue}, \hyperpage{117}
+  \item {sqr}
+    \subitem {utils::math}, \hyperpage{22}
+  \item {sqrf}
+    \subitem {utils::math}, \hyperpage{24}
+  \item {SquareWave}
+    \subitem {audio::SquareWave}, \hyperpage{114}
+  \item {src/app/tools/imagefx.hpp}, \hyperpage{125, 126}
+  \item {src/app/tools/multithreadedrenderer.h}, \hyperpage{128}
+  \item {src/app/tools/progressbar.h}, \hyperpage{128}
+  \item {src/libLMTKaudio/audiofilter.h}, \hyperpage{129, 130}
+  \item {src/libLMTKaudio/audioplayer.h}, \hyperpage{130, 131}
+  \item {src/libLMTKaudio/audiotrack.h}, \hyperpage{131, 132}
+  \item {src/libLMTKaudio/flac.h}, \hyperpage{133, 134}
+  \item {src/libLMTKaudio/lowpassfilter.h}, \hyperpage{135, 136}
+  \item {src/libLMTKaudio/musicnote.h}, \hyperpage{136}, 
+		\hyperpage{138}
+  \item {src/libLMTKaudio/sawtooth.h}, \hyperpage{139, 140}
+  \item {src/libLMTKaudio/sinewave.h}, \hyperpage{140, 141}
+  \item {src/libLMTKaudio/squarewave.h}, \hyperpage{141, 142}
+  \item {src/libLMTKaudio/wavegenerator.h}, \hyperpage{142, 143}
+  \item {src/libLMTKimage/bokehblur.h}, \hyperpage{143, 144}
+  \item {src/libLMTKimage/boxblur.h}, \hyperpage{144, 145}
+  \item {src/libLMTKimage/chromakeyer.h}, \hyperpage{146}
+  \item {src/libLMTKimage/color.h}, \hyperpage{147, 148}
+  \item {src/libLMTKimage/colorinvert.h}, \hyperpage{148, 149}
+  \item {src/libLMTKimage/convolution.h}, \hyperpage{149, 150}
+  \item {src/libLMTKimage/filters.h}, \hyperpage{151}
+  \item {src/libLMTKimage/gaussianblur.h}, \hyperpage{152, 153}
+  \item {src/libLMTKimage/grayscale.h}, \hyperpage{154}
+  \item {src/libLMTKimage/hslapixel.h}, \hyperpage{155, 156}
+  \item {src/libLMTKimage/hslcolor.h}, \hyperpage{157}
+  \item {src/libLMTKimage/huesatlum.h}, \hyperpage{158}
+  \item {src/libLMTKimage/image.h}, \hyperpage{159, 160}
+  \item {src/libLMTKimage/imagefile.h}, \hyperpage{161, 162}
+  \item {src/libLMTKimage/imageshader.h}, \hyperpage{162, 163}
+  \item {src/libLMTKimage/jpeg.h}, \hyperpage{164, 165}
+  \item {src/libLMTKimage/pluginchain.h}, \hyperpage{165, 166}
+  \item {src/libLMTKimage/png.h}, \hyperpage{167, 168}
+  \item {src/libLMTKimage/rgbapixel.h}, \hyperpage{169, 170}
+  \item {src/libLMTKimage/rgbcolor.h}, \hyperpage{171, 172}
+  \item {src/libLMTKimage/sharpen.h}, \hyperpage{172, 173}
+  \item {src/utils/fft.h}, \hyperpage{173, 174}
+  \item {src/utils/file.h}, \hyperpage{174, 175}
+  \item {src/utils/threadpool.h}, \hyperpage{175, 176}
+  \item {src/utils/timer.h}, \hyperpage{178, 179}
+  \item {src/utils/utils.h}, \hyperpage{179}, \hyperpage{181}
+  \item {src/utils/utilsmath.h}, \hyperpage{181}, \hyperpage{183}
+  \item {src/utils/utilsstring.h}, \hyperpage{183, 184}
+  \item {start}
+    \subitem {threadpool::ThreadPool}, \hyperpage{120}
+    \subitem {utils::Timer}, \hyperpage{122}
+  \item {stop}
+    \subitem {audio::AudioPlayer}, \hyperpage{29}
+    \subitem {threadpool::ThreadPool}, \hyperpage{120}
+    \subitem {utils::Timer}, \hyperpage{122}
+
+  \indexspace
+
+  \item {tasks\_completed}
+    \subitem {threadpool::ThreadPool}, \hyperpage{120}
+  \item {tasks\_remaining}
+    \subitem {threadpool::ThreadPool}, \hyperpage{121}
+  \item {ThreadPool}
+    \subitem {threadpool::ThreadPool}, \hyperpage{118}
+  \item {threadpool::task}, \hyperpage{115}
+  \item {threadpool::TaskQueue}, \hyperpage{115}
+    \subitem {dequeue}, \hyperpage{116}
+    \subitem {empty}, \hyperpage{116}
+    \subitem {enqueue}, \hyperpage{116}
+    \subitem {size}, \hyperpage{117}
+  \item {threadpool::ThreadPool}, \hyperpage{117}
+    \subitem {$\sim$ThreadPool}, \hyperpage{118}
+    \subitem {addTask}, \hyperpage{118, 119}
+    \subitem {detach}, \hyperpage{119}
+    \subitem {join}, \hyperpage{120}
+    \subitem {start}, \hyperpage{120}
+    \subitem {stop}, \hyperpage{120}
+    \subitem {tasks\_completed}, \hyperpage{120}
+    \subitem {tasks\_remaining}, \hyperpage{121}
+    \subitem {ThreadPool}, \hyperpage{118}
+  \item {to\_string}
+    \subitem {image::HSLAPixel}, \hyperpage{63}
+    \subitem {image::Image}, \hyperpage{77}
+    \subitem {image::RGBAPixel}, \hyperpage{107}
+  \item {track}
+    \subitem {audio::AudioPlayer}, \hyperpage{29}
+
+  \indexspace
+
+  \item {uint64\_next\_pwr2}
+    \subitem {utils.h}, \hyperpage{180}
+  \item {uint\_max\_val}
+    \subitem {utils.h}, \hyperpage{180}
+  \item {utils.h}
+    \subitem {uint64\_next\_pwr2}, \hyperpage{180}
+    \subitem {uint\_max\_val}, \hyperpage{180}
+  \item {utils::math}, \hyperpage{18}
+    \subitem {dist}, \hyperpage{19}
+    \subitem {gaussian}, \hyperpage{19}
+    \subitem {gaussian2d}, \hyperpage{20}
+    \subitem {nsum}, \hyperpage{21}
+    \subitem {nsumf}, \hyperpage{21}
+    \subitem {real\_to\_complex}, \hyperpage{21}
+    \subitem {real\_to\_complexf}, \hyperpage{22}
+    \subitem {sqr}, \hyperpage{22}
+    \subitem {sqrf}, \hyperpage{24}
+  \item {utils::Timer}, \hyperpage{121}
+    \subitem {start}, \hyperpage{122}
+    \subitem {stop}, \hyperpage{122}
+
+  \indexspace
+
+  \item {WaveGenerator}
+    \subitem {audio::WaveGenerator}, \hyperpage{123}
+  \item {weighted\_average}
+    \subitem {image::RGBAPixel}, \hyperpage{107}
+  \item {weighted\_naverage}
+    \subitem {image::RGBAPixel}, \hyperpage{108}
+  \item {width}
+    \subitem {image::Image}, \hyperpage{77}
+  \item {writeFile}
+    \subitem {image::ImageFile}, \hyperpage{85}
+    \subitem {image::JPEG}, \hyperpage{92}
+    \subitem {image::PNG}, \hyperpage{98}
+
+\end{theindex}

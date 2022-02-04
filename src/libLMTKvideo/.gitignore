@@ -1,0 +1,10 @@
+# CMake 
+
+CMakeFiles/
+cmake_install.cmake
+
+# Other
+
+[Ii]gnore/
+*.bak
+*.bkp

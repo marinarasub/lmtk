@@ -1,0 +1,212 @@
+\hypertarget{classthreadpool_1_1_thread_pool}{}\doxysubsection{threadpool\+::Thread\+Pool Class Reference}
+\label{classthreadpool_1_1_thread_pool}\index{threadpool::ThreadPool@{threadpool::ThreadPool}}
+
+
+Class for a pool of flexible worker threads which can be given miscellaneous tasks to complete.  
+
+
+
+
+{\ttfamily \#include \char`\"{}threadpool.\+h\char`\"{}}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classthreadpool_1_1_thread_pool_ac68ab6d845f94b031103ed6c8d4f16e8}{Thread\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Creates a threadpool with the default number of threads. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classthreadpool_1_1_thread_pool_a13c2ed02e79d83b635476d9a42a136e6}{Thread\+Pool}} (size\+\_\+t num\+\_\+threads)
+\begin{DoxyCompactList}\small\item\em Creates a threadpool with n threads. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classthreadpool_1_1_thread_pool_a32e182edc603781e10c08298a4e30111}{$\sim$\+Thread\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Deletes all threads. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classthreadpool_1_1_thread_pool_a754bfe3216b873d6e46f4c0cb9fab1ff}{start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the threads into worker thread main loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classthreadpool_1_1_thread_pool_a74cb7363001817d129240a96331a8433}{join}} ()
+\begin{DoxyCompactList}\small\item\em Join the threadpool after the tasks are completed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classthreadpool_1_1_thread_pool_ad52b0bec755870d63e680e82be943d60}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Requests threads to stop execution, regardless of tasks remaining. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classthreadpool_1_1_thread_pool_ac8580a5f5d6ec5cbdd6a950db58a00e4}{detach}} ()
+\begin{DoxyCompactList}\small\item\em Detach all threads in the pool, allowing threads to execute independent of main thread. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\void \mbox{\hyperlink{classthreadpool_1_1_thread_pool_af02f050c2762c6155d94c24398b9a071}{add\+Task}} (std\+::function$<$ void(Args...)$>$ callback, Args... args)
+\begin{DoxyCompactList}\small\item\em Adds a task for the threadpool given callback and arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\void \mbox{\hyperlink{classthreadpool_1_1_thread_pool_aeae41be6862df9d946fc381f7b1f7c42}{add\+Task}} (void($\ast$callback)(Args...), Args... args)
+\begin{DoxyCompactList}\small\item\em Adds a task for the threadpool given callback and arguments. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classthreadpool_1_1_thread_pool_a49146ab821b74f2c17d8ad94be8159ec}{tasks\+\_\+remaining}} () const
+\begin{DoxyCompactList}\small\item\em Get number of tasks remaining, when called. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classthreadpool_1_1_thread_pool_afe366576644a60fb9a348ca548307eab}{tasks\+\_\+completed}} () const
+\begin{DoxyCompactList}\small\item\em Returns the total number of tasks completed by the threadpool when called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Class for a pool of flexible worker threads which can be given miscellaneous tasks to complete. 
+
+Any sized pool of worker threads can be created, but it is not recommended to create more than hardware support unless tasks require lots of waiting, such as memory or disk read/writes. 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classthreadpool_1_1_thread_pool_ac68ab6d845f94b031103ed6c8d4f16e8}\label{classthreadpool_1_1_thread_pool_ac68ab6d845f94b031103ed6c8d4f16e8}} 
+\index{threadpool::ThreadPool@{threadpool::ThreadPool}!ThreadPool@{ThreadPool}}
+\index{ThreadPool@{ThreadPool}!threadpool::ThreadPool@{threadpool::ThreadPool}}
+\doxyparagraph{\texorpdfstring{ThreadPool()}{ThreadPool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily threadpool\+::\+Thread\+Pool\+::\+Thread\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a threadpool with the default number of threads. 
+
+Checks hardware concurrency for number of threads supported. \mbox{\Hypertarget{classthreadpool_1_1_thread_pool_a13c2ed02e79d83b635476d9a42a136e6}\label{classthreadpool_1_1_thread_pool_a13c2ed02e79d83b635476d9a42a136e6}} 
+\index{threadpool::ThreadPool@{threadpool::ThreadPool}!ThreadPool@{ThreadPool}}
+\index{ThreadPool@{ThreadPool}!threadpool::ThreadPool@{threadpool::ThreadPool}}
+\doxyparagraph{\texorpdfstring{ThreadPool()}{ThreadPool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily threadpool\+::\+Thread\+Pool\+::\+Thread\+Pool (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{num\+\_\+threads }\end{DoxyParamCaption})}
+
+
+
+Creates a threadpool with n threads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+threads} & Number of threads to add to pool \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classthreadpool_1_1_thread_pool_a32e182edc603781e10c08298a4e30111}\label{classthreadpool_1_1_thread_pool_a32e182edc603781e10c08298a4e30111}} 
+\index{threadpool::ThreadPool@{threadpool::ThreadPool}!````~ThreadPool@{$\sim$ThreadPool}}
+\index{````~ThreadPool@{$\sim$ThreadPool}!threadpool::ThreadPool@{threadpool::ThreadPool}}
+\doxyparagraph{\texorpdfstring{$\sim$ThreadPool()}{~ThreadPool()}}
+{\footnotesize\ttfamily threadpool\+::\+Thread\+Pool\+::$\sim$\+Thread\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deletes all threads. 
+
+\begin{DoxyWarning}{Warning}
+Should not be called before join if the pool has already been started. 
+\end{DoxyWarning}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classthreadpool_1_1_thread_pool_af02f050c2762c6155d94c24398b9a071}\label{classthreadpool_1_1_thread_pool_af02f050c2762c6155d94c24398b9a071}} 
+\index{threadpool::ThreadPool@{threadpool::ThreadPool}!addTask@{addTask}}
+\index{addTask@{addTask}!threadpool::ThreadPool@{threadpool::ThreadPool}}
+\doxyparagraph{\texorpdfstring{addTask()}{addTask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+void threadpool\+::\+Thread\+Pool\+::add\+Task (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(Args...)$>$}]{callback,  }\item[{Args...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a task for the threadpool given callback and arguments. 
+
+Add using std\+::function 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Args} & Variadic arguments \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Callback function for threads to execute \\
+\hline
+{\em args} & Variadic arguments to call callback with Basically, you can call with any arguments you want // !!! I don\textquotesingle{}t think it handles references very well \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classthreadpool_1_1_thread_pool_aeae41be6862df9d946fc381f7b1f7c42}\label{classthreadpool_1_1_thread_pool_aeae41be6862df9d946fc381f7b1f7c42}} 
+\index{threadpool::ThreadPool@{threadpool::ThreadPool}!addTask@{addTask}}
+\index{addTask@{addTask}!threadpool::ThreadPool@{threadpool::ThreadPool}}
+\doxyparagraph{\texorpdfstring{addTask()}{addTask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+void threadpool\+::\+Thread\+Pool\+::add\+Task (\begin{DoxyParamCaption}\item[{void($\ast$)(Args...)}]{callback,  }\item[{Args...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a task for the threadpool given callback and arguments. 
+
+Add using c-\/style callback (function pointer) 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Args} & Variadic arguments \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Callback function for threads to execute \\
+\hline
+{\em args} & Variadic arguments to call callback with Basically, you can call with any arguments you want // !!! I don\textquotesingle{}t think it handles references very well \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classthreadpool_1_1_thread_pool_ac8580a5f5d6ec5cbdd6a950db58a00e4}\label{classthreadpool_1_1_thread_pool_ac8580a5f5d6ec5cbdd6a950db58a00e4}} 
+\index{threadpool::ThreadPool@{threadpool::ThreadPool}!detach@{detach}}
+\index{detach@{detach}!threadpool::ThreadPool@{threadpool::ThreadPool}}
+\doxyparagraph{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void threadpool\+::\+Thread\+Pool\+::detach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Detach all threads in the pool, allowing threads to execute independent of main thread. 
+
+Threads will no longer be joinable. \mbox{\Hypertarget{classthreadpool_1_1_thread_pool_a74cb7363001817d129240a96331a8433}\label{classthreadpool_1_1_thread_pool_a74cb7363001817d129240a96331a8433}} 
+\index{threadpool::ThreadPool@{threadpool::ThreadPool}!join@{join}}
+\index{join@{join}!threadpool::ThreadPool@{threadpool::ThreadPool}}
+\doxyparagraph{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily void threadpool\+::\+Thread\+Pool\+::join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Join the threadpool after the tasks are completed. 
+
+Will join each thread as long as joinable (i.\+e. not detached) Threads will exit when there are no more tasks remaining. \begin{DoxyNote}{Note}
+tasks can no longer be added from the thread will calls join as the thread will be blocked. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classthreadpool_1_1_thread_pool_a754bfe3216b873d6e46f4c0cb9fab1ff}\label{classthreadpool_1_1_thread_pool_a754bfe3216b873d6e46f4c0cb9fab1ff}} 
+\index{threadpool::ThreadPool@{threadpool::ThreadPool}!start@{start}}
+\index{start@{start}!threadpool::ThreadPool@{threadpool::ThreadPool}}
+\doxyparagraph{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void threadpool\+::\+Thread\+Pool\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the threads into worker thread main loop. 
+
+The threads will run all tasks are completed, unless stopped \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classthreadpool_1_1_thread_pool_ad52b0bec755870d63e680e82be943d60}{stop()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classthreadpool_1_1_thread_pool_ad52b0bec755870d63e680e82be943d60}\label{classthreadpool_1_1_thread_pool_ad52b0bec755870d63e680e82be943d60}} 
+\index{threadpool::ThreadPool@{threadpool::ThreadPool}!stop@{stop}}
+\index{stop@{stop}!threadpool::ThreadPool@{threadpool::ThreadPool}}
+\doxyparagraph{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void threadpool\+::\+Thread\+Pool\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Requests threads to stop execution, regardless of tasks remaining. 
+
+Threads will exit when finished their current task, if any. Then joins the threadpool \begin{DoxyNote}{Note}
+Not a force terminate, will not save infinite loops, deadlocks or other indefinite execution. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classthreadpool_1_1_thread_pool_afe366576644a60fb9a348ca548307eab}\label{classthreadpool_1_1_thread_pool_afe366576644a60fb9a348ca548307eab}} 
+\index{threadpool::ThreadPool@{threadpool::ThreadPool}!tasks\_completed@{tasks\_completed}}
+\index{tasks\_completed@{tasks\_completed}!threadpool::ThreadPool@{threadpool::ThreadPool}}
+\doxyparagraph{\texorpdfstring{tasks\_completed()}{tasks\_completed()}}
+{\footnotesize\ttfamily size\+\_\+t threadpool\+::\+Thread\+Pool\+::tasks\+\_\+completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the total number of tasks completed by the threadpool when called. 
+
+\begin{DoxyReturn}{Returns}
+Cumulative number of tasks completed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classthreadpool_1_1_thread_pool_a49146ab821b74f2c17d8ad94be8159ec}\label{classthreadpool_1_1_thread_pool_a49146ab821b74f2c17d8ad94be8159ec}} 
+\index{threadpool::ThreadPool@{threadpool::ThreadPool}!tasks\_remaining@{tasks\_remaining}}
+\index{tasks\_remaining@{tasks\_remaining}!threadpool::ThreadPool@{threadpool::ThreadPool}}
+\doxyparagraph{\texorpdfstring{tasks\_remaining()}{tasks\_remaining()}}
+{\footnotesize\ttfamily size\+\_\+t threadpool\+::\+Thread\+Pool\+::tasks\+\_\+remaining (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get number of tasks remaining, when called. 
+
+\begin{DoxyReturn}{Returns}
+Number of tasks remaining on queue 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/\mbox{\hyperlink{threadpool_8h}{threadpool.\+h}}\item 
+src/utils/threadpool.\+cpp\end{DoxyCompactItemize}

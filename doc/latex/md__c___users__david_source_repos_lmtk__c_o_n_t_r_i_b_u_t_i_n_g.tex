@@ -1,0 +1,142 @@
+\hypertarget{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md1}{}\doxysection{Issues}\label{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md1}
+TODO\hypertarget{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md2}{}\doxysection{Commits \& Pull Requests}\label{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md2}
+TODO\hypertarget{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md3}{}\doxysection{Code Style}\label{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md3}
+The code style attempts to be consistent and readable, and is subject to change, but here are the styling I use so far\+:
+
+For the most part, I follow a similar format to \href{https://google.github.io/styleguide/cppguide.html}{\texttt{ Google C++ Style Guide}}\hypertarget{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md4}{}\doxysubsection{General}\label{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md4}
+
+\begin{DoxyItemize}
+\item blank lines between {\itshape everything} for readability
+\begin{DoxyItemize}
+\item ok seriously, use blank lines when better readability
+\end{DoxyItemize}
+\item two newlines at after include, header guards, macros before content
+\begin{DoxyItemize}
+\item header guards follow google C++ conventions
+\item include c++ library, then external library headers before user defined 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#ifndef \_SILLYPROJECT\_HEADER\_H\_}
+\DoxyCodeLine{\#define \_SILLYPROJECT\_HEADER\_H\_}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#include <stdlib.h>}
+\DoxyCodeLine{\#include <externallib.h>}
+\DoxyCodeLine{\#include userfile.h"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{class Content }
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#endif // \_SILLYPROJECT\_HEADER\_H\_}
+
+\end{DoxyCode}
+ ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md5}{}\doxysubsection{Comments}\label{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Follow Doxygen Javadoc styling for formal specifications 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/**}
+\DoxyCodeLine{* Brief description.}
+\DoxyCodeLine{*}
+\DoxyCodeLine{\# @tags like this}
+\DoxyCodeLine{*/}
+\DoxyCodeLine{code...}
+
+\end{DoxyCode}
+
+\item Use // for temporary comments or code likely to change 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{// TODO fix this later (which means never lol)}
+\DoxyCodeLine{messy code...}
+
+\end{DoxyCode}
+
+\item TODO will add banners for each header file once more mature 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/***************************************************************************//**}
+\DoxyCodeLine{ * }
+\DoxyCodeLine{ * THIS THING AT THE TOP}
+\DoxyCodeLine{ *}
+\DoxyCodeLine{ * SOME IMPORTANT INFO...}
+\DoxyCodeLine{ *}
+\DoxyCodeLine{ ******************************************************************************/}
+
+\end{DoxyCode}
+ ~\newline
+
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md6}{}\doxysubsection{Naming}\label{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md6}
+
+\begin{DoxyItemize}
+\item UPPERCASE for constants, macros etc. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#define MACRO}
+\DoxyCodeLine{}
+\DoxyCodeLine{const char* CONSTANT}
+
+\end{DoxyCode}
+
+\item Pascal\+Case for classes 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{class HelloWorld}
+
+\end{DoxyCode}
+
+\item camel\+Case for functions 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void myFunc()}
+
+\end{DoxyCode}
+
+\item snake\+\_\+case for fields/members and structs (more hidden/low level stuff) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{double me\_is\_snake\_case}
+\DoxyCodeLine{struct my\_struct}
+
+\end{DoxyCode}
+
+\item snake\+\_\+case for namespaces 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{namespace not\_std}
+
+\end{DoxyCode}
+ ~\newline
+
+\end{DoxyItemize}\hypertarget{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md7}{}\doxysubsection{Brackets/\+Code Blocks}\label{md__c___users__david_source_repos_lmtk__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md7}
+
+\begin{DoxyItemize}
+\item curly on next line for functions, classes and branch logic 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{class Class}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    void func()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        ...}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{````}
+\DoxyCodeLine{-\/ curly on same line for namespaces and try/catch blocks}
+
+\end{DoxyCode}
+ namespace hello \{
+
+try \{
+
+\} catch (...) \{
+
+\} \} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/ branch logic (not as strict) followed by space for condition and curly next line}
+
+\end{DoxyCode}
+ if (condition) \{ ... \} else \{ ... \} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/ function calls are no space (is there any other sane way?)}
+
+\end{DoxyCode}
+ hello.\+function() \`{}\`{}\`{} ~\newline
+ 
+\end{DoxyItemize}

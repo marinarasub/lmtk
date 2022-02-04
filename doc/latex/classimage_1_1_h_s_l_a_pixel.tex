@@ -1,0 +1,351 @@
+\hypertarget{classimage_1_1_h_s_l_a_pixel}{}\doxysubsection{image\+::HSLAPixel Class Reference}
+\label{classimage_1_1_h_s_l_a_pixel}\index{image::HSLAPixel@{image::HSLAPixel}}
+
+
+Class for representing a pixel\textquotesingle{}s color using the HSL color model.  
+
+
+
+
+{\ttfamily \#include \char`\"{}hslapixel.\+h\char`\"{}}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ab044c2aa221fb7a8c1369495f3dd50e0}{HSLAPixel}} ()
+\begin{DoxyCompactList}\small\item\em Creates default HSLA Pixel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ae5a6ff53b52bf2c6c2652f4cf3bb3ec5}{HSLAPixel}} (float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a5f0fad854535cf8ddded306764e44b29}{h}}, float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ad4f4d0c8f41b2e789d0bd6494c1d684f}{s}}, float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a0a28f754dc0763ded14b9c45204da06f}{l}}, float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ae3d41cf9de9dea265b4d4ccff50ae4bf}{a}})
+\begin{DoxyCompactList}\small\item\em Creates HSLA Pixel given hue, saturation, lumimance, and alpha. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a081ad2ba9a9ad658140d75ee95b959ad}{HSLAPixel}} (const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&rgb)
+\begin{DoxyCompactList}\small\item\em Converts RGBA Pixel to HSLA. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a380d0ec7f600eea704d4467f2ad76a98}{operator=}} (const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator\+: copies other\textquotesingle{}s h, s, l, a values to $\ast$this. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ab7547ba99abb14654ff22fdf5a525583}{operator==}} (const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equality operator\+: checks if two HSLA Pixels are equal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_aebb5fa0431f42ebf3c6db09dadb1866c}{operator!=}} (const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&other) const
+\begin{DoxyCompactList}\small\item\em Inequality operator\+: check if two HSLA Pixels are not equal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a8981577539f3afdc18f1a4b59d7d8e8c}{set}} (float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a5f0fad854535cf8ddded306764e44b29}{h}}, float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ad4f4d0c8f41b2e789d0bd6494c1d684f}{s}}, float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a0a28f754dc0763ded14b9c45204da06f}{l}})
+\begin{DoxyCompactList}\small\item\em Sets the H, S, L values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_af0114932acad71f135f210a63c2eee68}{set}} (float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a5f0fad854535cf8ddded306764e44b29}{h}}, float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ad4f4d0c8f41b2e789d0bd6494c1d684f}{s}}, float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a0a28f754dc0763ded14b9c45204da06f}{l}}, float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ae3d41cf9de9dea265b4d4ccff50ae4bf}{a}})
+\begin{DoxyCompactList}\small\item\em Sets the H, S, L and A values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_af73f1221f18063d043aa8c5ed737e7e7}{set}} (const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&other)
+\begin{DoxyCompactList}\small\item\em Sets all channel values to that of another pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_afbf752dcd6ad95416f0dd159738f917d}{set}} (const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&other)
+\begin{DoxyCompactList}\small\item\em Sets HSL values converted from RGB, and alpha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_af01affb3f490c680d2c1d54199a8894c}{set\+Alpha}} (float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ae3d41cf9de9dea265b4d4ccff50ae4bf}{a}})
+\begin{DoxyCompactList}\small\item\em Set the alpha value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_af681684935990b7dd245d10432503a3a}{set\+Transparency}} (float transparency)
+\begin{DoxyCompactList}\small\item\em Sets the transparency. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a5437fe32eee9e3fd7be025ba560cd503}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the HSLA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a5f0fad854535cf8ddded306764e44b29}{h}}
+\begin{DoxyCompactList}\small\item\em Represents the amount of hue in degrees \mbox{[}0, 360) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ad4f4d0c8f41b2e789d0bd6494c1d684f}{s}}
+\begin{DoxyCompactList}\small\item\em Represents the amount of saturation \mbox{[}0, 1\mbox{]}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a0a28f754dc0763ded14b9c45204da06f}{l}}
+\begin{DoxyCompactList}\small\item\em Represents the amount of lightness \mbox{[}0, 1\mbox{]}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ae3d41cf9de9dea265b4d4ccff50ae4bf}{a}}
+\begin{DoxyCompactList}\small\item\em Represents the alpha \mbox{[}0, 1\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Class for representing a pixel\textquotesingle{}s color using the HSL color model. 
+
+HSL\+: Hue, Saturation and Luminance. H is the hue, which can be represented by an angle. The resulting \char`\"{}color  wheel\char`\"{} is a rainbow spectrum. This implementation uses degrees \mbox{[}0, 360). S is the saturation, which is the \char`\"{}amount of color\char`\"{} or vibrance of the color. A lower value means grey, and a higher value is very bright. L is the luminance, which is the intensity of the light. A lower value is close to black, a higher value is close to white. In addition, there is an alpha layer which is the opacity of the image and can be used to overlay different images when suppported. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespacecolor}{color}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_ab044c2aa221fb7a8c1369495f3dd50e0}\label{classimage_1_1_h_s_l_a_pixel_ab044c2aa221fb7a8c1369495f3dd50e0}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!HSLAPixel@{HSLAPixel}}
+\index{HSLAPixel@{HSLAPixel}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{HSLAPixel()}{HSLAPixel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily image\+::\+HSLAPixel\+::\+HSLAPixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates default HSLA Pixel. 
+
+Default value is 0 for each channel \mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_ae5a6ff53b52bf2c6c2652f4cf3bb3ec5}\label{classimage_1_1_h_s_l_a_pixel_ae5a6ff53b52bf2c6c2652f4cf3bb3ec5}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!HSLAPixel@{HSLAPixel}}
+\index{HSLAPixel@{HSLAPixel}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{HSLAPixel()}{HSLAPixel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily image\+::\+HSLAPixel\+::\+HSLAPixel (\begin{DoxyParamCaption}\item[{float}]{h,  }\item[{float}]{s,  }\item[{float}]{l,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Creates HSLA Pixel given hue, saturation, lumimance, and alpha. 
+
+Clamps the values. \begin{DoxySeeAlso}{See also}
+clamp\+HSLA() 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Hue in degrees (can be negative) \\
+\hline
+{\em s} & Saturation \mbox{[}0, 1\mbox{]} \\
+\hline
+{\em l} & Luminance \mbox{[}0, 1\mbox{]} \\
+\hline
+{\em a} & Alpha \mbox{[}0, 1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_a081ad2ba9a9ad658140d75ee95b959ad}\label{classimage_1_1_h_s_l_a_pixel_a081ad2ba9a9ad658140d75ee95b959ad}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!HSLAPixel@{HSLAPixel}}
+\index{HSLAPixel@{HSLAPixel}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{HSLAPixel()}{HSLAPixel()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily image\+::\+HSLAPixel\+::\+HSLAPixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&}]{rgb }\end{DoxyParamCaption})}
+
+
+
+Converts RGBA Pixel to HSLA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rgb} & RGBA Pixel \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_aebb5fa0431f42ebf3c6db09dadb1866c}\label{classimage_1_1_h_s_l_a_pixel_aebb5fa0431f42ebf3c6db09dadb1866c}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool image\+::\+HSLAPixel\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Inequality operator\+: check if two HSLA Pixels are not equal. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ab7547ba99abb14654ff22fdf5a525583}{operator==()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Other pixel to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two are not equal, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_a380d0ec7f600eea704d4467f2ad76a98}\label{classimage_1_1_h_s_l_a_pixel_a380d0ec7f600eea704d4467f2ad76a98}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!operator=@{operator=}}
+\index{operator=@{operator=}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void image\+::\+HSLAPixel\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Assignment operator\+: copies other\textquotesingle{}s h, s, l, a values to $\ast$this. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & HSLA Pixel to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_ab7547ba99abb14654ff22fdf5a525583}\label{classimage_1_1_h_s_l_a_pixel_ab7547ba99abb14654ff22fdf5a525583}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!operator==@{operator==}}
+\index{operator==@{operator==}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool image\+::\+HSLAPixel\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Equality operator\+: checks if two HSLA Pixels are equal. 
+
+Each channel H, S, L, A must be equal. 
+\begin{DoxyParams}{Parameters}
+{\em other} & Other pixel to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two are equal, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_af73f1221f18063d043aa8c5ed737e7e7}\label{classimage_1_1_h_s_l_a_pixel_af73f1221f18063d043aa8c5ed737e7e7}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!set@{set}}
+\index{set@{set}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void image\+::\+HSLAPixel\+::set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Sets all channel values to that of another pixel. 
+
+Equivalent to operator= 
+\begin{DoxyParams}{Parameters}
+{\em other} & Color to set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_afbf752dcd6ad95416f0dd159738f917d}\label{classimage_1_1_h_s_l_a_pixel_afbf752dcd6ad95416f0dd159738f917d}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!set@{set}}
+\index{set@{set}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void image\+::\+HSLAPixel\+::set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Sets HSL values converted from RGB, and alpha. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespacecolor}{color}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Color to set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_a8981577539f3afdc18f1a4b59d7d8e8c}\label{classimage_1_1_h_s_l_a_pixel_a8981577539f3afdc18f1a4b59d7d8e8c}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!set@{set}}
+\index{set@{set}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void image\+::\+HSLAPixel\+::set (\begin{DoxyParamCaption}\item[{float}]{h,  }\item[{float}]{s,  }\item[{float}]{l }\end{DoxyParamCaption})}
+
+
+
+Sets the H, S, L values. 
+
+Will clamp values \begin{DoxySeeAlso}{See also}
+HSLAClamp() 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Hue value \\
+\hline
+{\em s} & Saturation value \\
+\hline
+{\em l} & Luminance value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_af0114932acad71f135f210a63c2eee68}\label{classimage_1_1_h_s_l_a_pixel_af0114932acad71f135f210a63c2eee68}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!set@{set}}
+\index{set@{set}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void image\+::\+HSLAPixel\+::set (\begin{DoxyParamCaption}\item[{float}]{h,  }\item[{float}]{s,  }\item[{float}]{l,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Sets the H, S, L and A values. 
+
+Will clamp values \begin{DoxySeeAlso}{See also}
+HSLAClamp() 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Hue value \\
+\hline
+{\em s} & Saturation value \\
+\hline
+{\em l} & Luminance value \\
+\hline
+{\em a} & Alpha \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_af01affb3f490c680d2c1d54199a8894c}\label{classimage_1_1_h_s_l_a_pixel_af01affb3f490c680d2c1d54199a8894c}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily void image\+::\+HSLAPixel\+::set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Set the alpha value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Alpha \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_af681684935990b7dd245d10432503a3a}\label{classimage_1_1_h_s_l_a_pixel_af681684935990b7dd245d10432503a3a}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!setTransparency@{setTransparency}}
+\index{setTransparency@{setTransparency}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{setTransparency()}{setTransparency()}}
+{\footnotesize\ttfamily void image\+::\+HSLAPixel\+::set\+Transparency (\begin{DoxyParamCaption}\item[{float}]{transparency }\end{DoxyParamCaption})}
+
+
+
+Sets the transparency. 
+
+Transparency is 1.\+0 -\/ alpha 
+\begin{DoxyParams}{Parameters}
+{\em a} & Alpha value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_a5437fe32eee9e3fd7be025ba560cd503}\label{classimage_1_1_h_s_l_a_pixel_a5437fe32eee9e3fd7be025ba560cd503}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string image\+::\+HSLAPixel\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string representation of the HSLA. 
+
+\begin{DoxyReturn}{Returns}
+The string representation 
+\end{DoxyReturn}
+
+
+\doxysubsubsection{Member Data Documentation}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_ae3d41cf9de9dea265b4d4ccff50ae4bf}\label{classimage_1_1_h_s_l_a_pixel_ae3d41cf9de9dea265b4d4ccff50ae4bf}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!a@{a}}
+\index{a@{a}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily float image\+::\+HSLAPixel\+::a}
+
+
+
+Represents the alpha \mbox{[}0, 1\mbox{]}. 
+
+\begin{DoxyWarning}{Warning}
+Modifying this directly does not clamp the value. Not recommended. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_a5f0fad854535cf8ddded306764e44b29}\label{classimage_1_1_h_s_l_a_pixel_a5f0fad854535cf8ddded306764e44b29}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!h@{h}}
+\index{h@{h}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily float image\+::\+HSLAPixel\+::h}
+
+
+
+Represents the amount of hue in degrees \mbox{[}0, 360) 
+
+\begin{DoxyWarning}{Warning}
+Modifying this directly does not clamp the value. Not recommended. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_a0a28f754dc0763ded14b9c45204da06f}\label{classimage_1_1_h_s_l_a_pixel_a0a28f754dc0763ded14b9c45204da06f}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!l@{l}}
+\index{l@{l}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{l}{l}}
+{\footnotesize\ttfamily float image\+::\+HSLAPixel\+::l}
+
+
+
+Represents the amount of lightness \mbox{[}0, 1\mbox{]}. 
+
+\begin{DoxyWarning}{Warning}
+Modifying this directly does not clamp the value. Not recommended. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classimage_1_1_h_s_l_a_pixel_ad4f4d0c8f41b2e789d0bd6494c1d684f}\label{classimage_1_1_h_s_l_a_pixel_ad4f4d0c8f41b2e789d0bd6494c1d684f}} 
+\index{image::HSLAPixel@{image::HSLAPixel}!s@{s}}
+\index{s@{s}!image::HSLAPixel@{image::HSLAPixel}}
+\doxyparagraph{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily float image\+::\+HSLAPixel\+::s}
+
+
+
+Represents the amount of saturation \mbox{[}0, 1\mbox{]}. 
+
+\begin{DoxyWarning}{Warning}
+Modifying this directly does not clamp the value. Not recommended. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{hslapixel_8h}{hslapixel.\+h}}\item 
+src/lib\+LMTKimage/hslapixel.\+cpp\end{DoxyCompactItemize}

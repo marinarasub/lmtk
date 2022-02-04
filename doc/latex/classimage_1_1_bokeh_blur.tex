@@ -1,0 +1,99 @@
+\hypertarget{classimage_1_1_bokeh_blur}{}\doxysubsection{image\+::Bokeh\+Blur Class Reference}
+\label{classimage_1_1_bokeh_blur}\index{image::BokehBlur@{image::BokehBlur}}
+
+
+Class for a bokeh/lens blur using a disk/circular convolution.  
+
+
+
+
+{\ttfamily \#include \char`\"{}bokehblur.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Bokeh\+Blur\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimage_1_1_bokeh_blur}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimage_1_1_bokeh_blur_ad5cdebcefc3d85462f0c49b54a1aa131}{Bokeh\+Blur}} (float radius)
+\begin{DoxyCompactList}\small\item\em Constructs a bokeh blur functor with blur radius. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_bokeh_blur_a5a3c482c88134d2002cf8052ae989ffd}{Bokeh\+Blur}} (float radiusX, float radiusY)
+\begin{DoxyCompactList}\small\item\em Constructs a bokeh blur functor with horizontal and vertial blur radius. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classimage_1_1_bokeh_blur_a884f23558c46a253fae65a9a06928219}{compute\+Kernel}} () override
+\begin{DoxyCompactList}\small\item\em Computes a circular kernel using radii x, y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Class for a bokeh/lens blur using a disk/circular convolution. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_convolution}{Image\+Convolution}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_bokeh_blur_ad5cdebcefc3d85462f0c49b54a1aa131}\label{classimage_1_1_bokeh_blur_ad5cdebcefc3d85462f0c49b54a1aa131}} 
+\index{image::BokehBlur@{image::BokehBlur}!BokehBlur@{BokehBlur}}
+\index{BokehBlur@{BokehBlur}!image::BokehBlur@{image::BokehBlur}}
+\doxyparagraph{\texorpdfstring{BokehBlur()}{BokehBlur()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily image\+::\+Bokeh\+Blur\+::\+Bokeh\+Blur (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})}
+
+
+
+Constructs a bokeh blur functor with blur radius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & Radius of blur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_bokeh_blur_a5a3c482c88134d2002cf8052ae989ffd}\label{classimage_1_1_bokeh_blur_a5a3c482c88134d2002cf8052ae989ffd}} 
+\index{image::BokehBlur@{image::BokehBlur}!BokehBlur@{BokehBlur}}
+\index{BokehBlur@{BokehBlur}!image::BokehBlur@{image::BokehBlur}}
+\doxyparagraph{\texorpdfstring{BokehBlur()}{BokehBlur()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily image\+::\+Bokeh\+Blur\+::\+Bokeh\+Blur (\begin{DoxyParamCaption}\item[{float}]{radiusX,  }\item[{float}]{radiusY }\end{DoxyParamCaption})}
+
+
+
+Constructs a bokeh blur functor with horizontal and vertial blur radius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radiusX} & Horizontal radius of blur \\
+\hline
+{\em radiusY} & Vertical radius of blur \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_bokeh_blur_a884f23558c46a253fae65a9a06928219}\label{classimage_1_1_bokeh_blur_a884f23558c46a253fae65a9a06928219}} 
+\index{image::BokehBlur@{image::BokehBlur}!computeKernel@{computeKernel}}
+\index{computeKernel@{computeKernel}!image::BokehBlur@{image::BokehBlur}}
+\doxyparagraph{\texorpdfstring{computeKernel()}{computeKernel()}}
+{\footnotesize\ttfamily void image\+::\+Bokeh\+Blur\+::compute\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Computes a circular kernel using radii x, y. 
+
+The edges are antialiased. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}{Image\+Convolution\+::compute\+Kernel()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_convolution_a237d263ccc79ee5a5e3127ccc56fa83b}{image\+::\+Image\+Convolution}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{bokehblur_8h}{bokehblur.\+h}}\item 
+src/lib\+LMTKimage/bokehblur.\+cpp\end{DoxyCompactItemize}

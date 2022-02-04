@@ -1,0 +1,112 @@
+\hypertarget{audiotrack_8h_source}{}\doxysubsection{audiotrack.\+h}
+\label{audiotrack_8h_source}\index{src/libLMTKaudio/audiotrack.h@{src/libLMTKaudio/audiotrack.h}}
+\mbox{\hyperlink{audiotrack_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef \_LIBLMTKAUDIO\_AUDIOTRACK\_H\_}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define \_LIBLMTKAUDIO\_AUDIOTRACK\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{namespace }audio \{}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} byte;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{36     \textcolor{keyword}{struct }\mbox{\hyperlink{structaudio_1_1audio__sample}{audio\_sample}}}
+\DoxyCodeLine{37     \{}
+\DoxyCodeLine{38         \textcolor{keywordtype}{float} \mbox{\hyperlink{structaudio_1_1audio__sample_aacd563cccd13c0b5c09212b5b386234e}{left}}; }
+\DoxyCodeLine{39         \textcolor{keywordtype}{float} \mbox{\hyperlink{structaudio_1_1audio__sample_a0d71236727a02b818e4b7e00ce7a8756}{right}}; }
+\DoxyCodeLine{46         \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\_sample}} \mbox{\hyperlink{structaudio_1_1audio__sample_affe7f8f5b341e59a243d4a51adf9aa5c}{operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\_sample}}\& other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{47 \textcolor{keyword}{        }\{}
+\DoxyCodeLine{48             \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\_sample}} s\{\};}
+\DoxyCodeLine{49             s.\mbox{\hyperlink{structaudio_1_1audio__sample_aacd563cccd13c0b5c09212b5b386234e}{left}} = this-\/>left + other.\mbox{\hyperlink{structaudio_1_1audio__sample_aacd563cccd13c0b5c09212b5b386234e}{left}};}
+\DoxyCodeLine{50             s.right = this-\/>right + other.\mbox{\hyperlink{structaudio_1_1audio__sample_a0d71236727a02b818e4b7e00ce7a8756}{right}};}
+\DoxyCodeLine{51             s.clamp();}
+\DoxyCodeLine{52             \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58         \textcolor{keywordtype}{void} \mbox{\hyperlink{structaudio_1_1audio__sample_ac637fe4081edb7f9255021640e75e3b2}{clamp}}();}
+\DoxyCodeLine{59     \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{67     \textcolor{keyword}{class }\mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}}
+\DoxyCodeLine{68     \{}
+\DoxyCodeLine{69         \textcolor{comment}{// const for number of channels}}
+\DoxyCodeLine{70         \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{byte} MONO = 1;}
+\DoxyCodeLine{71         \textcolor{comment}{// const for number of channels}}
+\DoxyCodeLine{72         \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{byte} STEREO = 2;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{75         \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} DEFAULT\_SAMPLE\_RATE = 44100;}
+\DoxyCodeLine{76         \textcolor{comment}{// 44.1, 48 and multiples/factors of these.}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{keyword}{public}:}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         \textcolor{comment}{// TODO create with time in seconds?}}
+\DoxyCodeLine{81         }
+\DoxyCodeLine{85         \mbox{\hyperlink{classaudio_1_1_audio_track_abbbac59295baedea18bcbc16a6a5e6e9}{AudioTrack}}();}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{92         \mbox{\hyperlink{classaudio_1_1_audio_track_abbbac59295baedea18bcbc16a6a5e6e9}{AudioTrack}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} length);}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{100         \mbox{\hyperlink{classaudio_1_1_audio_track_abbbac59295baedea18bcbc16a6a5e6e9}{AudioTrack}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} length, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} sample\_rate); \textcolor{comment}{// in samples}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{108         \mbox{\hyperlink{classaudio_1_1_audio_track_abbbac59295baedea18bcbc16a6a5e6e9}{AudioTrack}}(\textcolor{keyword}{const} \mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}\& other);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{113         \mbox{\hyperlink{classaudio_1_1_audio_track_a530dd1f7535456282b871ad2ab1b0632}{\string~AudioTrack}}();}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{121         \mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}} \mbox{\hyperlink{classaudio_1_1_audio_track_a0efb43e40a1c02bbd587e2618785b218}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}\& other);}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{130         \mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}} \mbox{\hyperlink{classaudio_1_1_audio_track_af2049b0242ccf4b43ed67f6361bd8347}{operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 }
+\DoxyCodeLine{136         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classaudio_1_1_audio_track_a2969a5f57d9bd0303f93c4e7d6d43898}{sampleRate}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{137         }
+\DoxyCodeLine{141         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{classaudio_1_1_audio_track_a753843df7ee265e0a6ccb11377dbd5ad}{sampleLength}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{146         \textcolor{keywordtype}{byte} \mbox{\hyperlink{classaudio_1_1_audio_track_afa2d1c332a4dce3d1e6be4adff5a72aa}{channels}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{151         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_audio_track_aadf545a05971e073f7813a9d0537689d}{resetPosition}}();}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{156         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{classaudio_1_1_audio_track_af005384b12dbdf8dc61894792ecd64e9}{currentPos}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{161         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classaudio_1_1_audio_track_a730a337fb6f316c7981ee13fb547263e}{ended}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{168         \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\_sample}} \mbox{\hyperlink{classaudio_1_1_audio_track_afa5e4602cf42206243ab1faf5e4bd2fc}{nextSample}}();}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{175         \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\_sample}} \mbox{\hyperlink{classaudio_1_1_audio_track_ad06f77571ba14cb347dc4460c16cadc1}{getSample}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} idx) \textcolor{keyword}{const};}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{183         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_audio_track_a51190ced997d7d123eb54647c5660ace}{setSample}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} idx, \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\_sample}} data);}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185         \textcolor{comment}{// TODO resample method}}
+\DoxyCodeLine{192 \textcolor{comment}{}        \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_audio_track_aba9d73e06f7ea2dd07c767d8800a08be}{resample}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} new\_sample\_rate);}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{200         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_audio_track_abf204dbdb602b81e7482d9293067baa3}{merge}}(\mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}\& track);}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{209         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_audio_track_aeef41186a95170e6bd7005503fa600e6}{copy}}(\textcolor{keyword}{const} \mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}\& other);}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{214         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_audio_track_a17e5bfe83cfd696a5b1cbe5f186190bc}{clear}}();}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216         \textcolor{comment}{//audio\_sample clampSample(audio\_sample\& sample) const;}}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219         \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\_sample}}* \mbox{\hyperlink{classaudio_1_1_audio_track_a2fc2f80ea0022e0aa3313bcfa641f8ef}{audio}}; }
+\DoxyCodeLine{221     \textcolor{keyword}{private}:}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{228         \textcolor{keywordtype}{void} allocSamples(\textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sample\_rate; }
+\DoxyCodeLine{232         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} current\_pos; }
+\DoxyCodeLine{234         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} length; }
+\DoxyCodeLine{236         \textcolor{comment}{// TODO only support stereo currently}}
+\DoxyCodeLine{237         \textcolor{keywordtype}{byte} num\_tracks; }
+\DoxyCodeLine{239     \};}
+\DoxyCodeLine{240 \}}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKAUDIO\_AUDIOTRACK\_H\_}}
+
+\end{DoxyCode}

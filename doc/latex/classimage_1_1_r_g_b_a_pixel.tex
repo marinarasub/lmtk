@@ -1,0 +1,513 @@
+\hypertarget{classimage_1_1_r_g_b_a_pixel}{}\doxysubsection{image\+::RGBAPixel Class Reference}
+\label{classimage_1_1_r_g_b_a_pixel}\index{image::RGBAPixel@{image::RGBAPixel}}
+
+
+Represents pixels with color channels red, green, blue and alpha.  
+
+
+
+
+{\ttfamily \#include $<$rgbapixel.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a894360303d09b4c280c9d3a767e1945c}{RGBAPixel}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a default RGBA Pixel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a4a36746efe6a6d495aca07c0726dceec}{RGBAPixel}} (float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a9483af5f7807c26f4c37612ddce17cd4}{r}}, float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ad29ff5113994971348c93d306d379c4f}{g}}, float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ab4a4ef60bc99f7a2fe63d8f7c8a3cad2}{b}})
+\begin{DoxyCompactList}\small\item\em Constructs a RGBA pixels given float values for each channel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a78b8d58814ceff848cbca762f4cbd3fc}{RGBAPixel}} (float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a9483af5f7807c26f4c37612ddce17cd4}{r}}, float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ad29ff5113994971348c93d306d379c4f}{g}}, float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ab4a4ef60bc99f7a2fe63d8f7c8a3cad2}{b}}, float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_acc891e03df5f23cd2d55f01b805ebc4c}{a}})
+\begin{DoxyCompactList}\small\item\em Constructs a RGBA pixels given float values for each channel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a2315fa2322c8ba4ce95fc349e1ca1d74}{RGBAPixel}} (uint32\+\_\+t \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a9483af5f7807c26f4c37612ddce17cd4}{r}}, uint32\+\_\+t \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ad29ff5113994971348c93d306d379c4f}{g}}, uint32\+\_\+t \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ab4a4ef60bc99f7a2fe63d8f7c8a3cad2}{b}}, uint32\+\_\+t \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_acc891e03df5f23cd2d55f01b805ebc4c}{a}}, uint8\+\_\+t bit\+\_\+depth)
+\begin{DoxyCompactList}\small\item\em Constructs a RGBA pixel given unsigned integer values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a70df43855f5757bc9700852913380a7e}{RGBAPixel}} (const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&hsl)
+\begin{DoxyCompactList}\small\item\em Converts a HSLA Pixel to a RGBA Pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_afbbc81f847a8e83d9a308ad1ad8fb22b}{operator=}} (const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator\+: sets the current RGBA to the other pixel\textquotesingle{}s values. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a7f5203aa0f7cf13031e3cb1f8d75bb6c}{operator==}} (const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equality operator\+: returns true if two colors are equal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a22157921443474ffaa8d2c6e2d8ca682}{operator!=}} (const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equality operator\+: returns true if two colors are NOT equal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a080563380a38efd8eeb6d851256a4b4f}{set}} (float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a9483af5f7807c26f4c37612ddce17cd4}{r}}, float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ad29ff5113994971348c93d306d379c4f}{g}}, float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ab4a4ef60bc99f7a2fe63d8f7c8a3cad2}{b}})
+\begin{DoxyCompactList}\small\item\em Sets the color channels values, RGB. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ac29af09072ebf36be3361d18309aaa50}{set}} (float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a9483af5f7807c26f4c37612ddce17cd4}{r}}, float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ad29ff5113994971348c93d306d379c4f}{g}}, float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ab4a4ef60bc99f7a2fe63d8f7c8a3cad2}{b}}, float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_acc891e03df5f23cd2d55f01b805ebc4c}{a}})
+\begin{DoxyCompactList}\small\item\em Sets all channel values, RGBA. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a796b422962c48d9b2963c89c4564e487}{set}} (const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&other)
+\begin{DoxyCompactList}\small\item\em Sets all channel values to that of another pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a851c42bfd1b7be5b6f61b3cd5e39b075}{set}} (const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&other)
+\begin{DoxyCompactList}\small\item\em Sets the RGB values converted from a HSL, and alpha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a113ad04af86b5af0df8c0c6b811a9b8b}{set\+Alpha}} (float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_acc891e03df5f23cd2d55f01b805ebc4c}{a}})
+\begin{DoxyCompactList}\small\item\em Sets the alpha value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_add4fc0d9b62d0e806fa63f60d505df8f}{set\+Transparency}} (float transparency)
+\begin{DoxyCompactList}\small\item\em Sets the transparency. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ab5f1cbee5059376beba9d927b727b6f8}{dist}} (const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns the euclidian distance between two colors. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a8170392c5aae3b6691b355bd88b84611}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the RGBA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a7b6cf288563a0d2d467bbcc6904b4341}{average}} (\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} p1, \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} p2)
+\begin{DoxyCompactList}\small\item\em Computes average RGBA values from 2 pixels. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ae372486af031c76caa4b658d741ec670}{naverage}} (\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} pixels\mbox{[}$\,$\mbox{]}, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Computes average RGBA values from n pixels. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_aee6fd4632eece716ead820c39abab028}{weighted\+\_\+average}} (\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} p1, \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} p2, float w1, float w2)
+\begin{DoxyCompactList}\small\item\em Computes weighted average RGBA values from 2 pixels. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a33b54a87f9b165b2d30eeb2ecb63313a}{weighted\+\_\+naverage}} (\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} pixels\mbox{[}$\,$\mbox{]}, float weights\mbox{[}$\,$\mbox{]}, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Computes weighted average RGBA values from n pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a9483af5f7807c26f4c37612ddce17cd4}{r}}
+\begin{DoxyCompactList}\small\item\em Represents the amount of red \mbox{[}0, 1\mbox{]}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ad29ff5113994971348c93d306d379c4f}{g}}
+\begin{DoxyCompactList}\small\item\em Represents the amount of green \mbox{[}0, 1\mbox{]}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_ab4a4ef60bc99f7a2fe63d8f7c8a3cad2}{b}}
+\begin{DoxyCompactList}\small\item\em Represents the amount of blue \mbox{[}0, 1\mbox{]}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_acc891e03df5f23cd2d55f01b805ebc4c}{a}}
+\begin{DoxyCompactList}\small\item\em Represents the alpha \mbox{[}0, 1\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Represents pixels with color channels red, green, blue and alpha. 
+
+The RGBA color model is an additive color model, where red, green and blue are the primary colors which can be combined to create a wide variety of other colors. White is created when each of the three colors are at maximum intensity, and black is when all three colors have 0 intensity. An additonal channel, alpha represents the opacity of the color which allows the color to be blended with another (known as alpha blending) to create a transparency effect. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespacecolor}{color}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a894360303d09b4c280c9d3a767e1945c}\label{classimage_1_1_r_g_b_a_pixel_a894360303d09b4c280c9d3a767e1945c}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!RGBAPixel@{RGBAPixel}}
+\index{RGBAPixel@{RGBAPixel}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{RGBAPixel()}{RGBAPixel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily image\+::\+RGBAPixel\+::\+RGBAPixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a default RGBA Pixel. 
+
+The default is 0 for each channel. \mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a4a36746efe6a6d495aca07c0726dceec}\label{classimage_1_1_r_g_b_a_pixel_a4a36746efe6a6d495aca07c0726dceec}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!RGBAPixel@{RGBAPixel}}
+\index{RGBAPixel@{RGBAPixel}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{RGBAPixel()}{RGBAPixel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily image\+::\+RGBAPixel\+::\+RGBAPixel (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+
+
+Constructs a RGBA pixels given float values for each channel. 
+
+Sets the alpha to 1.\+0 Each channel is restricted to \mbox{[}0, 1\mbox{]} \begin{DoxySeeAlso}{See also}
+clamp\+RGBA() 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red value \\
+\hline
+{\em g} & Green value \\
+\hline
+{\em b} & Blue value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a78b8d58814ceff848cbca762f4cbd3fc}\label{classimage_1_1_r_g_b_a_pixel_a78b8d58814ceff848cbca762f4cbd3fc}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!RGBAPixel@{RGBAPixel}}
+\index{RGBAPixel@{RGBAPixel}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{RGBAPixel()}{RGBAPixel()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily image\+::\+RGBAPixel\+::\+RGBAPixel (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Constructs a RGBA pixels given float values for each channel. 
+
+Each channel is restricted to \mbox{[}0, 1\mbox{]} \begin{DoxySeeAlso}{See also}
+clamp\+RGBA() 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red value \\
+\hline
+{\em g} & Green value \\
+\hline
+{\em b} & Blue value \\
+\hline
+{\em a} & Alpha value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a2315fa2322c8ba4ce95fc349e1ca1d74}\label{classimage_1_1_r_g_b_a_pixel_a2315fa2322c8ba4ce95fc349e1ca1d74}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!RGBAPixel@{RGBAPixel}}
+\index{RGBAPixel@{RGBAPixel}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{RGBAPixel()}{RGBAPixel()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily image\+::\+RGBAPixel\+::\+RGBAPixel (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{r,  }\item[{uint32\+\_\+t}]{g,  }\item[{uint32\+\_\+t}]{b,  }\item[{uint32\+\_\+t}]{a,  }\item[{uint8\+\_\+t}]{bit\+\_\+depth }\end{DoxyParamCaption})}
+
+
+
+Constructs a RGBA pixel given unsigned integer values. 
+
+RGBA is traditonally defined with an unsigned integer \mbox{[}0, 255\mbox{]} with 8 bit channels, but can accept other bit depths as well. \begin{DoxyNote}{Note}
+the maximum bit depth accepted is 32 (integer/dword) 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red value \\
+\hline
+{\em g} & Green value \\
+\hline
+{\em b} & Blue value \\
+\hline
+{\em a} & Alpha value \\
+\hline
+{\em bit\+\_\+depth} & Bit depth of all the channels \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+All channels are assumed to have the same bit depth 
+\end{DoxyNote}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a70df43855f5757bc9700852913380a7e}\label{classimage_1_1_r_g_b_a_pixel_a70df43855f5757bc9700852913380a7e}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!RGBAPixel@{RGBAPixel}}
+\index{RGBAPixel@{RGBAPixel}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{RGBAPixel()}{RGBAPixel()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily image\+::\+RGBAPixel\+::\+RGBAPixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&}]{hsl }\end{DoxyParamCaption})}
+
+
+
+Converts a HSLA Pixel to a RGBA Pixel. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespacecolor}{color}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em hsl} & HSLA Pixel to convert \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a7b6cf288563a0d2d467bbcc6904b4341}\label{classimage_1_1_r_g_b_a_pixel_a7b6cf288563a0d2d467bbcc6904b4341}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!average@{average}}
+\index{average@{average}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} image\+::\+RGBAPixel\+::average (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}}]{p1,  }\item[{\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes average RGBA values from 2 pixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & First pixel \\
+\hline
+{\em p2} & Second Pixel \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_ab5f1cbee5059376beba9d927b727b6f8}\label{classimage_1_1_r_g_b_a_pixel_ab5f1cbee5059376beba9d927b727b6f8}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!dist@{dist}}
+\index{dist@{dist}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{dist()}{dist()}}
+{\footnotesize\ttfamily float image\+::\+RGBAPixel\+::dist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns the euclidian distance between two colors. 
+
+The eulician distance is the pythagorean sum of the three colored channels (not including alpha)~\newline
+dist = sqrt(d\+RED$^\wedge$2 + d\+GREEN$^\wedge$2 + d\+BLUE$^\wedge$2) \begin{DoxyNote}{Note}
+The max distance is therefore sqrt(3) 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Pixel to compare to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance between the colors 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_ae372486af031c76caa4b658d741ec670}\label{classimage_1_1_r_g_b_a_pixel_ae372486af031c76caa4b658d741ec670}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!naverage@{naverage}}
+\index{naverage@{naverage}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{naverage()}{naverage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} image\+::\+RGBAPixel\+::naverage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}}]{pixels\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes average RGBA values from n pixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixels} & Pixels to average \\
+\hline
+{\em count} & Number of pixels in array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a22157921443474ffaa8d2c6e2d8ca682}\label{classimage_1_1_r_g_b_a_pixel_a22157921443474ffaa8d2c6e2d8ca682}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool image\+::\+RGBAPixel\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Equality operator\+: returns true if two colors are NOT equal. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel_a7f5203aa0f7cf13031e3cb1f8d75bb6c}{operator==()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Other RGBA Pixel to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the colors are not equal, false if they are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_afbbc81f847a8e83d9a308ad1ad8fb22b}\label{classimage_1_1_r_g_b_a_pixel_afbbc81f847a8e83d9a308ad1ad8fb22b}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!operator=@{operator=}}
+\index{operator=@{operator=}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void image\+::\+RGBAPixel\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Assignment operator\+: sets the current RGBA to the other pixel\textquotesingle{}s values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & RGBA Pixel to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a7f5203aa0f7cf13031e3cb1f8d75bb6c}\label{classimage_1_1_r_g_b_a_pixel_a7f5203aa0f7cf13031e3cb1f8d75bb6c}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!operator==@{operator==}}
+\index{operator==@{operator==}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool image\+::\+RGBAPixel\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Equality operator\+: returns true if two colors are equal. 
+
+Each channel must have the same value, including alpha 
+\begin{DoxyParams}{Parameters}
+{\em other} & Other RGBA Pixel to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the colors are equal, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a851c42bfd1b7be5b6f61b3cd5e39b075}\label{classimage_1_1_r_g_b_a_pixel_a851c42bfd1b7be5b6f61b3cd5e39b075}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!set@{set}}
+\index{set@{set}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void image\+::\+RGBAPixel\+::set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Sets the RGB values converted from a HSL, and alpha. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespacecolor}{color}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a796b422962c48d9b2963c89c4564e487}\label{classimage_1_1_r_g_b_a_pixel_a796b422962c48d9b2963c89c4564e487}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!set@{set}}
+\index{set@{set}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void image\+::\+RGBAPixel\+::set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Sets all channel values to that of another pixel. 
+
+Equivalent to operator= 
+\begin{DoxyParams}{Parameters}
+{\em other} & Color to set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a080563380a38efd8eeb6d851256a4b4f}\label{classimage_1_1_r_g_b_a_pixel_a080563380a38efd8eeb6d851256a4b4f}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!set@{set}}
+\index{set@{set}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void image\+::\+RGBAPixel\+::set (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+
+
+Sets the color channels values, RGB. 
+
+Using this function will also clamp the values if not \mbox{[}0, 1\mbox{]}. \begin{DoxySeeAlso}{See also}
+clamp() 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red value \\
+\hline
+{\em g} & Green value \\
+\hline
+{\em b} & Blue value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_ac29af09072ebf36be3361d18309aaa50}\label{classimage_1_1_r_g_b_a_pixel_ac29af09072ebf36be3361d18309aaa50}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!set@{set}}
+\index{set@{set}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void image\+::\+RGBAPixel\+::set (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Sets all channel values, RGBA. 
+
+Using this function will also clamp the values if not \mbox{[}0, 1\mbox{]}. \begin{DoxySeeAlso}{See also}
+clamp() 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red value \\
+\hline
+{\em g} & Green value \\
+\hline
+{\em b} & Blue value \\
+\hline
+{\em a} & Alpha value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a113ad04af86b5af0df8c0c6b811a9b8b}\label{classimage_1_1_r_g_b_a_pixel_a113ad04af86b5af0df8c0c6b811a9b8b}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily void image\+::\+RGBAPixel\+::set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Sets the alpha value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Alpha value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_add4fc0d9b62d0e806fa63f60d505df8f}\label{classimage_1_1_r_g_b_a_pixel_add4fc0d9b62d0e806fa63f60d505df8f}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!setTransparency@{setTransparency}}
+\index{setTransparency@{setTransparency}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{setTransparency()}{setTransparency()}}
+{\footnotesize\ttfamily void image\+::\+RGBAPixel\+::set\+Transparency (\begin{DoxyParamCaption}\item[{float}]{transparency }\end{DoxyParamCaption})}
+
+
+
+Sets the transparency. 
+
+Transparency is 1.\+0 -\/ alpha 
+\begin{DoxyParams}{Parameters}
+{\em a} & Alpha value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a8170392c5aae3b6691b355bd88b84611}\label{classimage_1_1_r_g_b_a_pixel_a8170392c5aae3b6691b355bd88b84611}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string image\+::\+RGBAPixel\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string representation of the RGBA. 
+
+\begin{DoxyReturn}{Returns}
+The string representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_aee6fd4632eece716ead820c39abab028}\label{classimage_1_1_r_g_b_a_pixel_aee6fd4632eece716ead820c39abab028}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!weighted\_average@{weighted\_average}}
+\index{weighted\_average@{weighted\_average}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{weighted\_average()}{weighted\_average()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} image\+::\+RGBAPixel\+::weighted\+\_\+average (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}}]{p1,  }\item[{\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}}]{p2,  }\item[{float}]{w1,  }\item[{float}]{w2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes weighted average RGBA values from 2 pixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & First pixel \\
+\hline
+{\em p2} & Second Pixel \\
+\hline
+{\em w1} & Weight for p1 \\
+\hline
+{\em w2} & Weight for p2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a33b54a87f9b165b2d30eeb2ecb63313a}\label{classimage_1_1_r_g_b_a_pixel_a33b54a87f9b165b2d30eeb2ecb63313a}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!weighted\_naverage@{weighted\_naverage}}
+\index{weighted\_naverage@{weighted\_naverage}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{weighted\_naverage()}{weighted\_naverage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} image\+::\+RGBAPixel\+::weighted\+\_\+naverage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}}]{pixels\mbox{[}$\,$\mbox{]},  }\item[{float}]{weights\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes weighted average RGBA values from n pixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixels} & Pixels to average \\
+\hline
+{\em weights} & Weights corresponding to pixel\mbox{[}i\mbox{]} \\
+\hline
+{\em count} & Number of pixels in array \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Data Documentation}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_acc891e03df5f23cd2d55f01b805ebc4c}\label{classimage_1_1_r_g_b_a_pixel_acc891e03df5f23cd2d55f01b805ebc4c}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!a@{a}}
+\index{a@{a}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily float image\+::\+RGBAPixel\+::a}
+
+
+
+Represents the alpha \mbox{[}0, 1\mbox{]}. 
+
+\begin{DoxyWarning}{Warning}
+Modifying this directly does not clamp the value. Not recommended. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_ab4a4ef60bc99f7a2fe63d8f7c8a3cad2}\label{classimage_1_1_r_g_b_a_pixel_ab4a4ef60bc99f7a2fe63d8f7c8a3cad2}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!b@{b}}
+\index{b@{b}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily float image\+::\+RGBAPixel\+::b}
+
+
+
+Represents the amount of blue \mbox{[}0, 1\mbox{]}. 
+
+\begin{DoxyWarning}{Warning}
+Modifying this directly does not clamp the value. Not recommended. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_ad29ff5113994971348c93d306d379c4f}\label{classimage_1_1_r_g_b_a_pixel_ad29ff5113994971348c93d306d379c4f}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!g@{g}}
+\index{g@{g}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily float image\+::\+RGBAPixel\+::g}
+
+
+
+Represents the amount of green \mbox{[}0, 1\mbox{]}. 
+
+\begin{DoxyWarning}{Warning}
+Modifying this directly does not clamp the value. Not recommended. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classimage_1_1_r_g_b_a_pixel_a9483af5f7807c26f4c37612ddce17cd4}\label{classimage_1_1_r_g_b_a_pixel_a9483af5f7807c26f4c37612ddce17cd4}} 
+\index{image::RGBAPixel@{image::RGBAPixel}!r@{r}}
+\index{r@{r}!image::RGBAPixel@{image::RGBAPixel}}
+\doxyparagraph{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily float image\+::\+RGBAPixel\+::r}
+
+
+
+Represents the amount of red \mbox{[}0, 1\mbox{]}. 
+
+\begin{DoxyWarning}{Warning}
+Modifying this directly does not clamp the value. Not recommended. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{rgbapixel_8h}{rgbapixel.\+h}}\item 
+src/lib\+LMTKimage/rgbapixel.\+cpp\end{DoxyCompactItemize}

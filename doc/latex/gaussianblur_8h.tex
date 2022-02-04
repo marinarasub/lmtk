@@ -1,0 +1,60 @@
+\hypertarget{gaussianblur_8h}{}\doxysubsection{src/lib\+LMTKimage/gaussianblur.h File Reference}
+\label{gaussianblur_8h}\index{src/libLMTKimage/gaussianblur.h@{src/libLMTKimage/gaussianblur.h}}
+
+
+Copyright (c) 2022 marinarasub.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}convolution.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../utils/utilsmath.\+h\char`\"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classimage_1_1_gaussian_blur}{image\+::\+Gaussian\+Blur}}
+\begin{DoxyCompactList}\small\item\em Class for gaussian blur kernel filtering of an image. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classimage_1_1_gaussian_blur_horizontal}{image\+::\+Gaussian\+Blur\+Horizontal}}
+\begin{DoxyCompactList}\small\item\em Class for seperable horizontal component of gaussian blur. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classimage_1_1_gaussian_blur_vertical}{image\+::\+Gaussian\+Blur\+Vertical}}
+\begin{DoxyCompactList}\small\item\em Class for seperable vertical component of gaussian blur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{gaussianblur_8cpp_acd07767f869d68c2a0b6aab4249c4f4c}{image\+::sigma\+Tolerance}} (float zscore)
+\begin{DoxyCompactList}\small\item\em Helper function for computing gaussian() from given z-\/score. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Copyright (c) 2022 marinarasub. 
+
+LMTK / Light Multimedia Tool\+Kit
+
+This file is included in lib\+LMTKimage, the image library for LMTK LMTK and its subprojects are available under the MIT license.
+
+\begin{DoxyAuthor}{Author}
+marinarasub 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 2021
+\end{DoxyDate}
+Header file for gaussian blur shader 
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{gaussianblur_8cpp_acd07767f869d68c2a0b6aab4249c4f4c}\label{gaussianblur_8cpp_acd07767f869d68c2a0b6aab4249c4f4c}} 
+\index{gaussianblur.h@{gaussianblur.h}!sigmaTolerance@{sigmaTolerance}}
+\index{sigmaTolerance@{sigmaTolerance}!gaussianblur.h@{gaussianblur.h}}
+\doxyparagraph{\texorpdfstring{sigmaTolerance()}{sigmaTolerance()}}
+{\footnotesize\ttfamily static float image\+::sigma\+Tolerance (\begin{DoxyParamCaption}\item[{float}]{zscore }\end{DoxyParamCaption})}
+
+
+
+Helper function for computing gaussian() from given z-\/score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zscore} & Z-\/score, or standard deviations from mean \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+gaussian function result 
+\end{DoxyReturn}

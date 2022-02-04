@@ -1,0 +1,31 @@
+\hypertarget{sinewave_8h_source}{}\doxysubsection{sinewave.\+h}
+\label{sinewave_8h_source}\index{src/libLMTKaudio/sinewave.h@{src/libLMTKaudio/sinewave.h}}
+\mbox{\hyperlink{sinewave_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef \_LIBLMTKAUDIO\_SINEWAVE\_H\_}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define \_LIBLMTKAUDIO\_SINEWAVE\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{wavegenerator_8h}{wavegenerator.h}}"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }audio \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{33     \textcolor{keyword}{class }\mbox{\hyperlink{classaudio_1_1_sine_wave}{SineWave}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaudio_1_1_wave_generator}{WaveGenerator}}}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35     \textcolor{keyword}{public}:}
+\DoxyCodeLine{36         }
+\DoxyCodeLine{44         \mbox{\hyperlink{classaudio_1_1_sine_wave_adc5c9b48bc70924c5263df6725a95da7}{SineWave}}(\textcolor{keywordtype}{float} freql, \textcolor{keywordtype}{float} freqr, \textcolor{keywordtype}{float} amp);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{54         \mbox{\hyperlink{classaudio_1_1_sine_wave_adc5c9b48bc70924c5263df6725a95da7}{SineWave}}(\textcolor{keywordtype}{float} freql, \textcolor{keywordtype}{float} freqr, \textcolor{keywordtype}{float} amp, \textcolor{keywordtype}{float} \mbox{\hyperlink{classaudio_1_1_wave_generator_a0f06b359f8c84033a7f43613370393eb}{offset}});}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{61         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_sine_wave_aa16dc4b1e30d41675f8347b578c8a573}{operator()}}(\mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}\& track);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \};}
+\DoxyCodeLine{64 \}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKAUDIO\_SINEWAVE\_H\_}}
+
+\end{DoxyCode}

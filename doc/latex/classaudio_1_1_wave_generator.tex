@@ -1,0 +1,108 @@
+\hypertarget{classaudio_1_1_wave_generator}{}\doxysubsection{audio\+::Wave\+Generator Class Reference}
+\label{classaudio_1_1_wave_generator}\index{audio::WaveGenerator@{audio::WaveGenerator}}
+
+
+Abstract wave generator class.  
+
+
+
+
+{\ttfamily \#include \char`\"{}wavegenerator.\+h\char`\"{}}
+
+Inheritance diagram for audio\+::Wave\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classaudio_1_1_wave_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaudio_1_1_wave_generator_a4aa33c9696ea4d1540d1254780012f69}\label{classaudio_1_1_wave_generator_a4aa33c9696ea4d1540d1254780012f69}} 
+virtual {\bfseries $\sim$\+Wave\+Generator} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classaudio_1_1_wave_generator_a99136681ca763ec2df9b2c1743f3773e}{operator()}} (\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&track)=0
+\begin{DoxyCompactList}\small\item\em Abstract function for wave generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaudio_1_1_wave_generator_a73a03b15aafbe143a203a38103f2a32e}{Wave\+Generator}} (float freql, float freqr, float amp, float \mbox{\hyperlink{classaudio_1_1_wave_generator_a0f06b359f8c84033a7f43613370393eb}{offset}})
+\begin{DoxyCompactList}\small\item\em Creates a wave given frequencies, amplitude and offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaudio_1_1_wave_generator_a0875c517e88a6c307333c1cd7fd1e06d}\label{classaudio_1_1_wave_generator_a0875c517e88a6c307333c1cd7fd1e06d}} 
+float {\bfseries left\+\_\+freq}
+\begin{DoxyCompactList}\small\item\em Left channel frequency. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaudio_1_1_wave_generator_ae736f9ba4f3a4b440381bd46ba93c2bb}\label{classaudio_1_1_wave_generator_ae736f9ba4f3a4b440381bd46ba93c2bb}} 
+float {\bfseries right\+\_\+freq}
+\begin{DoxyCompactList}\small\item\em Right channel frequency. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaudio_1_1_wave_generator_afe1ac1cd3c9eef71940aad94dc0c6d8e}\label{classaudio_1_1_wave_generator_afe1ac1cd3c9eef71940aad94dc0c6d8e}} 
+float {\bfseries amplitude}
+\begin{DoxyCompactList}\small\item\em Wave amplitude. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaudio_1_1_wave_generator_a0f06b359f8c84033a7f43613370393eb}\label{classaudio_1_1_wave_generator_a0f06b359f8c84033a7f43613370393eb}} 
+float {\bfseries offset}
+\begin{DoxyCompactList}\small\item\em Offset from 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Abstract wave generator class. 
+
+Waves generated will be discrete and applied to an audio track \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaudio_1_1_wave_generator_a73a03b15aafbe143a203a38103f2a32e}\label{classaudio_1_1_wave_generator_a73a03b15aafbe143a203a38103f2a32e}} 
+\index{audio::WaveGenerator@{audio::WaveGenerator}!WaveGenerator@{WaveGenerator}}
+\index{WaveGenerator@{WaveGenerator}!audio::WaveGenerator@{audio::WaveGenerator}}
+\doxyparagraph{\texorpdfstring{WaveGenerator()}{WaveGenerator()}}
+{\footnotesize\ttfamily audio\+::\+Wave\+Generator\+::\+Wave\+Generator (\begin{DoxyParamCaption}\item[{float}]{freql,  }\item[{float}]{freqr,  }\item[{float}]{amp,  }\item[{float}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Creates a wave given frequencies, amplitude and offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freql} & Left channel frequency \\
+\hline
+{\em freqr} & Right channel frequency \\
+\hline
+{\em amp} & Amplitude \\
+\hline
+{\em offset} & Offset from 0 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaudio_1_1_wave_generator_a99136681ca763ec2df9b2c1743f3773e}\label{classaudio_1_1_wave_generator_a99136681ca763ec2df9b2c1743f3773e}} 
+\index{audio::WaveGenerator@{audio::WaveGenerator}!operator()@{operator()}}
+\index{operator()@{operator()}!audio::WaveGenerator@{audio::WaveGenerator}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual void audio\+::\+Wave\+Generator\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function for wave generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track} & Audio track to generate over \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classaudio_1_1_audio_filter_a2018d3548aabb9b1252faf463319d99e}{audio\+::\+Audio\+Filter}}.
+
+
+
+Implemented in \mbox{\hyperlink{classaudio_1_1_sawtooth_wave_a91f419410def6704478d5846dd1d9ea3}{audio\+::\+Sawtooth\+Wave}}, \mbox{\hyperlink{classaudio_1_1_sine_wave_aa16dc4b1e30d41675f8347b578c8a573}{audio\+::\+Sine\+Wave}}, and \mbox{\hyperlink{classaudio_1_1_square_wave_a05423bdd7e68dd375abf604bf66be3dd}{audio\+::\+Square\+Wave}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKaudio/\mbox{\hyperlink{wavegenerator_8h}{wavegenerator.\+h}}\end{DoxyCompactItemize}

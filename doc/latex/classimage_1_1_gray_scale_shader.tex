@@ -1,0 +1,84 @@
+\hypertarget{classimage_1_1_gray_scale_shader}{}\doxysubsection{image\+::Gray\+Scale\+Shader Class Reference}
+\label{classimage_1_1_gray_scale_shader}\index{image::GrayScaleShader@{image::GrayScaleShader}}
+
+
+Class for a converting any image to a grayscale version.  
+
+
+
+
+{\ttfamily \#include \char`\"{}grayscale.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Gray\+Scale\+Shader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classimage_1_1_gray_scale_shader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classimage_1_1_gray_scale_shader_a671baba6fbccb15c974bc117fcef0c28}{operator()}} (\mbox{\hyperlink{classimage_1_1_image}{Image}} \&img) override
+\begin{DoxyCompactList}\small\item\em Grayscale each pixel in the image. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} \mbox{\hyperlink{classimage_1_1_gray_scale_shader_aa821c3c548dac4b0148308e68ae48764}{operator()}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&img, size\+\_\+t x, size\+\_\+t y) override
+\begin{DoxyCompactList}\small\item\em Grayscale a pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Class for a converting any image to a grayscale version. 
+
+In a grayscale image each pixel is a shade of gray, with only varying intensity. Gray is defined where the RGB components all have the same value. This means if desired, only one color channel would be required. 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_gray_scale_shader_aa821c3c548dac4b0148308e68ae48764}\label{classimage_1_1_gray_scale_shader_aa821c3c548dac4b0148308e68ae48764}} 
+\index{image::GrayScaleShader@{image::GrayScaleShader}!operator()@{operator()}}
+\index{operator()@{operator()}!image::GrayScaleShader@{image::GrayScaleShader}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} image\+::\+Gray\+Scale\+Shader\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{img,  }\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Grayscale a pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to select pixel from \\
+\hline
+{\em x} & X location of target pixel \\
+\hline
+{\em y} & Y location of target pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Grayscaled pixel 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_shader_aba9ce88c5538453871d7a60a7cd0957d}{image\+::\+Image\+Shader}}.
+
+\mbox{\Hypertarget{classimage_1_1_gray_scale_shader_a671baba6fbccb15c974bc117fcef0c28}\label{classimage_1_1_gray_scale_shader_a671baba6fbccb15c974bc117fcef0c28}} 
+\index{image::GrayScaleShader@{image::GrayScaleShader}!operator()@{operator()}}
+\index{operator()@{operator()}!image::GrayScaleShader@{image::GrayScaleShader}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void image\+::\+Gray\+Scale\+Shader\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{img }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Grayscale each pixel in the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to grayscale \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classimage_1_1_image_shader_a2451e1c8c54e928393f46bdeb494d533}{image\+::\+Image\+Shader}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{grayscale_8h}{grayscale.\+h}}\item 
+src/lib\+LMTKimage/grayscale.\+cpp\end{DoxyCompactItemize}

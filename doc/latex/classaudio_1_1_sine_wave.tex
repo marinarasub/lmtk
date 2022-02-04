@@ -1,0 +1,101 @@
+\hypertarget{classaudio_1_1_sine_wave}{}\doxysubsection{audio\+::Sine\+Wave Class Reference}
+\label{classaudio_1_1_sine_wave}\index{audio::SineWave@{audio::SineWave}}
+
+
+Class for generating a sine wave.  
+
+
+
+
+{\ttfamily \#include \char`\"{}sinewave.\+h\char`\"{}}
+
+Inheritance diagram for audio\+::Sine\+Wave\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classaudio_1_1_sine_wave}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaudio_1_1_sine_wave_adc5c9b48bc70924c5263df6725a95da7}{Sine\+Wave}} (float freql, float freqr, float amp)
+\begin{DoxyCompactList}\small\item\em Create a sine wave given frequency and amplitude. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaudio_1_1_sine_wave_a32d6d936dbcf90e34222d56fc93e69ca}{Sine\+Wave}} (float freql, float freqr, float amp, float \mbox{\hyperlink{classaudio_1_1_wave_generator_a0f06b359f8c84033a7f43613370393eb}{offset}})
+\begin{DoxyCompactList}\small\item\em Create a sine wave given frequency, amplitude and offset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaudio_1_1_sine_wave_aa16dc4b1e30d41675f8347b578c8a573}{operator()}} (\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&track)
+\begin{DoxyCompactList}\small\item\em Sine wave operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Class for generating a sine wave. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaudio_1_1_wave_generator}{Wave\+Generator}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaudio_1_1_sine_wave_adc5c9b48bc70924c5263df6725a95da7}\label{classaudio_1_1_sine_wave_adc5c9b48bc70924c5263df6725a95da7}} 
+\index{audio::SineWave@{audio::SineWave}!SineWave@{SineWave}}
+\index{SineWave@{SineWave}!audio::SineWave@{audio::SineWave}}
+\doxyparagraph{\texorpdfstring{SineWave()}{SineWave()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily audio\+::\+Sine\+Wave\+::\+Sine\+Wave (\begin{DoxyParamCaption}\item[{float}]{freql,  }\item[{float}]{freqr,  }\item[{float}]{amp }\end{DoxyParamCaption})}
+
+
+
+Create a sine wave given frequency and amplitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freql} & Left channel frequency \\
+\hline
+{\em freqr} & Right channel frequency \\
+\hline
+{\em amp} & Amplitude \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_sine_wave_a32d6d936dbcf90e34222d56fc93e69ca}\label{classaudio_1_1_sine_wave_a32d6d936dbcf90e34222d56fc93e69ca}} 
+\index{audio::SineWave@{audio::SineWave}!SineWave@{SineWave}}
+\index{SineWave@{SineWave}!audio::SineWave@{audio::SineWave}}
+\doxyparagraph{\texorpdfstring{SineWave()}{SineWave()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily audio\+::\+Sine\+Wave\+::\+Sine\+Wave (\begin{DoxyParamCaption}\item[{float}]{freql,  }\item[{float}]{freqr,  }\item[{float}]{amp,  }\item[{float}]{offset }\end{DoxyParamCaption})}
+
+
+
+Create a sine wave given frequency, amplitude and offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freql} & Left channel frequency \\
+\hline
+{\em freqr} & Right channel frequency \\
+\hline
+{\em amp} & Amplitude \\
+\hline
+{\em offset} & Offset from 0 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaudio_1_1_sine_wave_aa16dc4b1e30d41675f8347b578c8a573}\label{classaudio_1_1_sine_wave_aa16dc4b1e30d41675f8347b578c8a573}} 
+\index{audio::SineWave@{audio::SineWave}!operator()@{operator()}}
+\index{operator()@{operator()}!audio::SineWave@{audio::SineWave}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void audio\+::\+Sine\+Wave\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sine wave operator. 
+
+Creates a sine wave over the track, overwriting existing data 
+
+Implements \mbox{\hyperlink{classaudio_1_1_wave_generator_a99136681ca763ec2df9b2c1743f3773e}{audio\+::\+Wave\+Generator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKaudio/\mbox{\hyperlink{sinewave_8h}{sinewave.\+h}}\item 
+src/lib\+LMTKaudio/sinewave.\+cpp\end{DoxyCompactItemize}

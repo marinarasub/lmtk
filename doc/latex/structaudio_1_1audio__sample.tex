@@ -1,0 +1,50 @@
+\hypertarget{structaudio_1_1audio__sample}{}\doxysubsection{audio\+::audio\+\_\+sample Struct Reference}
+\label{structaudio_1_1audio__sample}\index{audio::audio\_sample@{audio::audio\_sample}}
+
+
+a 2 channel (stereo) audio sample of values \mbox{[}-\/1, 1\mbox{]}  
+
+
+
+
+{\ttfamily \#include \char`\"{}audiotrack.\+h\char`\"{}}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structaudio_1_1audio__sample}{audio\+\_\+sample}} \mbox{\hyperlink{structaudio_1_1audio__sample_affe7f8f5b341e59a243d4a51adf9aa5c}{operator+}} (const \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\+\_\+sample}} \&other) const
+\begin{DoxyCompactList}\small\item\em operator+\+: Adds two audio samples together. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaudio_1_1audio__sample_ac637fe4081edb7f9255021640e75e3b2}\label{structaudio_1_1audio__sample_ac637fe4081edb7f9255021640e75e3b2}} 
+void {\bfseries clamp} ()
+\begin{DoxyCompactList}\small\item\em Clamp each channel to \mbox{[}-\/1, 1\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaudio_1_1audio__sample_aacd563cccd13c0b5c09212b5b386234e}\label{structaudio_1_1audio__sample_aacd563cccd13c0b5c09212b5b386234e}} 
+float {\bfseries left}
+\begin{DoxyCompactList}\small\item\em Left channel sample. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaudio_1_1audio__sample_a0d71236727a02b818e4b7e00ce7a8756}\label{structaudio_1_1audio__sample_a0d71236727a02b818e4b7e00ce7a8756}} 
+float {\bfseries right}
+\begin{DoxyCompactList}\small\item\em Right channel sample. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+a 2 channel (stereo) audio sample of values \mbox{[}-\/1, 1\mbox{]} 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{structaudio_1_1audio__sample_affe7f8f5b341e59a243d4a51adf9aa5c}\label{structaudio_1_1audio__sample_affe7f8f5b341e59a243d4a51adf9aa5c}} 
+\index{audio::audio\_sample@{audio::audio\_sample}!operator+@{operator+}}
+\index{operator+@{operator+}!audio::audio\_sample@{audio::audio\_sample}}
+\doxyparagraph{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\+\_\+sample}} audio\+::audio\+\_\+sample\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaudio_1_1audio__sample}{audio\+\_\+sample}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator+\+: Adds two audio samples together. 
+
+Both channels are added linearly 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKaudio/\mbox{\hyperlink{audiotrack_8h}{audiotrack.\+h}}\item 
+src/lib\+LMTKaudio/audiotrack.\+cpp\end{DoxyCompactItemize}

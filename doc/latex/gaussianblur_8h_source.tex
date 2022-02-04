@@ -1,0 +1,75 @@
+\hypertarget{gaussianblur_8h_source}{}\doxysubsection{gaussianblur.\+h}
+\label{gaussianblur_8h_source}\index{src/libLMTKimage/gaussianblur.h@{src/libLMTKimage/gaussianblur.h}}
+\mbox{\hyperlink{gaussianblur_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef \_LIBLMTKIMAGE\_GAUSSIANBLUR\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define \_LIBLMTKIMAGE\_GAUSSIANBLUR\_H\_}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{convolution_8h}{convolution.h}}"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}../utils/utilsmath.h"{}}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{namespace }image \{}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{36     \textcolor{keyword}{static} \textcolor{keywordtype}{float} sigmaTolerance(\textcolor{keywordtype}{float} zscore);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{47     \textcolor{keyword}{class }\mbox{\hyperlink{classimage_1_1_gaussian_blur}{GaussianBlur}} : \textcolor{keyword}{public} \mbox{\hyperlink{classimage_1_1_image_convolution}{ImageConvolution}}}
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49     \textcolor{keyword}{public}:}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{57         \mbox{\hyperlink{classimage_1_1_gaussian_blur_a14789ef2d98c7a82cc5df2d654edc8f5}{GaussianBlur}}(\textcolor{keywordtype}{float} stdev);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{66         \mbox{\hyperlink{classimage_1_1_gaussian_blur_a14789ef2d98c7a82cc5df2d654edc8f5}{GaussianBlur}}(\textcolor{keywordtype}{float} stdevX, \textcolor{keywordtype}{float} stdevY);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{81         \mbox{\hyperlink{classimage_1_1_gaussian_blur_a14789ef2d98c7a82cc5df2d654edc8f5}{GaussianBlur}}(\textcolor{keywordtype}{float} stdevX, \textcolor{keywordtype}{float} stdevY, \textcolor{keywordtype}{float} toleranceX, \textcolor{keywordtype}{float} toleranceY);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83     \textcolor{keyword}{private}:}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{90         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_gaussian_blur_afb51712b40a570f26014ae502d590cde}{computeKernel}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92         \textcolor{keywordtype}{float} sigmaX; }
+\DoxyCodeLine{93         \textcolor{keywordtype}{float} sigmaY; }
+\DoxyCodeLine{95     \};}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 }
+\DoxyCodeLine{105     \textcolor{keyword}{class }\mbox{\hyperlink{classimage_1_1_gaussian_blur_horizontal}{GaussianBlurHorizontal}} : \textcolor{keyword}{public} \mbox{\hyperlink{classimage_1_1_image_convolution}{ImageConvolution}}}
+\DoxyCodeLine{106     \{}
+\DoxyCodeLine{107     \textcolor{keyword}{public}:}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{115         \mbox{\hyperlink{classimage_1_1_gaussian_blur_horizontal_a91ac728d5f2fdef73944de28bf5c7e66}{GaussianBlurHorizontal}}(\textcolor{keywordtype}{float} stdev);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{126         \mbox{\hyperlink{classimage_1_1_gaussian_blur_horizontal_a91ac728d5f2fdef73944de28bf5c7e66}{GaussianBlurHorizontal}}(\textcolor{keywordtype}{float} stdev, \textcolor{keywordtype}{float} tol);}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     \textcolor{keyword}{private}:}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{135         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_gaussian_blur_horizontal_ae68b365f541a0b4c7f829b6b8f37ee04}{computeKernel}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137         \textcolor{keywordtype}{float} sigma; }
+\DoxyCodeLine{139     \};}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 }
+\DoxyCodeLine{149     \textcolor{keyword}{class }\mbox{\hyperlink{classimage_1_1_gaussian_blur_vertical}{GaussianBlurVertical}} : \textcolor{keyword}{public} \mbox{\hyperlink{classimage_1_1_image_convolution}{ImageConvolution}}}
+\DoxyCodeLine{150     \{}
+\DoxyCodeLine{151     \textcolor{keyword}{public}:}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{159         \mbox{\hyperlink{classimage_1_1_gaussian_blur_vertical_a6d734f095defdd2f7522e9efa12e42ec}{GaussianBlurVertical}}(\textcolor{keywordtype}{float} stdev);}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{170         \mbox{\hyperlink{classimage_1_1_gaussian_blur_vertical_a6d734f095defdd2f7522e9efa12e42ec}{GaussianBlurVertical}}(\textcolor{keywordtype}{float} stdev, \textcolor{keywordtype}{float} tol);}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172     \textcolor{keyword}{private}:}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{179         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_gaussian_blur_vertical_ae000e3fd7a9ef25bc664d51318c25974}{computeKernel}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181         \textcolor{keywordtype}{float} sigma; }
+\DoxyCodeLine{183     \};}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 \}}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKIMAGE\_GAUSSIANBLUR\_H\_}}
+\DoxyCodeLine{189 }
+
+\end{DoxyCode}

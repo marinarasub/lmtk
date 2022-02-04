@@ -1,0 +1,84 @@
+\hypertarget{classaudio_1_1_saw_tooth_wave}{}\doxysection{audio\+::Saw\+Tooth\+Wave Class Reference}
+\label{classaudio_1_1_saw_tooth_wave}\index{audio::SawToothWave@{audio::SawToothWave}}
+Inheritance diagram for audio\+::Saw\+Tooth\+Wave\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classaudio_1_1_saw_tooth_wave}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaudio_1_1_saw_tooth_wave_a55c04dd477059efe891df6ace36ca725}{Saw\+Tooth\+Wave}} (float freql, float freqr, float amp)
+\begin{DoxyCompactList}\small\item\em Create a sawtooth wave given frequency and amplitude. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaudio_1_1_saw_tooth_wave_aa45c37a76f17edb593e7260c64bae22b}{Saw\+Tooth\+Wave}} (float freql, float freqr, float amp, float \mbox{\hyperlink{classaudio_1_1_wave_generator_a0f06b359f8c84033a7f43613370393eb}{offset}})
+\begin{DoxyCompactList}\small\item\em Create a sawtooth wave given frequency, amplitude and offset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaudio_1_1_saw_tooth_wave_a77e0f94ae31e59af6ffd2b66eed0e9b0}{operator()}} (\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&track)
+\begin{DoxyCompactList}\small\item\em Sawtooth operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaudio_1_1_saw_tooth_wave_a55c04dd477059efe891df6ace36ca725}\label{classaudio_1_1_saw_tooth_wave_a55c04dd477059efe891df6ace36ca725}} 
+\index{audio::SawToothWave@{audio::SawToothWave}!SawToothWave@{SawToothWave}}
+\index{SawToothWave@{SawToothWave}!audio::SawToothWave@{audio::SawToothWave}}
+\doxysubsubsection{\texorpdfstring{SawToothWave()}{SawToothWave()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily audio\+::\+Saw\+Tooth\+Wave\+::\+Saw\+Tooth\+Wave (\begin{DoxyParamCaption}\item[{float}]{freql,  }\item[{float}]{freqr,  }\item[{float}]{amp }\end{DoxyParamCaption})}
+
+
+
+Create a sawtooth wave given frequency and amplitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freql} & Left channel frequency \\
+\hline
+{\em freqr} & Right channel frequency \\
+\hline
+{\em amp} & Amplitude \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaudio_1_1_saw_tooth_wave_aa45c37a76f17edb593e7260c64bae22b}\label{classaudio_1_1_saw_tooth_wave_aa45c37a76f17edb593e7260c64bae22b}} 
+\index{audio::SawToothWave@{audio::SawToothWave}!SawToothWave@{SawToothWave}}
+\index{SawToothWave@{SawToothWave}!audio::SawToothWave@{audio::SawToothWave}}
+\doxysubsubsection{\texorpdfstring{SawToothWave()}{SawToothWave()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily audio\+::\+Saw\+Tooth\+Wave\+::\+Saw\+Tooth\+Wave (\begin{DoxyParamCaption}\item[{float}]{freql,  }\item[{float}]{freqr,  }\item[{float}]{amp,  }\item[{float}]{offset }\end{DoxyParamCaption})}
+
+
+
+Create a sawtooth wave given frequency, amplitude and offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freql} & Left channel frequency \\
+\hline
+{\em freqr} & Right channel frequency \\
+\hline
+{\em amp} & Amplitude \\
+\hline
+{\em offset} & Offset from 0 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaudio_1_1_saw_tooth_wave_a77e0f94ae31e59af6ffd2b66eed0e9b0}\label{classaudio_1_1_saw_tooth_wave_a77e0f94ae31e59af6ffd2b66eed0e9b0}} 
+\index{audio::SawToothWave@{audio::SawToothWave}!operator()@{operator()}}
+\index{operator()@{operator()}!audio::SawToothWave@{audio::SawToothWave}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void audio\+::\+Saw\+Tooth\+Wave\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaudio_1_1_audio_track}{Audio\+Track}} \&}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sawtooth operator. 
+
+Creates a sawtooth wave over the track, overwriting existing data 
+
+Implements \mbox{\hyperlink{classaudio_1_1_wave_generator_a99136681ca763ec2df9b2c1743f3773e}{audio\+::\+Wave\+Generator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKaudio/\mbox{\hyperlink{sawtooth_8h}{sawtooth.\+h}}\item 
+src/lib\+LMTKaudio/sawtooth.\+cpp\end{DoxyCompactItemize}

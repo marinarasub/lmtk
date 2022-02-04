@@ -1,0 +1,41 @@
+\hypertarget{timer_8h_source}{}\doxysubsection{timer.\+h}
+\label{timer_8h_source}\index{src/utils/timer.h@{src/utils/timer.h}}
+\mbox{\hyperlink{timer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef \_UTILS\_TIMER\_H\_}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define \_UTILS\_TIMER\_H\_}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{namespace }utils \{}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keyword}{using namespace }std::chrono;}
+\DoxyCodeLine{27     \textcolor{keyword}{using} hrc = high\_resolution\_clock;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{33     \textcolor{keyword}{class }\mbox{\hyperlink{classutils_1_1_timer}{Timer}}}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35     \textcolor{keyword}{public}:}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{40         \mbox{\hyperlink{classutils_1_1_timer_a0489e1eabf3cbaf99b8afcaefa79306e}{Timer}}();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{47         \textcolor{keywordtype}{void} \mbox{\hyperlink{classutils_1_1_timer_a8e465b6d99885a8ce9980186e17676c8}{start}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{54         \textcolor{keywordtype}{double} \mbox{\hyperlink{classutils_1_1_timer_acc915b725f83fc285da2319387e29330}{time}}(); \textcolor{comment}{// return time in s.}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         \textcolor{comment}{// TODO to string.}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58         \textcolor{comment}{// TODO pause/lap}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{keyword}{private}:}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62         hrc::time\_point start\_point; }
+\DoxyCodeLine{64         \textcolor{comment}{//time\_p}}
+\DoxyCodeLine{65     \};}
+\DoxyCodeLine{66 \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_UTILS\_TIMER\_H\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,41 @@
+\hypertarget{threadpool_8h}{}\doxysubsection{src/utils/threadpool.h File Reference}
+\label{threadpool_8h}\index{src/utils/threadpool.h@{src/utils/threadpool.h}}
+
+
+Copyright (c) 2022 marinarasub.  
+
+
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structthreadpool_1_1task}{threadpool\+::task}}
+\begin{DoxyCompactList}\small\item\em A task for a thread which stores a void calback. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classthreadpool_1_1_task_queue}{threadpool\+::\+Task\+Queue}}
+\begin{DoxyCompactList}\small\item\em A FIFO queue of callback tasks that is thread-\/safe. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classthreadpool_1_1_thread_pool}{threadpool\+::\+Thread\+Pool}}
+\begin{DoxyCompactList}\small\item\em Class for a pool of flexible worker threads which can be given miscellaneous tasks to complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Copyright (c) 2022 marinarasub. 
+
+LMTK / Light Multimedia Tool\+Kit
+
+This file is included in the utils library for LMTK LMTK and its subprojects are available under the MIT license.
+
+\begin{DoxyAuthor}{Author}
+marinarasub 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 2022
+\end{DoxyDate}
+Contains handy string utilities. 

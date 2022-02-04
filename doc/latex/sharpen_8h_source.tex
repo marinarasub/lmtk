@@ -1,0 +1,36 @@
+\hypertarget{sharpen_8h_source}{}\doxysubsection{sharpen.\+h}
+\label{sharpen_8h_source}\index{src/libLMTKimage/sharpen.h@{src/libLMTKimage/sharpen.h}}
+\mbox{\hyperlink{sharpen_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef \_LIBLMTKIMAGE\_SHARPEN\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define \_LIBLMTKIMAGE\_SHARPEN\_H\_}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{convolution_8h}{convolution.h}}"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{namespace }image \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{34     \textcolor{keyword}{class }\mbox{\hyperlink{classimage_1_1_image_sharpen}{ImageSharpen}} : \textcolor{keyword}{public} \mbox{\hyperlink{classimage_1_1_image_convolution}{ImageConvolution}}}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36     \textcolor{keyword}{public}:}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{comment}{// sharpen uses 1x1}}
+\DoxyCodeLine{39         \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} SHARP\_CENTER = 1; }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{44         \mbox{\hyperlink{classimage_1_1_image_sharpen_a9802944032d6b890e5eb51aa56598a29}{ImageSharpen}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{51         \mbox{\hyperlink{classimage_1_1_image_sharpen_a9802944032d6b890e5eb51aa56598a29}{ImageSharpen}}(\textcolor{keywordtype}{float} amt);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{keyword}{private}:}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{59         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_image_sharpen_aca7238e8f84a48ceb0cf324ec0c35fca}{computeKernel}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61         \textcolor{keywordtype}{float} amount; }
+\DoxyCodeLine{62     \};}
+\DoxyCodeLine{63 \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKIMAGE\_SHARPEN\_H\_}}
+
+\end{DoxyCode}

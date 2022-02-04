@@ -1,0 +1,72 @@
+\hypertarget{imagefx_8hpp}{}\doxysubsection{src/app/imagetools/imagefx.hpp File Reference}
+\label{imagefx_8hpp}\index{src/app/imagetools/imagefx.hpp@{src/app/imagetools/imagefx.hpp}}
+
+
+Copyright (c) 2022 marinarasub.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include \char`\"{}../../lib\+LMTKimage/pluginchain.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../lib\+LMTKimage/filters.\+h\char`\"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlmtkimage_1_1fx__info}{lmtkimage\+::fx\+\_\+info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{imagefx_8hpp_a6ea26a7d6b3a4531ed3b5d79b950b488}\label{imagefx_8hpp_a6ea26a7d6b3a4531ed3b5d79b950b488}} 
+std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$ {\bfseries lmtkimage\+::make\+\_\+bokeh\+\_\+blur} (size\+\_\+t passes, std\+::vector$<$ std\+::string $>$ args)
+\item 
+\mbox{\Hypertarget{imagefx_8hpp_aa8ba9c1baaa2cf3080bd45ab14dfef63}\label{imagefx_8hpp_aa8ba9c1baaa2cf3080bd45ab14dfef63}} 
+std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$ {\bfseries lmtkimage\+::make\+\_\+box\+\_\+blur} (size\+\_\+t passes, std\+::vector$<$ std\+::string $>$ args)
+\item 
+\mbox{\Hypertarget{imagefx_8hpp_a364db8836947bf3f75403214de6d0b9c}\label{imagefx_8hpp_a364db8836947bf3f75403214de6d0b9c}} 
+std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$ {\bfseries lmtkimage\+::make\+\_\+fast\+\_\+blur} (size\+\_\+t passes, std\+::vector$<$ std\+::string $>$ args)
+\item 
+\mbox{\Hypertarget{imagefx_8hpp_a6c850872d1c33bcfd7429f4eb7f5e59f}\label{imagefx_8hpp_a6c850872d1c33bcfd7429f4eb7f5e59f}} 
+std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$ {\bfseries lmtkimage\+::make\+\_\+chroma\+\_\+keyer} (size\+\_\+t passes, std\+::vector$<$ std\+::string $>$ args)
+\item 
+\mbox{\Hypertarget{imagefx_8hpp_a6db3b262e47b0a8abf7d5fd319112b50}\label{imagefx_8hpp_a6db3b262e47b0a8abf7d5fd319112b50}} 
+std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$ {\bfseries lmtkimage\+::make\+\_\+color\+\_\+invert} (size\+\_\+t passes, std\+::vector$<$ std\+::string $>$ args)
+\item 
+\mbox{\Hypertarget{imagefx_8hpp_ac5bbeb8aba148c90f412d82144c3f26f}\label{imagefx_8hpp_ac5bbeb8aba148c90f412d82144c3f26f}} 
+std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$ {\bfseries lmtkimage\+::make\+\_\+gaussian\+\_\+blur} (size\+\_\+t passes, std\+::vector$<$ std\+::string $>$ args)
+\item 
+\mbox{\Hypertarget{imagefx_8hpp_a5e4bdff1230bc41f73618b57e84f39cf}\label{imagefx_8hpp_a5e4bdff1230bc41f73618b57e84f39cf}} 
+std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$ {\bfseries lmtkimage\+::make\+\_\+grayscale} (size\+\_\+t passes, std\+::vector$<$ std\+::string $>$ args)
+\item 
+\mbox{\Hypertarget{imagefx_8hpp_a6b325fe35623a4e623d0b52212695128}\label{imagefx_8hpp_a6b325fe35623a4e623d0b52212695128}} 
+std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$ {\bfseries lmtkimage\+::make\+\_\+hsl\+\_\+adjust} (size\+\_\+t passes, std\+::vector$<$ std\+::string $>$ args)
+\item 
+\mbox{\Hypertarget{imagefx_8hpp_a9424df911fa3a88f9af5921cbcae2f6c}\label{imagefx_8hpp_a9424df911fa3a88f9af5921cbcae2f6c}} 
+std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$ {\bfseries lmtkimage\+::make\+\_\+image\+\_\+sharpen} (size\+\_\+t passes, std\+::vector$<$ std\+::string $>$ args)
+\item 
+\mbox{\Hypertarget{imagefx_8hpp_ae0e57bcb4c3232fcc54396f4c5153c4f}\label{imagefx_8hpp_ae0e57bcb4c3232fcc54396f4c5153c4f}} 
+std\+::string {\bfseries lmtkimage\+::help\+\_\+fx} ()
+\item 
+\mbox{\Hypertarget{imagefx_8hpp_a50be77d70ee42dd21ac62cae81065de3}\label{imagefx_8hpp_a50be77d70ee42dd21ac62cae81065de3}} 
+std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$ {\bfseries lmtkimage\+::get\+\_\+effects} (std\+::string effect, size\+\_\+t passes, std\+::vector$<$ std\+::string $>$ args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Copyright (c) 2022 marinarasub. 
+
+LMTK / Light Multimedia Tool\+Kit
+
+This file is included in the LMTKimage app component of LMTK LMTK and its subprojects are available under the MIT license.
+
+\begin{DoxyAuthor}{Author}
+marinarasub 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 2022
+\end{DoxyDate}
+Header file for string arg wrappers for LMTK image shaders library
+
+\mbox{\hyperlink{imageshader_8h}{imageshader.\+h}} 

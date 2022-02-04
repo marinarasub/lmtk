@@ -1,0 +1,57 @@
+\hypertarget{fft_8h}{}\doxysubsection{src/utils/fft.h File Reference}
+\label{fft_8h}\index{src/utils/fft.h@{src/utils/fft.h}}
+
+
+Copyright (c) 2022 marinarasub.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utilsmath.\+h\char`\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fft_8cpp_a504889195a15af475ce62139b145ce58}\label{fft_8cpp_a504889195a15af475ce62139b145ce58}} 
+std\+::vector$<$ math\+::complex $>$ $\ast$ {\bfseries utils\+::fft\+::dft} (std\+::vector$<$ float $>$ \&input)
+\begin{DoxyCompactList}\small\item\em Returns discrete fourier transform of 0..n (where n is max freq.) fhat (fourier coeff) = SUM j=0 to n-\/1 (input $\ast$ e$^\wedge$(-\/i2\+PIjk/n)) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fft_8cpp_a7306f2101086dce178802ff403bde7d4}\label{fft_8cpp_a7306f2101086dce178802ff403bde7d4}} 
+std\+::vector$<$ float $>$ $\ast$ {\bfseries utils\+::fft\+::idft} (std\+::vector$<$ math\+::complex $>$ \&coeffs)
+\begin{DoxyCompactList}\small\item\em Returns discrete fourier transform of 0..n (where n is max freq.) j (data) = SUM j=0 to n-\/1 (fhat $\ast$ e$^\wedge$(i2\+PIjk/n)) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fft_8cpp_a349751f8e293b645611c466894df8f73}\label{fft_8cpp_a349751f8e293b645611c466894df8f73}} 
+std\+::vector$<$ math\+::complex $>$ $\ast$ {\bfseries utils\+::fft\+::fft} (std\+::vector$<$ float $>$ \&input)
+\item 
+\mbox{\Hypertarget{fft_8h_a5bbc566243d469f4d7c703e8ac69ac74}\label{fft_8h_a5bbc566243d469f4d7c703e8ac69ac74}} 
+std\+::vector$<$ float $>$ $\ast$ {\bfseries utils\+::fft\+::ifft} (std\+::vector$<$ math\+::complex $>$ \&coeffs)
+\item 
+\mbox{\Hypertarget{fft_8cpp_a5275720aa5bd3acdf9ede9514963ad0f}\label{fft_8cpp_a5275720aa5bd3acdf9ede9514963ad0f}} 
+std\+::vector$<$ float $>$ $\ast$ {\bfseries utils\+::fft\+::power\+\_\+spec} (std\+::vector$<$ math\+::complex $>$ \&input)
+\item 
+\mbox{\Hypertarget{fft_8cpp_a6f78f752a24e798fa73d5beea8582b5c}\label{fft_8cpp_a6f78f752a24e798fa73d5beea8582b5c}} 
+math\+::complex {\bfseries utils\+::fft\+::eitheta} (double theta)
+\item 
+\mbox{\Hypertarget{fft_8cpp_a1b1853480975e614509644edc40925c0}\label{fft_8cpp_a1b1853480975e614509644edc40925c0}} 
+math\+::complex {\bfseries utils\+::fft\+::cis} (double theta)
+\item 
+\mbox{\Hypertarget{fft_8cpp_a1041e4611d329c2a76fe4191d6d27de4}\label{fft_8cpp_a1041e4611d329c2a76fe4191d6d27de4}} 
+math\+::complex {\bfseries utils\+::fft\+::eitheta\+\_\+inv} (double theta)
+\item 
+\mbox{\Hypertarget{fft_8cpp_a2910388fc86da4441c849ffde4e8c54b}\label{fft_8cpp_a2910388fc86da4441c849ffde4e8c54b}} 
+math\+::complex {\bfseries utils\+::fft\+::cis\+\_\+inv} (double theta)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Copyright (c) 2022 marinarasub. 
+
+LMTK / Light Multimedia Tool\+Kit
+
+This file is included in the utils library for LMTK LMTK and its subprojects are available under the MIT license.
+
+\begin{DoxyAuthor}{Author}
+marinarasub 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 2022
+\end{DoxyDate}
+Utility class for fourier transform 

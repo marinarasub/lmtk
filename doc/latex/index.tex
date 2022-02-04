@@ -1,0 +1,190 @@
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+\href{https://github.com/marinarasub/lmtk/actions/workflows/build-linux.yml}{\texttt{ }} \href{https://github.com/marinarasub/lmtk/actions/workflows/build-windows.yml}{\texttt{ }}\hypertarget{index_autotoc_md9}{}\doxysubsection{Light Multimedia Tool\+Kit}\label{index_autotoc_md9}
+Multimedia processing tool for images, audio and (planned video). Currently in early development. Written in C++. A student/hobby project.
+
+Made by marinarasub 2021 -\/ 2022
+
+Currently, this README outlines developement progress and features. Keep in mind that this project is under version 0 development and there may be uncompleted, buggy or unusable features. Expect a lot of changes!
+
+~\newline
+\hypertarget{index_autotoc_md10}{}\doxysubsection{Latest Release ✅}\label{index_autotoc_md10}
+Coming soon. Target platforms\+: windows, linux
+
+~\newline
+\hypertarget{index_autotoc_md11}{}\doxysubsection{Features}\label{index_autotoc_md11}
+Here are some of the main features 😃. A few demos are available see DEMO.\+md. \char`\"{}\+TODO\char`\"{} indicates a planned or WIP feature (These will only be here during early development).
+
+~\newline
+\hypertarget{index_autotoc_md12}{}\doxysubsubsection{Image Library 🌄}\label{index_autotoc_md12}
+\hypertarget{index_autotoc_md13}{}\doxyparagraph{Supported Formats}\label{index_autotoc_md13}
+
+\begin{DoxyItemize}
+\item PNG \mbox{[}read/write\mbox{]}
+\item JPEG \mbox{[}read/write\mbox{]} 
+\end{DoxyItemize}\hypertarget{index_autotoc_md14}{}\doxyparagraph{Tools}\label{index_autotoc_md14}
+
+\begin{DoxyItemize}
+\item Image convolution
+\item Resizing TODO bicubic and bilinear
+\item Mirror TODO angle
+\item Gradient TODO more options lol
+\item Alpha blending 
+\end{DoxyItemize}\hypertarget{index_autotoc_md15}{}\doxyparagraph{Effects}\label{index_autotoc_md15}
+
+\begin{DoxyItemize}
+\item Blurs \& Sharpen
+\begin{DoxyItemize}
+\item Box/fast blur
+\item Gaussian blur
+\item Bokeh/lens blur
+\end{DoxyItemize}
+\item Adjustment/\+Correction
+\begin{DoxyItemize}
+\item HSL (Hue/\+Sat/\+Lum) Adjust
+\end{DoxyItemize}
+\item Other
+\begin{DoxyItemize}
+\item Grayscale
+\item Chroma key 
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_autotoc_md16}{}\doxyparagraph{Console Application}\label{index_autotoc_md16}
+Command line tool for using the image library. Right now it is experimental.
+\begin{DoxyItemize}
+\item Features multithreaded rendering
+\end{DoxyItemize}
+
+~\newline
+\hypertarget{index_autotoc_md17}{}\doxysubsubsection{Audio / DSP Library 🎵}\label{index_autotoc_md17}
+\hypertarget{index_autotoc_md18}{}\doxyparagraph{Supported Formats}\label{index_autotoc_md18}
+
+\begin{DoxyItemize}
+\item FLAC \mbox{[}read only\mbox{]}
+\item NEXT PLANNED\+: MP3 (MPEG Audio Layer III)
+\end{DoxyItemize}\hypertarget{index_autotoc_md19}{}\doxyparagraph{Tools/fx}\label{index_autotoc_md19}
+
+\begin{DoxyItemize}
+\item Audio playback to output device
+\begin{DoxyItemize}
+\item Live gain
+\end{DoxyItemize}
+\item Track Blending (just add them like A + B!)
+\item Wave Generators\+:
+\begin{DoxyItemize}
+\item Sine
+\item Saw
+\item Square
+\end{DoxyItemize}
+\item TODO low pass, high pass, band pass
+\item TODO peak detection
+\end{DoxyItemize}\hypertarget{index_autotoc_md20}{}\doxysubsubsection{Video 🎥}\label{index_autotoc_md20}
+\hypertarget{index_autotoc_md21}{}\doxyparagraph{Supported Formats}\label{index_autotoc_md21}
+
+\begin{DoxyItemize}
+\item TBA
+\end{DoxyItemize}\hypertarget{index_autotoc_md22}{}\doxysubsubsection{Other}\label{index_autotoc_md22}
+
+\begin{DoxyItemize}
+\item DFT + FFT
+\begin{DoxyItemize}
+\item Power/frequency spectrum
+\end{DoxyItemize}
+\item Utility classes
+\begin{DoxyItemize}
+\item Math functions
+\item Threadpool
+\item String functions
+\item Other...
+\end{DoxyItemize}
+
+~\newline
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md23}{}\doxysubsection{Compiling / Building}\label{index_autotoc_md23}
+You can build using CMake and using vcpkg as a dependency manager. Currently only vcpkg is supported for CMake.
+
+First download \href{https://cmake.org/}{\texttt{ CMake}} and \href{https://vcpkg.io/en/index.html}{\texttt{ vcpkg}} if you haven\textquotesingle{}t already.
+
+Make sure to put vcpkg in your environment variables.
+
+Steps to build\+:
+
+
+\begin{DoxyItemize}
+\item Run {\ttfamily vcpkg install} on the top level folder (lmtk/). This should download required dependencies.
+\item Use CMake at the top level folder (lmtk/).
+\begin{DoxyItemize}
+\item If CMake can\textquotesingle{}t find vcpkg toolchain, try specifying VCPKG\+\_\+\+ROOT in CMake environment varables
+\item Select {\ttfamily BUILD\+\_\+\+TEST} if you want to build tests
+\end{DoxyItemize}
+
+~\newline
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md24}{}\doxysubsection{Performance}\label{index_autotoc_md24}
+I\textquotesingle{}ll update this once the project is more mature.
+
+~\newline
+\hypertarget{index_autotoc_md25}{}\doxysubsection{License}\label{index_autotoc_md25}
+MIT license. see LICENSE.
+
+I have not published any third party source code or binaries so far as of January 2022, but info on licenses and links are below.
+
+~\newline
+\hypertarget{index_autotoc_md26}{}\doxysubsection{Documentation / API}\label{index_autotoc_md26}
+You can use \href{https://www.doxygen.nl/index.html}{\texttt{ Doxygen}} to generate you own copy of the API or view a pre-\/generated version at docs/
+
+The API should be considered unstable at this stage, and is subject to heavy modification.
+
+~\newline
+\hypertarget{index_autotoc_md27}{}\doxysubsection{Development ☕}\label{index_autotoc_md27}
+Although it is not intended for community contribution right now, anyone is welcome to contribute. See CONTRIBUTING.\+md\hypertarget{index_autotoc_md28}{}\doxysubsubsection{Required Libraries}\label{index_autotoc_md28}
+If you haven\textquotesingle{}t already, download vcpkg and CMake to help you with this part.
+
+The following libraries are currently used in the project, subject to change.\hypertarget{index_autotoc_md29}{}\doxyparagraph{Images}\label{index_autotoc_md29}
+
+\begin{DoxyItemize}
+\item \href{http://www.libpng.org/pub/png/libpng.html}{\texttt{ libpng}} -\/ PNG Reference Library License
+\item zlib (use link above) -\/ zlib license
+\item \href{https://libjpeg-turbo.org/}{\texttt{ libjpeg-\/turbo}} -\/ Multiple licenses
+\begin{DoxyItemize}
+\item OR \href{https://ijg.org/}{\texttt{ libjpeg}} -\/ IJG license 
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_autotoc_md30}{}\doxyparagraph{Audio}\label{index_autotoc_md30}
+
+\begin{DoxyItemize}
+\item \href{http://www.portaudio.com/}{\texttt{ Port\+Audio}} -\/ Port\+Audio license
+\item \href{https://www.xiph.org/flac/}{\texttt{ FLAC}} (lib\+FLAC++) -\/ BSD 
+\end{DoxyItemize}\hypertarget{index_autotoc_md31}{}\doxyparagraph{Other}\label{index_autotoc_md31}
+
+\begin{DoxyItemize}
+\item \href{https://eigen.tuxfamily.org/}{\texttt{ Eigen}} -\/ MPL 2.\+0
+\begin{DoxyItemize}
+\item will include license if binaries/source code distributed
+\end{DoxyItemize}
+
+~\newline
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md32}{}\doxysubsubsection{Testing}\label{index_autotoc_md32}
+I am using \href{https://github.com/google/googletest}{\texttt{ Google Test}} to unit test, which should be installed using vcpkg.
+
+Utility funcitons are tested \char`\"{}normally\char`\"{} using assertions and such.
+
+Due to the nature of the project, a lot of tests require file read/write which is difficult to make portable. If you decide to run tests, expect a lot of failed tests unless you supply for your own files. In addition, many features are quite complex and undergo minor changes often, so the some of the tests are not set in stone.
+
+In the future, I will add test media files to the repository.
+
+~\newline
+\hypertarget{index_autotoc_md33}{}\doxysubsubsection{Future / Roadmap / Random TODOs}\label{index_autotoc_md33}
+
+\begin{DoxyItemize}
+\item Text/font support
+\item Progress callbacks for image stuff (for loading bar etc.)
+\item Multithreaded processing
+\item I plan to make a command line interface and GUI, maybe using Wx\+Widgets or something for editing images, audio etc.
+\item More formats support.
+\item Speed optimization
+\item Probably use ffmpeg in the future.
+\item Video editor, maybe.
+\item Writing this file takes a while so I will continue to update as I think of stuff.
+\item Linux, Mac OS
+\item Mobile???\# Contains all source code 
+\end{DoxyItemize}

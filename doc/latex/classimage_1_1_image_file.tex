@@ -1,0 +1,148 @@
+\hypertarget{classimage_1_1_image_file}{}\doxysubsection{image\+::Image\+File Class Reference}
+\label{classimage_1_1_image_file}\index{image::ImageFile@{image::ImageFile}}
+
+
+class for read/writeable image file.  
+
+
+
+
+{\ttfamily \#include \char`\"{}imagefile.\+h\char`\"{}}
+
+Inheritance diagram for image\+::Image\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimage_1_1_image_file}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classimage_1_1_image_file_aaaa9a01157c4248fdf58670eb1a4ac40}{$\sim$\+Image\+File}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classimage_1_1_image_file_afc3f2e52dd400b6db9b532ca7ceb4afc}{read\+File}} (std\+::string path)=0
+\begin{DoxyCompactList}\small\item\em Abstract function for reading an image into memory. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classimage_1_1_image_file_a5c881a826d05f3539adc7ca9ddf8022c}{write\+File}} (std\+::string path)=0
+\begin{DoxyCompactList}\small\item\em Abstract function for writing an image to disk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimage_1_1_image_file_ae1ea4eb746e75a0b047c586fb50bbc54}{Image\+File}} ()
+\begin{DoxyCompactList}\small\item\em Constructs and \mbox{\hyperlink{classimage_1_1_image_file}{Image\+File}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_image_file_a71deb0830810a27c24d2fa812670e7f2}{Image\+File}} (unsigned int w, unsigned int h)
+\begin{DoxyCompactList}\small\item\em Creates an image file of size w, h. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_image_file_a971fc870c8284c8901a8fddac0727437}{Image\+File}} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&other)
+\begin{DoxyCompactList}\small\item\em Converts an image to to a image file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+class for read/writeable image file. 
+
+Essentially a interface containing abstract functions for image IO 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_image_file_aaaa9a01157c4248fdf58670eb1a4ac40}\label{classimage_1_1_image_file_aaaa9a01157c4248fdf58670eb1a4ac40}} 
+\index{image::ImageFile@{image::ImageFile}!````~ImageFile@{$\sim$ImageFile}}
+\index{````~ImageFile@{$\sim$ImageFile}!image::ImageFile@{image::ImageFile}}
+\doxyparagraph{\texorpdfstring{$\sim$ImageFile()}{~ImageFile()}}
+{\footnotesize\ttfamily virtual image\+::\+Image\+File\+::$\sim$\+Image\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual destructor. 
+
+empty. \mbox{\Hypertarget{classimage_1_1_image_file_ae1ea4eb746e75a0b047c586fb50bbc54}\label{classimage_1_1_image_file_ae1ea4eb746e75a0b047c586fb50bbc54}} 
+\index{image::ImageFile@{image::ImageFile}!ImageFile@{ImageFile}}
+\index{ImageFile@{ImageFile}!image::ImageFile@{image::ImageFile}}
+\doxyparagraph{\texorpdfstring{ImageFile()}{ImageFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily image\+::\+Image\+File\+::\+Image\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Constructs and \mbox{\hyperlink{classimage_1_1_image_file}{Image\+File}}. 
+
+Calls base \mbox{\hyperlink{classimage_1_1_image}{Image}} constructor \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image}{Image}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classimage_1_1_image_file_a71deb0830810a27c24d2fa812670e7f2}\label{classimage_1_1_image_file_a71deb0830810a27c24d2fa812670e7f2}} 
+\index{image::ImageFile@{image::ImageFile}!ImageFile@{ImageFile}}
+\index{ImageFile@{ImageFile}!image::ImageFile@{image::ImageFile}}
+\doxyparagraph{\texorpdfstring{ImageFile()}{ImageFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily image\+::\+Image\+File\+::\+Image\+File (\begin{DoxyParamCaption}\item[{unsigned int}]{w,  }\item[{unsigned int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Creates an image file of size w, h. 
+
+Call base \mbox{\hyperlink{classimage_1_1_image}{Image}} constructor \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image}{Image}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Width \\
+\hline
+{\em h} & Height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_image_file_a971fc870c8284c8901a8fddac0727437}\label{classimage_1_1_image_file_a971fc870c8284c8901a8fddac0727437}} 
+\index{image::ImageFile@{image::ImageFile}!ImageFile@{ImageFile}}
+\index{ImageFile@{ImageFile}!image::ImageFile@{image::ImageFile}}
+\doxyparagraph{\texorpdfstring{ImageFile()}{ImageFile()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily image\+::\+Image\+File\+::\+Image\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Converts an image to to a image file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to convert to image file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_image_file_afc3f2e52dd400b6db9b532ca7ceb4afc}\label{classimage_1_1_image_file_afc3f2e52dd400b6db9b532ca7ceb4afc}} 
+\index{image::ImageFile@{image::ImageFile}!readFile@{readFile}}
+\index{readFile@{readFile}!image::ImageFile@{image::ImageFile}}
+\doxyparagraph{\texorpdfstring{readFile()}{readFile()}}
+{\footnotesize\ttfamily virtual void image\+::\+Image\+File\+::read\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function for reading an image into memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to file \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classimage_1_1_j_p_e_g_acb4acf5b9f91532404ed94d9f891ef1f}{image\+::\+JPEG}}, and \mbox{\hyperlink{classimage_1_1_p_n_g_adb83bfb01869c9e639fa5d9e325da51b}{image\+::\+PNG}}.
+
+\mbox{\Hypertarget{classimage_1_1_image_file_a5c881a826d05f3539adc7ca9ddf8022c}\label{classimage_1_1_image_file_a5c881a826d05f3539adc7ca9ddf8022c}} 
+\index{image::ImageFile@{image::ImageFile}!writeFile@{writeFile}}
+\index{writeFile@{writeFile}!image::ImageFile@{image::ImageFile}}
+\doxyparagraph{\texorpdfstring{writeFile()}{writeFile()}}
+{\footnotesize\ttfamily virtual void image\+::\+Image\+File\+::write\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function for writing an image to disk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to file \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classimage_1_1_j_p_e_g_a7c41d1ec59d46e0747f9cd061c42f66d}{image\+::\+JPEG}}, and \mbox{\hyperlink{classimage_1_1_p_n_g_a651866682c06db4006184ed38739bf28}{image\+::\+PNG}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{imagefile_8h}{imagefile.\+h}}\end{DoxyCompactItemize}

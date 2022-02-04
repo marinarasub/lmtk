@@ -1,0 +1,59 @@
+\hypertarget{audioplayer_8h_source}{}\doxysubsection{audioplayer.\+h}
+\label{audioplayer_8h_source}\index{src/libLMTKaudio/audioplayer.h@{src/libLMTKaudio/audioplayer.h}}
+\mbox{\hyperlink{audioplayer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef \_LIBLMTKAUDIO\_AUDIOPLAYER\_H\_}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define \_LIBLMTKAUDIO\_AUDIOPLAYER\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <portaudio.h>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{audiotrack_8h}{audiotrack.h}}"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }audio \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{33     \textcolor{keyword}{class }\mbox{\hyperlink{classaudio_1_1_audio_player}{AudioPlayer}}}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35     \textcolor{keyword}{public}:}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{42         \mbox{\hyperlink{classaudio_1_1_audio_player_a8d0197a4dcda2410a7c48fdd9bbd8654}{AudioPlayer}}();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{47         \mbox{\hyperlink{classaudio_1_1_audio_player_a94fb3c0a7a7d06c672c64d3c4e147a5a}{\string~AudioPlayer}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{55         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_audio_player_a7642017876250bf58721aab77a9496a3}{operator()}}(\mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}\& \mbox{\hyperlink{classaudio_1_1_audio_player_a935a8253de79eff84ed7bf67fb1f94ce}{track}});}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{62         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_audio_player_ab0cb7450f85d0a15caae84bd8c3c17b2}{play}}(\mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}\& \mbox{\hyperlink{classaudio_1_1_audio_player_a935a8253de79eff84ed7bf67fb1f94ce}{track}});}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         \textcolor{comment}{//void record(AudioTrack\& track);}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{69         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_audio_player_aa37244a9c48cfbf2392eb8e97fb86fd5}{stop}}();}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{74         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_audio_player_a0c92ee3afac7f1257947d1c73aa7d0ed}{close}}();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{79         \mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}* \mbox{\hyperlink{classaudio_1_1_audio_player_a935a8253de79eff84ed7bf67fb1f94ce}{track}}();}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{86         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaudio_1_1_audio_player_a2f024797c5b13d3ef9f74b3bb7c320a7}{setGain}}(\textcolor{keywordtype}{float} db); \textcolor{comment}{// in db (10log\_10(out/in))}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \textcolor{keyword}{private}:}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{93         \textcolor{keyword}{static} \textcolor{keywordtype}{int} playCallback(}
+\DoxyCodeLine{94             \textcolor{keyword}{const} \textcolor{keywordtype}{void}* inputBuffer,}
+\DoxyCodeLine{95             \textcolor{keywordtype}{void}* outputBuffer,}
+\DoxyCodeLine{96             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} framesPerBuffer,}
+\DoxyCodeLine{97             \textcolor{keyword}{const} PaStreamCallbackTimeInfo* timeInfo,}
+\DoxyCodeLine{98             PaStreamCallbackFlags statusFlags,}
+\DoxyCodeLine{99             \textcolor{keywordtype}{void}* userData);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{106         \textcolor{keywordtype}{bool} handle\_pa\_error(PaError err);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108         PaStream* stream; }
+\DoxyCodeLine{110         \mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}* audio\_track; }
+\DoxyCodeLine{112         \textcolor{keywordtype}{float} amplifier; }
+\DoxyCodeLine{114     \};}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKAUDIO\_AUDIOPLAYER\_H\_}}
+
+\end{DoxyCode}

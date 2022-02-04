@@ -1,0 +1,77 @@
+\hypertarget{flac_8h_source}{}\doxysubsection{flac.\+h}
+\label{flac_8h_source}\index{src/libLMTKaudio/flac.h@{src/libLMTKaudio/flac.h}}
+\mbox{\hyperlink{flac_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef \_LIBLMTKAUDIO\_FLAC\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define \_LIBLMTKAUDIO\_FLAC\_H\_}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <FLAC++/all.h>}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{audiotrack_8h}{audiotrack.h}}"{}}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}../utils/utils.h"{}}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{namespace }FLACAPI = FLAC; \textcolor{comment}{// to avoid confusion between libFLAC API}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{namespace }audio \{}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{39     \textcolor{keyword}{class }\mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaudio_1_1_audio_track}{AudioTrack}}}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46         \textcolor{keyword}{class }FLACDecoder : \textcolor{keyword}{public} FLACAPI::Decoder::File}
+\DoxyCodeLine{47         \{}
+\DoxyCodeLine{48         \textcolor{keyword}{public}:}
+\DoxyCodeLine{49             FLACDecoder() : FLACAPI::Decoder::File()}
+\DoxyCodeLine{50             \{}
+\DoxyCodeLine{51                 out = NULL;}
+\DoxyCodeLine{52             \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54             \string~FLACDecoder()}
+\DoxyCodeLine{55             \{}
+\DoxyCodeLine{56                 \textcolor{keywordflow}{if} (out != NULL) \textcolor{keyword}{delete} out;}
+\DoxyCodeLine{57             \}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59             \textcolor{comment}{// return constructed flac. call after read done.}}
+\DoxyCodeLine{60             \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}} get();}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62         \textcolor{keyword}{private}:}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64             \textcolor{keyword}{virtual} FLAC\_\_StreamDecoderWriteStatus write\_callback(}
+\DoxyCodeLine{65                 \textcolor{keyword}{const} FLAC\_\_Frame* frame,}
+\DoxyCodeLine{66                 \textcolor{keyword}{const} FLAC\_\_int32* \textcolor{keyword}{const}* buffer) \textcolor{keyword}{override};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68             \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} metadata\_callback(}
+\DoxyCodeLine{69                 \textcolor{keyword}{const} FLAC\_\_StreamMetadata* metadata) \textcolor{keyword}{override};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71             \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} error\_callback(}
+\DoxyCodeLine{72                 FLAC\_\_StreamDecoderErrorStatus status) \textcolor{keyword}{override};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74             \mbox{\hyperlink{classaudio_1_1_f_l_a_c}{FLAC}}* out;}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76             \textcolor{keywordtype}{bool} finished = \textcolor{keyword}{false};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bit\_depth = 0; \textcolor{comment}{// of samples}}
+\DoxyCodeLine{79         \};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     \textcolor{keyword}{public}:}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{88         \mbox{\hyperlink{classaudio_1_1_f_l_a_c_aaa5b35ec475ce832fdc7bee506b4a147}{FLAC}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} length); }
+\DoxyCodeLine{89 }
+\DoxyCodeLine{96         \mbox{\hyperlink{classaudio_1_1_f_l_a_c_aaa5b35ec475ce832fdc7bee506b4a147}{FLAC}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} length, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} sample\_rate); }
+\DoxyCodeLine{97 }
+\DoxyCodeLine{104         \mbox{\hyperlink{classaudio_1_1_f_l_a_c_aaa5b35ec475ce832fdc7bee506b4a147}{FLAC}}(std::string path);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{111         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classaudio_1_1_f_l_a_c_ab713b282351d6e60b411ba4078120a6d}{readFile}}(std::string path);}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113         \textcolor{comment}{// TODO !!! NOT IMPLEMENTED}}
+\DoxyCodeLine{114         \textcolor{keywordtype}{bool} writeFile(std::string path);}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \};}
+\DoxyCodeLine{117 \}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//\_LIBLMTKAUDIO\_FLAC\_H\_}}
+
+\end{DoxyCode}

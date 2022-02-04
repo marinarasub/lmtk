@@ -1,0 +1,52 @@
+\hypertarget{pluginchain_8h_source}{}\doxysubsection{pluginchain.\+h}
+\label{pluginchain_8h_source}\index{src/libLMTKimage/pluginchain.h@{src/libLMTKimage/pluginchain.h}}
+\mbox{\hyperlink{pluginchain_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifndef \_LIBLMTKIMAGE\_PLUGINCHAIN\_H\_}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define \_LIBLMTKIMAGE\_PLUGINCHAIN\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{imageshader_8h}{imageshader.h}}"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }image \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{36     \textcolor{keyword}{class }\mbox{\hyperlink{classimage_1_1_plugin_chain}{PluginChain}}}
+\DoxyCodeLine{37     \{}
+\DoxyCodeLine{38     \textcolor{keyword}{public}:}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{43         \mbox{\hyperlink{classimage_1_1_plugin_chain_aa6be82cf13bd3e23ac47077f52dc57d3}{PluginChain}}() \{\}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{48         \mbox{\hyperlink{classimage_1_1_plugin_chain_a837a371035d2eaf7db94695acc5661bf}{\string~PluginChain}}();}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{55         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_plugin_chain_a5a81a505a91b938e97cbd36c96019bc9}{operator()}}(\mbox{\hyperlink{classimage_1_1_image}{Image}} \&img);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57         \textcolor{comment}{// TODO throw? or let vector throw}}
+\DoxyCodeLine{63 \textcolor{comment}{}        \mbox{\hyperlink{classimage_1_1_image_shader}{ImageShader}}* \mbox{\hyperlink{classimage_1_1_plugin_chain_ad284bf81a05fa4500a1f22650a3b1b7d}{operator[]}}(\textcolor{keywordtype}{size\_t} i);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{71         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_plugin_chain_ae8df57342d87f325314e18dc0b930f69}{addEffect}}(\mbox{\hyperlink{classimage_1_1_image_shader}{ImageShader}}* fx, \textcolor{keywordtype}{size\_t} passes);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{79         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_plugin_chain_ae8df57342d87f325314e18dc0b930f69}{addEffect}}(\mbox{\hyperlink{classimage_1_1_image_shader}{ImageShader}} *fx);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{87         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_plugin_chain_a378aa682f5137d1e8ea59c68c9a229ac}{addEffects}}(std::vector<ImageShader*> fx);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{94         \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classimage_1_1_plugin_chain_ae8f242f63dfdaaae3875ca7200f71d31}{size}}();}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{101         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classimage_1_1_plugin_chain_a6df4d64979dace638bff3015eb9b0ca9}{empty}}();}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103     \textcolor{keyword}{private}:}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105         std::vector<ImageShader*> chain; }
+\DoxyCodeLine{107         \textcolor{comment}{//size\_t completed;}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111     \textcolor{comment}{// TODO ostream, tostring}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKIMAGE\_PLUGINCHAIN\_H\_}}
+
+\end{DoxyCode}

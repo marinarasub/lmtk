@@ -1,0 +1,150 @@
+\hypertarget{classimage_1_1_plugin_chain}{}\doxysubsection{image\+::Plugin\+Chain Class Reference}
+\label{classimage_1_1_plugin_chain}\index{image::PluginChain@{image::PluginChain}}
+
+
+Class for applying multiple effects to an image, in order.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage_1_1_plugin_chain_aa6be82cf13bd3e23ac47077f52dc57d3}\label{classimage_1_1_plugin_chain_aa6be82cf13bd3e23ac47077f52dc57d3}} 
+{\bfseries Plugin\+Chain} ()
+\begin{DoxyCompactList}\small\item\em Creates an empty plugin chain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage_1_1_plugin_chain_a837a371035d2eaf7db94695acc5661bf}\label{classimage_1_1_plugin_chain_a837a371035d2eaf7db94695acc5661bf}} 
+{\bfseries $\sim$\+Plugin\+Chain} ()
+\begin{DoxyCompactList}\small\item\em Frees memory from each plugin after complete. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classimage_1_1_plugin_chain_a5a81a505a91b938e97cbd36c96019bc9}{operator()}} (\mbox{\hyperlink{classimage_1_1_image}{Image}} \&img)
+\begin{DoxyCompactList}\small\item\em Applies every effect on an image, in order. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ \mbox{\hyperlink{classimage_1_1_plugin_chain_ad284bf81a05fa4500a1f22650a3b1b7d}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Access the ith effect in the plugin chain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_plugin_chain_ae8df57342d87f325314e18dc0b930f69}{add\+Effect}} (\mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$fx, size\+\_\+t passes)
+\begin{DoxyCompactList}\small\item\em Add an effect to the plugin chain, n times. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_plugin_chain_ace23b63323acbaca9d0dde4572cf33f4}{add\+Effect}} (\mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$fx)
+\begin{DoxyCompactList}\small\item\em Add an effect to plugin chain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_plugin_chain_a378aa682f5137d1e8ea59c68c9a229ac}{add\+Effects}} (std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$ fx)
+\begin{DoxyCompactList}\small\item\em Add multiple effects to plugin chain. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classimage_1_1_plugin_chain_ae8f242f63dfdaaae3875ca7200f71d31}{size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of effects in the plugin chain. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classimage_1_1_plugin_chain_a6df4d64979dace638bff3015eb9b0ca9}{empty}} ()
+\begin{DoxyCompactList}\small\item\em Check if the plugin chain is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Class for applying multiple effects to an image, in order. 
+
+Maintains a ordered list of image effects to apply to an image. Individual effects can be accessed or you can apply them all at once. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_plugin_chain_ace23b63323acbaca9d0dde4572cf33f4}\label{classimage_1_1_plugin_chain_ace23b63323acbaca9d0dde4572cf33f4}} 
+\index{image::PluginChain@{image::PluginChain}!addEffect@{addEffect}}
+\index{addEffect@{addEffect}!image::PluginChain@{image::PluginChain}}
+\doxyparagraph{\texorpdfstring{addEffect()}{addEffect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void image\+::\+Plugin\+Chain\+::add\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$}]{fx }\end{DoxyParamCaption})}
+
+
+
+Add an effect to plugin chain. 
+
+Adds the effect once. 
+\begin{DoxyParams}{Parameters}
+{\em fx} & Effect to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_plugin_chain_ae8df57342d87f325314e18dc0b930f69}\label{classimage_1_1_plugin_chain_ae8df57342d87f325314e18dc0b930f69}} 
+\index{image::PluginChain@{image::PluginChain}!addEffect@{addEffect}}
+\index{addEffect@{addEffect}!image::PluginChain@{image::PluginChain}}
+\doxyparagraph{\texorpdfstring{addEffect()}{addEffect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void image\+::\+Plugin\+Chain\+::add\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$}]{fx,  }\item[{size\+\_\+t}]{passes }\end{DoxyParamCaption})}
+
+
+
+Add an effect to the plugin chain, n times. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fx} & Effect to add \\
+\hline
+{\em passes} & Number of times to apply the effect in sequence \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_plugin_chain_a378aa682f5137d1e8ea59c68c9a229ac}\label{classimage_1_1_plugin_chain_a378aa682f5137d1e8ea59c68c9a229ac}} 
+\index{image::PluginChain@{image::PluginChain}!addEffects@{addEffects}}
+\index{addEffects@{addEffects}!image::PluginChain@{image::PluginChain}}
+\doxyparagraph{\texorpdfstring{addEffects()}{addEffects()}}
+{\footnotesize\ttfamily void image\+::\+Plugin\+Chain\+::add\+Effects (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ $>$}]{fx }\end{DoxyParamCaption})}
+
+
+
+Add multiple effects to plugin chain. 
+
+Adds all effects if vector. 
+\begin{DoxyParams}{Parameters}
+{\em fx} & Effects to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_plugin_chain_a6df4d64979dace638bff3015eb9b0ca9}\label{classimage_1_1_plugin_chain_a6df4d64979dace638bff3015eb9b0ca9}} 
+\index{image::PluginChain@{image::PluginChain}!empty@{empty}}
+\index{empty@{empty}!image::PluginChain@{image::PluginChain}}
+\doxyparagraph{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool image\+::\+Plugin\+Chain\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if the plugin chain is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if it is empty, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage_1_1_plugin_chain_a5a81a505a91b938e97cbd36c96019bc9}\label{classimage_1_1_plugin_chain_a5a81a505a91b938e97cbd36c96019bc9}} 
+\index{image::PluginChain@{image::PluginChain}!operator()@{operator()}}
+\index{operator()@{operator()}!image::PluginChain@{image::PluginChain}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void image\+::\+Plugin\+Chain\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classimage_1_1_image}{Image}} \&}]{img }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Applies every effect on an image, in order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & \mbox{\hyperlink{classimage_1_1_image}{Image}} to apply effects to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_plugin_chain_ad284bf81a05fa4500a1f22650a3b1b7d}\label{classimage_1_1_plugin_chain_ad284bf81a05fa4500a1f22650a3b1b7d}} 
+\index{image::PluginChain@{image::PluginChain}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!image::PluginChain@{image::PluginChain}}
+\doxyparagraph{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classimage_1_1_image_shader}{Image\+Shader}} $\ast$ image\+::\+Plugin\+Chain\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+
+
+Access the ith effect in the plugin chain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index of effect to access \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_plugin_chain_ae8f242f63dfdaaae3875ca7200f71d31}\label{classimage_1_1_plugin_chain_ae8f242f63dfdaaae3875ca7200f71d31}} 
+\index{image::PluginChain@{image::PluginChain}!size@{size}}
+\index{size@{size}!image::PluginChain@{image::PluginChain}}
+\doxyparagraph{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t image\+::\+Plugin\+Chain\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the number of effects in the plugin chain. 
+
+\begin{DoxyReturn}{Returns}
+The size of the effect chain 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{pluginchain_8h}{pluginchain.\+h}}\item 
+src/lib\+LMTKimage/pluginchain.\+cpp\end{DoxyCompactItemize}

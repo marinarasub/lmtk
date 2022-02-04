@@ -1,0 +1,71 @@
+\hypertarget{hslapixel_8h_source}{}\doxysubsection{hslapixel.\+h}
+\label{hslapixel_8h_source}\index{src/libLMTKimage/hslapixel.h@{src/libLMTKimage/hslapixel.h}}
+\mbox{\hyperlink{hslapixel_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***************************************************************************/}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef \_LIBLMTKIMAGE\_HSLAPIXEL\_H\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define \_LIBLMTKIMAGE\_HSLAPIXEL\_H\_}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{color_8h}{color.h}}"{}}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rgbapixel_8h}{rgbapixel.h}}"{}}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{namespace }image \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keyword}{class }RGBAPixel;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{49     \textcolor{keyword}{class }\mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}}}
+\DoxyCodeLine{50     \{}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{keyword}{public}:}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \textcolor{comment}{// TODO avg functions}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{61         \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ab044c2aa221fb7a8c1369495f3dd50e0}{HSLAPixel}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{73         \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ab044c2aa221fb7a8c1369495f3dd50e0}{HSLAPixel}}(\textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a5f0fad854535cf8ddded306764e44b29}{h}}, \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ad4f4d0c8f41b2e789d0bd6494c1d684f}{s}}, \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a0a28f754dc0763ded14b9c45204da06f}{l}}, \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ae3d41cf9de9dea265b4d4ccff50ae4bf}{a}});}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{80         \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ab044c2aa221fb7a8c1369495f3dd50e0}{HSLAPixel}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}\& rgb);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{87         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a380d0ec7f600eea704d4467f2ad76a98}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}}\& other);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{96         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ab7547ba99abb14654ff22fdf5a525583}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{105         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_aebb5fa0431f42ebf3c6db09dadb1866c}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{116         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a8981577539f3afdc18f1a4b59d7d8e8c}{set}}(\textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a5f0fad854535cf8ddded306764e44b29}{h}}, \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ad4f4d0c8f41b2e789d0bd6494c1d684f}{s}}, \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a0a28f754dc0763ded14b9c45204da06f}{l}});}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{128         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a8981577539f3afdc18f1a4b59d7d8e8c}{set}}(\textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a5f0fad854535cf8ddded306764e44b29}{h}}, \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ad4f4d0c8f41b2e789d0bd6494c1d684f}{s}}, \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a0a28f754dc0763ded14b9c45204da06f}{l}}, \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ae3d41cf9de9dea265b4d4ccff50ae4bf}{a}});}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{136         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a8981577539f3afdc18f1a4b59d7d8e8c}{set}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}}\& other);}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{144         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a8981577539f3afdc18f1a4b59d7d8e8c}{set}}(\textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}}\& other);}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{151         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_af01affb3f490c680d2c1d54199a8894c}{setAlpha}}(\textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ae3d41cf9de9dea265b4d4ccff50ae4bf}{a}});}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{159         \textcolor{keywordtype}{void} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_af681684935990b7dd245d10432503a3a}{setTransparency}}(\textcolor{keywordtype}{float} transparency);}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161         \textcolor{comment}{// !!! This function is subject to change.}}
+\DoxyCodeLine{167 \textcolor{comment}{}        std::string \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a5437fe32eee9e3fd7be025ba560cd503}{to\_string}}() \textcolor{keyword}{const}; \textcolor{comment}{// todo stream operator instead??}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{171         \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a5f0fad854535cf8ddded306764e44b29}{h}}; }
+\DoxyCodeLine{174         \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ad4f4d0c8f41b2e789d0bd6494c1d684f}{s}}; }
+\DoxyCodeLine{177         \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_a0a28f754dc0763ded14b9c45204da06f}{l}}; }
+\DoxyCodeLine{180         \textcolor{keywordtype}{float} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel_ae3d41cf9de9dea265b4d4ccff50ae4bf}{a}}; }
+\DoxyCodeLine{182     \textcolor{keyword}{private}:}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{190         \textcolor{keywordtype}{void} clampHSLA();}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193     \};}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{201     std::ostream\& operator<<(std::ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{classimage_1_1_h_s_l_a_pixel}{HSLAPixel}}\& pixel);}
+\DoxyCodeLine{202 \}}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_LIBLMTKIMAGE\_HSLAPIXEL\_H\_}}
+
+\end{DoxyCode}

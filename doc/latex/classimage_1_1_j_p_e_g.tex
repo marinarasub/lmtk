@@ -1,0 +1,146 @@
+\hypertarget{classimage_1_1_j_p_e_g}{}\doxysubsection{image\+::JPEG Class Reference}
+\label{classimage_1_1_j_p_e_g}\index{image::JPEG@{image::JPEG}}
+
+
+\mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} image class.  
+
+
+
+
+{\ttfamily \#include $<$jpeg.\+h$>$}
+
+Inheritance diagram for image\+::JPEG\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimage_1_1_j_p_e_g}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimage_1_1_j_p_e_g_aa0cd8294403e2367e22b284c33da6a14}{JPEG}} (unsigned int w, unsigned int h)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} image of size width $\ast$ height. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classimage_1_1_j_p_e_g_ac5d9fdbd67f792423f18462c47a70069}{JPEG}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} in memory from a jpeg/jpg file stored on disk. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage_1_1_j_p_e_g_a17a881b0a37a9efaa1c4ccd819aeedcf}\label{classimage_1_1_j_p_e_g_a17a881b0a37a9efaa1c4ccd819aeedcf}} 
+{\bfseries JPEG} (const \mbox{\hyperlink{classimage_1_1_image}{Image}} \&img)
+\begin{DoxyCompactList}\small\item\em Converts an image to a writable \mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage_1_1_j_p_e_g_a5e213f158d84bb4411bab7a7fee71aa9}\label{classimage_1_1_j_p_e_g_a5e213f158d84bb4411bab7a7fee71aa9}} 
+{\bfseries $\sim$\+JPEG} ()
+\begin{DoxyCompactList}\small\item\em Does nothing right now. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_j_p_e_g_acb4acf5b9f91532404ed94d9f891ef1f}{read\+File}} (std\+::string path) override
+\begin{DoxyCompactList}\small\item\em Read \mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} file from disk. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classimage_1_1_j_p_e_g_a7c41d1ec59d46e0747f9cd061c42f66d}{write\+File}} (std\+::string path) override
+\begin{DoxyCompactList}\small\item\em Writes image to new or exisiting \mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} file on disk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+\mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} image class. 
+
+The \mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} class has all image functionality plus read/write capability, and additional \mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} specific tools. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image}{Image}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage_1_1_j_p_e_g_aa0cd8294403e2367e22b284c33da6a14}\label{classimage_1_1_j_p_e_g_aa0cd8294403e2367e22b284c33da6a14}} 
+\index{image::JPEG@{image::JPEG}!JPEG@{JPEG}}
+\index{JPEG@{JPEG}!image::JPEG@{image::JPEG}}
+\doxyparagraph{\texorpdfstring{JPEG()}{JPEG()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily image\+::\+JPEG\+::\+JPEG (\begin{DoxyParamCaption}\item[{unsigned int}]{w,  }\item[{unsigned int}]{h }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} image of size width $\ast$ height. 
+
+Calls base class constructor \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_image}{Image}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Width \\
+\hline
+{\em h} & Height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage_1_1_j_p_e_g_ac5d9fdbd67f792423f18462c47a70069}\label{classimage_1_1_j_p_e_g_ac5d9fdbd67f792423f18462c47a70069}} 
+\index{image::JPEG@{image::JPEG}!JPEG@{JPEG}}
+\index{JPEG@{JPEG}!image::JPEG@{image::JPEG}}
+\doxyparagraph{\texorpdfstring{JPEG()}{JPEG()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily image\+::\+JPEG\+::\+JPEG (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} in memory from a jpeg/jpg file stored on disk. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classimage_1_1_j_p_e_g_acb4acf5b9f91532404ed94d9f891ef1f}{read\+File()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if could not read file \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage_1_1_j_p_e_g_acb4acf5b9f91532404ed94d9f891ef1f}\label{classimage_1_1_j_p_e_g_acb4acf5b9f91532404ed94d9f891ef1f}} 
+\index{image::JPEG@{image::JPEG}!readFile@{readFile}}
+\index{readFile@{readFile}!image::JPEG@{image::JPEG}}
+\doxyparagraph{\texorpdfstring{readFile()}{readFile()}}
+{\footnotesize\ttfamily void image\+::\+JPEG\+::read\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Read \mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} file from disk. 
+
+Attempt to open file for read, and replaces existing data, if any. Converts byte data from libjpeg to RGBAPixels. 
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to file to read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em An} & exception if failed to read (i.\+e. file does not exist) \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_file_afc3f2e52dd400b6db9b532ca7ceb4afc}{image\+::\+Image\+File}}.
+
+\mbox{\Hypertarget{classimage_1_1_j_p_e_g_a7c41d1ec59d46e0747f9cd061c42f66d}\label{classimage_1_1_j_p_e_g_a7c41d1ec59d46e0747f9cd061c42f66d}} 
+\index{image::JPEG@{image::JPEG}!writeFile@{writeFile}}
+\index{writeFile@{writeFile}!image::JPEG@{image::JPEG}}
+\doxyparagraph{\texorpdfstring{writeFile()}{writeFile()}}
+{\footnotesize\ttfamily void image\+::\+JPEG\+::write\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes image to new or exisiting \mbox{\hyperlink{classimage_1_1_j_p_e_g}{JPEG}} file on disk. 
+
+Directory must exist. Converts \mbox{\hyperlink{classimage_1_1_r_g_b_a_pixel}{RGBAPixel}} data to jpeg byte data for libjpeg. 
+\begin{DoxyParams}{Parameters}
+{\em Path} & to write file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em An} & exception if failed to write \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classimage_1_1_image_file_a5c881a826d05f3539adc7ca9ddf8022c}{image\+::\+Image\+File}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lib\+LMTKimage/\mbox{\hyperlink{jpeg_8h}{jpeg.\+h}}\item 
+src/lib\+LMTKimage/jpeg.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\hypertarget{color_8h}{}\doxysubsection{src/lib\+LMTKimage/color.h File Reference}
+\label{color_8h}\index{src/libLMTKimage/color.h@{src/libLMTKimage/color.h}}
+
+
+Copyright (c) 2022 marinarasub.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcolor_1_1rgb__color}{color\+::rgb\+\_\+color}}
+\item 
+struct \mbox{\hyperlink{structcolor_1_1hsl__color}{color\+::hsl\+\_\+color}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacecolor}{color}}
+\begin{DoxyCompactList}\small\item\em Contains color representations, functions and conversion between them. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacecolor_a6af366ee0c6494b19bdb0c59866c639e}\label{namespacecolor_a6af366ee0c6494b19bdb0c59866c639e}} 
+hsl\+\_\+color {\bfseries color\+::rgb\+\_\+to\+\_\+hsl} (double r, double g, double b)
+\begin{DoxyCompactList}\small\item\em Translated from \href{https://www.rapidtables.com/convert/color/hsl-to-rgb.html}{\texttt{ https\+://www.\+rapidtables.\+com/convert/color/hsl-\/to-\/rgb.\+html}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacecolor_a0b36e173fba3f962893c9a0bfc9fda66}\label{namespacecolor_a0b36e173fba3f962893c9a0bfc9fda66}} 
+hsl\+\_\+color {\bfseries color\+::rgb\+\_\+to\+\_\+hsl} (const rgb\+\_\+color \&clr)
+\item 
+\mbox{\Hypertarget{namespacecolor_a21f1cbf4d6df671ebeaa96f7bdd9010f}\label{namespacecolor_a21f1cbf4d6df671ebeaa96f7bdd9010f}} 
+rgb\+\_\+color {\bfseries color\+::hsl\+\_\+to\+\_\+rgb} (double h, double s, double l)
+\item 
+\mbox{\Hypertarget{namespacecolor_a43136d08ebbe0c7c36367dc547b7065f}\label{namespacecolor_a43136d08ebbe0c7c36367dc547b7065f}} 
+rgb\+\_\+color {\bfseries color\+::hsl\+\_\+to\+\_\+rgb} (const hsl\+\_\+color \&clr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Copyright (c) 2022 marinarasub. 
+
+LMTK / Light Multimedia Tool\+Kit
+
+This file is included in lib\+LMTKimage, the image library for LMTK LMTK and its subprojects are available under the MIT license.
+
+\begin{DoxyAuthor}{Author}
+marinarasub 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 2022
+\end{DoxyDate}
+This file contains functions for representing \& converting color types 
