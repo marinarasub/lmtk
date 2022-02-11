@@ -18,7 +18,8 @@ if(WIN32)
 	add_executable(LMTKimage 
 				"LMTKimage.cpp"
                 "imagetools/progressbar.cpp"
-                "imagetools/renderer.cpp" "imagetools/imagefx.cpp")
+                "imagetools/renderer.cpp" 
+                "imagetools/imagefx.cpp")
 else()
 	add_executable(LMTKimage
 				"LMTKimage.cpp"
