@@ -26,14 +26,14 @@
 namespace image {
 
     /**
-    * @class ColorInvertShader "colorinvert.h"
+    * @class ColorInverter "colorinvert.h"
     * @brief Class for a color inversion
     *
     * For every pixel in a given image, the R, G, B channels are inverted and the
     * alpha is left as is.
     * @see ImageShader
     */
-    class ColorInvertShader : public ImageShader
+    class ColorInverter : public ImageShader
     {
     public:
 
@@ -55,7 +55,10 @@ namespace image {
         * @param x X location of target
         * @param y Y location of target
         */
-        virtual RGBAPixel operator()(const Image& img, size_t x, size_t y) override;
+        virtual RGBAPixel operator()(const Image& img, int x, int y) override;
+
+        // copy invert
+        virtual ColorInverter* clone() override;
 
     private:
         /**

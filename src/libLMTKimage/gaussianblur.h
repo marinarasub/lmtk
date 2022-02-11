@@ -20,8 +20,8 @@
 #define _LIBLMTKIMAGE_GAUSSIANBLUR_H_
 #pragma once
 
-#include <math.h>
-#include "convolution.h"
+#include <cmath>
+#include "blur.h"
 #include "../utils/utilsmath.h"
 
 
@@ -44,7 +44,7 @@ namespace image {
     * boring looking blur.
     * @see utils::math::gaussian()
     */
-    class GaussianBlur : public ImageConvolution
+    class GaussianBlur : public Blur
     {
     public:
 
@@ -80,6 +80,15 @@ namespace image {
         */
         GaussianBlur(float stdevX, float stdevY, float toleranceX, float toleranceY);
 
+        // scale gaussian blur
+        virtual GaussianBlur* operator*(double scalar) override;
+        
+        // copy gaussian blur
+        virtual GaussianBlur* clone() override;
+
+        // normalize gaussian. if stdev is too close to 0, return identity
+        virtual void normalize() override;
+
     private:
 
         /**
@@ -102,7 +111,7 @@ namespace image {
     * Blurs the image according to the gaussian horizontally
     * @see GaussianBlur
     */
-    class GaussianBlurHorizontal : public ImageConvolution
+    class GaussianBlurHorizontal : public Blur
     {
     public:
 
@@ -125,6 +134,13 @@ namespace image {
         */
         GaussianBlurHorizontal(float stdev, float tol);
 
+        virtual void normalize() override;
+
+        // scale gaussian blur
+        virtual GaussianBlurHorizontal* operator*(double scalar) override;
+
+        virtual GaussianBlurHorizontal* clone() override;
+
     private:
 
         /**
@@ -146,7 +162,7 @@ namespace image {
     * Blurs the image according to the gaussian vertically
     * @see GaussianBlur
     */
-    class GaussianBlurVertical : public ImageConvolution
+    class GaussianBlurVertical : public Blur
     {
     public:
 
@@ -168,6 +184,13 @@ namespace image {
         * @param tol Tolerance for kernel weights
         */
         GaussianBlurVertical(float stdev, float tol);
+
+        // scale gaussian blur
+        virtual GaussianBlurVertical* operator*(double scalar) override;
+
+        virtual GaussianBlurVertical* clone() override;
+
+        virtual void normalize() override;
 
     private:
 

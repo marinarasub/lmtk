@@ -27,12 +27,217 @@ protected:
 const std::string ShaderTest::IMG_FOLDER = "../testdata/images/in/";
 const std::string ShaderTest::OUT_FOLDER = "../testdata/images/out/shadertest/";
 
+TEST_F(ShaderTest, bokeh_blur_near_zero)
+{
+    try {
+        JPEG img(IMG_FOLDER + "testblur-small.jpg");
+        BokehBlur blur(0.00001);
+        blur(img);
+        img.writeFile(OUT_FOLDER + "bokeh-zero.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+
+TEST_F(ShaderTest, gaussian_blur_near_zero_stdev)
+{
+    try {
+        JPEG img(IMG_FOLDER + "testblur-small.jpg");
+        GaussianBlur blur(0.00001);
+        blur(img);
+        img.writeFile(OUT_FOLDER + "gaussian-zero.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+TEST_F(ShaderTest, tilt_shift_bokeh)
+{
+    try {
+        JPEG img(IMG_FOLDER + "train.jpg");
+        BokehBlur blur(10);
+        TiltShiftBlur tshift(
+            img.height() / 3,
+            2 * img.height() / 3,
+            static_cast<float>(img.height()) / 6,
+            &blur);
+        tshift(img);
+        img.writeFile(OUT_FOLDER + "tshift-bokeh.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+TEST_F(ShaderTest, tilt_shift_gaussianhv)
+{
+    try {
+        JPEG img(IMG_FOLDER + "ny.jpg");
+        GaussianBlurHorizontal blurh(5);
+        GaussianBlurVertical blurv(5);
+        TiltShiftBlur tshifth(
+            img.height() / 3,
+            2 * img.height() / 3,
+            static_cast<float>(img.height()) / 8,
+            &blurh);
+        TiltShiftBlur tshiftv(
+            img.height() / 3,
+            2 * img.height() / 3,
+            static_cast<float>(img.height()) / 8,
+            &blurv);
+        tshiftv(img);
+        tshifth(img);
+        img.writeFile(OUT_FOLDER + "tshift-gaussianhv.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+TEST_F(ShaderTest, tilt_shift_gaussian)
+{
+    try {
+        JPEG img(IMG_FOLDER + "ny.jpg");
+        GaussianBlur blur(5);
+        TiltShiftBlur tshift(
+            img.height() / 3,
+            2 * img.height() / 3,
+            static_cast<float>(img.height()) / 6,
+            &blur);
+        tshift(img);
+        img.writeFile(OUT_FOLDER + "tshift-gaussian.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+TEST_F(ShaderTest, rotate_90)
+{
+    try {
+        JPEG img(IMG_FOLDER + "train.jpg");
+        ImageRotate rot(90);
+        rot(img);
+        img.writeFile(OUT_FOLDER + "rot90.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+
+TEST_F(ShaderTest, rotate_30)
+{
+    try {
+        JPEG img(IMG_FOLDER + "train.jpg");
+        ImageRotate rot(30);
+        rot(img);
+        img.writeFile(OUT_FOLDER + "rot30.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+TEST_F(ShaderTest, rotate_neg30)
+{
+    try {
+        JPEG img(IMG_FOLDER + "train.jpg");
+        ImageRotate rot(-30);
+        rot(img);
+        img.writeFile(OUT_FOLDER + "rotneg30.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+TEST_F(ShaderTest, rotate_neg110)
+{
+    try {
+        JPEG img(IMG_FOLDER + "train.jpg");
+        ImageRotate rot(-110);
+        rot(img);
+        img.writeFile(OUT_FOLDER + "rotneg110.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+TEST_F(ShaderTest, rotate_180)
+{
+    try {
+        JPEG img(IMG_FOLDER + "sun.jpg");
+        ImageRotate rot(180);
+        rot(img);
+        img.writeFile(OUT_FOLDER + "rot180.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+TEST_F(ShaderTest, rotate_270)
+{
+    try {
+        JPEG img(IMG_FOLDER + "sun.jpg");
+        ImageRotate rot(270);
+        rot(img);
+        img.writeFile(OUT_FOLDER + "rot270.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+TEST_F(ShaderTest, rotate_3600)
+{
+    try {
+        JPEG img(IMG_FOLDER + "sun.jpg");
+        ImageRotate rot(3600);
+        rot(img);
+        img.writeFile(OUT_FOLDER + "rot3600.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
+
+TEST_F(ShaderTest, vignette)
+{
+    try {
+        JPEG img(IMG_FOLDER + "train.jpg");
+        VignetteShader vignette(img.width()/3, img.height()/3, 1);
+        vignette(img);
+        img.writeFile(OUT_FOLDER + "vignette.jpg");
+
+    }
+    catch (...) {
+        FAIL() << "Failed to write jpg file";
+    }
+}
 
 TEST_F(ShaderTest, invert)
 {
 	try {
 		PNG img(IMG_FOLDER + "large.png");
-		ColorInvertShader shader;
+		ColorInverter shader;
 		shader(img);
 		img.writeFile(OUT_FOLDER + "invert-out.png");
 	}
@@ -45,7 +250,7 @@ TEST_F(ShaderTest, invert2)
 {
     try {
         JPEG img(IMG_FOLDER + "fireworks.jpg");
-        ColorInvertShader shader;
+        ColorInverter shader;
         shader(img);
         img.writeFile(OUT_FOLDER + "invert2-out.jpg");
     }
@@ -59,7 +264,7 @@ TEST_F(ShaderTest, chroma_key)
 	float lo = 0.1;
 	try {
 		PNG img(IMG_FOLDER + "gstest.png");
-		ChromaKeyShader keyer(*img.getRGBAPixel(0, 0), lo);
+		ChromaKeyer keyer(*img.getRGBAPixel(0, 0), lo);
 		keyer(img);
 		img.writeFile(OUT_FOLDER + "gstest-out.png");
 	}
@@ -73,7 +278,7 @@ TEST_F(ShaderTest, chroma_key2)
 	float lo = 0.15;
 	try {
 		PNG img(IMG_FOLDER + "gstest2.png");
-		ChromaKeyShader keyer(*img.getRGBAPixel(0, 0), lo);
+		ChromaKeyer keyer(*img.getRGBAPixel(0, 0), lo);
 		keyer(img);
 		img.writeFile(OUT_FOLDER + "gstest2-out.png");
 	}
@@ -402,7 +607,7 @@ TEST_F(ShaderTest, bokeh_alt4)
 {
     try {
         JPEG img(IMG_FOLDER + "lights2.jpg");
-        BokehBlur blur(15);
+        BokehBlur blur(10);
         blur(img);
         img.writeFile(OUT_FOLDER + "bokeh-alt4-out.jpg");
 
@@ -411,3 +616,4 @@ TEST_F(ShaderTest, bokeh_alt4)
         FAIL() << "Failed to write jpg file";
     }
 }
+

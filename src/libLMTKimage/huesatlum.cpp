@@ -12,7 +12,7 @@ namespace image {
         ImageShader::operator()(img);
     }
 
-    RGBAPixel HueSatLumAdjust::operator()(const Image& img, size_t x, size_t y)
+    RGBAPixel HueSatLumAdjust::operator()(const Image& img, int x, int y)
     {
         RGBAPixel* p = img.getRGBAPixel(x, y);
         HSLAPixel adj = *p;
@@ -21,6 +21,11 @@ namespace image {
             adj.l * lum_multiplier);
  
         return RGBAPixel(adj);
+    }
+
+    HueSatLumAdjust* HueSatLumAdjust::clone()
+    {
+        return new HueSatLumAdjust(*this);
     }
 
 }

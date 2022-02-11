@@ -50,6 +50,8 @@ namespace image {
         */
         ImageSharpen(float amt);
 
+        // copy sharpen
+        virtual ImageSharpen* clone() override;
 
     private:
 

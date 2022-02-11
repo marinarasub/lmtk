@@ -67,9 +67,10 @@ namespace image {
         return RGBAPixel(r, g, b, a);
     }
 
-    RGBAPixel::RGBAPixel()
+    RGBAPixel::RGBAPixel() 
+        : RGBAPixel(0, 0, 0, 0)
     {
-        RGBAPixel(0, 0, 0, 0);
+        
     }
 
     RGBAPixel::RGBAPixel(float r, float g, float b)

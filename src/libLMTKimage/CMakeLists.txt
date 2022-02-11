@@ -29,7 +29,7 @@ add_library(libLMTKimage
 		"pluginchain.cpp"
 		"png.cpp"
 		"rgbapixel.cpp"
-		"sharpen.cpp")
+		"sharpen.cpp" "tiltshiftblur.h" "tiltshiftblur.cpp" "blur.h" "radialblur.h" "vignette.h" "vignette.cpp" "rotate.h" "rotate.cpp")
 		
 target_include_directories(libLMTKimage PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
 target_include_directories(libLMTKimage PRIVATE ${JPEG_INCLUDE_DIR})

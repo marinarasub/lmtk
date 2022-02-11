@@ -114,8 +114,11 @@ namespace image {
         * @param y Y location of target pixel
         * @returns Resulting convolved pixel
         */
-        virtual RGBAPixel operator()(const Image& img, size_t x, size_t y) 
+        virtual RGBAPixel operator()(const Image& img, int x, int y) 
             override;
+
+        // TODO copy kernel, non pure virtual?
+        virtual ImageConvolution* clone() override = 0;
 
     protected:
 
@@ -165,15 +168,16 @@ namespace image {
         * @note Out of bound pixels needed are handled with edge_method
         * @note The resulting color may clip.
         */
-        virtual RGBAPixel convolution(const Image& img, unsigned int x, unsigned int y);
+        virtual RGBAPixel convolution(const Image& img, int x, int y);
 
         /**
-        * Normalized the sum of all weights to 1.
+        * Normalized the sum of all weights to 1. 
         * 
+        * If the sum is 0, the identity kernel is made
         * This guarentees no "loss" or "gain" of color.
         * Optional to use. Some convolutions may not use a normalized kernel.
         */
-        void normalize();
+        virtual void normalize();
 
         Eigen::MatrixXf kernel; /**< The kernel matrix */
     };

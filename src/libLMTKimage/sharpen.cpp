@@ -14,6 +14,11 @@ namespace image {
         computeKernel();
     }
 
+    ImageSharpen* ImageSharpen::clone()
+    {
+        return new ImageSharpen(*this);
+    }
+
     // assumes kernel is 3x3
     void ImageSharpen::computeKernel()
     {

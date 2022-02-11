@@ -33,7 +33,8 @@ namespace image {
         if (fp == NULL) throw std::invalid_argument("file " + path + " does not exist"); // TODO fclose before throw (png too)
 
         jpeg_decompress_struct* dinfo = (jpeg_decompress_struct*)
-            alloca(sizeof(jpeg_decompress_struct));
+            malloc(sizeof(jpeg_decompress_struct));
+        if (!dinfo) throw std::runtime_error("Failed to read JPEG");
         jpeg_error_mgr jerr;
         // TODO setjmp
         // STEP 1 : decompression opject
@@ -62,7 +63,7 @@ namespace image {
         //}
         // TODO reading one row at a time probably saves memory
         // apparently the loop has to be here. ugh.
-        JSAMPROW row_p = (JSAMPROW)alloca(width() * channels);
+        JSAMPROW row_p = (JSAMPROW)malloc(width() * channels);
         unsigned int y = 0;
         while (dinfo->output_scanline < dinfo->output_height) {
             //JDIMENSION d = 
@@ -70,6 +71,7 @@ namespace image {
             std::memcpy(row_ptrs[y++], row_p, width() * channels);
             //printf("%d lines read VS output scanline %d\n", d, dinfo->output_scanline);
         }
+        free(row_p);
         // cmon, there's gotta be a better way to do that
         row_ptrs_to_pixels(row_ptrs);
         // reverse pixels_to_row_ptrs(row_ptrs);
@@ -80,6 +82,7 @@ namespace image {
         free(row_ptrs);*/
         jpeg_finish_decompress(dinfo);
         jpeg_destroy_decompress(dinfo);
+        free(dinfo);
 
         fclose(fp);
     }
@@ -89,12 +92,13 @@ namespace image {
     {
         FILE* fp = fopen(path.c_str(), "wb");
         // append .jpeg if path is not // write-binary file
-        if (fp == NULL) throw std::invalid_argument("file does not exist");
+        if (!fp) throw std::invalid_argument("file does not exist");
 
         // libjpeg-turbo structs for write
         //extern JSAMPLE* image_buffer; // pixel array
         jpeg_compress_struct* cinfo = (jpeg_compress_struct*)
-            alloca(sizeof(jpeg_compress_struct));
+            malloc(sizeof(jpeg_compress_struct));
+        if (!cinfo) throw std::runtime_error("Failed to write JPEG");
         jpeg_error_mgr jerr;
         // TODO setjmp
         // STEP 1 : compression opject
@@ -118,21 +122,23 @@ namespace image {
         jpeg_start_compress(cinfo, TRUE);
         // malloc row ptrs
         JSAMPARRAY row_ptrs = (JSAMPARRAY)malloc(height() * sizeof(JSAMPROW)); // similar to libpng
-        for (unsigned int y = 0; y < height(); y++)
+        if (!row_ptrs) throw std::runtime_error("Failed to write JPEG");
+        for (int y = 0; y < height(); y++)
         {
             row_ptrs[y] = (JSAMPROW)malloc(width() * sizeof(JSAMPLE) * channels);
-            if (row_ptrs[y] == NULL) throw std::runtime_error("Failed to write JPEG");
+            if (!row_ptrs[y]) throw std::runtime_error("Failed to write JPEG");
         }
         pixels_to_row_ptrs(row_ptrs);
         jpeg_write_scanlines(cinfo, row_ptrs, height());
         //free row ptrs
-        for (unsigned int y = 0; y < height(); y++)
+        for (int y = 0; y < height(); y++)
         {
             free(row_ptrs[y]);
         }
         free(row_ptrs);
         jpeg_finish_compress(cinfo);
         jpeg_destroy_compress(cinfo);
+        free(cinfo);
 
         fclose(fp);
     }
@@ -143,9 +149,9 @@ namespace image {
     {
         byte bit_depth = 8;
         byte channels = 3; // RGB
-        for (unsigned int y = 0; y < height(); y++)
+        for (int y = 0; y < height(); y++)
         {
-            for (unsigned int x = 0; x < width(); x++)
+            for (int x = 0; x < width(); x++)
             {
                 unsigned int pixel_size = channels * sizeof(JSAMPLE);
                 JSAMPLE r = 0, g = 0, b = 0;
@@ -168,9 +174,9 @@ namespace image {
         // up to 32 bit per channel  TODO
         byte bit_depth = 8;
         byte channels = 3; // RGB
-        for (unsigned int y = 0; y < height(); y++)
+        for (int y = 0; y < height(); y++)
         {
-            for (unsigned int x = 0; x < width(); x++)
+            for (int x = 0; x < width(); x++)
             {
                 unsigned int pixel_size = channels * sizeof(JSAMPLE);
                 unsigned int base = x * pixel_size;

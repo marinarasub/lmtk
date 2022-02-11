@@ -111,7 +111,7 @@ namespace image {
         * @param w Width
         * @param h Height
         */
-        Image(unsigned int w, unsigned int h);
+        Image(int w, int h);
 
         /**
         * Creates an image by copying another image's data.
@@ -160,14 +160,14 @@ namespace image {
         *
         * @return Width of the image
         */
-        unsigned int width() const;
+        int width() const;
 
         /**
         * Get the height of the image in pixels.
         *
         * @return Height of the image
         */
-        unsigned int height() const;
+        int height() const;
 
         /**
         * Get the total size of the image in pixels.
@@ -175,7 +175,7 @@ namespace image {
         * The size of the image is width * height
         * @return Size of the image
         */
-        unsigned int size() const;
+        int size() const;
 
         /**
         * Fills the image with the given color
@@ -222,8 +222,8 @@ namespace image {
         * @param w New width
         * @param h New height
         */
-        void resize(unsigned int w, unsigned int h); // calls default
-        void resize(unsigned int w, unsigned int h, ResampleMethod method); // will call scale resize
+        void resize(int w, int h); // calls default
+        void resize(int w, int h, ResampleMethod method); // will call scale resize
         // calls getPixel with a interp. method (accepts floats)
         // TODO downsampling
 

@@ -26,14 +26,14 @@
 namespace image {
 
     /**
-    * @class ChromaKeyShader "chromakeyer.h"
+    * @class ChromaKeyer "chromakeyer.h"
     * @brief Class for a simple chroma keyer (aka green screen).
     *
     * For every pixel in a given image, the operator sets the alpha to 0 if the
     * color distance is within a defined threshold of the target color (default 
     * 0, which means the colors must be equal)
     */
-    class ChromaKeyShader : public ImageShader
+    class ChromaKeyer : public ImageShader
     {
     public:
 
@@ -48,7 +48,7 @@ namespace image {
         * Sets the color threshold to default
         * @param target Target color to be removed.
         */
-        ChromaKeyShader(RGBAPixel target);
+        ChromaKeyer(RGBAPixel target);
         /**
         * Creates a chroma keyer functor with tolerance.
         *
@@ -56,7 +56,7 @@ namespace image {
         * @param tol Minimum threshold distance from the target color to
         * be removed.
         */
-        ChromaKeyShader(RGBAPixel target, float tol);
+        ChromaKeyer(RGBAPixel target, float tol);
 
         /**
         * Removes the target color from the image.
@@ -79,7 +79,10 @@ namespace image {
         * @param y Y location of target pixel
         * @return Transparent if within threshold, else the original pixel
         */
-        virtual RGBAPixel operator()(const Image& img, size_t x, size_t y);
+        virtual RGBAPixel operator()(const Image& img, int x, int y) override;
+
+        // copy chroma keyer
+        virtual ChromaKeyer* clone() override;
 
     private:
         RGBAPixel target; /**< target color defined in RGBA format */
