@@ -20,6 +20,7 @@
 #pragma once
 
 // TODO move to public headers
+#include "blur.h"
 #include "bokehblur.h"
 #include "boxblur.h"
 #include "chromakeyer.h"
@@ -27,6 +28,9 @@
 #include "gaussianblur.h"
 #include "grayscale.h"
 #include "huesatlum.h"
+#include "rotate.h"
 #include "sharpen.h"
+#include "tiltshiftblur.h"
+#include "vignette.h"
 
 #endif // _LIBLMTKIMAGE_FILTERS_H_

@@ -2,18 +2,23 @@
 
 namespace image {
 
-    void ColorInvertShader::operator()(Image& img)
+    void ColorInverter::operator()(Image& img)
     {
         ImageShader::operator()(img);
     }
 
-    RGBAPixel ColorInvertShader::operator()(const Image& img, size_t x, size_t y)
+    RGBAPixel ColorInverter::operator()(const Image& img, int x, int y)
     {
         RGBAPixel* p = img.getRGBAPixel(x, y);
         return invert(*p);
     }
 
-    RGBAPixel ColorInvertShader::invert(RGBAPixel p)
+    ColorInverter* ColorInverter::clone()
+    {
+        return new ColorInverter(*this);
+    }
+
+    RGBAPixel ColorInverter::invert(RGBAPixel p)
     {
         p.set(1 - p.r, 1 - p.g, 1 - p.b);
         return p;

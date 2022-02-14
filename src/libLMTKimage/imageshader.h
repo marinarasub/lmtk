@@ -69,9 +69,13 @@ namespace image {
         * Abstract pixel shader.
         * 
         * Returns a single pixel given a location.
+        * @note Sometimes it is useful to sample pixels outside of bounds.
         * Can be overriden do anything you want with the image.
         */
-        virtual RGBAPixel operator()(const Image& img, size_t x, size_t y) = 0;
+        virtual RGBAPixel operator()(const Image& img, int x, int y) = 0;
+
+        // create copy ptr on free store (new)
+        virtual ImageShader* clone() = 0;
 
 
     protected:

@@ -10,7 +10,7 @@ namespace image {
         pixel_data.pixels = nullptr;
     }
 
-    Image::Image(unsigned int w, unsigned int h) : Image()
+    Image::Image(int w, int h) : Image()
     {
         setInitialSize(w, h);
         fillSolidColor(rgbcolor::TRANSPARENT);
@@ -47,18 +47,18 @@ namespace image {
         return !(*this == other);
     }
 
-    unsigned int Image::width() const
+    int Image::width() const
     {
         return pixel_data.width;
     }
 
-    unsigned int Image::height() const
+    int Image::height() const
     {
         return pixel_data.height;
     }
 
     // TODO width * hieght may overflow.
-    unsigned int Image::size() const
+    int Image::size() const
     {
         return width() * height();
     }
@@ -111,12 +111,12 @@ namespace image {
         }
     }
 
-    void Image::resize(unsigned int w, unsigned int h)
+    void Image::resize(int w, int h)
     {
         resize(w, h, ResampleMethod::DEFAULT);
     }
 
-    void Image::resize(unsigned int w, unsigned int h, ResampleMethod method)
+    void Image::resize(int w, int h, ResampleMethod method)
     {
         if (w <= 0 || h <= 0) throw std::invalid_argument("image size must be positive integer");
         if (pixel_data.pixels == NULL) throw std::invalid_argument("null pixel data");

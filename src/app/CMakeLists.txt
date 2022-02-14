@@ -15,16 +15,13 @@ set(Boost_USE_STATIC_RUNTIME OFF)
 
 if(WIN32)
 	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE /ENTRY:mainCRTStartup")
-	add_executable(LMTKimage 
-				"LMTKimage.cpp"
-                "imagetools/progressbar.cpp"
-                "imagetools/renderer.cpp")
-else()
-	add_executable(LMTKimage
-				"LMTKimage.cpp"
-                "imagetools/progressbar.cpp"
-                "imagetools/renderer.cpp")
 endif()
+
+add_executable(LMTKimage 
+            "LMTKimage.cpp"
+            "imagetools/progressbar.cpp"
+            "imagetools/renderer.cpp"
+            "imagetools/imagefx.cpp")
 			
 target_include_directories(LMTKimage PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
 target_include_directories(LMTKimage PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/imagetools")

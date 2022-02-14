@@ -19,7 +19,7 @@
 #define _LIBLMTKIMAGE_BOKEHBLUR_H_
 #pragma once
 
-#include "convolution.h"
+#include "blur.h"
 #include "../utils/utilsmath.h"
 
 
@@ -31,7 +31,7 @@ namespace image {
     * 
     * @see ImageConvolution
     */
-    class BokehBlur : public ImageConvolution
+    class BokehBlur : public Blur
     {
     public:
 
@@ -51,6 +51,12 @@ namespace image {
         * @param radiusY Vertical radius of blur
         */
         BokehBlur(float radiusX, float radiusY);
+
+        // scale bokeh
+        virtual BokehBlur* operator*(double scalar) override;
+
+        // clone bokeh
+        virtual BokehBlur* clone() override;
 
     private:
 

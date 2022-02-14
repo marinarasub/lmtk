@@ -22,7 +22,7 @@
 #define _LIBLMTKIMAGE_BOXBLUR_H_
 #pragma once
 
-#include "convolution.h"
+#include "blur.h"
 
 namespace image {
 
@@ -38,7 +38,7 @@ namespace image {
     * Repeated iterations / multiple passes approximates the Gaussian Blur.
     * @see GaussianBlur
     */
-    class BoxBlur : public ImageConvolution
+    class BoxBlur : public Blur
     {
     public:
 
@@ -68,12 +68,21 @@ namespace image {
         */
         BoxBlur(size_t radiusX, size_t radiusY);
 
+        // scale box blur
+        virtual BoxBlur* operator*(double scalar) override;
+
+        // copy box blur
+        virtual BoxBlur* clone() override;
+
     private:
 
         /**
         * Sets the kernel to all 1, normalized.
         */
         virtual void computeKernel() override;
+
+        float radiusX;
+        float radiusY;
 ;
     };
 
@@ -88,7 +97,7 @@ namespace image {
      * @see BoxBlur
      * @see BoxBlurVertical
      */
-    class BoxBlurHorizontal : public ImageConvolution
+    class BoxBlurHorizontal : public Blur
     {
     public:
 
@@ -104,12 +113,20 @@ namespace image {
         */
         BoxBlurHorizontal(size_t radius);
 
+        // scale box blur
+        virtual BoxBlurHorizontal* operator*(double scalar) override;
+
+        virtual BoxBlurHorizontal* clone() override;
+
     private:
 
         /**
         * Sets the kernel to all 1, normalized.
         */
         virtual void computeKernel() override;
+
+        float hradius;
+
 
     };
 
@@ -124,7 +141,7 @@ namespace image {
      * @see BoxBlur
      * @see BoxBlurHorizontal
      */
-    class BoxBlurVertical : public ImageConvolution
+    class BoxBlurVertical : public Blur
     {
     public:
 
@@ -140,12 +157,19 @@ namespace image {
         */
         BoxBlurVertical(size_t radius);
 
+        // scale box blur
+        virtual BoxBlurVertical* operator*(double scalar) override;
+
+        virtual BoxBlurVertical* clone() override;
+
     private:
 
         /**
         * Sets the kernel to all 1, normalized.
         */
         virtual void computeKernel() override;
+
+        float vradius;
 
     };
 

@@ -53,7 +53,10 @@ namespace image {
         * @param y Y location of target pixel
         * @return Grayscaled pixel
         */
-        virtual RGBAPixel operator()(const Image& img, size_t x, size_t y) override;
+        virtual RGBAPixel operator()(const Image& img, int x, int y) override;
+
+        // copy grayscale
+        virtual GrayScaleShader* clone() override;
 
 
     private:

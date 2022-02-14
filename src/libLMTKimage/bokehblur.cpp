@@ -8,11 +8,23 @@ namespace image {
     }
 
     BokehBlur::BokehBlur(float radiusX, float radiusY)
-        : radiusX(radiusX), radiusY(radiusY), ImageConvolution(ceil(radiusX+1), ceil(radiusY+1))
+        : radiusX(radiusX), radiusY(radiusY), Blur(ceil(radiusX+1), ceil(radiusY+1))
     {
+        if (radiusX == 0) throw std::invalid_argument("radius cannot be 0");
+        if (radiusY == 0) throw std::invalid_argument("radius cannot be 0");
         computeKernel();
     }
 
+    BokehBlur* BokehBlur::operator*(double scalar)
+    {
+        // todo copy edge handle method too
+        return new BokehBlur(this->radiusX * scalar, this->radiusY * scalar);
+    }
+
+    BokehBlur* BokehBlur::clone()
+    {
+        return new BokehBlur(*this);
+    }
     
     void image::BokehBlur::computeKernel()
     {

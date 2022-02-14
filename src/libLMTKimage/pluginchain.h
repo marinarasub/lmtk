@@ -20,6 +20,7 @@
 #pragma once
 
 #include <vector>
+#include <list>
 #include "imageshader.h"
 
 
@@ -43,7 +44,8 @@ namespace image {
         PluginChain() {}
 
         /**
-        * Frees memory from each plugin after complete.
+        * / nothing /
+        * @note Free memory yourself.
         */
         ~PluginChain();
 
@@ -59,8 +61,9 @@ namespace image {
         * Access the ith effect in the plugin chain
         * 
         * @param i Index of effect to access
+        * @return Reference to image shader pointer at index i
         */
-        ImageShader* operator[](size_t i);
+        ImageShader*& operator[](size_t i);
 
         /**
         * Add an effect to the plugin chain, n times.
@@ -79,12 +82,31 @@ namespace image {
         void addEffect(ImageShader *fx);
 
         /**
+        * Add effect at position i in chain, n times
+        * 
+        * @param fx Effect to add
+        * @param passes number of times to add fx
+        * @param idx Index to insert at
+        */
+        void addEffect(ImageShader *fx, size_t passes, size_t idx);
+
+        /**
         * Add multiple effects to plugin chain.
         *
         * Adds all effects if vector.
         * @param fx Effects to add
         */
         void addEffects(std::vector<ImageShader*> fx);
+
+        /**
+        * Remove effect from fx, if exists and not null
+        */
+        void removeEffect(ImageShader* fx);
+
+        /**
+        * Remove effect at index i, if exists
+        */
+        void removeEffect(size_t index);
 
         /**
         * Returns the number of effects in the plugin chain
@@ -102,7 +124,7 @@ namespace image {
 
     private:
 
-        std::vector<ImageShader*> chain; /**< internal list of effects */
+        std::list<ImageShader*> chain; /**< internal list of effects */
 
         //size_t completed;
 

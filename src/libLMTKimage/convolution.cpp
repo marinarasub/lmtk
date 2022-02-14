@@ -27,9 +27,9 @@ namespace image {
     void ImageConvolution::operator()(Image& img)
     {
         Image temp = img;
-        for (size_t y = 0; y < img.height(); y++)
+        for (int y = 0; y < img.height(); y++)
         {
-            for (size_t x = 0; x < img.width(); x++)
+            for (int x = 0; x < img.width(); x++)
             {
                 RGBAPixel* p = img.getRGBAPixel(x, y);
                 p->set(this->operator()(temp, x, y));
@@ -37,7 +37,7 @@ namespace image {
         }
     }
 
-    RGBAPixel ImageConvolution::operator()(const Image& img, size_t x, size_t y)
+    RGBAPixel ImageConvolution::operator()(const Image& img, int x, int y)
     {
         return convolution(img, x, y);
     }
@@ -52,13 +52,12 @@ namespace image {
     void ImageConvolution::computeKernel()
     {
         kernel.setZero();
-        normalize();
     }
 
     RGBAPixel image::ImageConvolution::convolution(
         const Image& img, 
-        unsigned int target_x,
-        unsigned int target_y)
+        int target_x,
+        int target_y)
     {
         // accumulators
         float red = 0, green = 0, blue = 0, alpha = 0;
@@ -68,8 +67,8 @@ namespace image {
             {
                 float weight = kernel(y, x);
                 if (weight == 0) continue; // faster than retrieval
-                int img_x = x + (int)target_x - kernel.rows() / 2;
-                int img_y = y + (int)target_y - kernel.cols() / 2;
+                int img_x = x + target_x - kernel.cols() / 2;
+                int img_y = y + target_y - kernel.rows() / 2;
                 red += weight *
                     img.getRGBAPixel(img_x, img_y, edge_method).r;
                 green += weight *
@@ -87,7 +86,23 @@ namespace image {
     {
         // if the sum is 0, matrix need not be normalized (sum will always be 0)
         if (kernel.sum() == 0) return;
-        kernel *= 1.0 / kernel.sum(); // scale matrix by 1 / sum
+        /*{
+            kernel(kernel.rows()/2, kernel.cols()/2) += 1;
+        }*/
+        //std::cout << "1/sum = " << 1.0 / kernel.sum() << std::endl;
+        else 
+        {
+            //auto kernel_old = kernel;
+            float scalar = 1.0 / kernel.sum();
+            // can't handle
+            if (scalar == 0 || isnan(scalar) || isinf(scalar))
+                throw std::runtime_error("kernel sum floating point error");
+            kernel *= scalar; // scale matrix by 1 / sum
+            /*if (fabs(kernel.sum() - 1) > 0.01)
+            {
+                std::cout << kernel_old << '\n';
+            }*/
+        }
     }
 
 }

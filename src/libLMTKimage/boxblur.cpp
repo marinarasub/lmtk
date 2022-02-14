@@ -14,8 +14,20 @@ namespace image {
     }
 
     BoxBlur::BoxBlur(size_t radiusX, size_t radiusY)
-        : ImageConvolution(radiusX, radiusY)
+        : radiusX(radiusX), radiusY(radiusY), Blur(radiusX, radiusY)
     {
+    }
+
+    BoxBlur* BoxBlur::operator*(double scalar)
+    {
+        return new BoxBlur(
+            radiusX * scalar, 
+            radiusY * scalar);
+    }
+
+    BoxBlur* BoxBlur::clone()
+    {
+        return new BoxBlur(*this);
     }
 
     void BoxBlur::computeKernel()
@@ -31,9 +43,19 @@ namespace image {
 
 
     BoxBlurHorizontal::BoxBlurHorizontal(size_t radius)
-        : ImageConvolution(radius, 0)
+        : hradius(radius), Blur(radius, 0)
     {
         computeKernel();
+    }
+
+    BoxBlurHorizontal* BoxBlurHorizontal::operator*(double scalar)
+    {
+        return new BoxBlurHorizontal(this->hradius * scalar);
+    }
+
+    BoxBlurHorizontal* BoxBlurHorizontal::clone()
+    {
+        return new BoxBlurHorizontal(*this);
     }
 
     void BoxBlurHorizontal::computeKernel()
@@ -49,9 +71,19 @@ namespace image {
 
 
     BoxBlurVertical::BoxBlurVertical(size_t radius)
-        : ImageConvolution(0, radius)
+        : vradius(radius), Blur(0, radius)
     {
         computeKernel();
+    }
+
+    BoxBlurVertical* BoxBlurVertical::operator*(double scalar)
+    {
+        return new BoxBlurVertical(this->vradius * scalar);
+    }
+
+    BoxBlurVertical* BoxBlurVertical::clone()
+    {
+        return new BoxBlurVertical(*this);
     }
 
     void BoxBlurVertical::computeKernel()

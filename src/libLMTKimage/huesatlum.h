@@ -58,7 +58,10 @@ namespace image {
         * @param y Y location of target pixel
         * @return HSL Adjusted color
         */
-        virtual RGBAPixel operator()(const Image& img, size_t x, size_t y) override;
+        virtual RGBAPixel operator()(const Image& img, int x, int y) override;
+
+        // copy hsl shader
+        virtual HueSatLumAdjust* clone() override;
 
     private:
 

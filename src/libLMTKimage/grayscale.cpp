@@ -7,10 +7,15 @@ namespace image {
         ImageShader::operator()(img);
     }
 
-    RGBAPixel GrayScaleShader::operator()(const Image& img, size_t x, size_t y)
+    RGBAPixel GrayScaleShader::operator()(const Image& img, int x, int y)
     {
         RGBAPixel* p = img.getRGBAPixel(x, y);
         return greyScale(*p);
+    }
+
+    GrayScaleShader* GrayScaleShader::clone()
+    {
+        return new GrayScaleShader(*this);
     }
 
     RGBAPixel GrayScaleShader::greyScale(RGBAPixel p)

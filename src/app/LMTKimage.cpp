@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <unordered_map>
 #include <boost/program_options.hpp>
+#include <mutex>
 #include "../libLMTKimage/imagefile.h"
 #include "../libLMTKimage/png.h"
 #include "../libLMTKimage/jpeg.h"
@@ -23,7 +24,6 @@
 #include "imagetools/imagefx.hpp"
 #include "imagetools/renderer.h"
 #include "imagetools/progressbar.h"
-#include <mutex>
 
 //#include "tools/progressbar.h"
 
@@ -87,12 +87,10 @@ void convert(image::ImageFile* &img, std::string ext)
         if (ext == "png") 
         {
             temp = new PNG(*img);
-            std::cout << "Cast to PNG" << std::endl;
         }
         else if (ext == "jpg" || ext == "jpeg")
         {
             temp = new JPEG(*img);
-            std::cout << "Cast to JPEG" << std::endl;
         }
         else throw std::invalid_argument("File type not supported");
     }
@@ -188,6 +186,13 @@ std::vector<image::ImageShader*> get_effects(std::string str)
     return lmtkimage::get_effects(effect, passes, args_list);
 }
 
+void threaded_cout(std::string str, bool endl)
+{
+    std::lock_guard<std::mutex> lock(cout_mtx);
+    std::cout << str;
+    if (endl) std::cout << std::endl;
+}
+
 namespace options = boost::program_options;
 
 int main(int argc, char** argv)
@@ -209,7 +214,7 @@ int main(int argc, char** argv)
         ("help,h", options::value<std::string>(&help_arg)->implicit_value(""), "show help menu or specific argument help")
         ("version,v", "show version number")
         ("verbose,info-level", options::value<std::string>(), "set info level when running")
-        ("multithread,MT", options::value<size_t>(&threads)->implicit_value(0)->default_value(1, "no"), "use multithreaded rendering, given number of threads (if no arg given, will use number of logical cores)")
+        ("threads,MT", options::value<size_t>(&threads)->implicit_value(0)->default_value(1, "no"), "use multithreaded rendering, given number of threads (if no arg given, will use number of logical cores)")
         ("import,read,open,in", options::value<std::string>(&in), "choose file to open for reading")
         // TODO create image, ie blank
         // TODO blend two+ images
@@ -230,8 +235,6 @@ int main(int argc, char** argv)
     catch (const std::exception& e) {
         std::cout << e.what() << std::endl;
     }
-
-    bool mt = threads != 1;
 
     options::notify(vm);
 
@@ -271,17 +274,23 @@ int main(int argc, char** argv)
     try {
        timer.start();
        img = readImage(in);
-       std::string time_str = std::to_string(timer.time()); // TODO move to timer class
-       time_str.resize(5);
-       std::cout << "Read - time elapsed: " << time_str << "s" << '\n';
+       std::string time_str = std::to_string(timer.time()) + "s"; // TODO move to timer class
        size_t byte_size = img->size() * sizeof(image::RGBAPixel);
-       std::cout << "Image data size in memory: " << utils::get_size_string(byte_size) << '\n';
+       threaded_cout(
+           "Read file " +
+           in + 
+           ", "
+           "width: " +
+           std::to_string(img->width()) +
+           ", height: " +
+           std::to_string(img->height()), 
+           true);
+       threaded_cout("Size in memory: " + utils::get_size_string(byte_size), true);
     }
     catch (const std::exception& e) {
         std::cout << e.what() << std::endl;
         return 0;
     }
-    std::cout << "File read successfully!" << '\n';
 
     // color picker returns after done
     try {
@@ -303,9 +312,8 @@ int main(int argc, char** argv)
             timer.start();
             if (resize.size() != 2) throw std::invalid_argument("resize takes width, height");
             img->resize(resize[0], resize[1]);
-            std::string time_str = std::to_string(timer.time()); // TODO move to timer class
-            time_str.resize(5);
-            std::cout << "Resize - time elapsed: " << time_str << "s" << '\n';
+            std::string time_str = std::to_string(timer.time()) + "s"; // TODO move to timer class
+            threaded_cout("Resize - time elapsed: " + time_str, true);
         }
     }
     catch (const std::exception& e) {
@@ -319,9 +327,8 @@ int main(int argc, char** argv)
             timer.start();
             if (scale.size() != 2) throw std::invalid_argument("scale takes scaleX, scaleY");
             img->scale(scale[0], scale[1]);
-            std::string time_str = std::to_string(timer.time()); // TODO move to timer class
-            time_str.resize(5);
-            std::cout << "Scale - time elapsed: " << time_str << "s" << '\n';
+            std::string time_str = std::to_string(timer.time()) + "s"; // TODO move to timer class
+            threaded_cout("Scale - time elapsed: " + time_str, true);
         }
     }
     catch (const std::exception& e) {
@@ -348,49 +355,51 @@ int main(int argc, char** argv)
     // render
     timer.start();
 
-    if (mt && fx.size() > 0)
+    if (fx.size() > 0)
     {
         image::Image* buffer = new image::Image(*img);
         renderer::ImageRenderer render(threads, buffer);
         render.setProgressCallback([](double prog, size_t curr, size_t total, bool failed)
             {
-                std::string progstr = progressbar::getProgressBar(prog, false);
-                std::lock_guard<std::mutex> lock(cout_mtx);
-                if (!failed) 
+                std::string progstr = progressbar::getProgressBar(prog, failed);
+                if (!failed) // TODO print only once if failed
                 {
-                    std::string info = " (Pass " + 
-                        std::to_string(curr) + 
-                        " of " + 
+                    std::string info = " (Pass " +
+                        std::to_string(curr) +
+                        " of " +
                         std::to_string(total) +
                         ")";
                     progstr.append(info);
-                    std::cout << progstr;
                 }
-                if (prog >= 1 || failed) std::cout << std::endl;
+                //if (prog >= 1 || failed) failed = true;
+                threaded_cout(progstr, failed);
             });
         render.render(fx_chain, img);
         delete buffer;
+        threaded_cout("", true);
     }
-    else fx_chain(*img);
+    std::string time_str = std::to_string(timer.time()) + "s"; // TODO move to timer class
+    threaded_cout("Render - time elapsed: " + time_str, true);
 
-    std::string time_str = std::to_string(timer.time()); // TODO move to timer class
-    time_str.resize(5);
-    std::cout << "Render effects - time elapsed: " << time_str << "s" << '\n';
+    // delete fx chain
+    for (size_t i = 0; i < fx_chain.size(); i++)
+    {
+        delete fx_chain[i];
+        fx_chain[i] = nullptr;
+    }
 
     // write
     try {
         // todo extension checking and overwrite check
         timer.start();
         writeImage(img, out);
-        std::string time_str = std::to_string(timer.time()); // TODO move to timer class
-        time_str.resize(5);
-        std::cout << "Write - time elapsed: " << time_str << "s" << '\n';
+        std::string time_str = std::to_string(timer.time()) + "s"; // TODO move to timer class
+        threaded_cout("Write file " + out + " - time elapsed: " + time_str, true);
     }
     catch (const std::exception& e) {
         std::cout << e.what() << std::endl;
         return 0;
     }
-    std::cout << "File wrote successfully!" << '\n';
 
     delete img;
 
